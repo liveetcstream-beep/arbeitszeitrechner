@@ -83,7 +83,13 @@ Jetzt Arbeitszeit berechnen – Schnell & Präzise
 **[CALCULATOR WIDGET PLACEHOLDER — See Design Specs]**
 
 #### Calculator Tab Structure:
-- **Täglich** | **Wöchentlich** | **Monatlich**
+- **Täglich** | **Wöchentlich** | **Monatlich & Dezimal** | **Lohnrechner**
+
+#### Tier 1 Advanced Features (Implemented):
+1. **Lohnrechner (Stundenlohn × Stunden):** Berechnet Bruttoverdienst, Überstundenzuschlag (25%, 50%, 100%) und Nachtarbeitszuschlag (25% nach § 6 ArbZG).
+2. **Bundesland Feiertage 2026:** Automatische Ermittlung von Arbeitstagen, Jahresstunden und Feiertagen für 10 deutsche Bundesländer (Bayern, NRW, Berlin, BW, HH, HE, NI, RP, SN, TH).
+3. **ArbZG Compliance Checker:** Live-Prüfung von Höchstarbeitszeiten (10h) und Pflichtpausen (§ 4 ArbZG).
+4. **Nachtschicht-Erkennung:** Automatische Berechnung bei Schichten über Mitternacht.
 
 #### Calculator Input Fields:
 | Feld | Beschreibung |
