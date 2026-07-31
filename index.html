@@ -126,10 +126,7 @@
 
     <!-- CALCULATOR WIDGET SECTION -->
     <section id="rechner" class="calculator-section">
-      <div style="display: grid; grid-template-columns: 2.7fr 1fr; gap: 1.5rem; max-width: 1100px; margin: 0 auto;">
-        
-        <!-- MAIN CALCULATOR CARD -->
-        <div class="calculator-card" style="margin: 0;">
+      <div class="calculator-card" style="max-width: 1000px; margin: 0 auto;">
         <!-- Tab Header -->
         <div class="calc-tabs" role="tablist">
           <button class="tab-btn active" data-tab="tab-daily" role="tab" aria-selected="true">
@@ -207,6 +204,12 @@
                     <span class="checkbox-option-sub">30 Min. bei 6–9 Std. • 45 Min. bei &gt;9 Std. (nach ArbZG §4)</span>
                   </div>
                 </label>
+
+                <!-- Prominent Calculate Button -->
+                <button type="button" id="calc-daily-btn" class="btn-calc" style="width: 100%; font-size: 1.05rem; padding: 0.9rem; margin-top: 0.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                  <span>Arbeitszeit berechnen</span>
+                </button>
               </div>
 
               <!-- Right Results Output -->
@@ -461,46 +464,6 @@
           </div>
         </div>
       </div>
-
-      <!-- SIDEBAR QUICK TOOLS (Competitor Feature) -->
-      <div class="calc-sidebar" style="display: flex; flex-direction: column; gap: 1.25rem;">
-        <!-- Quick Converter Widget -->
-        <div style="background: #ffffff; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; box-shadow: var(--shadow-sm);">
-          <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--header-navy); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.4rem;">
-            <span>🔄</span> Dezimalstunden Rechner
-          </h4>
-          <div style="margin-bottom: 0.85rem;">
-            <label style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Zeit → Dezimal (z.B. 8:30)</label>
-            <div style="display: flex; gap: 0.35rem;">
-              <input type="text" id="side-time-in" class="input-field" placeholder="8:30" style="padding: 0.4rem 0.6rem; font-size: 0.85rem;">
-              <button type="button" id="side-time-btn" class="btn-calc" style="padding: 0.4rem 0.75rem; font-size: 0.85rem; width: auto;">→</button>
-            </div>
-            <div id="side-time-out" style="font-size: 0.8rem; font-weight: 700; color: var(--primary); margin-top: 0.3rem;">= 8,50 Std.</div>
-          </div>
-          <div>
-            <label style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-bottom: 0.25rem;">Dezimal → Zeit (z.B. 8.5)</label>
-            <div style="display: flex; gap: 0.35rem;">
-              <input type="text" id="side-dec-in" class="input-field" placeholder="8.5" style="padding: 0.4rem 0.6rem; font-size: 0.85rem;">
-              <button type="button" id="side-dec-btn" class="btn-calc" style="padding: 0.4rem 0.75rem; font-size: 0.85rem; width: auto;">→</button>
-            </div>
-            <div id="side-dec-out" style="font-size: 0.8rem; font-weight: 700; color: var(--btn-green); margin-top: 0.3rem;">= 8:30 Std.</div>
-          </div>
-        </div>
-
-        <!-- Quick ArbZG Rules Box -->
-        <div style="background: #f0f9ff; border: 1px solid #bae6fd; border-radius: var(--radius-md); padding: 1.1rem; font-size: 0.825rem; color: #0369a1;">
-          <h4 style="font-size: 0.9rem; font-weight: 700; color: #075985; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.3rem;">
-            <span>⚖️</span> Pausenregelung ArbZG
-          </h4>
-          <ul style="padding-left: 1rem; line-height: 1.6; margin-bottom: 0.5rem;">
-            <li><strong>6–9 Std.:</strong> Min. 30 Min. Pause</li>
-            <li><strong>&gt; 9 Std.:</strong> Min. 45 Min. Pause</li>
-            <li><strong>Aufteilung:</strong> Mind. 15 Min. Abschnitte</li>
-            <li><strong>Maximum:</strong> 10 Std. pro Tag</li>
-          </ul>
-        </div>
-      </div>
-    </div>
     </section>
 
     <!-- CONTENT SECTION 1: HOW IT WORKS -->

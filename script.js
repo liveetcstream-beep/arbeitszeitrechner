@@ -69,10 +69,18 @@ function initDailyCalc() {
   const printBtn = document.getElementById('print-daily-btn');
   const presets = document.querySelectorAll('.preset-chip');
 
+  const calcBtn = document.getElementById('calc-daily-btn');
+
   if (startTimeInput) startTimeInput.addEventListener('input', calculateDaily);
   if (endTimeInput) endTimeInput.addEventListener('input', calculateDaily);
   if (targetTimeInput) targetTimeInput.addEventListener('input', calculateDaily);
   if (autoBreakCheckbox) autoBreakCheckbox.addEventListener('change', calculateDaily);
+  if (calcBtn) {
+    calcBtn.addEventListener('click', () => {
+      calculateDaily();
+      showToast('Arbeitszeit erfolgreich berechnet!');
+    });
+  }
 
   if (addBreakBtn) {
     addBreakBtn.addEventListener('click', () => {
