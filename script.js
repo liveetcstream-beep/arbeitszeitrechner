@@ -333,19 +333,31 @@ function calculateWeekly() {
   const numDays = parseInt(document.getElementById('weekly-days-select')?.value, 10) || 5;
   const startStr = document.getElementById('weekly-start')?.value || '09:00';
   const endStr = document.getElementById('weekly-end')?.value || '17:30';
-  const pauseMinsSingle = parseInt(document.getElementById('weekly-pause')?.value, 10) || 30;
+  const manualPauseMins = parseInt(document.getElementById('weekly-pause')?.value, 10) || 30;
+  const autoBreak = document.getElementById('weekly-auto-break')?.checked || false;
 
   let sMins = timeToMinutes(startStr);
   let eMins = timeToMinutes(endStr);
   if (eMins < sMins) eMins += 24 * 60; // Overnight shift support
 
   let dailyGrossMins = eMins - sMins;
-  let dailyNetMins = Math.max(0, dailyGrossMins - pauseMinsSingle);
+
+  // Statutory break check (ArbZG)
+  let requiredPause = 0;
+  if (dailyGrossMins > 9 * 60) requiredPause = 45;
+  else if (dailyGrossMins > 6 * 60) requiredPause = 30;
+
+  let effectivePause = manualPauseMins;
+  if (autoBreak) {
+    effectivePause = Math.max(manualPauseMins, requiredPause);
+  }
+
+  let dailyNetMins = Math.max(0, dailyGrossMins - effectivePause);
 
   let totalGrossMins = dailyGrossMins * numDays;
-  let totalPauseMins = pauseMinsSingle * numDays;
+  let totalPauseMins = effectivePause * numDays;
   let totalNetMins = dailyNetMins * numDays;
-  let netDec = (totalNetMins / 60).toFixed(2).replace('.', ',');
+  let netDec = (totalNetMins / 60).toFixed(2);
 
   // Update DOM Output Cards (Competitor Format)
   const elDays = document.getElementById('w-res-days');
@@ -362,6 +374,36 @@ function calculateWeekly() {
   if (elDec) elDec.textContent = `${netDec} Stunden`;
   if (elBanner) elBanner.textContent = `Bei ${numDays} Arbeitstagen pro Woche und einer täglichen Arbeitszeit von ${minutesToFormattedTime(dailyNetMins)} ergibt sich eine wöchentliche Nettoarbeitszeit von ${minutesToFormattedTime(totalNetMins)}.`;
 }
+
+// Action button handlers for Weekly tab
+document.addEventListener('DOMContentLoaded', () => {
+  const copyWeekly = document.getElementById('copy-weekly-btn');
+  const printWeekly = document.getElementById('print-weekly-btn');
+  const autoBreakCheckbox = document.getElementById('weekly-auto-break');
+
+  if (copyWeekly) {
+    copyWeekly.addEventListener('click', () => {
+      const days = document.getElementById('w-res-days').textContent;
+      const gross = document.getElementById('w-res-gross').textContent;
+      const pause = document.getElementById('w-res-pause').textContent;
+      const net = document.getElementById('w-res-net').textContent;
+      const dec = document.getElementById('w-res-dec').textContent;
+
+      const summary = `Wöchentliche Arbeitszeit:\n- Arbeitstage: ${days}\n- Bruttozeit: ${gross}\n- Pausen: ${pause}\n- Nettoarbeitszeit: ${net} (${dec})`;
+      navigator.clipboard.writeText(summary).then(() => {
+        showToast('Wöchentliches Ergebnis kopiert!');
+      });
+    });
+  }
+
+  if (printWeekly) {
+    printWeekly.addEventListener('click', () => window.print());
+  }
+
+  if (autoBreakCheckbox) {
+    autoBreakCheckbox.addEventListener('change', calculateWeekly);
+  }
+});
 
 // --------------------------------------------------------------------------
 // 4. MONTHLY CALCULATOR LOGIC (Competitor Matching)
