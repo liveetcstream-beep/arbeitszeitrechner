@@ -1,0 +1,12 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    { "source": "/", "destination": "/index.html" },
+    { "source": "/ueber-uns", "destination": "/ueber-uns.html" },
+    { "source": "/kontakt", "destination": "/kontakt.html" },
+    { "source": "/datenschutz", "destination": "/datenschutz.html" },
+    { "source": "/impressum", "destination": "/impressum.html" },
+    { "source": "/nutzungsbedingungen", "destination": "/nutzungsbedingungen.html" }
+  ]
+}
