@@ -1,0 +1,277 @@
+Live Demo: Einblicke in Personio Payroll | 18. August, 10 Uhr
+Funktionen
+Lösungen
+Pläne
+HR Wissen
+Über uns
+DE
+Login
+Demo buchen
+
+14 Tage kostenlos
+
+Arbeitszeiten einfach und zuverlässig erfassen mit Personio
+Jetzt mehr erfahren
+Neueste Beiträge
+Warum Zugriffsrechte für sichere, skalierbare HR und KI unverzichtbar sind
+Lohnsteuer und Sozialversicherung: Die wichtigsten Änderungen 2026
+HR News im Dezember: Die wichtigsten Trends für Personaler:innen
+Beliebteste Inhalte
+Onboarding
+Employer Branding
+Change Management
+Performance Management
+HR Lexikon
+Arbeitszeitrechner: tägliche Arbeitszeit online berechnen
+Arbeitszeitrechner
+Tag 1:
+Arbeitsbeginn:
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+:
+00
+15
+30
+45
+Arbeitsende:
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+:
+00
+15
+30
+45
+Pausen insgesamt:
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+:
+00
+15
+30
+45
+Tag hinzufügen
+Löschen
+Berechnung:
+Netto Arbeitszeit:
+--:-- Stunden
+Pausen insgesamt:
+--:-- Stunden
+Brutto Arbeitszeit:
+- --:-- Stunden
+
+Ein Arbeitszeitrechner hilft dabei, Arbeitszeiten schnell und einfach zu berechnen – egal, ob Sie Ihre tägliche Arbeitszeit oder die Wochenarbeitszeit berechnen oder Ihre Netto-Arbeitszeit inklusive Pausen ermitteln möchten. Mit einem Arbeitszeiten-Rechner behalten Sie stets den Überblick über Ihre Arbeitsstunden und können auch Überstunden, Pausen oder Arbeitszeitmodelle unkompliziert erfassen. Erfahren Sie hier, wie Sie mit unserem Arbeitszeitrechner online oder anderen Tools Ihre Arbeitszeit kostenlos berechnen können.
+
+Key Facts
+
+Mithilfe von Online-Arbeitszeitrechnern lässt sich die tägliche Arbeitszeit von Arbeitnehmenden akkurat und unkompliziert bestimmen.
+
+Der Arbeitszeitrechner zeigt die geleisteten Arbeitsstunden als Brutto- sowie Nettoarbeitszeit an und macht so die digitale Zeiterfassung einfacher.
+
+Von der lückenlosen Aufzeichnung der tatsächlich geleisteten Arbeitszeit profitieren sowohl Arbeitgeber als auch Arbeitnehmende. 
+
+Inhalt
+1
+Was ist ein Arbeitszeitrechner und wie funktioniert er?
+2
+Gesetzliche Bestimmungen
+3
+Vorteile der Verwendung eines Arbeitszeitrechners
+4
+FAQ
+Was ist ein Arbeitszeitrechner und wie funktioniert er?
+
+Mithilfe des Arbeitszeitrechners lässt sich die tatsächlich geleistete Arbeitszeit von Mitarbeitenden erfassen und übersichtlich auflisten. Dies dient dazu, die Arbeitszeiten – auch im Rahmen eines flexiblen Arbeitszeitmodells – jederzeit im Blick zu behalten.
+
+Und so funktioniert der Arbeitszeitrechner:
+
+1. Geben Sie Arbeitsbeginn und -ende der Beschäftigten für den zu bestimmenden Zeitraum minutengenau an.
+
+2. Tragen Sie alle zugehörigen Ruhepausen ein, und zwar ebenfalls auf die Minute genau. Falls die Beschäftigten mehr als zwei Pausen gemacht haben, addieren Sie diese entsprechend auf. Hinweis: Pausen können sowohl in Minuten als auch in Stunden eingegeben werden. Bei der Stundeneingabe haben Sie zudem die Möglichkeit, Nachkommastellen zu bestimmen.
+
+3. Klicken Sie nun auf „Berechnen“ und lassen Sie sich vom Arbeitszeitrechner oder Stundenrechner Brutto- sowie Nettoarbeitszeit und die Gesamtzeit aller Pausen anzeigen. 
+
+Tipp: Möchten Sie die Arbeitszeit von Mitarbeitenden, die in der Nachtschicht tätig sind, erfassen, verfahren Sie nach dem gleichen Prinzip. Der Arbeitszeitrechner erkennt automatisch, dass der betreffende Zeitraum den „Sprung“ von einem Tag (nachts) zum nächsten (frühmorgens) beinhaltet.
+
+Gesetzliche Bestimmungen
+
+Dem Arbeitszeitgesetz (ArbZG) entnehmen Arbeitgeber und Arbeitnehmende die wichtigsten gesetzlichen Regelungen zur Arbeitszeit. 
+
+Allgemeine Arbeitszeitregelungen
+
+Die Nettoarbeitszeit (tatsächliche Arbeitszeit abzüglich Pausen) ist pro Arbeitnehmer:in auf acht Stunden pro Werktag beschränkt. An Sonn- und Feiertagen besteht für eine Vielzahl der Arbeitnehmenden Beschäftigungsverbot. 
+
+Arbeitszeiterfassung mit Excel: Das sind die Vor- und Nachteile!
+
+Gesetzliche Pausenzeiten
+
+Spätestens nach sechs Arbeitsstunden am Stück sind Arbeitnehmende dazu verpflichtet, eine Pause einzulegen. Bei einer Nettoarbeitszeit von sechs bis neun Stunden schreibt das Gesetz eine halbstündige Pause vor. Arbeitnehmenden, die mehr als neun Stunden beschäftigt werden, stehen insgesamt 45 Minuten Pause zu. Die Gesamtpausenzeit kann in 15-Minuten-Zeiträume unterteilt werden.
+
+Pausen korrekt erfassen und verwalten
+Employees can use Time Clock to record hours, no matter where they work. This gives accurate, reliable time entries and daily overviews.
+
+Definieren Sie pro Standort geeignete Richtlinien für die Arbeitszeitmodelle Ihrer Mitarbeitenden, einschließlich Regeln zur Höchstarbeitszeit, Pausen und Überstundengrenzen.
+
+Personio kostenlos testen
+Anforderungen an ununterbrochene Ruhezeiten
+
+Nach Absolvieren der werktäglichen Arbeitszeit müssen Arbeitnehmende eine ununterbrochene Ruhephase von mindestens 11 Stunden einhalten, bevor sie in den nächsten Arbeitstag starten dürfen. 
+
+In ausgewählten Branchen kann die Ruhezeit um je eine Stunde reduziert werden – unter der Bedingung, dass es innerhalb eines Kalendermonats zum Ausgleich kommt. Zu diesen Branchen gehören:
+
+Krankenhäuser und andere behandelnde, pflegende sowie betreuende Einrichtungen
+
+Gaststätten und andere Bewirtungs- und Beherbergungseinrichtungen
+
+Rundfunk
+
+Verkehrsbetriebe
+
+Landwirtschaft und Tierhaltung
+
+Lesetipp: Mehr Informationen zum Arbeitszeitgesetz!
+
+Vorteile der Verwendung eines Arbeitszeitrechners
+
+Die Verwendung eines Arbeitszeitrechners ist gesetzlich nicht vorgeschrieben; Unternehmen steht es demnach frei, weiterhin an ihren traditionellen Methoden zur Arbeitszeiterfassung festzuhalten. Allerdings gehen vor allem handschriftliche Aufzeichnungen mit einer potenziell höheren Fehleranfälligkeit einher. Bei Notizen, die „irgendwo“ in der Schreibtischschublade lagern, besteht zudem eine größere Gefahr, dass sie verloren gehen, in die falschen Hände geraten oder nicht zeitnah eingetragen werden. Ein digitaler Arbeitszeitrechner hingegen bestimmt die geleistete Arbeitszeit automatisiert, lesbar, sicher, zuverlässig. Davon profitieren Unternehmen in vielerlei Hinsicht:
+
+Gesetzeskonforme Arbeitszeiten: Überprüfen Sie auf einen Blick, ob die täglichen Arbeits-, Pausen- und Ruhezeiten eingehalten werden.
+
+Lückenlose Dokumentation: Der Arbeitszeitrechner ermittelt die täglichen Arbeitsstunden im Nu und ermöglicht Ihnen eine sofortige Übertragung der Daten in die Stundenzettel.
+
+Schutz der Arbeitnehmenden: Die vollumfängliche Dokumentation der täglichen Arbeitszeit zeigt, ob und wie oft Arbeitnehmende Überstunden leisten. 
+
+Einfache Lohnabrechnung: Werden Mitarbeitende pro Arbeitsstunde bezahlt, ist eine akkurate Bestimmung der täglichen Arbeitszeit unerlässlich. 
+
+Produktivität überprüfen: Durch die übersichtliche Auflistung der täglichen Arbeitszeiten pro Arbeitnehmer:in lassen sich Arbeitsrückstände schnell erkennen. 
+
+FAQ
+Wie viele Stunden sind 100 Prozent Arbeitszeit?
+
+Mitarbeitende, die in Vollzeit arbeiten, dürfen bei einer Sechs-Tage-Woche laut Gesetz bis zu 48 Stunden wöchentlich arbeiten. Diese 48 Wochenstunden sind dabei auf acht Stunden pro Werktag aufzuteilen. 
+
+Wie kann ich meine Arbeitszeit in Prozent berechnen?
+
+Mit einem Arbeitszeit in Prozent Rechner können Mitarbeitende einfach ermitteln, wie viel Prozent einer Vollzeitstelle sie tatsächlich arbeiten. Dafür teilen sie Ihre tatsächlich geleisteten Arbeitsstunden durch die vertraglich vereinbarte Regelarbeitszeit und multiplizieren das Ergebnis mit 100.
+
+Beispiel: Ein Mitarbeiter arbeitet 30 Stunden pro Woche, eine Vollzeitkraft im Unternehmen arbeitet 40 Stunden. Die Rechnung lautet: (30 / 40) x 100 = 75 %. Das bedeutet, der Mitarbeiter arbeitet 75 % einer Vollzeitstelle. Dieses Verfahren ist besonders hilfreich, wenn Mitarbeitende in Teilzeit arbeiten oder sie ihre wöchentliche Arbeitszeit flexibel gestalten möchten. Viele Arbeitszeitrechner online bieten diese Funktion automatisch an, sodass die Arbeitszeit in Prozent schnell und unkompliziert berechnet werden kann.
+
+Was gehört zur Arbeitszeit?
+
+Die Arbeitszeit beginnt in der Regel mit dem Betreten der Arbeitsstätte und endet mit dem Verlassen. Pausen zählen nicht zur Arbeitszeit. 
+
+Arbeitszeit berechnen: Wie kann man die Nettoarbeitszeit in Stunden und Minuten kalkulieren?
+
+Ein Arbeitszeitenrechner hilft dabei, die tägliche Nettoarbeitszeit in Stunden und Minuten zu erfassen. Zu diesem Zweck sind sowohl Arbeitsbeginn und -ende als auch die geleisteten Pausen anzugeben.
+
+Wie kann ich meine Wochenarbeitszeit berechnen?
+
+Um die Wochenarbeitszeit zu berechnen, addieren Sie einfach alle Arbeitsstunden, die Sie oder Beschäftigte an den einzelnen Arbeitstagen einer Woche leisten. Ziehen Sie dabei die Pausen ab, um die Netto-Arbeitszeit zu erhalten.
+
+Beispiel: Montag: 8 Stunden Dienstag: 7,5 Stunden Mittwoch: 8 Stunden Donnerstag: 7 Stunden Freitag: 7,5 Stunden Gesamt: 38 Stunden
+
+Mit einem Arbeitszeitrechner oder Stunden-Rechner können Sie diese Werte automatisch zusammenrechnen und auch Pausen sowie Überstunden berücksichtigen. So behalten Sie den Überblick über die tatsächliche Wochenarbeitszeit und können bei Bedarf auch die Berechnung der Arbeitszeit für mehrere Wochen vergleichen.
+
+Disclaimer
+
+Wir machen darauf aufmerksam, dass die Inhalte unserer Internetseite (auch etwaige Rechtsbeiträge) lediglich dem unverbindlichen Informationszweck dienen und keine Rechtsberatung im eigentlichen Sinne darstellen. Der Inhalt dieser Informationen kann und soll eine individuelle und verbindliche Rechtsberatung, die auf Ihre spezifische Situation eingeht, nicht ersetzen. Insofern verstehen sich alle bereitgestellten Informationen ohne Gewähr auf Richtigkeit, Vollständigkeit und Aktualität.
+
+Arbeitszeiten sicher erfassen
+So geht's mit Personio
+Personio unlocks the power of people.
+Unternehmen
+Über
+Jobs
+Personio Foundation
+Presse
+Informationen
+FAQ
+Datenschutz nach EU-DSGVO
+Implementierungsprozess
+Partnerprogramme
+Support
+Voyager Community
+Developer Hub
+Customer Advisory Board
+Rechtliches
+AGB
+Datenschutzerklärung
+Cookie-Einstellungen
+Impressum
+Lieferkette
+Site Map
+Social Media
+LinkedIn
+Facebook
+Instagram
+YouTube
+Noch kein Kunde?
++49 (0) 89 262 000 017
+Kontaktformular
+
+© 2026 PERSONIO SE & CO. KG

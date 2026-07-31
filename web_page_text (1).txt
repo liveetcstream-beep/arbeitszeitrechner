@@ -1,0 +1,413 @@
+Bis zu 70% auf 12 Monate sparen - mach' es wie 170.000 Kunden 00d 06h 25m 05s
+Funktionen
+Lösungen
+Preise
+Service
+Für Steuerberater
+Einloggen
+Kostenlos testen
+
+Arbeitszeit-Rechner 2026
+
+Berechne mit nur wenigen Klicks online deine tägliche Arbeitszeit.
+
+Mit unserem kostenlosen Arbeitszeitrechner kannst du als Arbeitnehmer, Selbstständiger oder Unternehmer deine Arbeitszeit schnell, unkompliziert und minutengenau berechnen. So behältst du immer den Überblick darüber, wie viele Stunden du tatsächlich gearbeitet hast, selbst bei einem flexiblen Arbeitszeitmodell. Deine Pausen werden dabei automatisch berücksichtigt.
+
+Für Selbstständige und Unternehmer ist der Rechner außerdem ideal, um die Zeiterfassung für einzelne Projekte zu vereinfachen, die Rentabilität einzelner Aufträge im Blick zu behalten und realistische Stundensätze zu kalkulieren. So weißt du immer genau, welche Tätigkeiten sich wirklich lohnen.
+
+Mein Arbeitsbeginn:
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+Uhr
+Mein Arbeitsende:
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+00
+01
+02
+03
+04
+05
+06
+07
+08
+09
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+Uhr
+Meine Pausen:
+min
+weitere Pause
+Deine Arbeitszeit:
+03:00
+Erledige deine Zeiterfassung ganz einfach mit sevdesk. Jetzt kostenlos testen!
+So funktioniert der Arbeitszeitrechner
+
+Für die Arbeitszeitberechnung brauchst du nur drei Infos:
+
+Arbeitsbeginn: Wann bzw. um welche Uhrzeit hast du mit der Arbeit begonnen?
+Arbeitsende: Wann bzw. um welche Uhrzeit hast du deine Arbeit beendet?
+Pausen: Wie lang waren deine Arbeitspausen?
+
+Deine Arbeitszeiten gibst du nun einfach oben in den Arbeitszeitrechner ein. Du kannst außerdem beliebig viele Pausenzeiten hinzufügen, ihre Dauer trägst du in Minuten ein. Hast du keine Pausen gemacht, weil du zum Beispiel weniger als 6 Stunden gearbeitet hast, lässt du das Feld einfach leer. Am Ende berechnet dir der Arbeitszeitrechner deine Nettoarbeitszeit (Bruttoarbeitszeit abzüglich der angegebenen Pausen).
+
+Arbeitszeit zu dezimal umrechnen
+
+Wenn du deine Arbeitszeiten addieren willst, um zum Beispiel deine Wochen- oder Monatsarbeitszeit zu ermitteln, brauchst du deine Arbeitsstunden in Dezimal-Schreibweise. Statt 7:30 Stunden solltest du in deiner Arbeitszeiterfassung in Excel oder in deinem Taschenrechner 7,5 eingeben. Du erhältst den Dezimal-Wert, indem du die Gesamtminuten deiner Arbeitszeit berechnest und durch 60 teilst. Hier ein paar Beispiele:
+
+Darstellung Stunden + Minuten	Dezimal	Berechnung
+7:30 Stunden	7,50 Stunden	450 Minuten / 60 = 7,50
+3:45 Stunden	3,75 Stunden	225 Minuten / 60 = 3,75
+6:15 Stunden	6,25 Stunden	375 Minuten / 60 = 6,25
+4:25 Stunden	4,42 Stunden	265 Minuten / 60 = 4,42
+2:55 Stunden	2,92 Stunden	175 Minuten / 60 = 2,92
+Wochenarbeitsstunden und Überstunden berechnen
+
+Mit unserem Arbeitszeitrechner kannst du außerdem schnell herausfinden, wie viele Stunden du in einer Woche tatsächlich gearbeitet hast und ob dabei Überstunden angefallen sind. Hierfür berechnest du einfach deine tägliche Arbeitszeit und addierst am Ende deine Stunden. 
+
+Beispiel:
+Montag:               8:00 - 16:30 (30 Min. Pause) = 8 h Arbeitszeit
+Dienstag:             9:00 - 17:00 (30 Min Pause) = 7,5 h Arbeitszeit
+Mittwoch:            8:30 - 17:30 (30 Min. Pause) = 8,5 h Arbeitszeit
+Donnerstag:        8:00 - 17:00 (30 Min. Pause) = 8,5 h Arbeitszeit
+Freitag:                8:00 - 16:30 (30 Min. Pause) = 8 h Arbeitszeit
+Gesamt:               40,5 Stunden
+
+Bei einer vertraglich vereinbarten Wochenarbeitszeit von 40 Stunden hättest du in dieser Arbeitswoche somit eine halbe Überstunde gemacht.
+
+‍
+
+Wie sind Arbeitszeiten gesetzlich geregelt?
+
+Bevor du deine Arbeitszeit richtig erfassen kannst, solltest du wissen, was man rechtlich darunter versteht. Die zentralen Vorschriften dazu stehen im Arbeitszeitgesetz (ArbZG). Ergänzungen und Ausnahmen finden sich in weiteren Gesetzen, zum Beispiel für Freiberufler oder Jugendliche. Für minderjährige Azubis oder Ferienjobber gelten insbesondere die Vorschriften aus §§ 8-19 JArbSchG (Jugendarbeitsschutzgesetz). Auch Tarifverträge können Einfluss auf die Arbeitszeiten und Pausenregelungen von Angestellten haben. 
+
+Die gesetzliche Definition der Arbeitszeit findest du in § 2 ArbZG. Sie legt fest, dass es sich dabei um „die Zeit vom Beginn bis zum Ende der Arbeit ohne die Ruhepausen“ handelt. Deine Arbeitszeit ist also ausschließlich die Zeit, in der du deiner Arbeitspflicht tatsächlich nachkommst (Nettoarbeitszeit).
+
+Hinzu kommt, dass die Arbeitszeiten bei mehreren Arbeitgebern zusammenzurechnen sind. Eine Stechuhr bei Arbeitgeber A erfasst natürlich nicht die Zeiten bei Arbeitgeber B oder umgekehrt. Die Zeiten musst du also separat erfassen und anschließend zusammenführen.
+
+Laut Gesetz darf deine tägliche Arbeitszeit 8 Stunden nicht überschreiten. Manchmal kann es aber sein, dass du bis zu 10 Stunden am Tag arbeitest. Diese Ausdehnung ist in Ordnung, solange die zusätzlichen Stunden in den nächsten 6 Monaten bzw. 24 Wochen ausgeglichen werden und du im Durchschnitt nicht mehr als 8 Stunden pro Werktag arbeitest. Als Werktage zählen die Tage von Montag bis Samstag. Somit darf deine wöchentliche Höchstarbeitszeit im Schnitt 48 Stunden (6 x 8 = 48) betragen.
+
+Gesetzliche Pausenzeiten
+
+Nicht zur Arbeitszeit zählen im Normalfall die Ruhepausen, die du nach bestimmten Regeln einlegen musst. Nach 6 Stunden Arbeit hast du Anspruch auf 30 Minuten Pause (und musst diese auch nehmen). Wenn dein Arbeitstag länger als 9 Stunden dauert, musst du mindestens 45 Minuten Pause machen. Ob du diese Pause am Stück machst oder auf mehrere kleine Pausen zu je 15 Minuten aufteilst, bleibt dir überlassen.
+
+Dazu gibt es allerdings eine Ausnahme, die ebenfalls in § 2 ArbZG festgelegt ist. Denn „im Bergbau unter Tage zählen die Ruhepausen zur Arbeitszeit.“
+
+Hast du einen Arbeitstag beendet, hast du zudem Anspruch auf eine 11-stündige, ununterbrochene Ruhezeit, bevor du wieder zur Arbeit gehst. In gewissen Branchen wie Krankenhäusern, Gastronomie, Beherbergungseinrichtungen, Verkehrsbetrieben oder dem Rundfunk kann diese Ruhezeit reduziert werden. Vorausgesetzt, du gleichst sie innerhalb eines Kalendermonats wieder aus.  
+
+Für Arbeitnehmer und Arbeitgeber ist es entscheidend, die tägliche Arbeitszeit korrekt zu berechnen. Zum einen geht es dabei um die Einhaltung der gesetzlichen Vorgaben (Arbeitszeitgesetz (ArbZG), Arbeitszeitverordnung) und zum anderen um die richtige Berechnung des Lohnes.
+
+Damit du dabei nicht lange hin und her rechnen musst, nutze für deine Arbeitszeitberechnung einfach unseren Online-Arbeitszeitrechner.
+
+FAQs zum Arbeitszeitrechner
+Ist die Arbeitszeiterfassung gesetzlich geregelt?
+
+Die Wichtigkeit der richtigen Arbeitszeiterfassung hat bereits im Mai 2019 der Europäische Gerichtshof (EuGH) dadurch unterstrichen, indem er in seinem Urteil (C-55/18) entschieden hat, dass alle Arbeitgeber der EU-Mitgliedstaaten ein System zur täglichen Arbeitszeiterfassung einrichten müssen.
+
+Wie genau Arbeitgeber die Zeiterfassung regeln müssen, ist bisher jedoch nicht gesetzlich geregelt. Dazu stehen unterschiedliche Möglichkeiten zur Verfügung. Angefangen von selbst geschriebenen Stundenzetteln, kostenlosen Stundenzettel-Vorlagen und eigens erstellten Excel-Tabellen über Stechuhren mit Lochkarten bis hin zu modernen, professionellen High-Tech-Lösungen. Letztere haben verschiedene positive Nebeneffekte, da sie sich problemlos mit der Lohnbuchhaltung verknüpfen lassen, wo die Arbeitszeit in die Lohnberechnung einfließt.
+
+Pausenregelungen: Zählen Pausen zur Arbeitszeit?
+
+Pausen zählen in der Regel nicht zur Arbeitszeit. Das gilt sowohl für Ruhepausen (nach § 4 ArbZG vorab festgelegte Zeiten, die sich nach der Gesamtarbeitszeit richten) als auch für Ruhezeiten (nach § 5 ArbZG die Pausen zwischen dem Arbeitsende und dem nächsten Arbeitsantritt, in der Regel 11 Stunden). 
+
+Was ist der Unterschied zwischen Ruhepausen und Ruhezeiten?
+
+Obwohl die Begriffe Ruhepause und Ruhezeit sehr ähnlich klingen, solltest du sie nicht synonym verwenden, da sie unterschiedliche Bedeutungen haben. Diese sind:
+
+Ruhepausen nach § 4 ArbZG sind vorab festgelegte Zeiten, die sich nach der Gesamtarbeitszeit richten. Gesetzliche Pausenzeiten sind bei einer Arbeitszeit von 6 bis 9 Stunden mindestens 30 Minuten. Wer länger als 9 Stunden arbeitet, dem stehen 45 Minuten zu. Diese Pausen dürfen am Stück genommen, aber auch in Zeitabschnitte von je 15 Minuten unterteilt werden. Es ist allerdings verboten, Arbeitnehmer länger als 6 Stunden ohne Pause arbeiten zu lassen.‍
+Ruhezeiten sind nach § 5 ArbZG die Pausen zwischen dem Arbeitsende und dem nächsten Arbeitsantritt. Eine ununterbrochene Ruhezeit von mindestens 11 Stunden ist die Regel. Doch auch hierfür gibt es in bestimmten Branchen Ausnahmen, beispielsweise in Krankenhäusern, nach denen diese Ruhezeit gekürzt und an anderer Stelle wieder ausgeglichen werden kann.
+Wie berechnet man die Arbeitszeit?
+
+Um deine tatsächlich geleistete Arbeitszeit zu berechnen, bestimmst du zunächst die Bruttoarbeitszeit inkl. Pausen aus der Anfangszeit und der Endzeit deiner täglichen Arbeit. Anschließend ziehst du davon deine gemachten Arbeitspausen ab. Das Ergebnis ist deine Nettoarbeitszeit ohne Ruhepausen gemäß § 2 ArbZG. Unser kostenloser Arbeitszeitrechner übernimmt das in Sekundenschnelle für dich. So sparst du Zeit und vermeidest Rechenfehler.
+
+Unterschied zwischen Netto- und Brutto-Arbeitszeit
+
+‍Die Brutto-Arbeitszeit bezeichnet die gesamte vertraglich vereinbarte Arbeitszeit eines Mitarbeitenden, also inklusive Pausen oder Zeiten, in denen nicht aktiv gearbeitet wird. Die Netto-Arbeitszeit hingegen umfasst nur die tatsächliche Arbeitszeit, in der produktiv gearbeitet wird – Pausen und Unterbrechungen sind hier bereits abgezogen.
+
+Wie hoch ist die tägliche Arbeitszeit?
+
+Nach dem Arbeitszeitgesetz (ArbZG) darf deine tägliche Arbeitszeit grundsätzlich 8 Stunden nicht überschreiten. Eine Verlängerung der Gesamtarbeitszeit auf bis zu 10 Stunden ist erlaubt, wenn innerhalb von 6 Monaten oder 24 Wochen ein Ausgleich erfolgt und der Durchschnitt wieder bei 8 Stunden pro Arbeitstag liegt. Bei anderen Arbeitszeitmodellen wie einer 75-%-Stelle oder einer Halbtagskraft verringert sich die tägliche Höchtsarbeitszeit entsprechend. Die tägliche Arbeitszeit berechnest du ganz leicht, indem du die Zeit von Arbeitsbeginn bis Arbeitsende summierst und davon deine Pausen abziehst.
+
+Wie hoch ist die Wochenarbeitszeit?
+
+Die wöchentliche Arbeitszeit ist in der Regel im Arbeitsvertrag festgelegt. Üblich sind z. B. eine 40-Stunden-Woche, eine 38,5-Stunden-Woche oder sogar eine 35-Stunden-Woche. Auf dieser Basis kannst du auch deine tägliche Arbeitszeit berechnen, indem du die Wochenstunden durch deine Arbeitstage teilst. Hast du beispielsweise eine 40-Stunden-Woche und arbeitest 5 Tage pro Woche, musst du pro Tag 8 Stunden arbeiten. Umgekehrt kannst du natürlich deine Arbeitsstunden einer Woche (ohne Pausen) addieren und erhältst dadurch deine geleistete Wochenarbeitszeit.
+
+Aber Vorsicht: Wenn in deinem Betrieb freitags nur bis 12 Uhr gearbeitet wird, darfst du keine 8 Stunden für den Freitag ansetzen. Damit du dennoch auf deine vertraglich vereinbarte wöchentliche Arbeitszeit kommst, musst du die fehlende Zeit von Montag bis Donnerstag vorarbeiten. Du arbeitest an diesen Tagen dann 9 Stunden anstelle der üblichen 8 Stunden.
+
+Wie hoch ist die monatliche Arbeitszeit?
+
+Deine monatliche Arbeitszeit hängt von deiner vertraglich vereinbarten Wochenarbeitszeit ab sowie von der Anzahl der Arbeits- und Feiertage im jeweiligen Monat. Hast du zum Beispiel eine 40-Stunden-Woche, ergibt sich daraus eine Monatsarbeitszeit zwischen 160 und 184 Stunden, sofern kein Feiertag auf einen Wochentag fällt. Bei einer Teilzeitstelle reduziert sich die monatliche Arbeit entsprechend.
+
+Die Berechnung der durchschnittlichen monatlichen Arbeitszeit ist relativ einfach:
+Wochenarbeitszeit x Wochenfaktor (4,33) = durchschnittliche Monatsarbeitszeit
+(Der Wochenfaktor 4,33 ergibt sich aus 52 Wochen / 12 Monate)
+
+Wie viele Stunden arbeite ich pro Jahr?
+
+Bei der Berechnung der Jahresarbeitszeit spielen gleich mehrere Faktoren eine Rolle. Neben der vereinbarten Wochenarbeitszeit musst du auch Urlaubstage, Krankentage sowie Feiertage in deiner Berechnung berücksichtigen.
+
+Beispiel: In einer 40-Stunden-Woche mit einem Feiertag kannst du beispielsweise nur an 4 Tagen deine vereinbarten  8 Stunden arbeiten, also nur 32 Stunden statt 40. Dadurch gerätst du aber nicht ins Minus, da an Feiertagen keine Arbeitszeit anfällt.
+
+Zudem musst du deine Urlaubstage (in der Regel zwischen 20 und 30 Tage) sowie die 52 Wochenenden mit 104 Tagen bei der Jahresberechnung abziehen. Erst so erhältst du die tatsächlich zu leistenden Arbeitstage und Arbeitsstunden pro Jahr.
+
+Mehr Details zur Berechnung und praktische Rechenbeispiele findest du in unserem Beitrag "Arbeitsstunden pro Jahr".
+
+Weitere hilfreiche Tools für deinen Business-Alltag
+Stundenlohn-Rechner
+
+Berechne deinen Stundenlohn mit wenigen Angaben.
+
+Zum Stundenlohn-Rechner
+→
+→
+Minijob Rechner
+
+Berechne schnell und einfach alle Minijob Abgaben
+
+Zum Minijob Rechner
+→
+→
+Alle Tools & Rechner
+
+Finde hier all unsere Tools & Rechner für deinen Business-Alltag
+
+Jetzt alle Tools nutzen
+→
+→
+Arbeitszeit einfach abrechnen mit dem sevdesk Rechnungs­programm
+
+Mit sevdesk erfasst du deine Arbeitszeit minutengenau und überträgst sie automatisch in deine Rechnungen. Für klare Abläufe und eine Abrechnung, die stimmt.
+
+Zeit starten oder eintragen: Minutengenau, mit Kategorien, Schlagworten und Notizen ohne Zeichenlimit
+Projekte und Kunden zuordnen: Auch mehrere Personen, Stundensätze und Mengen sind möglich
+Mit einem Klick in die Rechnung übernehmen: Alle Einträge werden automatisch als saubere, nachvollziehbare Positionen eingefügt
+sevdesk Zeiterfassung kennenlernen
+→
+→
+Bereits über 170.000 Gründer und Selbstständige vertrauen auf sevdesk für eine einfache Buchhaltung. Überzeuge dich selbst!
+sevdesk bietet viele weitere kostenlose Generatoren und Rechner
+AfA Abschreibungs­rechner
+Angebotsgenerator
+Cashflow Rechner
+Eigenbeleg Generator
+Einkommenssteuerrechner
+Firmennamen Generator
+Firmenwagenrechner
+Fristenrechner
+Gewerbeanmeldung online
+Gewerbesteuerrechner
+Kleinunternehmer-Rechner
+Margenrechner
+Mehrwertsteuerrechner
+Minijob Rechner
+PayPal Gebührenrechner
+Rechnungsgenerator
+ROI Rechner
+Skonto-Rechner
+Stundenlohnrechner
+Stundenrechner
+Umsatzsteuerrechner
+Werbungskostenrechner
+Teste alle Funktionen 14 Tage kostenlos.
+
+Jetzt starten
+Tarife vergleichen
+4,4
+OMR Reviews
+4,3
+Trusted
+Service & Support  → 
+Montag bis Freitag 08:00 - 17:00 Uhr
+
+Sag’ Tschüss zum Papierchaos und erhalte einen Einblick in die Software, mit der du deine Buchhaltung zentral an einem Ort übersichtlich und einfach erledigst.
+sevdesk
+Karriere
+Presse
+Partner werden
+Impressum
+AGB
+Datenschutz
+Lösungen
+Buch­haltungs­software
+Rechnungs­programm
+E‑Rechnung Software
+Rechnungs­programm Kleinunternehmer
+Buch­haltungs­software Freiberufler
+Produktübersicht
+Integrationen
+API – Offene Schnittstelle
+Ressourcen
+E‑Rechnung erstellen
+E‑Rechnung Viewer
+Rechnung schreiben
+Rechnungsvorlage
+E‑Rechnung Software Vergleich
+Steuerspartipps
+Gründerwelt
+Sitemap
+Service
+Ratgeber
+Lexikon
+Blog
+Webinare
+Hilfecenter
+Wechsel zu sevdesk
+Steuerberater suchen
+Steuerberaterportal
+GmbH & UG online gründen
+Produktdemo
+© 2026 sevdesk
+Made with ❤️ in Offenburg
+Deutschland
