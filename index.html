@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arbeitszeitrechner 2026 – Kostenlos & Minutengenau | arbeitszeitrechner365.de</title>
+  <meta name="description" content="Arbeitszeit sofort kostenlos berechnen – mit automatischer Pausenregelung nach ArbZG, Dezimalstunden, Überstunden &amp; Wochenübersicht. Kein Login. DSGVO-konform. Jetzt rechnen!">
+  <meta name="keywords" content="Arbeitszeitrechner, Arbeitszeit berechnen, Pausenregelung ArbZG, Dezimalstunden umrechnen, Überstundenrechner, Stundenzettel, Zeiterfassung online, 2026">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://arbeitszeitrechner365.de/">
+  <meta name="theme-color" content="#2c4a6f">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://arbeitszeitrechner365.de/">
+  <meta property="og:title" content="Arbeitszeitrechner 2026 – Kostenlos &amp; Minutengenau">
+  <meta property="og:description" content="Kostenloser Online-Arbeitszeitrechner mit gesetzlicher Pausenberechnung nach § 4 ArbZG, Dezimalstunden-Umrechnung und Wochenübersicht.">
+  <meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Arbeitszeitrechner 2026 – Kostenlos &amp; Minutengenau">
+  <meta name="twitter:description" content="Arbeitszeit sofort berechnen mit automatischer Pausenregelung, Dezimalstunden &amp; Überstunden.">
+
+  <!-- Favicon SVG -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z'/></svg>">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- JSON-LD Structured Data (WebApplication) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Arbeitszeitrechner 365",
+    "url": "https://arbeitszeitrechner365.de/",
+    "description": "Kostenloser Online Arbeitszeitrechner für Deutschland mit gesetzlicher Pausenregelung (ArbZG), Dezimalstunden und Wochenübersicht.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD Structured Data (FAQPage) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie funktioniert der Arbeitszeitrechner?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Geben Sie Arbeitsbeginn und Arbeitsende ein. Der Rechner berechnet automatisch die Bruttoarbeitszeit und zieht gesetzliche Pausenzeiten nach § 4 ArbZG ab."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Welche Pausenzeiten sind gesetzlich vorgeschrieben?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Nach § 4 ArbZG gelten: Bei 6-9 Std Arbeitszeit min. 30 Minuten Pause; bei über 9 Std min. 45 Minuten Pause."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Wie rechne ich Stunden in Dezimalstunden um?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Teilen Sie die Minuten durch 60. Beispiel: 7 Stunden 30 Minuten = 7 + (30/60) = 7,50 Dezimalstunden."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="#rechner">Rechner</a></li>
+          <li><a href="#anleitung">Funktionsweise</a></li>
+          <li><a href="#pausenregelung">Pausen (ArbZG)</a></li>
+          <li><a href="#dezimalstunden">Dezimalstunden</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#rechner" class="header-cta">Jetzt berechnen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="badge-pill">⚡ Kostenlos &amp; Minutengenau 2026</div>
+      <h1 class="hero-title">Arbeitszeitrechner – Arbeitszeit kostenlos &amp; minutengenau berechnen</h1>
+      <p class="hero-subtitle">Ihr kostenloser Online-Arbeitszeitrechner für Deutschland 2026. Einfach Arbeitsbeginn, Arbeitsende und Pausenzeiten eingeben – der Rechner berechnet sofort Ihre tatsächliche Netto-Arbeitszeit, Überstunden und Dezimalstunden. **Kein Login. Keine App. Sofort nutzbar.**</p>
+      
+      <div class="hero-trust-badges">
+        <span class="trust-item">✅ 100% Kostenlos</span>
+        <span class="trust-item">🔒 DSGVO-konform</span>
+        <span class="trust-item">⚡ Sofort-Ergebnis</span>
+        <span class="trust-item">🇩🇪 Nach § 4 ArbZG</span>
+        <span class="trust-item">📱 Mobil optimiert</span>
+      </div>
+    </section>
+
+    <!-- CALCULATOR WIDGET SECTION -->
+    <section id="rechner" class="calculator-section">
+      <div class="calculator-card">
+        <!-- Tab Header -->
+        <div class="calc-tabs" role="tablist">
+          <button class="tab-btn active" data-tab="tab-daily" role="tab" aria-selected="true">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Tägliche Arbeitszeit
+          </button>
+          <button class="tab-btn" data-tab="tab-weekly" role="tab" aria-selected="false">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Wochenübersicht
+          </button>
+          <button class="tab-btn" data-tab="tab-monthly" role="tab" aria-selected="false">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            Dezimal &amp; Monatsrechner
+          </button>
+        </div>
+
+        <div class="calc-content">
+          <!-- TAB 1: DAILY -->
+          <div id="tab-daily" class="tab-pane active" role="tabpanel">
+            <div class="calc-grid">
+              <!-- Left Form Inputs -->
+              <div class="calc-form-side">
+                <div class="form-section-title">
+                  <span>⏰ Zeiten &amp; Pausen eingeben</span>
+                </div>
+
+                <!-- Presets chips -->
+                <div class="presets-container">
+                  <span class="preset-chip" data-start="09:00" data-end="17:30" data-pause="30">9–17:30 Uhr (30m Pause)</span>
+                  <span class="preset-chip" data-start="08:00" data-end="16:30" data-pause="30">8–16:30 Uhr (30m Pause)</span>
+                  <span class="preset-chip" data-start="07:30" data-end="16:00" data-pause="30">7:30–16 Uhr (30m Pause)</span>
+                  <span class="preset-chip" data-start="22:00" data-end="06:00" data-pause="45">22–06 Uhr (Nachtschicht)</span>
+                </div>
+
+                <div class="input-row">
+                  <div class="input-group">
+                    <label for="daily-start">🟢 Arbeitsbeginn:</label>
+                    <input type="time" id="daily-start" class="input-field" value="08:00">
+                  </div>
+                  <div class="input-group">
+                    <label for="daily-end">🔴 Arbeitsende:</label>
+                    <input type="time" id="daily-end" class="input-field" value="17:00">
+                  </div>
+                </div>
+
+                <div class="input-row">
+                  <div class="input-group">
+                    <label for="daily-target">🎯 Sollarbeitszeit (Std):</label>
+                    <input type="time" id="daily-target" class="input-field" value="08:00">
+                  </div>
+                </div>
+
+                <!-- Dynamic Breaks -->
+                <div style="margin-top: 1rem;">
+                  <label style="font-size: 0.875rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">☕ Pausenzeiten (Dauer in Minuten):</label>
+                  <div id="breaks-list" class="breaks-list">
+                    <div class="break-item">
+                      <label style="font-size: 0.8rem; min-width: 65px; color: var(--text-muted);">1. Pause:</label>
+                      <input type="number" class="input-field break-min-input" value="30" min="0" max="240" step="5" placeholder="Min.">
+                      <span style="font-size: 0.85rem; color: var(--text-dim);">Minuten</span>
+                    </div>
+                  </div>
+                  <button type="button" id="add-break-btn" class="add-break-btn">+ Weitere Pause hinzufügen</button>
+                </div>
+
+                <!-- Checkbox -->
+                <label class="checkbox-option">
+                  <input type="checkbox" id="auto-break">
+                  <div>
+                    <span class="checkbox-option-text">Gesetzliche Pausen automatisch berechnen</span>
+                    <span class="checkbox-option-sub">30 Min. bei 6–9 Std. • 45 Min. bei &gt;9 Std. (nach ArbZG §4)</span>
+                  </div>
+                </label>
+              </div>
+
+              <!-- Right Results Output -->
+              <div class="calc-result-side">
+                <div class="result-card">
+                  <div class="result-header">
+                    <div class="result-title">Ergebnis der Berechnung</div>
+                  </div>
+
+                  <div class="big-result-box">
+                    <div id="res-net-val" class="big-result-val">8:30 Std.</div>
+                    <div id="res-dec-val" class="big-result-decimal">= 8,50 Stunden (Dezimal)</div>
+                  </div>
+
+                  <div class="result-breakdown">
+                    <div class="stat-box">
+                      <div class="stat-label">Bruttozeit</div>
+                      <div id="res-gross-val" class="stat-val">9:00 h</div>
+                    </div>
+                    <div class="stat-box">
+                      <div class="stat-label">Pausen (Gesamt)</div>
+                      <div id="res-pause-val" class="stat-val">30 Min.</div>
+                    </div>
+                  </div>
+
+                  <div class="stat-box" style="background: rgba(37, 99, 235, 0.15); border-color: var(--border-glow);">
+                    <div class="stat-label">Überstunden / Saldo</div>
+                    <div id="res-overtime-val" class="stat-val" style="color: #34d399; font-size: 1.3rem;">+0:30 h</div>
+                  </div>
+
+                  <div id="legal-status-box" class="legal-status-indicator ok">
+                    ✅ Konform mit ArbZG §4 (Gesetzliche Pausen eingehalten)
+                  </div>
+
+                  <div class="action-buttons-group">
+                    <button type="button" id="copy-daily-btn" class="btn-secondary">📋 Kopieren</button>
+                    <button type="button" id="print-daily-btn" class="btn-secondary">🖨️ Drucken</button>
+                    <button type="button" id="reset-daily-btn" class="btn-secondary">🔄 Reset</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: WEEKLY -->
+          <div id="tab-weekly" class="tab-pane" role="tabpanel">
+            <div class="weekly-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+              <div>
+                <h3 style="font-size: 1.1rem; font-weight: 700;">Wochenarbeitszeit &amp; Überstunden berechnen</h3>
+                <p style="font-size: 0.875rem; color: var(--text-muted);">Erfassen Sie Ihre täglichen Schichten von Montag bis Sonntag</p>
+              </div>
+              <div style="display: flex; gap: 0.5rem;">
+                <button type="button" id="copy-mon-btn" class="btn-secondary">⚡ Mo auf Mo–Fr übertragen</button>
+                <button type="button" id="export-weekly-csv" class="btn-secondary">📥 CSV Export</button>
+              </div>
+            </div>
+
+            <div class="weekly-table-container">
+              <table class="weekly-table">
+                <thead>
+                  <tr>
+                    <th>Wochentag</th>
+                    <th>Beginn</th>
+                    <th>Ende</th>
+                    <th>Pause (Min)</th>
+                    <th>Nettoarbeitszeit</th>
+                  </tr>
+                </thead>
+                <tbody id="weekly-inputs-body">
+                  <!-- Rows injected via JS -->
+                </tbody>
+              </table>
+            </div>
+
+            <div class="calc-grid" style="grid-template-columns: 1fr 1fr; margin-top: 1.5rem;">
+              <div class="input-group">
+                <label for="weekly-target-hours">🎯 Sollarbeitszeit der Woche (Stunden):</label>
+                <input type="number" id="weekly-target-hours" class="input-field" value="40" min="0" max="80">
+              </div>
+
+              <div class="result-card" style="padding: 1rem 1.25rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Wochensumme Netto:</span>
+                  <span id="w-total-net" style="font-size: 1.5rem; font-weight: 800; color: #60a5fa;">40:00 Std.</span>
+                </div>
+                <div id="w-total-dec" style="font-size: 0.85rem; color: var(--accent-green); text-align: right;">= 40,00 Dezimalstunden</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 0.5rem; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
+                  <span style="font-size: 0.85rem; color: var(--text-muted);">Überstunden Saldo:</span>
+                  <span id="w-overtime-balance" style="font-weight: 700; color: #34d399; font-size: 1.1rem;">+0:00 h</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: MONTHLY & DECIMAL CONVERTER -->
+          <div id="tab-monthly" class="tab-pane" role="tabpanel">
+            <div class="calc-grid" style="grid-template-columns: 1fr 1fr;">
+              <!-- Left: Time to Decimal Converter -->
+              <div class="content-block" style="padding: 1.5rem; margin-bottom: 0;">
+                <h3 class="section-h3" style="margin-top: 0;">🔄 Stunden &amp; Minuten ↔ Dezimalstunden</h3>
+                <p style="font-size: 0.875rem;">Konvertieren Sie Zeiten schnell für die Lohnabrechnung oder Excel.</p>
+                
+                <div class="input-group" style="margin-bottom: 1rem;">
+                  <label for="conv-time-str">Zeit eingeben (z.B. 7:30):</label>
+                  <input type="text" id="conv-time-str" class="input-field" placeholder="7:30" value="7:30">
+                  <span id="conv-time-res" style="font-weight: 700; color: #60a5fa; margin-top: 0.25rem;">7,50 Dezimalstunden</span>
+                </div>
+
+                <div class="input-group" style="margin-top: 1.5rem;">
+                  <label for="conv-dec-val">Dezimalstunden eingeben (z.B. 8.25):</label>
+                  <input type="text" id="conv-dec-val" class="input-field" placeholder="8.25" value="8.25">
+                  <span id="conv-dec-res" style="font-weight: 700; color: var(--accent-green); margin-top: 0.25rem;">8 Std 15 Min (Stunden:Minuten)</span>
+                </div>
+              </div>
+
+              <!-- Right: Monthly Hours Estimator -->
+              <div class="content-block" style="padding: 1.5rem; margin-bottom: 0;">
+                <h3 class="section-h3" style="margin-top: 0;">📅 Monatliche Arbeitszeit schätzen</h3>
+                <p style="font-size: 0.875rem;">Berechnen Sie Ihre durchschnittlichen Monatsstunden basierend auf Wochenstunden.</p>
+
+                <div class="input-group" style="margin-bottom: 1rem;">
+                  <label for="conv-weekly-hrs">Vertragliche Wochenstunden:</label>
+                  <input type="number" id="conv-weekly-hrs" class="input-field" value="40" min="1" max="60">
+                </div>
+
+                <div class="input-group" style="margin-bottom: 1.25rem;">
+                  <label for="conv-week-factor">Wochenfaktor:</label>
+                  <select id="conv-week-factor" class="input-field">
+                    <option value="4.35" selected>4,35 (Tariflicher Standard 2026)</option>
+                    <option value="4.33">4,33 (52 Wochen / 12 Monate)</option>
+                  </select>
+                </div>
+
+                <div class="stat-box" style="background: rgba(37, 99, 235, 0.15); border-color: var(--border-glow); padding: 1rem;">
+                  <div class="stat-label">Durchschnittliche Monatsstunden:</div>
+                  <div id="conv-monthly-res" class="stat-val" style="color: #60a5fa; font-size: 1.5rem;">174,0 h / Monat</div>
+                  <div id="conv-yearly-res" style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.25rem;">2080 h / Jahr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 1: HOW IT WORKS -->
+    <section id="anleitung" class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">So funktioniert der Arbeitszeitrechner – In 3 einfachen Schritten</h2>
+        <p>Unser Arbeitszeitrechner 2026 ist bewusst einfach gehalten: Keine Registrierung, keine Apps, keine versteckten Kosten. In drei Schritten erhalten Sie Ihre exakte Arbeitszeit nach deutschem Recht.</p>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">1️⃣</span>
+            <h3 class="feature-title">Arbeitsbeginn &amp; Arbeitsende eingeben</h3>
+            <p class="feature-desc">Tragen Sie Ihre Startzeit und Endzeit ein. Unser Rechner akzeptiert sowohl 12-Stunden- als auch 24-Stunden-Formate. Bei Nachtschichten über Mitternacht (z.B. 22:00 – 06:00 Uhr) erkennt der Rechner den Tageswechsel automatisch.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">2️⃣</span>
+            <h3 class="feature-title">Pausenzeiten definieren</h3>
+            <p class="feature-desc">Geben Sie Pausen manuell in Minuten ein (bis zu 4 Pausen). Oder aktivieren Sie <strong>„Gesetzliche Pausen automatisch berechnen“</strong>, um die Mindestpausen nach § 4 ArbZG anzuwenden.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">3️⃣</span>
+            <h3 class="feature-title">Sofort-Ergebnis erhalten</h3>
+            <p class="feature-desc">Sie sehen Ihre Nettoarbeitszeit (tatsächlich geleistete Arbeitszeit ohne Pausen), Dezimalstunden für Lohnabrechnungen sowie eventuelle Überstunden in Echtzeit auf einen Blick.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 2: LEGAL PAUSE RULES -->
+    <section id="pausenregelung" class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Gesetzliche Pausenzeiten 2026 – Was das Arbeitszeitgesetz vorschreibt</h2>
+        <p>Das <strong>Arbeitszeitgesetz (ArbZG)</strong> schützt alle Arbeitnehmer in Deutschland vor übermäßiger Belastung. Die Pausenregelungen sind in <strong>§ 4 ArbZG</strong> klar geregelt und gelten für Voll- und Teilzeitkräfte, Minijobber, Schichtarbeiter sowie für das Homeoffice gleichermaßen.</p>
+
+        <h3 class="section-h3">Übersichtstabelle – Gesetzliche Pausenzeiten nach § 4 ArbZG</h3>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Arbeitszeit (Netto)</th>
+                <th>Gesetzliche Mindestpause</th>
+                <th>Beispielrechnung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bis 6 Stunden</td>
+                <td>Keine Pause erforderlich</td>
+                <td>4h Arbeit = 4,0h netto</td>
+              </tr>
+              <tr>
+                <td>6 bis 9 Stunden</td>
+                <td>Mindestens <strong>30 Minuten</strong></td>
+                <td>8h brutto – 30 min = <strong>7,5h netto</strong></td>
+              </tr>
+              <tr>
+                <td>Über 9 Stunden</td>
+                <td>Mindestens <strong>45 Minuten</strong></td>
+                <td>10h brutto – 45 min = <strong>9,25h netto</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="legal-callout">
+          <strong>Wichtige Regeldetails nach § 4 ArbZG:</strong> Pausen dürfen nicht am Anfang oder Ende der Arbeitszeit liegen. Die kleinste zulässige Pauseneinheit beträgt 15 Minuten. Es ist gesetzlich verboten, Arbeitnehmer länger als 6 Stunden am Stück ohne Ruhepause arbeiten zu lassen.
+        </div>
+
+        <h3 class="section-h3">Unterschied zwischen Ruhepausen und Ruhezeiten</h3>
+        <p><strong>Ruhepausen (§ 4 ArbZG)</strong> sind die Arbeitsunterbrechungen <em>während</em> des Arbeitstages. <strong>Ruhezeiten (§ 5 ArbZG)</strong> beschreiben die ununterbrochene Erholungsphase <em>zwischen</em> zwei Arbeitstagen. Die gesetzliche Mindestruhezeit beträgt <strong>11 Stunden</strong>. Wer bis 22:00 Uhr arbeitet, darf erst ab 09:00 Uhr des Folgetags wieder arbeiten.</p>
+
+        <h3 class="section-h3">Was zählt zur Arbeitszeit – und was nicht?</h3>
+        <ul>
+          <li><strong>Zählt als Arbeitszeit:</strong> Reisezeiten auf Anweisung des Arbeitgebers, Bereitschaftsdienst mit Anwesenheitspflicht, Vor- und Nachbereitungszeiten, Pflichtschulungen.</li>
+          <li><strong>Zählt NICHT als Arbeitszeit:</strong> Ruhepausen, der reguläre Arbeitsweg (Pendeln), Rufbereitschaft ohne Einsatz, private Tätigkeiten.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 3: MONTHLY REFERENCE TABLE -->
+    <section class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Monatliche &amp; Jährliche Arbeitsstunden – Schnelle Referenztabelle 2026</h2>
+        <p>Die durchschnittliche Monatsarbeitszeit berechnet sich nach der Formel: <strong>Wöchentliche Arbeitszeit × 4,35 (Wochenfaktor) = Monatsstunden</strong>.</p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Wochenstunden</th>
+                <th>Monatsstunden Ø</th>
+                <th>Jahresstunden Ø</th>
+                <th>Beschäftigungsart</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>20 Stunden</td><td>86,7 h</td><td>1.040 h</td><td>Teilzeit (50%)</td></tr>
+              <tr><td>25 Stunden</td><td>108,5 h</td><td>1.300 h</td><td>Teilzeit (62,5%)</td></tr>
+              <tr><td>30 Stunden</td><td>130,5 h</td><td>1.560 h</td><td>Teilzeit (75%)</td></tr>
+              <tr><td>35 Stunden</td><td>152,3 h</td><td>1.820 h</td><td>Teilzeit / Vollzeit</td></tr>
+              <tr><td>38,5 Stunden</td><td>167,5 h</td><td>2.002 h</td><td>TVöD Länder</td></tr>
+              <tr><td>39 Stunden</td><td>169,7 h</td><td>2.028 h</td><td>TVöD Bund/Kommunen</td></tr>
+              <tr><td>40 Stunden</td><td>173,3 h</td><td>2.080 h</td><td>Vollzeit Standard</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 4: DECIMAL HOURS -->
+    <section id="dezimalstunden" class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Dezimalstunden &amp; Industrieminuten Rechner – Stunden in Kommazahlen umrechnen</h2>
+        <p>Viele Lohnabrechnungsprogramme, Stundennachweise und Controlling-Systeme verwenden <strong>Dezimalstunden</strong> statt des klassischen Stunden:Minuten-Formats. Unser Rechner zeigt beide Formate parallel an.</p>
+
+        <h3 class="section-h3">Umrechnungstabelle – Minuten in Dezimalstunden</h3>
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Minuten</th>
+                <th>Dezimalstunden</th>
+                <th>Berechnung</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>15 Minuten</td><td>0,25 Std.</td><td>15 ÷ 60 = 0,25</td></tr>
+              <tr><td>30 Minuten</td><td>0,50 Std.</td><td>30 ÷ 60 = 0,50</td></tr>
+              <tr><td>45 Minuten</td><td>0,75 Std.</td><td>45 ÷ 60 = 0,75</td></tr>
+              <tr><td>7 Std. 30 Min.</td><td>7,50 Std.</td><td>450 ÷ 60 = 7,50</td></tr>
+              <tr><td>3 Std. 45 Min.</td><td>3,75 Std.</td><td>225 ÷ 60 = 3,75</td></tr>
+              <tr><td>8 Std. 15 Min.</td><td>8,25 Std.</td><td>495 ÷ 60 = 8,25</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 class="section-h3">Was sind Industrieminuten?</h3>
+        <p>Industrieminuten sind eine dezimale Zeitdarstellung, bei der eine Stunde in <strong>100 Teile</strong> unterteilt wird. Eine Industrieminute entspricht <strong>0,6 normalen Minuten</strong>.</p>
+        <p><strong>Beispiel:</strong> 7 Stunden 30 Minuten = <strong>7,50 Dezimalstunden</strong> = <strong>750 Industrieminuten</strong>.</p>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 5: USE CASES -->
+    <section class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Für wen ist der Arbeitszeitrechner geeignet?</h2>
+        
+        <div class="features-grid">
+          <div class="feature-card">
+            <span class="feature-icon">💼</span>
+            <h3 class="feature-title">Arbeitnehmer in Vollzeit</h3>
+            <p class="feature-desc">Behalten Sie täglich im Blick, ob Sie Ihre vertragliche Wochenarbeitszeit einhalten. Erkennen Sie Überstunden sofort und dokumentieren Sie diese lückenlos.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🌙</span>
+            <h3 class="feature-title">Schichtarbeiter &amp; Nachtarbeit</h3>
+            <p class="feature-desc">Unser Rechner erkennt Nachtschichten über Mitternacht (z.B. 22:00 bis 06:00 Uhr) automatisch. Inklusive Hinweisen zu gesetzlichen Nachtarbeitszuschlägen.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">⏱️</span>
+            <h3 class="feature-title">Teilzeitkräfte &amp; Minijobber</h3>
+            <p class="feature-desc">Der Rechner funktioniert für jede Schichtlänge – auch für kurze Teilzeitschichten von 2–4 Stunden. Ab 6 Stunden gilt auch für Minijobber die Pausenpflicht.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🚀</span>
+            <h3 class="feature-title">Freelancer &amp; Selbstständige</h3>
+            <p class="feature-desc">Erfassen Sie exakte Projektarbeitszeiten, kalkulieren Sie Stundensätze realistisch und behalten Sie die Profitabilität einzelner Aufträge im Blick.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🏢</span>
+            <h3 class="feature-title">Arbeitgeber &amp; HR-Abteilungen</h3>
+            <p class="feature-desc">Seit dem BAG-Urteil von 2022 sind Arbeitgeber zur systematischen Zeiterfassung verpflichtet. Unser Rechner ist ideal für schnelle Kontrollen von Schichten.</p>
+          </div>
+
+          <div class="feature-card">
+            <span class="feature-icon">🏛️</span>
+            <h3 class="feature-title">TVöD im öffentlichen Dienst</h3>
+            <p class="feature-desc">Berücksichtigt die Tarifarbeitszeiten des öffentlichen Dienstes (39h/Woche bei TVöD Bund/Kommunen, 38.5h bei TV-L) mit 30 Tagen Urlaubsanspruch.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 6: OVERTIME & HOMEOFFICE -->
+    <section class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Überstunden &amp; Zeiterfassung im Homeoffice (BAG-Urteil 2022)</h2>
+        
+        <h3 class="section-h3">Überstunden berechnen – So funktioniert's</h3>
+        <p>Überstunden entstehen, wenn Ihre tatsächlich geleistete Nettoarbeitszeit Ihre vertraglich vereinbarte Sollarbeitszeit überschreitet.</p>
+        <p><strong>Formel:</strong> Tatsächliche Nettoarbeitszeit – Sollarbeitszeit = <strong>Überstunden</strong></p>
+        <p><strong>Praxisbeispiel:</strong> Sollarbeitszeit 8,0h • Tatsächlich 9h 15m (9,25h) • <strong>Überstunden: +1 Stunde 15 Minuten (+1,25h)</strong>.</p>
+
+        <h3 class="section-h3">Arbeitszeiterfassung im Homeoffice – Was gilt seit dem BAG-Urteil 2022?</h3>
+        <p>Das Arbeitszeitgesetz (ArbZG) gilt uneingeschränkt auch für das Homeoffice und mobiles Arbeiten. Das <strong>BAG-Urteil vom 13. September 2022</strong> (Az. 1 ABR 22/21) stellte klar: Arbeitgeber sind gesetzlich verpflichtet, ein System einzurichten, mit dem die geleistete Arbeitszeit erfasst werden kann. Dies gilt auch bei Vertrauensarbeitszeit. Aufzeichnungen sollten mindestens <strong>2 Jahre</strong> aufbewahrt werden.</p>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 7: PAIN POINTS SOLVED -->
+    <section class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Kennen Sie diese Probleme? – Wir haben die Lösung.</h2>
+        
+        <ul style="list-style: none; margin-left: 0;">
+          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <strong style="color: #60a5fa;">❓ Pain Point 1: Das Rätsel der tatsächlichen Arbeitszeit</strong><br>
+            Es ist 17:15 Uhr. Sie haben um 08:00 Uhr begonnen. Aber wie lange haben Sie <em>wirklich</em> gearbeitet? Unser Rechner zieht Pausen automatisch ab und zeigt Ihnen das exakte Ergebnis in Sekunden.
+          </li>
+          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <strong style="color: #60a5fa;">❓ Pain Point 2: Überstunden unbezahlt geleistet</strong><br>
+            Ohne exakte Dokumentation gehen Überstunden schnell verloren. Mit unserer Wochenübersicht erfassen Sie Arbeitsstunden lückenlos für Ihren Freizeitausgleich oder Lohnnachweis.
+          </li>
+          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <strong style="color: #60a5fa;">❓ Pain Point 3: Falsche Gehaltsabrechnung bei Stundenlohn</strong><br>
+            Bei Abrechnung auf Stundenbasis führen Umrechnungsfehler zu Einkommensverlusten. Unser Rechner liefert exakte Dezimalstunden für die Lohnbuchhaltung.
+          </li>
+          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
+            <strong style="color: #60a5fa;">❓ Pain Point 4: Gesetzliche Pausen vergessen</strong><br>
+            Wer Pausenvorgaben missachtet, riskiert Verstöße gegen das ArbZG. Die automatische Pausenfunktion schützt Sie vor bösen Überraschungen.
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 8: EEAT & TRUST -->
+    <section class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Über diesen Arbeitszeitrechner – Transparenz &amp; Vertrauen (E-E-A-T)</h2>
+        <p>Alle rechtlichen Inhalte und Berechnungsformeln auf dieser Seite basieren auf den aktuellen Fassungen des deutschen <strong>Arbeitszeitgesetzes (ArbZG)</strong>, den Veröffentlichungen des <strong>Bundesministeriums für Arbeit und Soziales (BMAS)</strong> sowie wegweisenden Urteilen des <strong>Bundesarbeitsgerichts (BAG)</strong>.</p>
+        
+        <h3 class="section-h3">Verlinkte offizielle Rechtsquellen:</h3>
+        <ul>
+          <li><a href="https://www.bmas.de" target="_blank" rel="noopener">Bundesministerium für Arbeit und Soziales (BMAS)</a></li>
+          <li><a href="https://www.gesetze-im-internet.de/arbzg/" target="_blank" rel="noopener">Arbeitszeitgesetz (ArbZG) – Offizieller Gesetzestext</a></li>
+          <li><a href="https://www.arbeitsagentur.de" target="_blank" rel="noopener">Bundesagentur für Arbeit – Arbeitsverträge &amp; Rechte</a></li>
+          <li><a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener">Bundesarbeitsgericht (BAG) – Rechtsprechung zur Zeiterfassung</a></li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- CONTENT SECTION 9: FAQ BLOCK (13 FAQs) -->
+    <section id="faq" class="content-container">
+      <article class="content-block">
+        <h2 class="section-h2">Häufige Fragen zum Arbeitszeitrechner – Alle Antworten auf einen Blick</h2>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item active">
+            <button class="faq-question">
+              <span>❓ Wie funktioniert der Arbeitszeitrechner?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Geben Sie Arbeitsbeginn (z.B. 08:00 Uhr) und Arbeitsende (z.B. 17:30 Uhr) ein. Das Tool berechnet automatisch die Bruttoarbeitszeit und zieht gesetzlich vorgeschriebene Pausenzeiten nach § 4 ArbZG ab. Das Ergebnis erhalten Sie als Nettoarbeitszeit in Stunden:Minuten sowie in Dezimalstunden.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Welche Pausenzeiten sind gesetzlich vorgeschrieben?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nach § 4 ArbZG gilt: Bei 6 bis 9 Stunden Arbeit müssen mindestens 30 Minuten Pause gemacht werden. Bei mehr als 9 Stunden Arbeit erhöht sich die Pflichtpause auf mindestens 45 Minuten. Pausen können in Abschnitte von mindestens 15 Minuten aufgeteilt werden.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Kann ich mit dem Rechner Überstunden berechnen?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ja! Geben Sie Ihre tatsächliche Arbeitszeit ein und vergleichen Sie das Ergebnis mit Ihrer vertraglichen Sollarbeitszeit. Die Differenz wird als Überstundensaldo ausgewiesen.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Wie rechne ich Stunden in Dezimalstunden um?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Teilen Sie die Minuten durch 60. Beispiel: 15 Minuten = 0,25 Dezimalstunden • 30 Minuten = 0,50 • 45 Minuten = 0,75. 7 Stunden 45 Minuten entsprechen 7,75 Dezimalstunden.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Funktioniert der Rechner auch für Nachtschichten?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ja, der Rechner erkennt Nachtschichten über Mitternacht automatisch. Wenn Sie z.B. 22:00 Uhr als Beginn und 06:00 Uhr als Ende eingeben, werden korrekt 8 Stunden berechnet.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Wie viele Arbeitsstunden hat ein Monat bei Vollzeit?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Bei einer 40-Stunden-Woche ergeben sich durchschnittlich 173,3 bis 174,0 Arbeitsstunden pro Monat (Formel: 40 × 4,35). Bei einer 39-Stunden-Woche (TVöD) sind es ca. 169,7 Stunden/Monat.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Was ist der Unterschied zwischen Brutto- und Nettoarbeitszeit?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Bruttoarbeitszeit ist die gesamte Zeit von Arbeitsbeginn bis Arbeitsende inklusive Pausen. Nettoarbeitszeit ist die tatsächlich geleistete und vergütete Arbeitszeit ohne Pausen.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Gilt das Arbeitszeitgesetz auch im Homeoffice?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ja – das Arbeitszeitgesetz (ArbZG) gilt uneingeschränkt im Homeoffice. Die maximale Höchstarbeitszeit von 10 Stunden und die 11-stündige Erholungsruhezeit müssen eingehalten werden.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Wie viele Stunden darf man maximal täglich arbeiten?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Nach § 3 ArbZG beträgt die werktägliche Regelarbeitszeit 8 Stunden. Sie kann auf maximal 10 Stunden verlängert werden, wenn innerhalb von 6 Monaten der Durchschnitt von 8 Stunden eingehalten wird.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Ist der Arbeitszeitrechner wirklich kostenlos?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ja, zu 100 % kostenlos, ohne Registrierung und ohne versteckte Gebühren. Ihre Eingaben werden ausschließlich lokal in Ihrem Browser verarbeitet (DSGVO-konform).</p>
+            </div>
+          </div>
+
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Für welche Arbeitsverhältnisse eignet sich der Rechner?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Der Rechner eignet sich für Vollzeit, Teilzeit, Minijobs, Schichtarbeit, Nachtarbeit, Homeoffice, TVöD sowie für Selbstständige zur Projekterfassung.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Wann kann ich Feierabend machen?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Formel: Arbeitsbeginn + Sollarbeitszeit + Pflichtpause = Feierabend. Beispiel: 09:00 Uhr Beginn + 8h Arbeit + 30 Min Pause = 17:30 Uhr Feierabend.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 13 -->
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>❓ Kann ich den Rechner zur Stundenzettel-Dokumentation nutzen?</span>
+              <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Ja! Nutzen Sie die Wochenübersicht und exportieren Sie Ihre Arbeitsstunden bequem als CSV-Datei für Excel oder Ihre Personalabteilung.</p>
+            </div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- LEGAL DISCLAIMER -->
+    <section class="content-container">
+      <div class="legal-callout" style="background: rgba(239, 68, 68, 0.08); border-left-color: var(--accent-red);">
+        <strong style="color: #f87171;">Rechtlicher Hinweis:</strong> Dieser Arbeitszeitrechner dient der vereinfachten Berechnung von Arbeitszeiten zu Informationszwecken und ersetzt keine individuelle Rechts- oder Steuerberatung. Alle Berechnungen basieren auf den allgemeinen Bestimmungen des deutschen Arbeitszeitgesetzes (ArbZG). Bei arbeitsrechtlichen Fragen wenden Sie sich bitte an einen Fachanwalt für Arbeitsrecht oder Ihre Gewerkschaft.
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+        </div>
+        <p>Der führende kostenlose Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach ArbZG §4.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Rechner &amp; Tools</div>
+        <ul class="footer-links">
+          <li><a href="#rechner">Tagesrechner</a></li>
+          <li><a href="#rechner">Wochenrechner</a></li>
+          <li><a href="#dezimalstunden">Dezimalstunden Rechner</a></li>
+          <li><a href="#pausenregelung">Pausenrechner</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Wissen &amp; Recht</div>
+        <ul class="footer-links">
+          <li><a href="#pausenregelung">Arbeitszeitgesetz (ArbZG)</a></li>
+          <li><a href="#anleitung">So funktioniert's</a></li>
+          <li><a href="#faq">Häufige Fragen (FAQ)</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+      <div style="display: flex; gap: 1rem;">
+        <a href="#rechner">Impressum</a>
+        <a href="#rechner">Datenschutz</a>
+        <a href="#rechner">Nutzungsbedingungen</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
