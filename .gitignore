@@ -1,0 +1,10 @@
+# Competitor research files - keep local only, do not push to GitHub
+*.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
