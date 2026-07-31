@@ -98,8 +98,8 @@
         <ul class="nav-links">
           <li><a href="#rechner">Rechner</a></li>
           <li><a href="#anleitung">Funktionsweise</a></li>
-          <li><a href="#pausenregelung">Pausen (ArbZG)</a></li>
-          <li><a href="#dezimalstunden">Dezimalstunden</a></li>
+          <li><a href="#pausenregelung">Pausen &amp; Recht</a></li>
+          <li><a href="#lohnrechner">Lohnrechner</a></li>
           <li><a href="#faq">FAQ</a></li>
           <li><a href="#rechner" class="header-cta">Jetzt berechnen</a></li>
         </ul>
@@ -110,7 +110,7 @@
   <main>
     <!-- HERO SECTION -->
     <section class="hero-section">
-      <div class="badge-pill">⚡ Kostenlos &amp; Minutengenau 2026</div>
+      <div class="badge-pill">&#9889; Kostenlos &amp; Minutengenau 2026</div>
       <h1 class="hero-title">Arbeitszeitrechner – Arbeitszeit kostenlos &amp; minutengenau berechnen</h1>
       <p class="hero-subtitle">Ihr kostenloser Online-Arbeitszeitrechner für Deutschland 2026. Einfach Arbeitsbeginn, Arbeitsende und Pausenzeiten eingeben – der Rechner berechnet sofort Ihre tatsächliche Netto-Arbeitszeit, Überstunden und Dezimalstunden. **Kein Login. Keine App. Sofort nutzbar.**</p>
       
@@ -138,7 +138,11 @@
           </button>
           <button class="tab-btn" data-tab="tab-monthly" role="tab" aria-selected="false">
             <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            Dezimal &amp; Monatsrechner
+            Dezimal &amp; Monat
+          </button>
+          <button class="tab-btn" data-tab="tab-lohn" role="tab" aria-selected="false">
+            <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            Lohnrechner
           </button>
         </div>
 
@@ -295,11 +299,11 @@
 
           <!-- TAB 3: MONTHLY & DECIMAL CONVERTER -->
           <div id="tab-monthly" class="tab-pane" role="tabpanel">
-            <div class="calc-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="calc-grid" style="grid-template-columns: 1fr 1fr; gap: 1.5rem;">
               <!-- Left: Time to Decimal Converter -->
               <div class="content-block" style="padding: 1.5rem; margin-bottom: 0;">
-                <h3 class="section-h3" style="margin-top: 0;">🔄 Stunden &amp; Minuten ↔ Dezimalstunden</h3>
-                <p style="font-size: 0.875rem;">Konvertieren Sie Zeiten schnell für die Lohnabrechnung oder Excel.</p>
+                <h3 class="section-h3" style="margin-top: 0;">Stunden &amp; Minuten &#8596; Dezimalstunden umrechnen</h3>
+                <p style="font-size: 0.875rem;">Rechnen Sie Zeiten schnell für die Lohnabrechnung oder Excel um.</p>
                 
                 <div class="input-group" style="margin-bottom: 1rem;">
                   <label for="conv-time-str">Zeit eingeben (z.B. 7:30):</label>
@@ -316,8 +320,8 @@
 
               <!-- Right: Monthly Hours Estimator -->
               <div class="content-block" style="padding: 1.5rem; margin-bottom: 0;">
-                <h3 class="section-h3" style="margin-top: 0;">📅 Monatliche Arbeitszeit schätzen</h3>
-                <p style="font-size: 0.875rem;">Berechnen Sie Ihre durchschnittlichen Monatsstunden basierend auf Wochenstunden.</p>
+                <h3 class="section-h3" style="margin-top: 0;">Monatliche Arbeitszeit berechnen</h3>
+                <p style="font-size: 0.875rem;">Wie viele Stunden arbeiten Sie im Durchschnitt pro Monat? Rechnen Sie hier schnell nach.</p>
 
                 <div class="input-group" style="margin-bottom: 1rem;">
                   <label for="conv-weekly-hrs">Vertragliche Wochenstunden:</label>
@@ -332,10 +336,110 @@
                   </select>
                 </div>
 
-                <div class="stat-box" style="background: rgba(37, 99, 235, 0.15); border-color: var(--border-glow); padding: 1rem;">
+                <div class="stat-box" style="background: var(--primary-light); border: 1.5px solid #bfdbfe; padding: 1rem;">
                   <div class="stat-label">Durchschnittliche Monatsstunden:</div>
-                  <div id="conv-monthly-res" class="stat-val" style="color: #60a5fa; font-size: 1.5rem;">174,0 h / Monat</div>
-                  <div id="conv-yearly-res" style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.25rem;">2080 h / Jahr</div>
+                  <div id="conv-monthly-res" class="stat-val" style="color: var(--header-navy); font-size: 1.5rem;">174,0 h / Monat</div>
+                  <div id="conv-yearly-res" style="font-size: 0.825rem; color: var(--text-muted); margin-top: 0.25rem;">2.080 h / Jahr</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: LOHNRECHNER -->
+          <div id="tab-lohn" class="tab-pane" role="tabpanel">
+            <div id="lohnrechner" style="max-width: 900px; margin: 0 auto;">
+              <div style="margin-bottom: 1.5rem;">
+                <h3 style="font-size: 1.2rem; font-weight: 700; color: var(--header-navy); margin-bottom: 0.35rem;">Stundenlohn &amp; Verdienst berechnen</h3>
+                <p style="font-size: 0.9rem; color: var(--text-muted);">Geben Sie Ihren Stundenlohn und die geleisteten Stunden ein – wir berechnen Ihren Bruttoverdienst sofort, inklusive Überstundenzuschlag und Nachtarbeitszuschlag.</p>
+              </div>
+
+              <div class="input-row" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 1.25rem;">
+                <div class="input-group">
+                  <label for="lohn-stundenlohn">Stundenlohn (€)</label>
+                  <input type="number" id="lohn-stundenlohn" class="input-field" value="18.50" step="0.50" min="0">
+                </div>
+                <div class="input-group">
+                  <label for="lohn-stunden">Gearbeitete Stunden</label>
+                  <input type="number" id="lohn-stunden" class="input-field" value="40" step="0.5" min="0">
+                </div>
+                <div class="input-group">
+                  <label for="lohn-ueberstunden">Davon Überstunden</label>
+                  <input type="number" id="lohn-ueberstunden" class="input-field" value="0" step="0.5" min="0">
+                </div>
+              </div>
+
+              <div class="input-row" style="grid-template-columns: 1fr 1fr; margin-bottom: 1.5rem;">
+                <div class="input-group">
+                  <label for="lohn-ue-zuschlag">Überstundenzuschlag (%)</label>
+                  <select id="lohn-ue-zuschlag" class="input-field">
+                    <option value="0">Kein Zuschlag (0%)</option>
+                    <option value="25" selected>25% – Standard</option>
+                    <option value="50">50% – Sonn-/Feiertag</option>
+                    <option value="100">100% – Gesetzlich zulässig</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="lohn-nacht-stunden">Nachtarbeitsstunden (23–06 Uhr)</label>
+                  <input type="number" id="lohn-nacht-stunden" class="input-field" value="0" step="0.5" min="0">
+                </div>
+              </div>
+
+              <!-- Results Grid -->
+              <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 1.5rem;">
+                <div class="stat-box" style="background: var(--primary-light); border: 1.5px solid #bfdbfe;">
+                  <div class="stat-label">Grundverdienst</div>
+                  <div id="lohn-grundverdienst" class="stat-val" style="color: var(--header-navy); font-size: 1.35rem;">740,00 €</div>
+                </div>
+                <div class="stat-box" style="background: #f0fdf4; border: 1.5px solid #bbf7d0;">
+                  <div class="stat-label">Überstundenzuschlag</div>
+                  <div id="lohn-ue-betrag" class="stat-val" style="color: var(--btn-green); font-size: 1.35rem;">0,00 €</div>
+                </div>
+                <div class="stat-box" style="background: #fffbeb; border: 1.5px solid #fde68a;">
+                  <div class="stat-label">Nachtzuschlag (25%)</div>
+                  <div id="lohn-nacht-betrag" class="stat-val" style="color: #b45309; font-size: 1.35rem;">0,00 €</div>
+                </div>
+                <div class="stat-box" style="background: var(--header-navy); border: none;">
+                  <div class="stat-label" style="color: #94a3b8;">Gesamt Brutto</div>
+                  <div id="lohn-gesamt" class="stat-val" style="color: #ffffff; font-size: 1.5rem;">740,00 €</div>
+                </div>
+              </div>
+
+              <!-- Nachtarbeit Hinweis -->
+              <div style="background: var(--accent-teal-light); border-left: 4px solid var(--accent-teal); padding: 1rem 1.25rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                <strong style="color: #0f766e;">Nachtarbeit (§ 6 ArbZG):</strong> Nachtarbeitnehmer haben Anspruch auf Nachtarbeitszuschlag. Laut BAG-Rechtsprechung gelten 25% als angemessen. Viele Tarifverträge sehen 30% oder mehr vor.
+              </div>
+
+              <!-- Bundesland Feiertage Section -->
+              <div style="background: #f8fafc; border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 1.25rem; margin-bottom: 1rem;">
+                <h4 style="font-size: 1rem; font-weight: 700; color: var(--header-navy); margin-bottom: 0.85rem;">Feiertage 2026 nach Bundesland &amp; effektive Jahresarbeitsstunden</h4>
+                <div class="input-group" style="margin-bottom: 1rem;">
+                  <label for="lohn-bundesland">Bundesland auswählen:</label>
+                  <select id="lohn-bundesland" class="input-field">
+                    <option value="BY">Bayern (BY) – 13 Feiertage</option>
+                    <option value="NW">Nordrhein-Westfalen (NW) – 11 Feiertage</option>
+                    <option value="BE">Berlin (BE) – 10 Feiertage</option>
+                    <option value="BW">Baden-Württemberg (BW) – 12 Feiertage</option>
+                    <option value="HH">Hamburg (HH) – 10 Feiertage</option>
+                    <option value="HE">Hessen (HE) – 12 Feiertage</option>
+                    <option value="NI">Niedersachsen (NI) – 10 Feiertage</option>
+                    <option value="RP">Rheinland-Pfalz (RP) – 12 Feiertage</option>
+                    <option value="SN">Sachsen (SN) – 11 Feiertage</option>
+                    <option value="TH" selected>Thüringen (TH) – 11 Feiertage</option>
+                  </select>
+                </div>
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
+                  <div class="stat-box">
+                    <div class="stat-label">Arbeitstage 2026</div>
+                    <div id="feiertag-arbeitstage" class="stat-val" style="color: var(--header-navy);">250</div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-label">Effektive Jahresstunden (40h)</div>
+                    <div id="feiertag-jahresstunden" class="stat-val" style="color: var(--btn-green);">2.000 h</div>
+                  </div>
+                  <div class="stat-box">
+                    <div class="stat-label">Feiertage im Jahr</div>
+                    <div id="feiertag-anzahl" class="stat-val" style="color: var(--primary);">11</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -549,26 +653,27 @@
     <!-- CONTENT SECTION 7: PAIN POINTS SOLVED -->
     <section class="content-container">
       <article class="content-block">
-        <h2 class="section-h2">Kennen Sie diese Probleme? – Wir haben die Lösung.</h2>
+        <h2 class="section-h2">Diese Situationen kennen Sie sicher – hier ist die Antwort.</h2>
+        <p>Viele Arbeitnehmer stellen sich täglich dieselben Fragen rund um ihre Arbeitszeit. Wir haben die Antworten – und den passenden Rechner dazu.</p>
         
-        <ul style="list-style: none; margin-left: 0;">
-          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <strong style="color: #60a5fa;">❓ Pain Point 1: Das Rätsel der tatsächlichen Arbeitszeit</strong><br>
-            Es ist 17:15 Uhr. Sie haben um 08:00 Uhr begonnen. Aber wie lange haben Sie <em>wirklich</em> gearbeitet? Unser Rechner zieht Pausen automatisch ab und zeigt Ihnen das exakte Ergebnis in Sekunden.
-          </li>
-          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <strong style="color: #60a5fa;">❓ Pain Point 2: Überstunden unbezahlt geleistet</strong><br>
-            Ohne exakte Dokumentation gehen Überstunden schnell verloren. Mit unserer Wochenübersicht erfassen Sie Arbeitsstunden lückenlos für Ihren Freizeitausgleich oder Lohnnachweis.
-          </li>
-          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <strong style="color: #60a5fa;">❓ Pain Point 3: Falsche Gehaltsabrechnung bei Stundenlohn</strong><br>
-            Bei Abrechnung auf Stundenbasis führen Umrechnungsfehler zu Einkommensverlusten. Unser Rechner liefert exakte Dezimalstunden für die Lohnbuchhaltung.
-          </li>
-          <li style="margin-bottom: 1.25rem; background: rgba(15, 23, 42, 0.6); padding: 1rem 1.25rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle);">
-            <strong style="color: #60a5fa;">❓ Pain Point 4: Gesetzliche Pausen vergessen</strong><br>
-            Wer Pausenvorgaben missachtet, riskiert Verstöße gegen das ArbZG. Die automatische Pausenfunktion schützt Sie vor bösen Überraschungen.
-          </li>
-        </ul>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; margin-top: 1.5rem;">
+          <div style="background: var(--bg-surface-elevated); padding: 1.35rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 4px solid var(--primary);">
+            <strong style="color: var(--header-navy); display: block; margin-bottom: 0.5rem; font-size: 1rem;">Wie viel habe ich heute wirklich gearbeitet?</strong>
+            Es ist 17:15 Uhr. Sie haben um 08:00 Uhr begonnen – aber wie lange <em>wirklich</em>? Mit zwei Pausen zwischendurch verliert man schnell den Überblick. Unser Rechner zieht Pausen automatisch ab und gibt Ihnen das genaue Ergebnis.
+          </div>
+          <div style="background: var(--bg-surface-elevated); padding: 1.35rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 4px solid var(--btn-green);">
+            <strong style="color: var(--header-navy); display: block; margin-bottom: 0.5rem; font-size: 1rem;">Meine Überstunden werden nicht bezahlt.</strong>
+            Ohne saubere Aufzeichnung sind Überstunden schwer nachzuweisen. Mit der Wochenübersicht erfassen Sie alle Schichten lückenlos – und haben beim Gespräch mit dem Chef klare Zahlen in der Hand.
+          </div>
+          <div style="background: var(--bg-surface-elevated); padding: 1.35rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-amber);">
+            <strong style="color: var(--header-navy); display: block; margin-bottom: 0.5rem; font-size: 1rem;">In der Gehaltsabrechnung stimmt etwas nicht.</strong>
+            Wer auf Stundenbasis bezahlt wird, merkt schnell: Kleine Rechenfehler kosten bares Geld. Unser Rechner liefert exakte Dezimalstunden, die direkt in die Lohnbuchhaltung übernommen werden können.
+          </div>
+          <div style="background: var(--bg-surface-elevated); padding: 1.35rem; border-radius: var(--radius-md); border: 1px solid var(--border-subtle); border-left: 4px solid var(--accent-teal);">
+            <strong style="color: var(--header-navy); display: block; margin-bottom: 0.5rem; font-size: 1rem;">Ich weiß nicht, wie viel Pause ich machen muss.</strong>
+            Wer die gesetzlichen Pausenvorgaben nicht kennt, riskiert Verstöße gegen das ArbZG. Die automatische Pausenfunktion zeigt Ihnen in Echtzeit, ob Ihre Pause den gesetzlichen Anforderungen entspricht.
+          </div>
+        </div>
       </article>
     </section>
 
@@ -597,7 +702,7 @@
           <!-- FAQ 1 -->
           <div class="faq-item active">
             <button class="faq-question">
-              <span>❓ Wie funktioniert der Arbeitszeitrechner?</span>
+              <span>Wie funktioniert der Arbeitszeitrechner?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -608,7 +713,7 @@
           <!-- FAQ 2 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Welche Pausenzeiten sind gesetzlich vorgeschrieben?</span>
+              <span>Welche Pausenzeiten sind gesetzlich vorgeschrieben?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -619,7 +724,7 @@
           <!-- FAQ 3 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Kann ich mit dem Rechner Überstunden berechnen?</span>
+              <span>Kann ich mit dem Rechner Überstunden berechnen?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -630,7 +735,7 @@
           <!-- FAQ 4 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Wie rechne ich Stunden in Dezimalstunden um?</span>
+              <span>Wie rechne ich Stunden in Dezimalstunden um?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -641,7 +746,7 @@
           <!-- FAQ 5 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Funktioniert der Rechner auch für Nachtschichten?</span>
+              <span>Funktioniert der Rechner auch für Nachtschichten?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -652,7 +757,7 @@
           <!-- FAQ 6 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Wie viele Arbeitsstunden hat ein Monat bei Vollzeit?</span>
+              <span>Wie viele Arbeitsstunden hat ein Monat bei Vollzeit?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
@@ -663,7 +768,7 @@
           <!-- FAQ 7 -->
           <div class="faq-item">
             <button class="faq-question">
-              <span>❓ Was ist der Unterschied zwischen Brutto- und Nettoarbeitszeit?</span>
+              <span>Was ist der Unterschied zwischen Brutto- und Nettoarbeitszeit?</span>
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">

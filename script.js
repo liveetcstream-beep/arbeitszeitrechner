@@ -9,6 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initMonthlyConverter();
   initFaqAccordion();
   loadSavedDailyData();
+  initLohnrechner();
+  initFeiertage();
 });
 
 // Toast notification helper
@@ -497,4 +499,103 @@ function initFaqAccordion() {
       });
     }
   });
+}
+
+// --------------------------------------------------------------------------
+// 6. LOHNRECHNER (SALARY CALCULATOR)
+// --------------------------------------------------------------------------
+function initLohnrechner() {
+  const inputs = [
+    'lohn-stundenlohn', 'lohn-stunden', 'lohn-ueberstunden',
+    'lohn-ue-zuschlag', 'lohn-nacht-stunden'
+  ];
+
+  inputs.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('input', calculateLohn);
+    if (el) el.addEventListener('change', calculateLohn);
+  });
+
+  calculateLohn();
+}
+
+function calculateLohn() {
+  const stundenlohn = parseFloat(document.getElementById('lohn-stundenlohn')?.value) || 0;
+  const gearbStunden = parseFloat(document.getElementById('lohn-stunden')?.value) || 0;
+  const ueberstunden = Math.min(parseFloat(document.getElementById('lohn-ueberstunden')?.value) || 0, gearbStunden);
+  const ueZuschlagPct = parseFloat(document.getElementById('lohn-ue-zuschlag')?.value) || 0;
+  const nachtStunden = parseFloat(document.getElementById('lohn-nacht-stunden')?.value) || 0;
+
+  // Regular hours (non-overtime)
+  const regelStunden = Math.max(0, gearbStunden - ueberstunden);
+
+  // Grundverdienst = alle Stunden × Stundenlohn (inkl. Überstunden zum Grundlohn)
+  const grundverdienst = gearbStunden * stundenlohn;
+
+  // Überstundenzuschlag: nur der Zuschlag (nicht nochmal der Grundlohn)
+  const ueZuschlagBetrag = ueberstunden * stundenlohn * (ueZuschlagPct / 100);
+
+  // Nachtzuschlag: 25% des Stundenlohns × Nachtstunden
+  const nachtZuschlagBetrag = nachtStunden * stundenlohn * 0.25;
+
+  const gesamt = grundverdienst + ueZuschlagBetrag + nachtZuschlagBetrag;
+
+  // Update DOM
+  const formatEuro = (val) => val.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+
+  const elGrund = document.getElementById('lohn-grundverdienst');
+  const elUe = document.getElementById('lohn-ue-betrag');
+  const elNacht = document.getElementById('lohn-nacht-betrag');
+  const elGesamt = document.getElementById('lohn-gesamt');
+
+  if (elGrund) elGrund.textContent = formatEuro(grundverdienst);
+  if (elUe) elUe.textContent = formatEuro(ueZuschlagBetrag);
+  if (elNacht) elNacht.textContent = formatEuro(nachtZuschlagBetrag);
+  if (elGesamt) elGesamt.textContent = formatEuro(gesamt);
+}
+
+// --------------------------------------------------------------------------
+// 7. BUNDESLAND FEIERTAGE 2026
+// --------------------------------------------------------------------------
+// Feiertage 2026 per Bundesland (Arbeitstage aus 365 Tagen - 52 Sonntage - 52 Samstage - Feiertage auf Werktagen)
+const FEIERTAGE_DATA = {
+  BY: { name: 'Bayern', anzahl: 13, arbeitstage: 249 },
+  NW: { name: 'Nordrhein-Westfalen', anzahl: 11, arbeitstage: 251 },
+  BE: { name: 'Berlin', anzahl: 10, arbeitstage: 252 },
+  BW: { name: 'Baden-Württemberg', anzahl: 12, arbeitstage: 250 },
+  HH: { name: 'Hamburg', anzahl: 10, arbeitstage: 252 },
+  HE: { name: 'Hessen', anzahl: 12, arbeitstage: 250 },
+  NI: { name: 'Niedersachsen', anzahl: 10, arbeitstage: 252 },
+  RP: { name: 'Rheinland-Pfalz', anzahl: 12, arbeitstage: 250 },
+  SN: { name: 'Sachsen', anzahl: 11, arbeitstage: 251 },
+  TH: { name: 'Thüringen', anzahl: 11, arbeitstage: 251 },
+};
+
+function initFeiertage() {
+  const select = document.getElementById('lohn-bundesland');
+  if (select) {
+    select.addEventListener('change', updateFeiertage);
+    updateFeiertage();
+  }
+}
+
+function updateFeiertage() {
+  const select = document.getElementById('lohn-bundesland');
+  if (!select) return;
+
+  const key = select.value;
+  const data = FEIERTAGE_DATA[key];
+  if (!data) return;
+
+  const wochenstunden = parseFloat(document.getElementById('lohn-stunden')?.value) || 40;
+  const stdProTag = 8; // Annahme: 8h/Tag
+  const jahresstunden = data.arbeitstage * stdProTag;
+
+  const elArbeitstage = document.getElementById('feiertag-arbeitstage');
+  const elJahresstunden = document.getElementById('feiertag-jahresstunden');
+  const elAnzahl = document.getElementById('feiertag-anzahl');
+
+  if (elArbeitstage) elArbeitstage.textContent = data.arbeitstage;
+  if (elJahresstunden) elJahresstunden.textContent = jahresstunden.toLocaleString('de-DE') + ' h';
+  if (elAnzahl) elAnzahl.textContent = data.anzahl;
 }
