@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontakt – Arbeitszeitrechner365.de | Kundenservice & Support</title>
+  <meta name="description" content="Haben Sie Fragen oder Feedback zu unserem Arbeitszeitrechner? Kontaktieren Sie unser Support-Team – wir antworten innerhalb von 24 Stunden.">
+  <link rel="canonical" href="https://arbeitszeitrechner365.de/kontakt.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <nav aria-label="Hauptnavigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Rechner</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html" class="active" style="color: var(--primary); font-weight: 700;">Kontakt</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+          <li><a href="index.html#rechner" class="header-cta">Jetzt berechnen</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" style="padding: 3.5rem 1rem 2rem;">
+      <div class="badge-pill">&#128231; Schneller &amp; Kostenloser Support</div>
+      <h1 class="hero-title">Wir sind für Sie da – Kontaktieren Sie uns</h1>
+      <p class="hero-subtitle">Haben Sie Fragen zur Arbeitszeitberechnung, Anregungen für neue Rechner-Funktionen oder Feedback? Schreiben Sie uns eine Nachricht!</p>
+    </section>
+
+    <!-- CONTACT CONTAINER -->
+    <section class="content-container">
+      <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2rem;">
+        
+        <!-- LEFT: CONTACT INFO -->
+        <article class="content-block" style="margin-bottom: 0;">
+          <h2 class="section-h2" style="font-size: 1.35rem;">Kontaktinformationen</h2>
+          <p style="font-size: 0.95rem; color: var(--text-dark); margin-bottom: 1.5rem;">Unser Support-Team hilft Ihnen gerne weiter. Wir antworten in der Regel innerhalb von 24 Stunden an Werktagen.</p>
+
+          <div style="margin-bottom: 1.25rem;">
+            <strong style="color: var(--header-navy); display: block; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">E-Mail Support:</strong>
+            <a href="mailto:support@arbeitszeitrechner365.de" style="color: var(--primary); font-weight: 600; font-size: 1.05rem; text-decoration: underline;">support@arbeitszeitrechner365.de</a>
+          </div>
+
+          <div style="margin-bottom: 1.25rem;">
+            <strong style="color: var(--header-navy); display: block; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Reaktionszeit:</strong>
+            <span style="color: var(--text-dark); font-size: 0.95rem;">Innerhalb von 24 Stunden (Mo–Fr)</span>
+          </div>
+
+          <div style="margin-bottom: 1.5rem;">
+            <strong style="color: var(--header-navy); display: block; font-size: 0.875rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.25rem;">Kostenfreier Service:</strong>
+            <span style="color: var(--text-dark); font-size: 0.95rem;">Nutzer-Support ist zu 100% kostenlos</span>
+          </div>
+
+          <div style="background: #f0fdf4; border-left: 4px solid var(--btn-green); padding: 1rem; border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 0.875rem; color: #166534;">
+            <strong>Hinweis zum Datenschutz:</strong> Ihre Anfrage wird streng vertraulich und nach den Richtlinien der DSGVO verarbeitet.
+          </div>
+        </article>
+
+        <!-- RIGHT: CONTACT FORM -->
+        <article class="content-block" style="margin-bottom: 0;">
+          <h2 class="section-h2" style="font-size: 1.35rem;">Nachricht senden</h2>
+          
+          <form id="contact-form" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihre Nachricht! Wir werden uns schnellstmöglich bei Ihnen melden.'); this.reset();">
+            <div class="input-group" style="margin-bottom: 1rem;">
+              <label for="contact-name">Ihr Name *</label>
+              <input type="text" id="contact-name" class="input-field" placeholder="z.B. Max Mustermann" required>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 1rem;">
+              <label for="contact-email">E-Mail Adresse *</label>
+              <input type="email" id="contact-email" class="input-field" placeholder="max@beispiel.de" required>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 1rem;">
+              <label for="contact-subject">Betreff *</label>
+              <input type="text" id="contact-subject" class="input-field" placeholder="z.B. Frage zur Überstundenberechnung" required>
+            </div>
+
+            <div class="input-group" style="margin-bottom: 1.25rem;">
+              <label for="contact-message">Ihre Nachricht *</label>
+              <textarea id="contact-message" class="input-field" rows="5" placeholder="Wie können wir Ihnen helfen?" style="resize: vertical; font-family: inherit;" required></textarea>
+            </div>
+
+            <button type="submit" class="btn-calc" style="width: 100%;">Nachricht abgeben</button>
+          </form>
+        </article>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+          <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+        </div>
+        <p>Der führende kostenlose Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach ArbZG §4.</p>
+      </div>
+
+      <div>
+        <div class="footer-title">Navigation</div>
+        <ul class="footer-links">
+          <li><a href="index.html">Arbeitszeitrechner</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-title">Rechtliches</div>
+        <ul class="footer-links">
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+          <li><a href="nutzungsbedingungen.html">Nutzungsbedingungen</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+      <div style="display: flex; gap: 1rem;">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <a href="nutzungsbedingungen.html">Nutzungsbedingungen</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
