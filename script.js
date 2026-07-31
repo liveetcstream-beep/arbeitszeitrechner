@@ -121,6 +121,9 @@ function initDailyCalc() {
   // Presets click
   presets.forEach(chip => {
     chip.addEventListener('click', () => {
+      presets.forEach(c => c.classList.remove('active'));
+      chip.classList.add('active');
+
       const start = chip.getAttribute('data-start');
       const end = chip.getAttribute('data-end');
       const pause = chip.getAttribute('data-pause');
