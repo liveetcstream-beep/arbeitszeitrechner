@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadSavedDailyData();
   initLohnrechner();
   initFeiertage();
+  initSideConverter();
 });
 
 // Toast notification helper
@@ -598,4 +599,37 @@ function updateFeiertage() {
   if (elArbeitstage) elArbeitstage.textContent = data.arbeitstage;
   if (elJahresstunden) elJahresstunden.textContent = jahresstunden.toLocaleString('de-DE') + ' h';
   if (elAnzahl) elAnzahl.textContent = data.anzahl;
+}
+
+// --------------------------------------------------------------------------
+// 8. SIDEBAR QUICK CONVERTER
+// --------------------------------------------------------------------------
+function initSideConverter() {
+  const timeBtn = document.getElementById('side-time-btn');
+  const decBtn = document.getElementById('side-dec-btn');
+  const timeIn = document.getElementById('side-time-in');
+  const decIn = document.getElementById('side-dec-in');
+
+  if (timeBtn && timeIn) {
+    const doTimeConv = () => {
+      const val = timeIn.value.trim();
+      if (!val) return;
+      const mins = timeToMinutes(val);
+      const dec = (mins / 60).toFixed(2).replace('.', ',');
+      document.getElementById('side-time-out').textContent = `= ${dec} Std.`;
+    };
+    timeBtn.addEventListener('click', doTimeConv);
+    timeIn.addEventListener('keyup', (e) => { if (e.key === 'Enter') doTimeConv(); });
+  }
+
+  if (decBtn && decIn) {
+    const doDecConv = () => {
+      const val = parseFloat(decIn.value.replace(',', '.')) || 0;
+      const totalMins = Math.round(val * 60);
+      const formatted = minutesToFormattedTime(totalMins);
+      document.getElementById('side-dec-out').textContent = `= ${formatted} Std.`;
+    };
+    decBtn.addEventListener('click', doDecConv);
+    decIn.addEventListener('keyup', (e) => { if (e.key === 'Enter') doDecConv(); });
+  }
 }
