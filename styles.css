@@ -852,23 +852,31 @@ a:hover {
 .site-footer {
   background: var(--header-navy);
   color: #cbd5e1;
-  padding: 3rem 1.5rem 2rem;
+  padding: 3.5rem 1.5rem 2rem;
   margin-top: auto;
   font-size: 0.9rem;
+  border-top: 3px solid var(--primary);
 }
 
 .footer-container {
   max-width: 1100px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 2.5rem;
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 550px) {
   .footer-container {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 
@@ -877,50 +885,106 @@ a:hover {
 }
 
 .footer-brand p {
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   color: #94a3b8;
   font-size: 0.875rem;
+  line-height: 1.6;
+  max-width: 340px;
 }
 
 .footer-title {
   color: #ffffff;
   font-weight: 700;
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 1.05rem;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.02em;
 }
 
 .footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.65rem;
 }
 
 .footer-links a {
   color: #cbd5e1;
-  transition: color 0.2s ease;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .footer-links a:hover {
   color: #ffffff;
+  transform: translateX(3px);
+}
+
+/* Social Media Icon Pill Links */
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.social-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #f1f5f9 !important;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.25 ease;
+}
+
+.social-pill:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+.social-pill svg {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.social-pill:hover svg {
+  transform: scale(1.1);
 }
 
 .footer-bottom {
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 1.5rem;
+  padding-top: 1.75rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
-  font-size: 0.825rem;
+  font-size: 0.85rem;
   color: #94a3b8;
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 1.25rem;
 }
 
 .footer-bottom a {
   color: #cbd5e1;
+  transition: color 0.2s ease;
+}
+
+.footer-bottom a:hover {
+  color: #ffffff;
 }
 
 /* Toast Notification */
