@@ -400,16 +400,17 @@ function initMonthlyConverter() {
 }
 
 function calculateMonthly() {
-  const daysPerWeek = parseInt(document.getElementById('monthly-days-select')?.value, 10) || 5;
+  const daysPerWeek = parseInt(document.getElementById('monthly-days-select')?.value, 10) || 6;
   const monthKey = document.getElementById('monthly-month-select')?.value || '2026-07';
   const startStr = document.getElementById('monthly-start')?.value || '09:00';
   const endStr = document.getElementById('monthly-end')?.value || '17:30';
-  const pauseMinsSingle = parseInt(document.getElementById('monthly-pause')?.value, 10) || 30;
+  const manualPauseMins = parseInt(document.getElementById('monthly-pause')?.value, 10) || 30;
+  const autoBreak = document.getElementById('monthly-auto-break')?.checked || false;
 
   const monthData = MONTHLY_WORKING_DAYS[monthKey] || MONTHLY_WORKING_DAYS['2026-07'];
   
-  let numDaysInMonth = monthData.days5;
-  if (daysPerWeek === 6) numDaysInMonth = monthData.days6;
+  let numDaysInMonth = monthData.days6;
+  if (daysPerWeek === 5) numDaysInMonth = monthData.days5;
   if (daysPerWeek === 7) numDaysInMonth = monthData.days7;
   if (daysPerWeek === 4) numDaysInMonth = monthData.days4;
 
@@ -418,14 +419,25 @@ function calculateMonthly() {
   if (eMins < sMins) eMins += 24 * 60; // Overnight
 
   let dailyGrossMins = eMins - sMins;
-  let dailyNetMins = Math.max(0, dailyGrossMins - pauseMinsSingle);
+
+  // Statutory break check (ArbZG)
+  let requiredPause = 0;
+  if (dailyGrossMins > 9 * 60) requiredPause = 45;
+  else if (dailyGrossMins > 6 * 60) requiredPause = 30;
+
+  let effectivePause = manualPauseMins;
+  if (autoBreak) {
+    effectivePause = Math.max(manualPauseMins, requiredPause);
+  }
+
+  let dailyNetMins = Math.max(0, dailyGrossMins - effectivePause);
 
   let totalGrossMins = dailyGrossMins * numDaysInMonth;
-  let totalPauseMins = pauseMinsSingle * numDaysInMonth;
+  let totalPauseMins = effectivePause * numDaysInMonth;
   let totalNetMins = dailyNetMins * numDaysInMonth;
-  let netDec = (totalNetMins / 60).toFixed(2).replace('.', ',');
+  let netDec = (totalNetMins / 60).toFixed(2);
 
-  // Update DOM Output Cards (Exact Competitor Screenshot Match)
+  // Update DOM Output Cards (Exact Competitor Image 2 Match)
   const elTitle = document.getElementById('m-res-title');
   const elDays = document.getElementById('m-res-days');
   const elGross = document.getElementById('m-res-gross');
@@ -442,6 +454,37 @@ function calculateMonthly() {
   if (elDec) elDec.textContent = `${netDec} Stunden`;
   if (elBanner) elBanner.textContent = `Im ${monthData.name} mit ${numDaysInMonth} Arbeitstagen ergibt sich bei einer täglichen Arbeitszeit von ${minutesToFormattedTime(dailyNetMins)} eine monatliche Nettoarbeitszeit von ${minutesToFormattedTime(totalNetMins)}.`;
 }
+
+// Action button handlers for Monthly tab
+document.addEventListener('DOMContentLoaded', () => {
+  const copyMonthly = document.getElementById('copy-monthly-btn');
+  const printMonthly = document.getElementById('print-monthly-btn');
+  const autoBreakCheckbox = document.getElementById('monthly-auto-break');
+
+  if (copyMonthly) {
+    copyMonthly.addEventListener('click', () => {
+      const title = document.getElementById('m-res-title').textContent;
+      const days = document.getElementById('m-res-days').textContent;
+      const gross = document.getElementById('m-res-gross').textContent;
+      const pause = document.getElementById('m-res-pause').textContent;
+      const net = document.getElementById('m-res-net').textContent;
+      const dec = document.getElementById('m-res-dec').textContent;
+
+      const summary = `${title}:\n- Arbeitstage: ${days}\n- Bruttozeit: ${gross}\n- Pausen: ${pause}\n- Nettoarbeitszeit: ${net} (${dec})`;
+      navigator.clipboard.writeText(summary).then(() => {
+        showToast('Monatliches Ergebnis kopiert!');
+      });
+    });
+  }
+
+  if (printMonthly) {
+    printMonthly.addEventListener('click', () => window.print());
+  }
+
+  if (autoBreakCheckbox) {
+    autoBreakCheckbox.addEventListener('change', calculateMonthly);
+  }
+});
 
 // --------------------------------------------------------------------------
 // 5. FAQ ACCORDION
