@@ -308,182 +308,139 @@ function loadSavedDailyData() {
 // 3. WEEKLY CALCULATOR LOGIC
 // --------------------------------------------------------------------------
 function initWeeklyCalc() {
-  const weeklyContainer = document.getElementById('weekly-inputs-body');
-  const weeklyTargetInput = document.getElementById('weekly-target-hours');
-  const copyMonBtn = document.getElementById('copy-mon-btn');
-  const exportWeeklyCsv = document.getElementById('export-weekly-csv');
+  const calcBtn = document.getElementById('calc-weekly-btn');
+  const daysSelect = document.getElementById('weekly-days-select');
+  const startInput = document.getElementById('weekly-start');
+  const endInput = document.getElementById('weekly-end');
+  const pauseInput = document.getElementById('weekly-pause');
 
-  if (!weeklyContainer) return;
-
-  const days = ['Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag', 'Sonntag'];
-  
-  days.forEach((day, idx) => {
-    const isWeekend = idx >= 5;
-    const defaultStart = isWeekend ? '' : '08:00';
-    const defaultEnd = isWeekend ? '' : '17:00';
-    const defaultPause = isWeekend ? '0' : '30';
-
-    const tr = document.createElement('tr');
-    tr.className = 'weekly-row';
-    tr.dataset.day = day;
-    tr.innerHTML = `
-      <td style="font-weight: 600; color: var(--text-main);">${day}</td>
-      <td><input type="time" class="input-field w-start" value="${defaultStart}"></td>
-      <td><input type="time" class="input-field w-end" value="${defaultEnd}"></td>
-      <td><input type="number" class="input-field w-pause" value="${defaultPause}" min="0" step="5" style="width: 70px;"></td>
-      <td class="w-net-col" style="font-weight: 700; color: #60a5fa;">0:00 h</td>
-    `;
-    weeklyContainer.appendChild(tr);
-  });
-
-  // Attach change event listeners to all weekly inputs
-  weeklyContainer.querySelectorAll('input').forEach(input => {
-    input.addEventListener('input', calculateWeekly);
-  });
-
-  if (weeklyTargetInput) {
-    weeklyTargetInput.addEventListener('input', calculateWeekly);
-  }
-
-  if (copyMonBtn) {
-    copyMonBtn.addEventListener('click', () => {
-      const monStart = weeklyContainer.querySelector('.weekly-row:first-child .w-start').value;
-      const monEnd = weeklyContainer.querySelector('.weekly-row:first-child .w-end').value;
-      const monPause = weeklyContainer.querySelector('.weekly-row:first-child .w-pause').value;
-
-      weeklyContainer.querySelectorAll('.weekly-row').forEach((row, idx) => {
-        if (idx < 5) { // Apply to Mon-Fri
-          row.querySelector('.w-start').value = monStart;
-          row.querySelector('.w-end').value = monEnd;
-          row.querySelector('.w-pause').value = monPause;
-        }
-      });
+  if (calcBtn) {
+    calcBtn.addEventListener('click', () => {
       calculateWeekly();
-      showToast('Montag-Zeiten auf Mo-Fr übertragen!');
+      showToast('Wochenarbeitszeit erfolgreich berechnet!');
     });
   }
 
-  if (exportWeeklyCsv) {
-    exportWeeklyCsv.addEventListener('click', () => {
-      let csvContent = "Tag;Arbeitsbeginn;Arbeitsende;Pause (Min);Nettoarbeitszeit (h)\n";
-      weeklyContainer.querySelectorAll('.weekly-row').forEach(row => {
-        const day = row.dataset.day;
-        const start = row.querySelector('.w-start').value || '-';
-        const end = row.querySelector('.w-end').value || '-';
-        const pause = row.querySelector('.w-pause').value || '0';
-        const net = row.querySelector('.w-net-col').textContent;
-        csvContent += `${day};${start};${end};${pause};${net}\n`;
-      });
-      
-      const totalNet = document.getElementById('w-total-net').textContent;
-      const overBalance = document.getElementById('w-overtime-balance').textContent;
-      csvContent += `\nGesamt Netto;;;;${totalNet}\n`;
-      csvContent += `Überstunden Saldo;;;;${overBalance}\n`;
-
-      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-      const url = URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.setAttribute('href', url);
-      link.setAttribute('download', `Wochenarbeitszeit_arbeitszeitrechner365.csv`);
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-      showToast('CSV-Export heruntergeladen!');
-    });
-  }
+  if (daysSelect) daysSelect.addEventListener('change', calculateWeekly);
+  if (startInput) startInput.addEventListener('input', calculateWeekly);
+  if (endInput) endInput.addEventListener('input', calculateWeekly);
+  if (pauseInput) pauseInput.addEventListener('input', calculateWeekly);
 
   calculateWeekly();
 }
 
 function calculateWeekly() {
-  const rows = document.querySelectorAll('.weekly-row');
-  let totalWeeklyNetMins = 0;
+  const numDays = parseInt(document.getElementById('weekly-days-select')?.value, 10) || 5;
+  const startStr = document.getElementById('weekly-start')?.value || '09:00';
+  const endStr = document.getElementById('weekly-end')?.value || '17:30';
+  const pauseMinsSingle = parseInt(document.getElementById('weekly-pause')?.value, 10) || 30;
 
-  rows.forEach(row => {
-    const startStr = row.querySelector('.w-start').value;
-    const endStr = row.querySelector('.w-end').value;
-    const pauseMins = parseInt(row.querySelector('.w-pause').value, 10) || 0;
-    const netCol = row.querySelector('.w-net-col');
+  let sMins = timeToMinutes(startStr);
+  let eMins = timeToMinutes(endStr);
+  if (eMins < sMins) eMins += 24 * 60; // Overnight shift support
 
-    if (startStr && endStr) {
-      let sMins = timeToMinutes(startStr);
-      let eMins = timeToMinutes(endStr);
-      if (eMins < sMins) eMins += 24 * 60; // Overnight
+  let dailyGrossMins = eMins - sMins;
+  let dailyNetMins = Math.max(0, dailyGrossMins - pauseMinsSingle);
 
-      let grossMins = eMins - sMins;
-      let netMins = Math.max(0, grossMins - pauseMins);
-      totalWeeklyNetMins += netMins;
+  let totalGrossMins = dailyGrossMins * numDays;
+  let totalPauseMins = pauseMinsSingle * numDays;
+  let totalNetMins = dailyNetMins * numDays;
+  let netDec = (totalNetMins / 60).toFixed(2).replace('.', ',');
 
-      netCol.textContent = minutesToFormattedTime(netMins) + ' h';
-    } else {
-      netCol.textContent = '0:00 h';
-    }
-  });
+  // Update DOM Output Cards (Competitor Format)
+  const elDays = document.getElementById('w-res-days');
+  const elGross = document.getElementById('w-res-gross');
+  const elPause = document.getElementById('w-res-pause');
+  const elNet = document.getElementById('w-res-net');
+  const elDec = document.getElementById('w-res-dec');
+  const elBanner = document.getElementById('w-res-banner-text');
 
-  const weeklyTargetHours = parseFloat(document.getElementById('weekly-target-hours')?.value) || 40;
-  const targetMins = weeklyTargetHours * 60;
-  const overtimeMins = totalWeeklyNetMins - targetMins;
-
-  const wTotalNetEl = document.getElementById('w-total-net');
-  const wTotalDecEl = document.getElementById('w-total-dec');
-  const wOvertimeBalanceEl = document.getElementById('w-overtime-balance');
-
-  if (wTotalNetEl) wTotalNetEl.textContent = minutesToFormattedTime(totalWeeklyNetMins) + ' Std.';
-  if (wTotalDecEl) wTotalDecEl.textContent = `= ${(totalWeeklyNetMins / 60).toFixed(2).replace('.', ',')} Dezimalstunden`;
-  
-  if (wOvertimeBalanceEl) {
-    const formattedOvertime = minutesToFormattedTime(overtimeMins);
-    wOvertimeBalanceEl.textContent = (overtimeMins >= 0 ? '+' : '') + formattedOvertime + ' h';
-    wOvertimeBalanceEl.style.color = overtimeMins >= 0 ? '#34d399' : '#f87171';
-  }
+  if (elDays) elDays.textContent = `${numDays} Tage`;
+  if (elGross) elGross.textContent = minutesToFormattedTime(totalGrossMins);
+  if (elPause) elPause.textContent = minutesToFormattedTime(totalPauseMins);
+  if (elNet) elNet.textContent = minutesToFormattedTime(totalNetMins);
+  if (elDec) elDec.textContent = `${netDec} Stunden`;
+  if (elBanner) elBanner.textContent = `Bei ${numDays} Arbeitstagen pro Woche und einer täglichen Arbeitszeit von ${minutesToFormattedTime(dailyNetMins)} ergibt sich eine wöchentliche Nettoarbeitszeit von ${minutesToFormattedTime(totalNetMins)}.`;
 }
 
 // --------------------------------------------------------------------------
-// 4. MONTHLY & DECIMAL CONVERTER LOGIC
+// 4. MONTHLY CALCULATOR LOGIC (Competitor Matching)
 // --------------------------------------------------------------------------
+const MONTHLY_WORKING_DAYS = {
+  '2026-07': { name: 'Juli 2026', days5: 23, days6: 27, days7: 31, days4: 18 },
+  '2026-08': { name: 'August 2026', days5: 21, days6: 26, days7: 31, days4: 17 },
+  '2026-09': { name: 'September 2026', days5: 22, days6: 26, days7: 30, days4: 17 },
+  '2026-10': { name: 'Oktober 2026', days5: 22, days6: 27, days7: 31, days4: 17 },
+  '2026-11': { name: 'November 2026', days5: 21, days6: 25, days7: 30, days4: 17 },
+  '2026-12': { name: 'Dezember 2026', days5: 22, days6: 26, days7: 31, days4: 17 }
+};
+
 function initMonthlyConverter() {
-  const timeInput = document.getElementById('conv-time-str');
-  const decInput = document.getElementById('conv-dec-val');
-  const weeklyHoursInput = document.getElementById('conv-weekly-hrs');
-  const weekFactorInput = document.getElementById('conv-week-factor');
+  const calcBtn = document.getElementById('calc-monthly-btn');
+  const daysSelect = document.getElementById('monthly-days-select');
+  const monthSelect = document.getElementById('monthly-month-select');
+  const startInput = document.getElementById('monthly-start');
+  const endInput = document.getElementById('monthly-end');
+  const pauseInput = document.getElementById('monthly-pause');
 
-  if (timeInput) {
-    timeInput.addEventListener('input', () => {
-      const val = timeInput.value;
-      if (val.includes(':')) {
-        const mins = timeToMinutes(val);
-        const dec = (mins / 60).toFixed(2);
-        document.getElementById('conv-time-res').textContent = `${dec.replace('.', ',')} Dezimalstunden`;
-      }
+  if (calcBtn) {
+    calcBtn.addEventListener('click', () => {
+      calculateMonthly();
+      showToast('Monatliche Arbeitszeit erfolgreich berechnet!');
     });
   }
 
-  if (decInput) {
-    decInput.addEventListener('input', () => {
-      const val = parseFloat(decInput.value.replace(',', '.'));
-      if (!isNaN(val)) {
-        const totalMins = Math.round(val * 60);
-        document.getElementById('conv-dec-res').textContent = `${minutesToFormattedTime(totalMins)} (Stunden:Minuten)`;
-      }
-    });
-  }
+  if (daysSelect) daysSelect.addEventListener('change', calculateMonthly);
+  if (monthSelect) monthSelect.addEventListener('change', calculateMonthly);
+  if (startInput) startInput.addEventListener('input', calculateMonthly);
+  if (endInput) endInput.addEventListener('input', calculateMonthly);
+  if (pauseInput) pauseInput.addEventListener('input', calculateMonthly);
 
-  const calcMonthlyHours = () => {
-    const wHours = parseFloat(weeklyHoursInput?.value) || 40;
-    const factor = parseFloat(weekFactorInput?.value) || 4.35;
-    const monthlyHours = (wHours * factor).toFixed(1);
-    const yearlyHours = Math.round(wHours * 52);
+  calculateMonthly();
+}
 
-    const mResEl = document.getElementById('conv-monthly-res');
-    const yResEl = document.getElementById('conv-yearly-res');
+function calculateMonthly() {
+  const daysPerWeek = parseInt(document.getElementById('monthly-days-select')?.value, 10) || 5;
+  const monthKey = document.getElementById('monthly-month-select')?.value || '2026-07';
+  const startStr = document.getElementById('monthly-start')?.value || '09:00';
+  const endStr = document.getElementById('monthly-end')?.value || '17:30';
+  const pauseMinsSingle = parseInt(document.getElementById('monthly-pause')?.value, 10) || 30;
 
-    if (mResEl) mResEl.textContent = `${monthlyHours.replace('.', ',')} h / Monat`;
-    if (yResEl) yResEl.textContent = `${yearlyHours} h / Jahr`;
-  };
+  const monthData = MONTHLY_WORKING_DAYS[monthKey] || MONTHLY_WORKING_DAYS['2026-07'];
+  
+  let numDaysInMonth = monthData.days5;
+  if (daysPerWeek === 6) numDaysInMonth = monthData.days6;
+  if (daysPerWeek === 7) numDaysInMonth = monthData.days7;
+  if (daysPerWeek === 4) numDaysInMonth = monthData.days4;
 
-  if (weeklyHoursInput) weeklyHoursInput.addEventListener('input', calcMonthlyHours);
-  if (weekFactorInput) weekFactorInput.addEventListener('change', calcMonthlyHours);
-  calcMonthlyHours();
+  let sMins = timeToMinutes(startStr);
+  let eMins = timeToMinutes(endStr);
+  if (eMins < sMins) eMins += 24 * 60; // Overnight
+
+  let dailyGrossMins = eMins - sMins;
+  let dailyNetMins = Math.max(0, dailyGrossMins - pauseMinsSingle);
+
+  let totalGrossMins = dailyGrossMins * numDaysInMonth;
+  let totalPauseMins = pauseMinsSingle * numDaysInMonth;
+  let totalNetMins = dailyNetMins * numDaysInMonth;
+  let netDec = (totalNetMins / 60).toFixed(2).replace('.', ',');
+
+  // Update DOM Output Cards (Exact Competitor Screenshot Match)
+  const elTitle = document.getElementById('m-res-title');
+  const elDays = document.getElementById('m-res-days');
+  const elGross = document.getElementById('m-res-gross');
+  const elPause = document.getElementById('m-res-pause');
+  const elNet = document.getElementById('m-res-net');
+  const elDec = document.getElementById('m-res-dec');
+  const elBanner = document.getElementById('m-res-banner-text');
+
+  if (elTitle) elTitle.textContent = `Monatliche Arbeitszeit - ${monthData.name}`;
+  if (elDays) elDays.textContent = `${numDaysInMonth} Tage`;
+  if (elGross) elGross.textContent = minutesToFormattedTime(totalGrossMins);
+  if (elPause) elPause.textContent = minutesToFormattedTime(totalPauseMins);
+  if (elNet) elNet.textContent = minutesToFormattedTime(totalNetMins);
+  if (elDec) elDec.textContent = `${netDec} Stunden`;
+  if (elBanner) elBanner.textContent = `Im ${monthData.name} mit ${numDaysInMonth} Arbeitstagen ergibt sich bei einer täglichen Arbeitszeit von ${minutesToFormattedTime(dailyNetMins)} eine monatliche Nettoarbeitszeit von ${minutesToFormattedTime(totalNetMins)}.`;
 }
 
 // --------------------------------------------------------------------------
