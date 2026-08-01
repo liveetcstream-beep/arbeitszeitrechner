@@ -326,10 +326,10 @@ function calculateDaily() {
   if (legalStatus) {
     if (manualBreakMins < requiredStatutoryPause && !autoBreak) {
       legalStatus.className = 'legal-status-indicator warning';
-      legalStatus.innerHTML = `⚠️ Mindestpause nach ArbZG §4: ${requiredStatutoryPause} Min. erforderlich (Eingetragen: ${manualBreakMins} Min.)`;
+      legalStatus.innerHTML = `⚠️ Gesetzliche Mindestpause: ${requiredStatutoryPause} Min. erforderlich (Eingetragen: ${manualBreakMins} Min.)`;
     } else {
       legalStatus.className = 'legal-status-indicator ok';
-      legalStatus.innerHTML = `✅ Konform mit ArbZG §4 (Gesetzliche Pausenvorgaben eingehalten)`;
+      legalStatus.innerHTML = `✅ Gesetzliche Pausenvorgaben eingehalten`;
     }
   }
 
