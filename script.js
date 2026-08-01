@@ -319,7 +319,7 @@ function calculateDaily() {
   if (resOvertime) {
     const formattedOvertime = minutesToFormattedTime(overtimeMins);
     resOvertime.textContent = (overtimeMins >= 0 ? '+' : '') + formattedOvertime + ' h';
-    resOvertime.style.color = overtimeMins >= 0 ? '#34d399' : '#f87171';
+    resOvertime.style.color = overtimeMins >= 0 ? '#15803d' : '#dc2626';
   }
 
   // Legal Status Update

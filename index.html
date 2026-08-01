@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EXYYVNZKJ"></script>
+  <!-- Google tag (gtag.js) - Non-blocking GA4 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-1EXYYVNZKJ');
   </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EXYYVNZKJ" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,11 +34,15 @@
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z'/></svg>">
 
-  <!-- Google Fonts: Inter -->
+  <!-- Preconnect & Non-blocking Font Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"></noscript>
 
+  <!-- Preload Stylesheet -->
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
 
   <!-- JSON-LD Structured Data (@graph) -->
@@ -359,7 +362,7 @@
                     <div class="break-item">
                       <label style="font-size: 0.8rem; min-width: 65px; color: var(--text-muted);">1. Pause:</label>
                       <input type="number" class="input-field break-min-input" value="30" min="0" max="240" step="5" placeholder="Min.">
-                      <span style="font-size: 0.85rem; color: var(--text-dim);">Minuten</span>
+                      <span style="font-size: 0.85rem; color: var(--text-muted);">Minuten</span>
                     </div>
                   </div>
                   <button type="button" id="add-break-btn" class="add-break-btn">+ Weitere Pause hinzufügen</button>
@@ -404,9 +407,9 @@
                     </div>
                   </div>
 
-                  <div class="stat-box" style="background: rgba(37, 99, 235, 0.15); border-color: var(--border-glow);">
-                    <div class="stat-label">Überstunden / Saldo</div>
-                    <div id="res-overtime-val" class="stat-val" style="color: #34d399; font-size: 1.3rem;">+0:30 h</div>
+                  <div class="stat-box" style="background: #eff6ff; border: 1px solid #bfdbfe;">
+                    <div class="stat-label" style="color: #1e3654;">Überstunden / Saldo</div>
+                    <div id="res-overtime-val" class="stat-val" style="color: #15803d; font-size: 1.3rem; font-weight: 800;">+0:00 h</div>
                   </div>
 
                   <div id="legal-status-box" class="legal-status-indicator ok">
@@ -429,10 +432,10 @@
                   <div style="margin-top: 1.25rem; padding-top: 1rem; border-top: 1px solid var(--border-subtle);">
                     <span style="font-size: 0.8rem; font-weight: 600; color: var(--text-muted); display: block; margin-bottom: 0.5rem;">Ergebnis teilen:</span>
                     <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
-                      <a href="https://api.whatsapp.com/send?text=Arbeitszeit%20berechnen%20mit%20arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #25D366; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">WhatsApp</a>
+                      <a href="https://api.whatsapp.com/send?text=Arbeitszeit%20berechnen%20mit%20arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #075e54; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">WhatsApp</a>
                       <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #0A66C2; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">LinkedIn</a>
-                      <a href="https://twitter.com/intent/tweet?text=Kostenloser%20Arbeitszeitrechner%202026&url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #1DA1F2; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">Twitter / X</a>
-                      <a href="mailto:?subject=Arbeitszeitrechner%202026&body=Hier%20kannst%20du%20deine%20Arbeitszeit%20berechnen:%20https://arbeitszeitrechner365.de" style="background: #475569; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">E-Mail</a>
+                      <a href="https://twitter.com/intent/tweet?text=Kostenloser%20Arbeitszeitrechner%202026&amp;url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #0284c7; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">Twitter / X</a>
+                      <a href="mailto:?subject=Arbeitszeitrechner%202026&amp;body=Hier%20kannst%20du%20deine%20Arbeitszeit%20berechnen:%20https://arbeitszeitrechner365.de" style="background: #334155; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">E-Mail</a>
                     </div>
                   </div>
                 </div>
@@ -1392,6 +1395,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>
