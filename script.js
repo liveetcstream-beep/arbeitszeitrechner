@@ -3,6 +3,7 @@
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
+  initMobileMenu();
   initTabs();
   initDailyCalc();
   initWeeklyCalc();
@@ -13,6 +14,53 @@ document.addEventListener('DOMContentLoaded', () => {
   initFeiertage();
   initSideConverter();
 });
+
+// ── Mobile Menu Toggle ──
+function initMobileMenu() {
+  const btn = document.getElementById('hamburger-btn');
+  const menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+
+  function openMenu() {
+    btn.classList.add('open');
+    menu.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    menu.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMenu() {
+    btn.classList.remove('open');
+    menu.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    menu.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Toggle on button click
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    btn.classList.contains('open') ? closeMenu() : openMenu();
+  });
+
+  // Close when a menu link is clicked
+  menu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  // Close when clicking outside the menu
+  document.addEventListener('click', (e) => {
+    if (!menu.contains(e.target) && !btn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeMenu();
+  });
+}
+
 
 // Toast notification helper
 function showToast(message) {
