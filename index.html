@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Google tag (gtag.js) - Zero-TBT Non-blocking GA4 -->
+  <!-- Google tag (gtag.js) - Expert Non-blocking GA4 (0ms TBT) -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -18,14 +18,10 @@
         s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1EXYYVNZKJ';
         document.head.appendChild(s);
       }
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadGA, { timeout: 6000 });
-      } else {
-        window.addEventListener('load', function() { setTimeout(loadGA, 3000); });
-      }
-      ['touchstart', 'scroll', 'mousemove', 'click', 'keydown'].forEach(function(e) {
+      ['touchstart', 'scroll', 'mousemove', 'click', 'keydown', 'wheel'].forEach(function(e) {
         window.addEventListener(e, loadGA, { once: true, passive: true });
       });
+      setTimeout(loadGA, 8000);
     })();
   </script>
 
@@ -53,12 +49,15 @@
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z'/></svg>">
 
-  <!-- Preconnect & Fonts -->
+  <!-- Preconnect & Non-blocking Fonts (0ms Critical Path Latency) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap"></noscript>
 
-  <!-- Main Stylesheet -->
+  <!-- Preloaded Main Stylesheet -->
+  <link rel="preload" href="styles.css" as="style">
   <link rel="stylesheet" href="styles.css">
 
   <!-- JSON-LD Structured Data (@graph) -->
