@@ -109,7 +109,7 @@
             "name": "Wie funktioniert der Arbeitszeitrechner?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Geben Sie Arbeitsbeginn, Arbeitsende und Ihre tatsächlichen Pausen ein. Der Rechner zeigt Bruttoarbeitszeit, Pausenzeit, Nettoarbeitszeit und Dezimalstunden an. Bei Nachtschichten über Mitternacht wird der Folgetag automatisch berücksichtigt."
+              "text": "Geben Sie Arbeitsbeginn (z.B. 08:00 Uhr) und Arbeitsende (z.B. 17:30 Uhr) ein. Das Tool berechnet automatisch die Bruttoarbeitszeit und zieht gesetzlich vorgeschriebene Pausenzeiten nach § 4 ArbZG ab. Das Ergebnis erhalten Sie als Nettoarbeitszeit in Stunden:Minuten sowie in Dezimalstunden."
             }
           },
           {
@@ -122,10 +122,90 @@
           },
           {
             "@type": "Question",
+            "name": "Kann ich mit dem Rechner Überstunden berechnen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja! Geben Sie Ihre tatsächliche Arbeitszeit ein und vergleichen Sie das Ergebnis mit Ihrer vertraglichen Sollarbeitszeit. Die Differenz wird als Überstundensaldo ausgewiesen."
+            }
+          },
+          {
+            "@type": "Question",
             "name": "Wie rechne ich Stunden in Dezimalstunden um?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Teilen Sie die Minuten durch 60 und addieren Sie das Ergebnis zu den Stunden. Beispiel: 7 Stunden 30 Minuten = 7 + 30 geteilt durch 60 = 7,50 Dezimalstunden."
+              "text": "Teilen Sie die Minuten durch 60. Beispiel: 15 Minuten = 0,25 Dezimalstunden • 30 Minuten = 0,50 • 45 Minuten = 0,75. 7 Stunden 45 Minuten entsprechen 7,75 Dezimalstunden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Funktioniert der Rechner auch für Nachtschichten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, der Rechner erkennt Nachtschichten über Mitternacht automatisch. Wenn Sie z.B. 22:00 Uhr als Beginn und 06:00 Uhr als Ende eingeben, werden korrekt 8 Stunden berechnet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie viele Arbeitsstunden hat ein Monat bei Vollzeit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bei einer 40-Stunden-Woche ergeben sich durchschnittlich 173,3 bis 174,0 Arbeitsstunden pro Monat (Formel: 40 × 4,35). Bei einer 39-Stunden-Woche (TVöD) sind es ca. 169,7 Stunden/Monat."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist der Unterschied zwischen Brutto- und Nettoarbeitszeit?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bruttoarbeitszeit ist die gesamte Zeit von Arbeitsbeginn bis Arbeitsende inklusive Pausen. Nettoarbeitszeit ist die tatsächlich geleistete und vergütete Arbeitszeit ohne Pausen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Gilt das Arbeitszeitgesetz auch im Homeoffice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja – das Arbeitszeitgesetz (ArbZG) gilt uneingeschränkt im Homeoffice. Die maximale Höchstarbeitszeit von 10 Stunden und die 11-stündige Erholungsruhezeit müssen eingehalten werden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie viele Stunden darf man maximal täglich arbeiten?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nach § 3 ArbZG beträgt die werktägliche Regelarbeitszeit 8 Stunden. Sie kann auf maximal 10 Stunden verlängert werden, wenn innerhalb von 6 Monaten der Durchschnitt von 8 Stunden eingehalten wird."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Ist der Arbeitszeitrechner wirklich kostenlos?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja, zu 100 % kostenlos, ohne Registrierung und ohne versteckte Gebühren. Ihre Eingaben werden ausschließlich lokal in Ihrem Browser verarbeitet (DSGVO-konform)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Für welche Arbeitsverhältnisse eignet sich der Rechner?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Der Rechner eignet sich für Vollzeit, Teilzeit, Minijobs, Schichtarbeit, Nachtarbeit, Homeoffice, TVöD sowie für Selbstständige zur Projekterfassung."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wann kann ich Feierabend machen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Formel: Arbeitsbeginn + Sollarbeitszeit + Pflichtpause = Feierabend. Beispiel: 09:00 Uhr Beginn + 8h Arbeit + 30 Min Pause = 17:30 Uhr Feierabend."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann ich den Rechner zur Stundenzettel-Dokumentation nutzen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja! Nutzen Sie die Wochenübersicht und exportieren Sie Ihre Arbeitsstunden bequem als CSV-Datei für Excel oder Ihre Personalabteilung."
             }
           }
         ]
