@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <!-- Google tag (gtag.js) - Non-blocking GA4 -->
+  <!-- Google tag (gtag.js) - Optimized Non-blocking GA4 -->
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-1EXYYVNZKJ');
+
+    (function() {
+      var loaded = false;
+      function loadGA() {
+        if (loaded) return;
+        loaded = true;
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-1EXYYVNZKJ';
+        document.head.appendChild(s);
+      }
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadGA, { timeout: 2500 });
+      } else {
+        window.addEventListener('load', function() { setTimeout(loadGA, 1000); });
+      }
+      ['touchstart', 'scroll', 'mousemove'].forEach(function(e) {
+        window.addEventListener(e, loadGA, { once: true, passive: true });
+      });
+    })();
   </script>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1EXYYVNZKJ" defer></script>
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -434,7 +453,7 @@
                     <div style="display: flex; gap: 0.4rem; flex-wrap: wrap;">
                       <a href="https://api.whatsapp.com/send?text=Arbeitszeit%20berechnen%20mit%20arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #075e54; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">WhatsApp</a>
                       <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #0A66C2; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">LinkedIn</a>
-                      <a href="https://twitter.com/intent/tweet?text=Kostenloser%20Arbeitszeitrechner%202026&amp;url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #0284c7; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">Twitter / X</a>
+                      <a href="https://twitter.com/intent/tweet?text=Kostenloser%20Arbeitszeitrechner%202026&amp;url=https://arbeitszeitrechner365.de" target="_blank" rel="noopener" style="background: #0369a1; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">Twitter / X</a>
                       <a href="mailto:?subject=Arbeitszeitrechner%202026&amp;body=Hier%20kannst%20du%20deine%20Arbeitszeit%20berechnen:%20https://arbeitszeitrechner365.de" style="background: #334155; color: white; padding: 0.35rem 0.65rem; border-radius: 4px; font-size: 0.75rem; text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; gap: 0.3rem;">E-Mail</a>
                     </div>
                   </div>

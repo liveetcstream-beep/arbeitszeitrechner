@@ -1054,13 +1054,13 @@ a:hover {
   }
 }
 
-.footer-brand .brand-logo {
-  color: #ffffff;
+.footer-brand .brand-logo .highlight {
+  color: #38bdf8;
 }
 
 .footer-brand p {
   margin-top: 0.85rem;
-  color: #94a3b8;
+  color: #e2e8f0;
   font-size: 0.875rem;
   line-height: 1.6;
   max-width: 340px;
