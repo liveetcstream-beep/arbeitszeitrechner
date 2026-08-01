@@ -1054,8 +1054,14 @@ a:hover {
   }
 }
 
+.site-footer .brand-logo,
+.footer-brand .brand-logo {
+  color: #ffffff !important;
+}
+
+.site-footer .brand-logo .highlight,
 .footer-brand .brand-logo .highlight {
-  color: #38bdf8;
+  color: #38bdf8 !important;
 }
 
 .footer-brand p {
