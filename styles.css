@@ -37,8 +37,8 @@
   --border-subtle: #e2e8f0;
   --border-glow: #cbd5e1;
 
-  /* Typography */
-  --font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* Typography - High-Performance Native System Fonts */
+  --font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   
   /* Radii & Shadows */
   --radius-sm: 6px;
