@@ -42,54 +42,93 @@
 
   <link rel="stylesheet" href="styles.css">
 
-  <!-- JSON-LD Structured Data (WebApplication) -->
+  <!-- JSON-LD Structured Data (@graph) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "Arbeitszeitrechner 365",
-    "url": "https://arbeitszeitrechner365.de/",
-    "description": "Kostenloser Online Arbeitszeitrechner für Deutschland mit gesetzlicher Pausenregelung (ArbZG), Dezimalstunden und Wochenübersicht.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "EUR"
-    }
-  }
-  </script>
-
-  <!-- JSON-LD Structured Data (FAQPage) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "Wie funktioniert der Arbeitszeitrechner?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Geben Sie Arbeitsbeginn und Arbeitsende ein. Der Rechner berechnet automatisch die Bruttoarbeitszeit und zieht gesetzliche Pausenzeiten nach § 4 ArbZG ab."
+        "@type": "Organization",
+        "@id": "https://arbeitszeitrechner365.de/#organization",
+        "name": "Arbeitszeitrechner 365",
+        "url": "https://arbeitszeitrechner365.de/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://arbeitszeitrechner365.de/assets/logo.png"
         }
       },
       {
-        "@type": "Question",
-        "name": "Welche Pausenzeiten sind gesetzlich vorgeschrieben?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Nach § 4 ArbZG gelten: Bei 6-9 Std Arbeitszeit min. 30 Minuten Pause; bei über 9 Std min. 45 Minuten Pause."
+        "@type": "WebSite",
+        "@id": "https://arbeitszeitrechner365.de/#website",
+        "url": "https://arbeitszeitrechner365.de/",
+        "name": "Arbeitszeitrechner 365",
+        "description": "Kostenlose Rechner für Arbeitszeit, Pausen, Überstunden und Dezimalstunden.",
+        "publisher": {
+          "@id": "https://arbeitszeitrechner365.de/#organization"
+        },
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://arbeitszeitrechner365.de/#webpage",
+        "url": "https://arbeitszeitrechner365.de/",
+        "name": "Arbeitszeitrechner 2026 – Kostenlos & Minutengenau | arbeitszeitrechner365.de",
+        "isPartOf": {
+          "@id": "https://arbeitszeitrechner365.de/#website"
+        },
+        "about": {
+          "@id": "https://arbeitszeitrechner365.de/#webapp"
+        },
+        "inLanguage": "de-DE",
+        "dateModified": "2026-08-01"
+      },
+      {
+        "@type": "WebApplication",
+        "@id": "https://arbeitszeitrechner365.de/#webapp",
+        "name": "Arbeitszeitrechner 365",
+        "url": "https://arbeitszeitrechner365.de/",
+        "description": "Kostenloser Online-Arbeitszeitrechner für Deutschland: Arbeitszeit mit Pausen, Dezimalstunden, Überstunden, Wochen- und Monatsübersicht berechnen.",
+        "applicationCategory": "BusinessApplication",
+        "applicationSubCategory": "Time Tracking",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires a modern web browser with JavaScript enabled",
+        "inLanguage": "de-DE",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
         }
       },
       {
-        "@type": "Question",
-        "name": "Wie rechne ich Stunden in Dezimalstunden um?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Teilen Sie die Minuten durch 60. Beispiel: 7 Stunden 30 Minuten = 7 + (30/60) = 7,50 Dezimalstunden."
-        }
+        "@type": "FAQPage",
+        "@id": "https://arbeitszeitrechner365.de/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wie funktioniert der Arbeitszeitrechner?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Geben Sie Arbeitsbeginn, Arbeitsende und Ihre tatsächlichen Pausen ein. Der Rechner zeigt Bruttoarbeitszeit, Pausenzeit, Nettoarbeitszeit und Dezimalstunden an. Bei Nachtschichten über Mitternacht wird der Folgetag automatisch berücksichtigt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Welche Pausenzeiten sind gesetzlich vorgeschrieben?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nach § 4 ArbZG sind bei mehr als 6 bis zu 9 Stunden Arbeitszeit mindestens 30 Minuten Ruhepause vorgeschrieben. Bei mehr als 9 Stunden sind es mindestens 45 Minuten. Pausen können in Abschnitte von jeweils mindestens 15 Minuten aufgeteilt werden."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie rechne ich Stunden in Dezimalstunden um?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Teilen Sie die Minuten durch 60 und addieren Sie das Ergebnis zu den Stunden. Beispiel: 7 Stunden 30 Minuten = 7 + 30 geteilt durch 60 = 7,50 Dezimalstunden."
+            }
+          }
+        ]
       }
     ]
   }
@@ -932,7 +971,7 @@
               <svg class="faq-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Nach § 4 ArbZG gilt: Bei 6 bis 9 Stunden Arbeit müssen mindestens 30 Minuten Pause gemacht werden. Bei mehr als 9 Stunden Arbeit erhöht sich die Pflichtpause auf mindestens 45 Minuten. Pausen können in Abschnitte von mindestens 15 Minuten aufgeteilt werden.</p>
+              <p>Nach § 4 ArbZG sind bei mehr als 6 bis zu 9 Stunden Arbeitszeit mindestens 30 Minuten Ruhepause vorgeschrieben. Bei mehr als 9 Stunden sind es mindestens 45 Minuten. Pausen können in Abschnitte von jeweils mindestens 15 Minuten aufgeteilt werden.</p>
             </div>
           </div>
 
