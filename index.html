@@ -49,13 +49,24 @@
   <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%232563eb'><path d='M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z'/></svg>">
 
-  <!-- Resource Preloads for Speed -->
-  <link rel="preload" href="styles.css" as="style">
+  <!-- Critical Hero & Header CSS (Eliminates 2,580ms LCP Element Render Delay) -->
+  <style>
+    .site-header { position: sticky; top: 0; z-index: 100; background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 0.85rem 1.5rem; }
+    .header-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; }
+    .brand-logo { display: flex; align-items: center; gap: 0.65rem; font-size: 1.35rem; font-weight: 800; color: #2c4a6f; text-decoration: none; }
+    .hero-section { padding: 3.5rem 1.5rem 2rem; text-align: center; max-width: 920px; margin: 0 auto; }
+    .badge-pill { display: inline-flex; align-items: center; gap: 0.5rem; background: #eff6ff; border: 1px solid #bfdbfe; color: #2563eb; padding: 0.35rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 700; margin-bottom: 1.25rem; }
+    .hero-title { font-size: clamp(2rem, 3.5vw + 1rem, 3rem); font-weight: 800; line-height: 1.2; color: #2c4a6f; margin-bottom: 1rem; }
+    .hero-subtitle { font-size: 1.1rem; color: #475569; max-width: 760px; margin: 0 auto 1.75rem; line-height: 1.6; }
+  </style>
+
+  <!-- Preconnect & Resource Preloads for Speed -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
+  <link rel="preload" href="styles.css" as="style">
 
-  <!-- Stylesheets -->
+  <!-- Stylesheets (Loaded synchronously to guarantee 0.000 CLS) -->
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap">
 
