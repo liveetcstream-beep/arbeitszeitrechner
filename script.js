@@ -261,6 +261,12 @@ function calculateDaily() {
   if (resDec) resDec.textContent = `= ${decimalHours.replace('.', ',')} Stunden (Dezimal)`;
   if (resGross) resGross.textContent = minutesToFormattedTime(grossMins) + ' h';
   if (resPause) resPause.textContent = effectiveBreakMins + ' Min.';
+
+  // Dynamic Formula Transparency
+  const formulaText = document.getElementById('res-formula-text');
+  if (formulaText) {
+    formulaText.textContent = `${startStr} – ${endStr} = ${minutesToFormattedTime(grossMins)} Anwesenheit | ${minutesToFormattedTime(grossMins)} – ${minutesToFormattedTime(effectiveBreakMins)} Pause = ${minutesToFormattedTime(netMins)} Nettoarbeitszeit`;
+  }
   
   if (resOvertime) {
     const formattedOvertime = minutesToFormattedTime(overtimeMins);
