@@ -272,7 +272,16 @@
               "@type": "Answer",
               "text": "Ja, 100 % kostenlos. Keine Registrierung, keine versteckten Gebühren, kein Abo. Alle Eingaben werden ausschließlich lokal im Browser verarbeitet – vollständig DSGVO-konform."
             }
+          },
+          {
+            "@type": "Question",
+            "name": "Muss ich Überstunden nacharbeiten, wenn ich krank war?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Nein. Laut Entgeltfortzahlungsgesetz (§ 3 EFZG) und gefestigter Rechtsprechung des Bundesarbeitsgerichts (BAG) dürfen krankheitsbedingte Ausfallzeiten keinesfalls nachgearbeitet werden müssen. Ausfallstunden zählen im Arbeitszeitkonto als geleistet."
+            }
           }
+
         ]
       }
     ]
@@ -1065,17 +1074,24 @@
                   <div class="input-group" style="margin-bottom: 1rem;">
                     <label for="lohn-bundesland">Bundesland auswählen:</label>
                     <select id="lohn-bundesland" class="input-field">
-                      <option value="BY">Bayern (BY) – 13 Feiertage</option>
-                      <option value="NW">Nordrhein-Westfalen (NW) – 11 Feiertage</option>
-                      <option value="BE">Berlin (BE) – 10 Feiertage</option>
                       <option value="BW">Baden-Württemberg (BW) – 12 Feiertage</option>
+                      <option value="BY">Bayern (BY) – 13 Feiertage</option>
+                      <option value="BE">Berlin (BE) – 10 Feiertage</option>
+                      <option value="BB">Brandenburg (BB) – 12 Feiertage</option>
+                      <option value="HB">Bremen (HB) – 10 Feiertage</option>
                       <option value="HH">Hamburg (HH) – 10 Feiertage</option>
                       <option value="HE">Hessen (HE) – 12 Feiertage</option>
+                      <option value="MV">Mecklenburg-Vorpommern (MV) – 11 Feiertage</option>
                       <option value="NI">Niedersachsen (NI) – 10 Feiertage</option>
+                      <option value="NW">Nordrhein-Westfalen (NW) – 11 Feiertage</option>
                       <option value="RP">Rheinland-Pfalz (RP) – 12 Feiertage</option>
+                      <option value="SL">Saarland (SL) – 12 Feiertage</option>
                       <option value="SN">Sachsen (SN) – 11 Feiertage</option>
+                      <option value="ST">Sachsen-Anhalt (ST) – 11 Feiertage</option>
+                      <option value="SH">Schleswig-Holstein (SH) – 10 Feiertage</option>
                       <option value="TH" selected>Thüringen (TH) – 11 Feiertage</option>
                     </select>
+
                   </div>
                   <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem;">
                     <div class="stat-box">
@@ -1256,7 +1272,7 @@
         <h2>Gesetzliche Pausenzeiten 2026 – Überblick nach ArbZG</h2>
         <p class="section-lead">
           Der <strong>Arbeitszeitrechner mit Pause</strong> wendet automatisch die gesetzlichen
-          Mindestpausen nach § 4 ArbZG an. Die Tabelle zeigt alle Pflichtpausen auf einen Blick.
+          Mindestpausen nach <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener">§ 4 ArbZG</a> an. Die Tabelle zeigt alle Pflichtpausen auf einen Blick.
         </p>
 
         <div class="tbl-wrap">
@@ -1293,11 +1309,12 @@
         </div>
 
         <div class="box box-warn">
-          <strong>⚠️ 3 wichtige Regeldetails</strong>
+          <strong>⚠️ 3 wichtige Regeldetails (nach <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener">§ 3</a> & <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener">§ 4 ArbZG</a>)</strong>
           Pausen dürfen <em>nicht</em> am Anfang oder Ende der Schicht liegen.
           Jeder einzelne Pausenabschnitt muss mindestens <strong>15 Minuten</strong> dauern.
-          Verstöße: Bußgeld bis zu <strong>30.000 €</strong> für den Arbeitgeber (§ 22 ArbZG).
+          Verstöße: Bußgeld bis zu <strong>30.000 €</strong> für den Arbeitgeber (<a href="https://www.gesetze-im-internet.de/arbzg/__22.html" target="_blank" rel="noopener">§ 22 ArbZG</a>).
         </div>
+
 
         <h3 style="margin-top:36px;margin-bottom:16px;">Praxis-Schichtbeispiele – Nettoarbeitszeit im Vergleich</h3>
 
@@ -1691,8 +1708,9 @@
           <div class="tip">
             <div class="tip-n">6</div>
             <div>
-              <strong>Mindestlohn 2026 im Blick: 13,90 € / Stunde</strong>
-              <span>Bruttogehalt ÷ geleistete Nettostunden muss ≥ 13,90 € sein. Unser Lohnrechner prüft das automatisch (BMAS-Prognose 2026).</span>
+              <strong>Gesetzlicher Mindestlohn 2026: 13,90 € / Stunde</strong>
+              <span>Bruttogehalt ÷ geleistete Nettostunden muss laut Gesetz seit 01.01.2026 mindestens 13,90 € betragen. Unser Lohnrechner prüft das automatisch.</span>
+
             </div>
           </div>
         </div>
@@ -1831,6 +1849,18 @@
               verarbeitet – vollständig DSGVO-konform, keine Datenweitergabe.
             </div>
           </details>
+
+          <details class="faq">
+            <summary>Muss ich Überstunden nacharbeiten, wenn ich krank war?</summary>
+            <div class="faq-body">
+              <strong>Nein.</strong> Laut <strong>Entgeltfortzahlungsgesetz (§ 3 EFZG)</strong>
+              und gefestigter Rechtsprechung des Bundesarbeitsgerichts (BAG) dürfen Arbeitszeiten,
+              die wegen Krankheit ausgefallen sind, keinesfalls nachgearbeitet werden müssen.
+              Die krankheitsbedingten Ausfallstunden werden auf dem Arbeitszeitkonto so angerechnet,
+              als hätten Sie regulär gearbeitet.
+            </div>
+          </details>
+
 
         </div>
 

@@ -667,17 +667,24 @@ function calculateLohn() {
 // --------------------------------------------------------------------------
 // Feiertage 2026 per Bundesland (Arbeitstage aus 365 Tagen - 52 Sonntage - 52 Samstage - Feiertage auf Werktagen)
 const FEIERTAGE_DATA = {
-  BY: { name: 'Bayern', anzahl: 13, arbeitstage: 249 },
-  NW: { name: 'Nordrhein-Westfalen', anzahl: 11, arbeitstage: 251 },
-  BE: { name: 'Berlin', anzahl: 10, arbeitstage: 252 },
   BW: { name: 'Baden-Württemberg', anzahl: 12, arbeitstage: 250 },
+  BY: { name: 'Bayern', anzahl: 13, arbeitstage: 249 },
+  BE: { name: 'Berlin', anzahl: 10, arbeitstage: 252 },
+  BB: { name: 'Brandenburg', anzahl: 12, arbeitstage: 250 },
+  HB: { name: 'Bremen', anzahl: 10, arbeitstage: 252 },
   HH: { name: 'Hamburg', anzahl: 10, arbeitstage: 252 },
   HE: { name: 'Hessen', anzahl: 12, arbeitstage: 250 },
+  MV: { name: 'Mecklenburg-Vorpommern', anzahl: 11, arbeitstage: 251 },
   NI: { name: 'Niedersachsen', anzahl: 10, arbeitstage: 252 },
+  NW: { name: 'Nordrhein-Westfalen', anzahl: 11, arbeitstage: 251 },
   RP: { name: 'Rheinland-Pfalz', anzahl: 12, arbeitstage: 250 },
+  SL: { name: 'Saarland', anzahl: 12, arbeitstage: 250 },
   SN: { name: 'Sachsen', anzahl: 11, arbeitstage: 251 },
+  ST: { name: 'Sachsen-Anhalt', anzahl: 11, arbeitstage: 251 },
+  SH: { name: 'Schleswig-Holstein', anzahl: 10, arbeitstage: 252 },
   TH: { name: 'Thüringen', anzahl: 11, arbeitstage: 251 },
 };
+
 
 function initFeiertage() {
   const select = document.getElementById('lohn-bundesland');
