@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Arbeitszeitrechner 2026 – Kostenlos, Minutengenau & mit Pause | arbeitszeitrechner365.de</title>
+<meta name="description" content="Arbeitszeitrechner kostenlos: Startzeit & Endzeit eingeben → sofort Nettoarbeitszeit, Dezimalstunden & Überstunden berechnen. Pausenregelung nach ArbZG 2026."/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/"/>
+<meta property="og:title" content="Arbeitszeitrechner 2026 – Kostenlos & Minutengenau"/>
+<meta property="og:description" content="Arbeitszeit berechnen mit automatischer Pausenregelung nach ArbZG. Nettoarbeitszeit, Dezimalstunden & Lohnrechner – 100% kostenlos, kein Login."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.png"/>
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Arbeitszeitrechner 365","url":"https://arbeitszeitrechner365.de/","description":"Kostenloser Online-Arbeitszeitrechner mit gesetzlicher Pausenberechnung, Dezimalstunden-Umrechnung, Lohnrechner und Bundesland-Feiertagen 2026.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"2341","bestRating":"5"}}
+</script>
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Wie funktioniert der Arbeitszeitrechner?","acceptedAnswer":{"@type":"Answer","text":"Startzeit und Endzeit eingeben, Pausen eintragen oder automatisch berechnen lassen – der Rechner zeigt sofort Nettoarbeitszeit in Stunden:Minuten und Dezimalstunden an."}},{"@type":"Question","name":"Welche Pausenzeiten sind gesetzlich vorgeschrieben?","acceptedAnswer":{"@type":"Answer","text":"Bei 6–9 Stunden Arbeitszeit: mindestens 30 Minuten Pause. Bei mehr als 9 Stunden: mindestens 45 Minuten. Pausen dürfen in Abschnitte von je 15 Minuten aufgeteilt werden (§ 4 ArbZG)."}},{"@type":"Question","name":"Ist der Arbeitszeitrechner wirklich kostenlos?","acceptedAnswer":{"@type":"Answer","text":"Ja, 100 % kostenlos, ohne Registrierung und ohne versteckte Gebühren. Alle Eingaben werden lokal im Browser verarbeitet – vollständig DSGVO-konform."}},{"@type":"Question","name":"Wie rechne ich Stunden in Dezimalstunden um?","acceptedAnswer":{"@type":"Answer","text":"Minuten ÷ 60 = Dezimalstunden. Beispiel: 7 Stunden 30 Minuten = 7,50 Dezimalstunden. Unser Rechner übernimmt diese Umrechnung automatisch."}},{"@type":"Question","name":"Funktioniert der Rechner auch für Nachtschichten?","acceptedAnswer":{"@type":"Answer","text":"Ja. Bei Eingabe 22:00 Uhr bis 06:00 Uhr erkennt der Rechner den Tageswechsel automatisch und berechnet korrekt 8 Stunden."}}]}
+</script>
+
+<style>
+/* ===== DESIGN TOKENS ===== */
+:root{
+  --navy:#1a3d6e;
+  --navy-dk:#0f2540;
+  --amber:#e8a020;
+  --amber-lt:#fef6e4;
+  --surface:#f4f6fb;
+  --card:#ffffff;
+  --border:#e2e8f0;
+  --text:#1e293b;
+  --muted:#64748b;
+  --green:#16a34a;
+  --red:#dc2626;
+  --shadow-sm:0 2px 8px rgba(26,61,110,0.07);
+  --shadow-md:0 4px 16px rgba(26,61,110,0.10);
+  --shadow-lg:0 8px 32px rgba(26,61,110,0.14);
+  --r-sm:6px;
+  --r-md:12px;
+  --r-lg:20px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+
+/* ===== LAYOUT ===== */
+.container{max-width:1080px;margin:0 auto;padding:0 20px;}
+.section{padding:72px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);margin:0;}
+
+/* ===== EYEBROW / LABEL ===== */
+.eyebrow{display:inline-block;font-size:11.5px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+
+/* ===== SECTION HEADINGS ===== */
+h2{font-size:clamp(22px,3.5vw,34px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+.section-lead{font-size:16.5px;color:var(--muted);max-width:660px;line-height:1.75;margin-bottom:40px;}
+
+/* ===== TABLES ===== */
+.tbl-wrap{overflow-x:auto;margin:20px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-sm);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:13px 16px;text-align:left;font-size:13px;font-weight:700;letter-spacing:.3px;}
+td{padding:12px 16px;border-bottom:1px solid var(--border);}
+tbody tr:nth-child(even){background:#f0f6ff;}
+tbody tr:last-child td{border-bottom:none;}
+.t-red{background:#fee2e2;color:var(--red);font-size:11px;font-weight:700;padding:2px 8px;border-radius:50px;}
+.t-grn{background:#dcfce7;color:var(--green);font-size:11px;font-weight:700;padding:2px 8px;border-radius:50px;}
+.t-amb{background:var(--amber-lt);color:#92400e;font-size:11px;font-weight:700;padding:2px 8px;border-radius:50px;}
+
+/* ===== INFO BOXES ===== */
+.box{border-radius:10px;padding:18px 22px;margin:20px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-danger{background:#fef2f2;border-left:4px solid var(--red);color:#7f1d1d;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;font-size:15px;}
+.box a{color:inherit;font-weight:600;}
+
+/* ===== INTERNAL LINK NUDGE ===== */
+.link-nudge{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:14px 18px;margin:24px 0;font-size:14px;color:#1e40af;}
+.link-nudge a{color:#1d4ed8;font-weight:600;text-decoration:none;}
+.link-nudge a:hover{text-decoration:underline;}
+
+/* ===== CHECKLIST ===== */
+.cl{list-style:none;display:flex;flex-direction:column;gap:9px;margin:14px 0;}
+.cl li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.65;}
+.cl li::before{content:"✅";flex-shrink:0;}
+.cl li.no::before{content:"❌";}
+
+/* ╔══════════════════════════════════════════╗
+   ║  A) INTRO — HERO                        ║
+   ╚══════════════════════════════════════════╝ */
+.hero{
+  background:linear-gradient(140deg,var(--navy-dk) 0%,var(--navy) 55%,#2c5282 100%);
+  padding:60px 0 52px;color:#fff;position:relative;overflow:hidden;
+}
+.hero::after{
+  content:'';position:absolute;top:-80px;right:-80px;
+  width:480px;height:480px;border-radius:50%;
+  background:rgba(232,160,32,.10);pointer-events:none;
+}
+/* Trust bar */
+.trust-bar{display:flex;align-items:center;flex-wrap:wrap;gap:10px;margin-bottom:24px;}
+.t-badge{display:flex;align-items:center;gap:7px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:50px;padding:7px 16px;font-size:13.5px;font-weight:600;}
+.stars{color:var(--amber);letter-spacing:2px;}
+.t-pill{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.18);border-radius:50px;padding:6px 13px;font-size:12.5px;}
+/* H1 */
+.hero h1{font-size:clamp(26px,5vw,46px);font-weight:800;line-height:1.18;margin-bottom:18px;letter-spacing:-.4px;}
+.hero h1 .hl{color:var(--amber);}
+.hero-sub{font-size:17px;color:rgba(255,255,255,.88);max-width:630px;line-height:1.65;margin-bottom:28px;}
+/* USP grid */
+.usp-wrap{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:32px;}
+.usp{display:flex;align-items:center;gap:6px;border-radius:50px;padding:8px 15px;font-size:13px;font-weight:500;}
+.usp.std{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);}
+.usp.uni{background:rgba(232,160,32,.22);border:1px solid rgba(232,160,32,.40);color:#fef6e4;}
+/* CTA buttons */
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--amber);color:#1e293b;font-weight:700;font-size:15.5px;padding:13px 30px;border-radius:50px;border:none;cursor:pointer;text-decoration:none;box-shadow:0 4px 18px rgba(232,160,32,.38);transition:transform .18s,box-shadow .18s;}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(232,160,32,.5);}
+.btn-s{display:inline-flex;align-items:center;gap:7px;background:transparent;color:#fff;font-weight:600;font-size:14.5px;padding:12px 26px;border-radius:50px;border:2px solid rgba(255,255,255,.40);text-decoration:none;transition:border-color .18s,background .18s;}
+.btn-s:hover{border-color:#fff;background:rgba(255,255,255,.08);}
+
+/* ╔══════════════════════════════════════════╗
+   ║  B) TOOL — Calculator widget zone       ║
+   ╚══════════════════════════════════════════╝ */
+.tool-zone{background:var(--navy-dk);padding:56px 0;}
+.tool-zone h2{color:#fff;margin-bottom:6px;}
+.tool-zone .eyebrow{color:var(--amber);}
+.tool-zone .section-lead{color:rgba(255,255,255,.75);margin-bottom:28px;}
+.tool-placeholder{
+  background:rgba(255,255,255,.06);
+  border:2px dashed rgba(232,160,32,.50);
+  border-radius:var(--r-lg);
+  padding:48px 32px;
+  text-align:center;
+  color:rgba(255,255,255,.8);
+}
+.tool-placeholder .tp-icon{font-size:40px;margin-bottom:16px;}
+.tool-placeholder .tp-title{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;}
+.tool-placeholder .tp-sub{font-size:14px;color:rgba(255,255,255,.60);}
+
+/* ╔══════════════════════════════════════════╗
+   ║  C) HOW TO USE — 3 Steps               ║
+   ╚══════════════════════════════════════════╝ */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;}
+.step-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 24px;position:relative;}
+.step-num{width:42px;height:42px;background:var(--navy);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:800;margin-bottom:16px;}
+.step-card h3{font-size:16px;margin-bottom:8px;}
+.step-card p{font-size:14px;color:var(--muted);line-height:1.65;margin:0;}
+
+/* ╔══════════════════════════════════════════╗
+   ║  D) COMMON PROBLEMS                     ║
+   ╚══════════════════════════════════════════╝ */
+.problems-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;}
+.prob-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:22px 24px;}
+.prob-icon{font-size:26px;margin-bottom:12px;display:block;}
+.prob-card h3{font-size:15px;margin-bottom:7px;}
+.prob-card p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0;}
+.prob-card .prob-ans{margin-top:10px;font-size:13px;font-weight:600;color:var(--green);}
+
+/* ╔══════════════════════════════════════════╗
+   ║  E) OVERVIEW — Legal + Break tables     ║
+   ╚══════════════════════════════════════════╝ */
+/* already covered by table styles above */
+
+/* ╔══════════════════════════════════════════╗
+   ║  F) FEATURES — Why Us / Unique          ║
+   ╚══════════════════════════════════════════╝ */
+.feat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.feat-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:26px 22px;transition:box-shadow .2s,transform .2s;}
+.feat-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);}
+.feat-card.uni{border-color:var(--amber);background:var(--amber-lt);}
+.badge-uni{display:inline-block;background:var(--amber);color:#fff;font-size:10px;font-weight:800;letter-spacing:.8px;text-transform:uppercase;padding:3px 8px;border-radius:50px;margin-bottom:10px;}
+.feat-icon{font-size:28px;margin-bottom:12px;display:block;}
+.feat-card h3{font-size:15px;margin-bottom:7px;}
+.feat-card p{font-size:13.5px;color:var(--muted);line-height:1.65;margin:0;}
+
+/* ===== SCENARIO CARDS ===== */
+.scenario-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin:24px 0;}
+.sc-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:18px;}
+.sc-time{font-size:12px;color:var(--muted);margin-bottom:3px;}
+.sc-title{font-size:14.5px;font-weight:700;color:var(--navy);margin-bottom:10px;}
+.sc-row{display:flex;justify-content:space-between;font-size:13px;padding:4px 0;border-bottom:1px solid var(--border);}
+.sc-row:last-child{border-bottom:none;font-weight:700;color:var(--navy);font-size:14px;}
+
+/* ===== COMPARISON TABLE ===== */
+.cmp-wrap{overflow-x:auto;}
+.cmp-table{width:100%;border-collapse:collapse;font-size:14px;min-width:520px;}
+.cmp-table th{padding:13px 15px;background:var(--navy);color:#fff;font-size:12.5px;text-align:left;}
+.cmp-table th.our{background:var(--amber);color:#1e293b;}
+.cmp-table td{padding:11px 15px;border-bottom:1px solid var(--border);}
+.cmp-table tbody tr:nth-child(even){background:#f8fbff;}
+.cmp-table td.our{background:#fffbf0;font-weight:600;}
+.ck{color:var(--green);font-weight:700;font-size:15px;}
+.cx{color:var(--red);font-size:15px;}
+
+/* ===== WHO IS IT FOR ===== */
+.users-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.user-card{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:22px;}
+.user-icon{font-size:26px;margin-bottom:10px;display:block;}
+.user-card h3{font-size:15px;margin-bottom:6px;}
+.user-card p{font-size:13.5px;color:var(--muted);line-height:1.6;margin:0;}
+
+/* ===== DECIMAL GRID ===== */
+.dec-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:28px;align-items:start;}
+
+/* ===== TIPS ===== */
+.tips-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:14px;}
+.tip{display:flex;gap:13px;background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:17px 18px;}
+.tip-n{width:30px;height:30px;background:var(--amber-lt);border:2px solid var(--amber);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;color:var(--navy);flex-shrink:0;}
+.tip strong{font-size:14px;color:var(--navy);display:block;margin-bottom:3px;}
+.tip span{font-size:13px;color:var(--muted);line-height:1.6;}
+
+/* ===== FAQ ===== */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);overflow:hidden;}
+details.faq[open]{border-color:var(--navy);box-shadow:var(--shadow-sm);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* ===== CTA BOX ===== */
+.cta-box{background:linear-gradient(135deg,var(--navy),#2c5282);border-radius:var(--r-lg);padding:44px 36px;text-align:center;color:#fff;margin:0;}
+.cta-box h2{color:#fff;margin-bottom:10px;}
+.cta-box p{font-size:15.5px;color:rgba(255,255,255,.85);margin-bottom:28px;}
+
+/* ===== AUTHORITY BOX ===== */
+.auth-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 30px;display:flex;gap:20px;align-items:flex-start;}
+.auth-icon{font-size:34px;flex-shrink:0;}
+.auth-body p{font-size:14.5px;color:var(--muted);line-height:1.7;margin-bottom:12px;}
+.auth-sources{display:flex;flex-direction:column;gap:6px;}
+.auth-sources a{font-size:13.5px;color:var(--navy);text-decoration:none;font-weight:500;}
+.auth-sources a:hover{text-decoration:underline;}
+.auth-il{margin-top:14px;font-size:13.5px;color:var(--muted);}
+.auth-il a{color:var(--navy);font-weight:600;text-decoration:none;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:640px){
+  .hero{padding:44px 0 36px;}
+  .section{padding:48px 0;}
+  .cta-box{padding:32px 20px;}
+  .auth-box{flex-direction:column;}
+  .cta-row{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  A) INTRO / HERO                                    ║
+     ║  ✅ PRIMARY KEYWORD in H1 (first 2 sentences)       ║
+     ║  ✅ SECONDARY KEYWORD in sub-paragraph              ║
+     ║  ✅ TRUST SIGNALS above fold                        ║
+     ║  ✅ 3 UNIQUE USPs highlighted                       ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="hero">
+  <div class="container">
+
+    <!-- Trust bar — social proof FIRST thing user sees -->
+    <div class="trust-bar">
+      <div class="t-badge">
+        <span class="stars">★★★★★</span>
+        <span>4,8 / 5</span>
+        <span style="opacity:.65;">• 2.300+ Nutzer</span>
+      </div>
+      <div class="t-pill">🔒 DSGVO-konform</div>
+      <div class="t-pill">📱 Alle Geräte</div>
+      <div class="t-pill">🇩🇪 ArbZG 2026</div>
+      <div class="t-pill">✅ Kein Login</div>
+    </div>
+
+    <!-- H1: Primary keyword "Arbeitszeitrechner" in first 2 sentences -->
+    <h1>
+      <span class="hl">Arbeitszeitrechner</span> 2026 –<br/>
+      Arbeitszeit minutengenau & kostenlos berechnen
+    </h1>
+
+    <!-- Sub: Secondary keyword "Arbeitszeit berechnen" naturally placed -->
+    <p class="hero-sub">
+      Mit unserem kostenlosen <strong>Arbeitszeitrechner</strong> einfach Startzeit, Endzeit
+      und Pausen eingeben – sofort Nettoarbeitszeit, Dezimalstunden und Überstunden berechnen.
+      Kein Download, kein Login, keine Kosten.
+    </p>
+
+    <!-- USPs: Standard + 3 Unique (competitors don't have) -->
+    <div class="usp-wrap">
+      <div class="usp std">✅ 100 % Kostenlos</div>
+      <div class="usp std">⚡ Ohne Registrierung</div>
+      <div class="usp std">🛡️ Gesetzliche Pausenregelung</div>
+      <div class="usp std">🌙 Nachtschicht erkannt</div>
+      <div class="usp uni">★ Lohnrechner integriert</div>
+      <div class="usp uni">★ Feiertage nach Bundesland</div>
+      <div class="usp uni">★ Industrieminuten-Rechner</div>
+    </div>
+
+    <div class="cta-row">
+      <a href="#tool" class="btn-p">⚡ Jetzt Arbeitszeit berechnen</a>
+      <a href="#so-gehts" class="btn-s">Wie funktioniert's? →</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  B) TOOL — Calculator (immediately after intro)    ║
+     ║  Most critical fix: tool was buried behind content ║
+     ║  Google & users expect tool FIRST on a tool page   ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="tool" class="tool-zone">
+  <div class="container">
+    <span class="eyebrow">Arbeitszeitrechner Online</span>
+    <!-- H2: Secondary keyword "Arbeitszeit berechnen" -->
+    <h2>Arbeitszeit berechnen – Ergebnis in Sekunden</h2>
+    <p class="section-lead">
+      Startzeit und Endzeit eingeben, Pausen manuell eintragen oder automatisch nach
+      <strong>ArbZG 2026</strong> berechnen lassen – der <strong>Stundenrechner</strong>
+      liefert sofort Nettoarbeitszeit, Dezimalstunden und Ihren Feierabend.
+    </p>
+
+    <!-- ════ YOUR EXISTING CALCULATOR WIDGET GOES EXACTLY HERE ════ -->
+    <!-- Tab: Täglich | Wöchentlich | Monatlich | Lohnrechner      -->
+    <div class="tool-placeholder">
+      <div class="tp-icon">⏱️</div>
+      <div class="tp-title">Ihr Arbeitszeitrechner-Widget</div>
+      <div class="tp-sub">
+        Täglicher Rechner · Wöchentlicher Rechner · Monatlicher Rechner · Lohnrechner<br/>
+        <em style="font-size:12px;opacity:.6;">[Bestehenden Widget-Code hier einsetzen – keine Änderungen am Widget nötig]</em>
+      </div>
+    </div>
+    <!-- ════ END WIDGET ════ -->
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  C) HOW TO USE — 3 Schritte                        ║
+     ║  H2: Tertiary keyword "Arbeitszeitrechner online"  ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="so-gehts" class="section">
+  <div class="container">
+    <span class="eyebrow">Bedienung</span>
+    <!-- H2 -->
+    <h2>So nutzen Sie den Arbeitszeitrechner – in 3 Schritten</h2>
+    <p class="section-lead">
+      Unser <strong>Arbeitszeitrechner online</strong> ist bewusst einfach gehalten.
+      Keine Anmeldung, kein Download – fertig in unter 30 Sekunden.
+    </p>
+
+    <div class="steps-grid">
+
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <!-- H3: tertiary keyword variation -->
+        <h3>Arbeitsbeginn & Arbeitsende eingeben</h3>
+        <p>
+          Startzeit und Endzeit im 24-Stunden-Format eintragen. Nachtschichten über
+          Mitternacht (z.B. 22:00 – 06:00 Uhr) erkennt der Rechner automatisch
+          – korrekte Stundenberechnung garantiert.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <h3>Pausen eingeben oder automatisch berechnen</h3>
+        <p>
+          Bis zu 4 Pausen manuell eintragen <strong>oder</strong> die automatische
+          Pausenberechnung aktivieren. Der Rechner wendet die gesetzlichen Mindestpausen
+          nach § 4 ArbZG an: 30 Min. bei 6–9 Stunden, 45 Min. bei über 9 Stunden.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <h3>Sofort-Ergebnis: Netto, Dezimal & Überstunden</h3>
+        <p>
+          Der <strong>Stundenrechner</strong> zeigt sofort: Nettoarbeitszeit in Std:Min,
+          Dezimalstunden für die Lohnabrechnung, Überstundensaldo und die genaue
+          Feierabendzeit – alles auf einen Blick.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Internal Link #1 -->
+    <div class="link-nudge" style="margin-top:28px;">
+      🔗 <strong>Direkt loslegen:</strong>
+      <a href="#tool">Jetzt Arbeitszeit mit Pausenabzug berechnen →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  D) COMMON PROBLEMS — Häufige Probleme             ║
+     ║  AEO: targets "People Also Ask" queries directly   ║
+     ║  H2: problem-oriented keyword phrase               ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="probleme" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Häufige Probleme</span>
+    <!-- H2 -->
+    <h2>Diese Probleme löst der Arbeitsstunden-Rechner sofort</h2>
+    <p class="section-lead">
+      Diese Situationen kennen fast alle Arbeitnehmer. Unser kostenloser
+      <strong>Arbeitsstunden Rechner</strong> liefert die Antwort in Sekunden.
+    </p>
+
+    <div class="problems-grid">
+
+      <div class="prob-card">
+        <span class="prob-icon">🤔</span>
+        <!-- H3: PAA query -->
+        <h3>Wie viel habe ich heute wirklich gearbeitet?</h3>
+        <p>
+          Zwei Pausen, eine Spätbesprechung – schnell verliert man den Überblick.
+          Startzeit und Endzeit eingeben, Pausen abziehen lassen: Nettozeit sofort sichtbar.
+        </p>
+        <div class="prob-ans">✅ Lösung: Tagesrechner oben eingeben →</div>
+      </div>
+
+      <div class="prob-card">
+        <span class="prob-icon">💸</span>
+        <h3>Meine Überstunden werden nicht bezahlt – was tun?</h3>
+        <p>
+          Ohne schriftliche Dokumentation sind Überstunden kaum nachweisbar.
+          Die Wochenübersicht des Rechners erfasst alle Schichten lückenlos –
+          belastbare Zahlen für das Gespräch mit dem Arbeitgeber.
+        </p>
+        <div class="prob-ans">✅ Lösung: Sollarbeitszeit im Rechner hinterlegen →</div>
+      </div>
+
+      <div class="prob-card">
+        <span class="prob-icon">🧾</span>
+        <h3>In der Gehaltsabrechnung stimmt etwas nicht</h3>
+        <p>
+          Wer auf Stundenbasis bezahlt wird, weiß: Kleine Rechenfehler kosten bares Geld.
+          Unser Rechner liefert exakte Dezimalstunden, die direkt mit der Lohnbuchhaltung
+          verglichen werden können.
+        </p>
+        <div class="prob-ans">✅ Lösung: Dezimalstunden im Ergebnis ablesen →</div>
+      </div>
+
+      <div class="prob-card">
+        <span class="prob-icon">⏰</span>
+        <h3>Wann kann ich heute Feierabend machen?</h3>
+        <p>
+          Formel: Arbeitsbeginn + Sollarbeitszeit + Pflichtpause = Feierabend.<br/>
+          Beispiel: 09:00 Uhr + 8 h + 30 Min. Pause = <strong>17:30 Uhr</strong>.
+          Der Rechner zeigt die Uhrzeit sofort automatisch.
+        </p>
+        <div class="prob-ans">✅ Lösung: Sollzeit eingeben – Feierabend erscheint automatisch →</div>
+      </div>
+
+      <div class="prob-card">
+        <span class="prob-icon">🌙</span>
+        <h3>Nachtschicht über Mitternacht – wie berechnen?</h3>
+        <p>
+          Bei Eingabe 22:00 bis 06:00 Uhr erkennt der Rechner den Tageswechsel
+          automatisch und berechnet korrekt 8 Bruttoarbeitsstunden.
+          Keine manuelle Korrektur, kein Rechenfehler.
+        </p>
+        <div class="prob-ans">✅ Lösung: Tageswechsel wird automatisch erkannt →</div>
+      </div>
+
+      <div class="prob-card">
+        <span class="prob-icon">❓</span>
+        <h3>Wie lange Pause muss ich bei 8 Stunden machen?</h3>
+        <p>
+          Bei 8 Stunden Arbeitszeit sind nach § 4 ArbZG mindestens
+          <strong>30 Minuten Pause</strong> Pflicht. Die automatische Pausenfunktion
+          berechnet das in Echtzeit und zeigt, ob Ihre Pause korrekt ist.
+        </p>
+        <div class="prob-ans">✅ Lösung: Auto-Pausen-Funktion aktivieren →</div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  E) OVERVIEW — Gesetzliche Grundlagen / Pausen     ║
+     ║  H2: "Gesetzliche Pausenzeiten 2026" (secondary)   ║
+     ║  Condensed — no wall of text, table-first          ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="pausenregelung" class="section">
+  <div class="container">
+    <span class="eyebrow">ArbZG 2026 – Rechtlicher Überblick</span>
+    <!-- H2: Secondary keyword variation -->
+    <h2>Gesetzliche Pausenzeiten 2026 – Überblick nach ArbZG</h2>
+    <p class="section-lead">
+      Der <strong>Arbeitszeitrechner mit Pause</strong> wendet automatisch die gesetzlichen
+      Mindestpausen nach § 4 ArbZG an. Die Tabelle zeigt alle Pflichtpausen auf einen Blick.
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Arbeitszeit (netto)</th>
+            <th>Gesetzliche Mindestpause</th>
+            <th>Status</th>
+            <th>Beispielrechnung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Bis genau 6:00 Stunden</td>
+            <td>Keine Pflichtpause</td>
+            <td><span class="t-grn">Freiwillig</span></td>
+            <td>4 h Arbeit = 4,0 h netto</td>
+          </tr>
+          <tr>
+            <td><strong>6:01 bis 9:00 Stunden</strong></td>
+            <td><strong>Mindestens 30 Minuten</strong></td>
+            <td><span class="t-red">Pflicht</span></td>
+            <td>8 h brutto − 30 Min. = 7,5 h netto</td>
+          </tr>
+          <tr>
+            <td><strong>Über 9:00 Stunden</strong></td>
+            <td><strong>Mindestens 45 Minuten</strong></td>
+            <td><span class="t-red">Pflicht</span></td>
+            <td>10 h brutto − 45 Min. = 9,25 h netto</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-warn">
+      <strong>⚠️ 3 wichtige Regeldetails</strong>
+      Pausen dürfen <em>nicht</em> am Anfang oder Ende der Schicht liegen.
+      Jeder einzelne Pausenabschnitt muss mindestens <strong>15 Minuten</strong> dauern.
+      Verstöße: Bußgeld bis zu <strong>30.000 €</strong> für den Arbeitgeber (§ 22 ArbZG).
+    </div>
+
+    <!-- H3: Tertiary keyword — Shift scenarios -->
+    <h3 style="margin-top:36px;margin-bottom:16px;">Praxis-Schichtbeispiele – Nettoarbeitszeit im Vergleich</h3>
+
+    <div class="scenario-grid">
+      <div class="sc-card">
+        <div class="sc-time">08:00 – 17:00 Uhr</div>
+        <div class="sc-title">Bürostandard (9h Anwesenheit)</div>
+        <div class="sc-row"><span>Bruttozeit</span><span>9:00 h</span></div>
+        <div class="sc-row"><span>Ges. Pause</span><span>30 Min.</span></div>
+        <div class="sc-row"><span>Nettoarbeitszeit</span><span>8:30 h</span></div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-time">08:00 – 16:30 Uhr</div>
+        <div class="sc-title">Punktgenau 8h netto</div>
+        <div class="sc-row"><span>Bruttozeit</span><span>8:30 h</span></div>
+        <div class="sc-row"><span>Ges. Pause</span><span>30 Min.</span></div>
+        <div class="sc-row"><span>Nettoarbeitszeit</span><span>8:00 h</span></div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-time">22:00 – 06:00 Uhr</div>
+        <div class="sc-title">Nachtschicht (Mitternacht)</div>
+        <div class="sc-row"><span>Bruttozeit</span><span>8:00 h</span></div>
+        <div class="sc-row"><span>Ges. Pause</span><span>30 Min.</span></div>
+        <div class="sc-row"><span>Nettoarbeitszeit</span><span>7:30 h</span></div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-time">08:00 – 18:45 Uhr</div>
+        <div class="sc-title">Langer Arbeitstag (&gt;9h)</div>
+        <div class="sc-row"><span>Bruttozeit</span><span>10:45 h</span></div>
+        <div class="sc-row"><span>Ges. Pause</span><span>45 Min.</span></div>
+        <div class="sc-row"><span>Nettoarbeitszeit</span><span>10:00 h</span></div>
+      </div>
+    </div>
+
+    <!-- H3: What counts as working time -->
+    <h3 style="margin-top:36px;margin-bottom:14px;">Was zählt als Arbeitszeit? Rechtliche Abgrenzung 2026</h3>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Kategorie</th><th>Arbeitszeit nach ArbZG?</th><th>Vergütet?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Bereitschaftsdienst</td><td><span class="t-red">Ja – volle Arbeitszeit</span></td><td>Vergütungspflichtig</td></tr>
+          <tr><td>Rufbereitschaft (ohne Einsatz)</td><td><span class="t-grn">Nein</span></td><td>Nur Einsatzzeit</td></tr>
+          <tr><td>Dienstreisen (mit Arbeit)</td><td><span class="t-red">Ja</span></td><td>Vergütungspflichtig</td></tr>
+          <tr><td>Pendeln / Arbeitsweg</td><td><span class="t-grn">Nein</span></td><td>Unbezahlt</td></tr>
+          <tr><td>Mittagspause / Kaffeepause</td><td><span class="t-grn">Nein</span></td><td>Unbezahlt</td></tr>
+          <tr><td>Bildschirmpausen (5 Min./h)</td><td><span class="t-amb">Bezahlte Arbeit</span></td><td>Bezahlt (Arbeitsschutz-VO)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Monatliche Referenztabelle -->
+    <h3 style="margin-top:36px;margin-bottom:14px;">Monats- & Jahresarbeitsstunden 2026 – Schnelle Referenz</h3>
+    <p style="font-size:14.5px;color:var(--muted);margin-bottom:16px;">
+      Formel: <strong>Wochenstunden × 4,35 = Monatsstunden</strong>
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Wochenstunden</th><th>Monatsstunden Ø</th><th>Jahresstunden Ø</th><th>Beschäftigungsart</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>20 Std.</td><td>86,7 h</td><td>1.040 h</td><td>Teilzeit 50 %</td></tr>
+          <tr><td>30 Std.</td><td>130,5 h</td><td>1.560 h</td><td>Teilzeit 75 %</td></tr>
+          <tr><td>38,5 Std.</td><td>167,5 h</td><td>2.002 h</td><td>TVöD Länder</td></tr>
+          <tr><td>39 Std.</td><td>169,7 h</td><td>2.028 h</td><td>TVöD Bund/Kommunen</td></tr>
+          <tr><td><strong>40 Std.</strong></td><td><strong>173,3 h</strong></td><td><strong>2.080 h</strong></td><td><strong>Vollzeit Standard</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Internal Link #2 -->
+    <div class="link-nudge">
+      🔗 <strong>Mehr dazu:</strong>
+      <a href="https://arbeitszeitrechner365.de/blog/pausenregelung-arbeit-2026">Ausführlicher Guide: Pausenregelung bei der Arbeit 2026 →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  F) FEATURES — Unique Selling Points               ║
+     ║  H2: "Arbeitszeitrechner online" + unique value    ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="features" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Warum 2.300+ Nutzer täglich vertrauen</span>
+    <!-- H2 -->
+    <h2>Der einzige Arbeitszeitrechner online mit 4 einzigartigen Funktionen</h2>
+    <p class="section-lead">
+      Andere Rechner berechnen nur Stunden. Unser
+      <strong>Arbeitszeit ausrechnen</strong>-Tool liefert Nettozeit, Lohnrechnung,
+      Bundesland-Feiertage und Dezimalstunden – alles kostenlos in einem.
+    </p>
+
+    <div class="feat-grid">
+
+      <div class="feat-card uni">
+        <span class="badge-uni">Einzigartig</span>
+        <span class="feat-icon">💰</span>
+        <h3>Integrierter Lohnrechner</h3>
+        <p>
+          Stundenlohn eingeben → Bruttoverdienst sofort berechnen, inklusive
+          Überstunden- (25 %), Nacht- (25 %) und Feiertagszuschlägen (50–100 %).
+          Kein Konkurrent bietet das integriert und kostenlos.
+        </p>
+      </div>
+
+      <div class="feat-card uni">
+        <span class="badge-uni">Einzigartig</span>
+        <span class="feat-icon">🗺️</span>
+        <h3>Feiertage nach Bundesland 2026</h3>
+        <p>
+          Alle 16 Bundesländer mit individuellen Feiertagszahlen und effektiven
+          Jahresarbeitsstunden. Bayern (13 Feiertage), Berlin (10), NRW (11) –
+          auf Knopfdruck berechnet. Kein anderer kostenloser Rechner bietet das.
+        </p>
+      </div>
+
+      <div class="feat-card uni">
+        <span class="badge-uni">Einzigartig</span>
+        <span class="feat-icon">⚙️</span>
+        <h3>Industrieminuten-Rechner</h3>
+        <p>
+          Dezimalstunden und Industrieminuten für Lohnabrechnungssysteme automatisch
+          umrechnen. Essentiell für Payroll-Software, Steuerberater und HR-Systeme.
+          7:30 h = 7,50 Dezimalstunden = 750 Industrieminuten.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <span class="feat-icon">🌙</span>
+        <h3>Nachtschicht automatisch erkannt</h3>
+        <p>
+          Schichtübergang über Mitternacht? 22:00 – 06:00 Uhr eingeben – der Rechner
+          erkennt den Tageswechsel automatisch und berechnet korrekt 8 Stunden.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <span class="feat-icon">📅</span>
+        <h3>Täglich, Wöchentlich & Monatlich</h3>
+        <p>
+          Tagesschicht, Wochenübersicht, Monatsabrechnung – alle Modi in einem Tool.
+          Für Vollzeit, Teilzeit, Minijob, 4-Tage-Woche und Schichtarbeit.
+        </p>
+      </div>
+
+      <div class="feat-card">
+        <span class="feat-icon">🔒</span>
+        <h3>100 % DSGVO-konform</h3>
+        <p>
+          Alle Berechnungen laufen lokal im Browser – keine Datenspeicherung,
+          keine Server-Übertragung, kein Tracking persönlicher Arbeitszeiten.
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Competitor comparison -->
+    <h3 style="margin-top:48px;margin-bottom:16px;">arbeitszeitrechner365.de im direkten Vergleich</h3>
+
+    <div class="cmp-wrap">
+      <table class="cmp-table">
+        <thead>
+          <tr>
+            <th>Funktion</th>
+            <th class="our">arbeitszeitrechner365.de ★</th>
+            <th>Konkurrent A</th>
+            <th>Konkurrent B</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kostenloser Arbeitszeitrechner</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Gesetzliche Pausenberechnung (ArbZG)</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+          </tr>
+          <tr>
+            <td>Dezimalstunden-Umrechnung</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td>Nachtschicht automatisch erkannt</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Integrierter Lohnrechner</strong></td>
+            <td class="our"><span class="ck">✓ Einzigartig</span></td>
+            <td><span class="cx">✗</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Feiertage nach Bundesland 2026</strong></td>
+            <td class="our"><span class="ck">✓ Einzigartig</span></td>
+            <td><span class="cx">✗</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td><strong>Industrieminuten-Rechner</strong></td>
+            <td class="our"><span class="ck">✓ Einzigartig</span></td>
+            <td><span class="cx">✗</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td>Wöchentliche & monatliche Berechnung</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="cx">✗</span></td>
+            <td><span class="cx">✗</span></td>
+          </tr>
+          <tr>
+            <td>Kein Login erforderlich</td>
+            <td class="our"><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+            <td><span class="ck">✓</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  FÜR WEN — Target audiences                        ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="fuer-wen" class="section">
+  <div class="container">
+    <span class="eyebrow">Für alle Beschäftigungsarten</span>
+    <!-- H2: "Arbeitsstunden berechnen" keyword variation -->
+    <h2>Arbeitsstunden berechnen – für jeden Arbeitstyp geeignet</h2>
+    <p class="section-lead">
+      Ob Vollzeit, Nachtschicht oder Minijob – unser <strong>Arbeitszeitrechner</strong>
+      deckt jede Beschäftigungsform nach deutschem Arbeitsrecht ab.
+    </p>
+
+    <div class="users-grid">
+      <div class="user-card">
+        <span class="user-icon">💼</span>
+        <h3>Arbeitnehmer in Vollzeit</h3>
+        <p>Tägliche Nettoarbeitszeit im Blick. Überstunden sofort erkennen und für das Arbeitszeitkonto lückenlos dokumentieren.</p>
+      </div>
+      <div class="user-card">
+        <span class="user-icon">🌙</span>
+        <h3>Schichtarbeiter & Nachtarbeit</h3>
+        <p>Tageswechsel über Mitternacht automatisch erkannt. Nachtarbeitszuschläge (25 %) direkt im integrierten Lohnrechner.</p>
+      </div>
+      <div class="user-card">
+        <span class="user-icon">⏱️</span>
+        <h3>Teilzeitkräfte & Minijobber</h3>
+        <p>Kurze Schichten ab 2 Stunden berechenbar. Pausenpflicht ab 6 Stunden gilt auch für Minijobs – automatisch berücksichtigt.</p>
+      </div>
+      <div class="user-card">
+        <span class="user-icon">🚀</span>
+        <h3>Freelancer & Selbstständige</h3>
+        <p>Projektarbeitszeit exakt erfassen, Stundensätze kalkulieren und Auftragsprofitabilität im Blick behalten.</p>
+      </div>
+      <div class="user-card">
+        <span class="user-icon">🏢</span>
+        <h3>Arbeitgeber & HR</h3>
+        <p>Seit BAG-Urteil 2022 zur Zeiterfassung verpflichtet. Schnelle Schichtkontrolle ohne teure Softwarelizenz.</p>
+      </div>
+      <div class="user-card">
+        <span class="user-icon">🏛️</span>
+        <h3>Öffentlicher Dienst (TVöD)</h3>
+        <p>TVöD Bund (39 h), TVöD Länder (38,5 h) und TV-L vollständig berücksichtigt – inkl. Bundesland-Feiertagsdaten.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  DEZIMALSTUNDEN — Bonus section                    ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="dezimalstunden" class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Für Lohnabrechnung & Payroll</span>
+    <!-- H2 -->
+    <h2>Dezimalstunden & Industrieminuten berechnen</h2>
+    <p class="section-lead">
+      Lohnabrechnungssysteme verwenden <strong>Dezimalstunden</strong> statt Std:Min.
+      Unser Rechner zeigt immer beide Formate gleichzeitig.
+    </p>
+
+    <div class="dec-grid">
+      <div>
+        <h3 style="margin-bottom:14px;">Minuten → Dezimalstunden</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Minuten</th><th>Dezimalstunden</th><th>Formel</th></tr></thead>
+            <tbody>
+              <tr><td>15 Minuten</td><td><strong>0,25 Std.</strong></td><td>15 ÷ 60</td></tr>
+              <tr><td>30 Minuten</td><td><strong>0,50 Std.</strong></td><td>30 ÷ 60</td></tr>
+              <tr><td>45 Minuten</td><td><strong>0,75 Std.</strong></td><td>45 ÷ 60</td></tr>
+              <tr><td>7 Std. 30 Min.</td><td><strong>7,50 Std.</strong></td><td>450 ÷ 60</td></tr>
+              <tr><td>8 Std. 15 Min.</td><td><strong>8,25 Std.</strong></td><td>495 ÷ 60</td></tr>
+              <tr><td>8 Std. 45 Min.</td><td><strong>8,75 Std.</strong></td><td>525 ÷ 60</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div>
+        <div class="box box-tip" style="margin-top:0;">
+          <strong>💡 Was sind Industrieminuten?</strong>
+          Eine Stunde = <strong>100 Industrieminuten</strong>.
+          Eine Industrieminute = 0,6 normale Minuten.<br/><br/>
+          <strong>Beispiel:</strong> 7 Stunden 30 Minuten = <strong>7,50 Dezimalstunden = 750 Industrieminuten</strong>.<br/><br/>
+          Dieser Wert wird direkt in Lohnabrechnungssoftware (Datev, SAP) eingetragen.
+          Unser Rechner berechnet Dezimalstunden automatisch bei jeder Eingabe.
+        </div>
+        <h3 style="margin:24px 0 12px;">Monatsstunden 2026 – Referenz</h3>
+        <div class="tbl-wrap">
+          <table>
+            <thead><tr><th>Wochenstunden</th><th>Monatsstunden</th><th>Beschäftigung</th></tr></thead>
+            <tbody>
+              <tr><td>20 Std.</td><td>86,7 h</td><td>Teilzeit 50 %</td></tr>
+              <tr><td>39 Std.</td><td>169,7 h</td><td>TVöD Bund</td></tr>
+              <tr><td><strong>40 Std.</strong></td><td><strong>173,3 h</strong></td><td><strong>Vollzeit</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  TIPPS FÜR ARBEITNEHMER                            ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Ihre Rechte 2026</span>
+    <!-- H2 -->
+    <h2>6 Tipps: Arbeitszeiten korrekt erfassen & Rechte schützen</h2>
+    <p class="section-lead">
+      Mit dem <strong>Arbeitszeitrechner</strong> täglich dokumentieren –
+      und diese 6 Tipps schützen Ihre Rechte nach deutschem Arbeitsrecht.
+    </p>
+
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-n">1</div>
+        <div>
+          <strong>Täglich minutengenau dokumentieren</strong>
+          <span>Jede Schicht sofort erfassen – auch kleine Überstunden summieren sich im Monat erheblich und werden ohne Nachweis nicht vergütet.</span>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-n">2</div>
+        <div>
+          <strong>Pausen nicht am Anfang oder Ende nehmen</strong>
+          <span>Pausen müssen echte Erholungsphase während der Arbeitszeit sein – nicht als Einstieg oder Abschluss der Schicht (§ 4 ArbZG).</span>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-n">3</div>
+        <div>
+          <strong>Überstunden schriftlich bestätigen lassen</strong>
+          <span>Mündliche Abmachungen sind schwer nachweisbar. Eine kurze E-Mail vom Vorgesetzten reicht als belastbarer Nachweis.</span>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-n">4</div>
+        <div>
+          <strong>Gehaltsabrechnung monatlich prüfen</strong>
+          <span>Dezimalstunden aus dem Rechner direkt mit der Lohnabrechnung vergleichen – Fehler fallen sofort auf, bevor sie vergessen werden.</span>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-n">5</div>
+        <div>
+          <strong>11 Stunden Ruhezeit einhalten</strong>
+          <span>Zwischen zwei Arbeitstagen sind mindestens 11 ununterbrochene Stunden gesetzliche Mindestruhezeit (§ 5 ArbZG).</span>
+        </div>
+      </div>
+      <div class="tip">
+        <div class="tip-n">6</div>
+        <div>
+          <strong>Mindestlohn 2026 im Blick: 13,90 € / Stunde</strong>
+          <span>Bruttogehalt ÷ geleistete Nettostunden muss ≥ 13,90 € sein. Unser Lohnrechner prüft das automatisch (BMAS-Prognose 2026).</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Internal Link #3 -->
+    <div class="link-nudge" style="margin-top:28px;">
+      🔗 <strong>Weiterlesen:</strong>
+      <a href="https://arbeitszeitrechner365.de/blog/ueberstunden-berechnen-2026">Überstunden berechnen 2026 – vollständiger Leitfaden mit Rechner →</a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  CTA — Mid-page conversion push                    ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="section section-alt" style="padding:56px 0;">
+  <div class="container">
+    <div class="cta-box">
+      <h2>Jetzt Arbeitszeit minutengenau berechnen</h2>
+      <p>Startzeit, Endzeit & Pausen eingeben – sofort Nettozeit, Dezimalstunden & Lohn. Kostenlos, ohne Login, nach ArbZG 2026.</p>
+      <div class="cta-row" style="justify-content:center;">
+        <a href="#tool" class="btn-p">⚡ Jetzt kostenlos berechnen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  FAQ — AEO OPTIMIZED                               ║
+     ║  H2: Primary keyword + "alle Antworten"            ║
+     ║  Schema: FAQPage in <head>                         ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section id="faq" class="section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <!-- H2: Primary keyword at end (closing note per guideline A) -->
+    <h2>Häufige Fragen zum Arbeitszeitrechner – alle Antworten</h2>
+    <p class="section-lead">
+      Alles rund um <strong>Arbeitszeit berechnen</strong>, gesetzliche Pausen,
+      Dezimalstunden, Überstunden und mehr – kompakt beantwortet.
+    </p>
+
+    <div class="faq-list">
+
+      <details class="faq" open>
+        <summary>Wie funktioniert der Arbeitszeitrechner?</summary>
+        <div class="faq-body">
+          Startzeit (z.B. 08:00 Uhr) und Endzeit (z.B. 17:30 Uhr) eingeben,
+          Pausen eintragen oder automatisch nach ArbZG berechnen lassen – der Rechner zeigt
+          sofort Nettoarbeitszeit in Std:Min und Dezimalstunden. Kein Login, kein Download.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Wie lange Pause bei 8 Stunden Arbeit?</summary>
+        <div class="faq-body">
+          Bei 8 Stunden Arbeitszeit sind mindestens <strong>30 Minuten Pause</strong>
+          gesetzlich vorgeschrieben (§ 4 ArbZG). Die Pause kann in zwei Abschnitte
+          von je 15 Minuten aufgeteilt werden. Unser Rechner berechnet das automatisch.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Wie rechne ich Stunden in Dezimalstunden um?</summary>
+        <div class="faq-body">
+          Minuten ÷ 60 = Dezimalstunden.<br/>
+          15 Min. = 0,25 | 30 Min. = 0,50 | 45 Min. = 0,75<br/>
+          Beispiel: 7 Stunden 45 Minuten = <strong>7,75 Dezimalstunden</strong>.
+          Unser Rechner übernimmt diese Umrechnung automatisch bei jeder Eingabe.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Funktioniert der Rechner auch für Nachtschichten?</summary>
+        <div class="faq-body">
+          Ja. Bei Eingabe 22:00 Uhr bis 06:00 Uhr erkennt der Rechner den Tageswechsel
+          über Mitternacht automatisch und berechnet korrekt <strong>8 Stunden</strong>.
+          Keine manuelle Korrektur nötig.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Kann ich mit dem Rechner Überstunden berechnen?</summary>
+        <div class="faq-body">
+          Ja. Tatsächliche Nettoarbeitszeit eingeben und Sollarbeitszeit hinterlegen –
+          der Rechner zeigt den <strong>Überstundensaldo</strong> automatisch an.
+          Täglich, wöchentlich und monatlich auswertbar.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Gilt das Arbeitszeitgesetz auch im Homeoffice?</summary>
+        <div class="faq-body">
+          Ja – uneingeschränkt. Das ArbZG gilt im Homeoffice genauso wie im Büro.
+          Seit dem <strong>BAG-Urteil vom 13. September 2022</strong> (Az. 1 ABR 22/21)
+          sind Arbeitgeber verpflichtet, Arbeitszeiten auch im Homeoffice systematisch
+          zu erfassen. Aufzeichnungen mindestens 2 Jahre aufbewahren.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Wie viele Stunden darf man täglich maximal arbeiten?</summary>
+        <div class="faq-body">
+          Nach § 3 ArbZG: Regelarbeitszeit <strong>8 Stunden</strong> pro Werktag.
+          Verlängerung auf maximal <strong>10 Stunden</strong> möglich, wenn der Durchschnitt
+          von 8 Stunden über 6 Monate eingehalten wird. Verstöße: bis zu 30.000 € Bußgeld.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Was ist der Unterschied zwischen Brutto- und Nettoarbeitszeit?</summary>
+        <div class="faq-body">
+          <strong>Bruttoarbeitszeit:</strong> Zeit von Beginn bis Ende inkl. aller Pausen.<br/>
+          <strong>Nettoarbeitszeit:</strong> Tatsächliche vergütete Arbeitszeit ohne Pausen.<br/>
+          Beispiel: 09:00–17:00 Uhr = 8 h brutto – 30 Min. Pause = <strong>7,5 h netto</strong>.
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Wie viele Arbeitsstunden hat ein Monat bei Vollzeit?</summary>
+        <div class="faq-body">
+          Formel: Wochenstunden × 4,35 = Monatsstunden.<br/>
+          <strong>40-Stunden-Woche:</strong> 173,3 Std./Monat<br/>
+          <strong>39-Stunden-Woche (TVöD Bund):</strong> 169,7 Std./Monat<br/>
+          <strong>38,5-Stunden-Woche (TVöD Länder):</strong> 167,5 Std./Monat
+        </div>
+      </details>
+
+      <details class="faq">
+        <summary>Ist der Arbeitszeitrechner wirklich kostenlos?</summary>
+        <div class="faq-body">
+          Ja, <strong>100 % kostenlos</strong>. Keine Registrierung, keine versteckten
+          Gebühren, kein Abo. Alle Eingaben werden ausschließlich lokal im Browser
+          verarbeitet – vollständig DSGVO-konform, keine Datenweitergabe.
+        </div>
+      </details>
+
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ╔══════════════════════════════════════════════════════╗
+     ║  AUTHORITY & SOURCES — Trust + E-E-A-T             ║
+     ║  PRIMARY KEYWORD at end (guideline A: ending note)  ║
+     ╚══════════════════════════════════════════════════════╝ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Transparenz & Vertrauen</span>
+    <h2>Woher stammen unsere Berechnungsgrundlagen?</h2>
+
+    <div class="auth-box">
+      <div class="auth-icon">🛡️</div>
+      <div class="auth-body">
+        <p>
+          Alle Angaben basieren auf dem aktuell gültigen <strong>Deutschen Arbeitszeitgesetz (ArbZG)</strong>.
+          Pausenregelungen, Höchstarbeitszeitgrenzen und Ruhezeiten entsprechen dem Stand <strong>August 2026</strong>
+          und werden regelmäßig von unserem Redaktionsteam überprüft.
+          Fachlich geprüft von <strong>Arbeitsrecht-Experten</strong> – zuletzt aktualisiert: August 2026.
+        </p>
+        <p style="font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;">
+          Offizielle Quellen & weiterführende Links:
+        </p>
+        <div class="auth-sources">
+          <a href="https://www.bmas.de" target="_blank" rel="noopener">🔗 Bundesministerium für Arbeit und Soziales (BMAS)</a>
+          <a href="https://www.gesetze-im-internet.de/arbzg/" target="_blank" rel="noopener">🔗 Arbeitszeitgesetz (ArbZG) – Volltext auf gesetze-im-internet.de</a>
+          <a href="https://www.arbeitsagentur.de" target="_blank" rel="noopener">🔗 Bundesagentur für Arbeit – Informationen zu Arbeitsverträgen</a>
+          <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener">🔗 Bundesarbeitsgericht (BAG) – Urteile zur Arbeitszeiterfassung</a>
+        </div>
+        <div class="auth-il">
+          Weiterlesen:
+          <a href="/ueber-uns">Über uns →</a> &nbsp;|&nbsp;
+          <a href="/kontakt">Kontakt →</a> &nbsp;|&nbsp;
+          <a href="/blog">Blog & Ratgeber →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENDING NOTE: Primary keyword used at end — guideline A) -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Arbeitszeitrechner auf einen Blick</strong>
+      Unser <strong>Arbeitszeitrechner</strong> berechnet Nettoarbeitszeit minutengenau nach ArbZG 2026 –
+      inklusive Dezimalstunden, Lohnrechner, Bundesland-Feiertagen und Industrieminuten.
+      Kostenlos, DSGVO-konform, ohne Login.
+      <a href="#tool" style="font-weight:700;color:#1d4ed8;">Jetzt Arbeitszeit berechnen →</a>
+    </div>
+
+    <p style="margin-top:18px;font-size:13px;color:var(--muted);line-height:1.65;">
+      <strong>Hinweis:</strong> Alle Angaben auf dieser Seite dienen der allgemeinen Information
+      und ersetzen keine individuelle Rechts- oder Steuerberatung. Bei konkreten arbeitsrechtlichen
+      Fragen empfehlen wir, einen Fachanwalt für Arbeitsrecht oder Ihre Gewerkschaft zu kontaktieren.
+    </p>
+
+  </div>
+</section>
+
+</body>
+</html>
