@@ -463,6 +463,14 @@
   details.faq[open] summary::after{content:'−';}
   .faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
 
+  /* ===== RELATED TOOLS ===== */
+  .rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:20px;}
+  .rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:var(--r-md);padding:22px 24px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+  .rel-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-3px);border-color:var(--amber);}
+  .rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:var(--amber);margin-bottom:8px;}
+  .rel-title{font-size:15px;font-weight:700;color:var(--navy);line-height:1.45;}
+
+
   /* ===== CTA BOX ===== */
   .cta-box{background:linear-gradient(135deg,var(--navy),#2c5282);border-radius:var(--r-lg);padding:44px 36px;text-align:center;color:#fff;margin:0;}
   .cta-box h2{color:#fff;margin-bottom:10px;}
@@ -1960,6 +1968,30 @@
           </details>
 
 
+        </div>
+
+        <!-- ════ WEITERE RECHNER & TOOLS ════ -->
+        <div style="margin-top:54px; padding-top:36px; border-top:1px solid var(--border);">
+          <span class="eyebrow">Spezialrechner &amp; Zusatz-Tools</span>
+          <h2 style="font-size:clamp(20px,3vw,28px); margin-bottom:8px;">Weitere Rechner &amp; Tools</h2>
+          <p style="font-size:15px; color:var(--muted); margin-bottom:18px;">
+            Nutzen Sie unsere spezialisierten Rechner für monatliche Arbeitsstunden, DATEV-Dezimalzeiten und Überstundenkonten:
+          </p>
+
+          <div class="rel-grid">
+            <a href="/arbeitszeitrechner-monat" class="rel-card">
+              <div class="rel-tag">Monatsstunden</div>
+              <div class="rel-title">Monatliche Arbeitszeit berechnen – alle Wochenmodelle &amp; TVöD</div>
+            </a>
+            <a href="/arbeitszeitrechner-dezimal" class="rel-card">
+              <div class="rel-tag">Dezimalstunden</div>
+              <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP kompatibel</div>
+            </a>
+            <a href="/sollarbeitszeit-rechner" class="rel-card">
+              <div class="rel-tag">Überstunden</div>
+              <div class="rel-title">Sollarbeitszeit-Rechner – Zeitkonto &amp; Überstunden</div>
+            </a>
+          </div>
         </div>
 
       </div>
