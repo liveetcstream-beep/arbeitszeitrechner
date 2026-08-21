@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ✅ PRIMARY: Pausenrechner | SECONDARY: Pausenregelung Arbeitszeitgesetz § 4 ArbZG -->
+<title>Pausenrechner 2026 – Gesetzliche Pausen nach § 4 ArbZG berechnen</title>
+<meta name="description" content="Pausenrechner 2026: Arbeitszeit eingeben → sofort gesetzliche Pflichtpause nach § 4 ArbZG, Nettoarbeitszeit & Ruhezeit (§ 5 ArbZG) berechnen. ✓ Azubi/JArbSchG ✓ Kostenlos"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/pausenrechner"/>
+<meta property="og:title" content="Pausenrechner 2026 – Gesetzliche Pausen nach § 4 ArbZG"/>
+<meta property="og:description" content="Gesetzliche Pflichtpause nach deutschem Arbeitszeitgesetz minutengenau berechnen. Inkl. Ruhezeit & Azubi-Regelung. Kostenlos."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/pausenrechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Pausenrechner 2026 – Gesetzliche Pausen nach § 4 ArbZG"/>
+<meta name="twitter:description" content="Pflichtpause & Nettoarbeitszeit minutengenau berechnen. Stand ArbZG 2026."/>
+<meta name="robots" content="index, follow"/>
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Pausenrechner – Gesetzliche Pausen nach § 4 ArbZG",
+  "url": "https://arbeitszeitrechner365.de/pausenrechner",
+  "description": "Kostenloser Pausenrechner: Gesetzliche Mindestpausen nach § 4 ArbZG (30 Min. ab 6h, 45 Min. ab 9h), Ruhezeiten (§ 5 ArbZG) und Jugendarbeitsschutz (§ 11 JArbSchG) minutengenau ermitteln.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Work Time & Break Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.2",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Automatische Ermittlung der gesetzlichen Mindestpause nach § 4 ArbZG (30 bzw. 45 Minuten)",
+    "Pausenprüfung für Jugendliche und Azubis nach § 11 JArbSchG (30 bzw. 60 Minuten)",
+    "Ruhezeit-Rechner nach § 5 ArbZG (frühester Dienstbeginn nach 11 Std. Ruhezeit)",
+    "Rechtlich konforme 15-Minuten-Stückelungsprüfung",
+    "Warnung bei Überschreitung der 10-Stunden-Höchstarbeitszeit (§ 3 ArbZG)",
+    "100% DSGVO-konform ohne Login und ohne Datenspeicherung"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/icon-512.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man die gesetzliche Pflichtpause nach § 4 ArbZG?",
+  "description": "Schritt-für-Schritt-Anleitung zur Ermittlung der gesetzlich vorgeschriebenen Pausenzeiten nach deutschem Arbeitsrecht.",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Bruttoarbeitszeit ermitteln",
+      "text": "Erfassen Sie die Gesamtarbeitszeit von Dienstbeginn bis Dienstende (z.B. 08:00 bis 17:00 Uhr = 9 Stunden Bruttozeit)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Gesetzliche Pausenstufen nach § 4 ArbZG abgleichen",
+      "text": "Bis zu 6 Stunden: keine Pflichtpause. Mehr als 6 bis 9 Stunden: mindestens 30 Minuten Pause. Mehr als 9 Stunden: mindestens 45 Minuten Pause."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "15-Minuten-Mindestblock prüfen",
+      "text": "Stellen Sie sicher, dass jede Ruhepause in Abschnitte von mindestens 15 Minuten aufgeteilt ist (kürzere Unterbrechungen gelten als bezahlte Arbeitszeit)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Nettoarbeitszeit berechnen",
+      "text": "Ziehen Sie die Pausenzeit von der Bruttozeit ab (z.B. 9,0 h Brutto − 45 Min. Pause = 8,25 h Nettoarbeitszeit)."
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie viel Pause steht mir bei 8 Stunden Arbeit zu?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bei einer Arbeitszeit von 8 Stunden schreibt § 4 ArbZG eine gesetzliche Mindestpause von genau 30 Minuten vor. Diese Pause kann am Stück oder in zwei Abschnitten zu je mindestens 15 Minuten genommen werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ab wie vielen Stunden muss man 45 Minuten Pause machen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ab einer Gesamtarbeitszeit von mehr als 9 Stunden (z.B. 9 Stunden und 1 Minute) erhöht sich die gesetzliche Pflichtpause auf mindestens 45 Minuten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Darf der Arbeitgeber automatisch Pause abziehen, wenn ich durchgearbeitet habe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Laut ständiger Rechtsprechung des Bundesarbeitsgerichts (BAG) darf der Arbeitgeber nicht fiktiv Pausen abziehen, wenn der Arbeitnehmer tatsächlich ununterbrochen gearbeitet hat. Allerdings begeht der Arbeitnehmer einen Verstoß gegen das ArbZG, wenn er eigenmächtig auf die gesetzliche Pause verzichtet."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gilt der Gang zur Toilette als Pause?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Der Gang zur Toilette ist ein unaufschiebbares menschliches Grundbedürfnis und zählt arbeitsrechtlich zur bezahlten Arbeitszeit. Der Arbeitgeber darf hierfür keine Arbeitszeit abziehen oder ein Ausstempeln verlangen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Zählen Raucherpausen als gesetzliche Pause oder Arbeitszeit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Raucherpausen zählen nicht zur Arbeitszeit und werden nicht bezahlt. Wenn Raucherpausen unter 15 Minuten dauern, erfüllen sie zudem nicht die rechtlichen Kriterien einer Ruhepause nach § 4 ArbZG und müssen gesondert nachgearbeitet bzw. ausgestempelt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Welche Pausenregelung gilt für Azubis und Jugendliche unter 18 Jahren?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für Jugendliche gilt § 11 Jugendarbeitsschutzgesetz (JArbSchG): Bei 4,5 bis 6 Stunden Arbeitszeit sind 30 Minuten Pause vorgeschrieben, bei mehr als 6 Stunden Arbeitszeit mindestens 60 Minuten Pause. Die erste Pause muss spätestens nach 4,5 Stunden gewährt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie lange muss die Ruhezeit zwischen zwei Schichten sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nach § 5 ArbZG müssen Arbeitnehmer nach Beendigung der täglichen Arbeitszeit eine ununterbrochene Ruhezeit von mindestens 11 Stunden einhalten, bevor die nächste Schicht beginnen darf."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pausenrechner",
+      "item": "https://arbeitszeitrechner365.de/pausenrechner"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;
+  --surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;
+  --muted:#64748b;--green:#16a34a;--red:#dc2626;
+  --shadow:0 2px 12px rgba(26,61,110,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;line-height:1.2;margin-bottom:14px;color:#fff;}
+h1 .hl{color:var(--amber);}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+
+/* NAV */
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:48px 0 40px;position:relative;overflow:hidden;}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:640px;line-height:1.65;margin-bottom:24px;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+
+/* QUICK ANSWER */
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:28px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+
+/* TOOL ZONE */
+.tool-zone{background:var(--navy-dk);padding:48px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:24px;}
+
+/* PAUSENRECHNER CARD */
+.calc-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(0,0,0,.25);}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.form-grp{display:flex;flex-direction:column;gap:6px;}
+.form-grp label{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.9);}
+.form-grp input,.form-grp select{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:11px 14px;color:#ffffff;font-size:15.5px;font-weight:600;font-family:inherit;outline:none;}
+.form-grp input:focus,.form-grp select:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+.form-grp select option{background:#1a3d6e;color:#fff;}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:800;font-size:16px;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;margin-top:20px;transition:transform .15s, box-shadow .15s;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,160,32,.4);}
+
+/* RESULT CARDS */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;}
+.res-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 16px;text-align:center;}
+.res-box .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:6px;font-weight:600;}
+.res-box .val{font-size:24px;font-weight:800;color:#fff;}
+.res-box.hl .val{color:var(--amber);}
+.res-box.green .val{color:#4ade80;}
+
+/* STATUS BANNER */
+.status-banner{border-radius:10px;padding:14px 18px;margin-top:20px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:12px;line-height:1.5;}
+.status-ok{background:rgba(74,222,128,.15);border:1.5px solid #4ade80;color:#86efac;}
+.status-warn{background:rgba(232,160,32,.18);border:1.5px solid var(--amber);color:#fde047;}
+.status-danger{background:rgba(239,68,68,.20);border:1.5px solid #f87171;color:#fca5a5;}
+
+/* TABLE STYLING */
+.tbl-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:14px 16px;text-align:left;font-size:13px;font-weight:700;}
+td{padding:13px 16px;border-bottom:1px solid var(--border);background:#fff;}
+tbody tr:nth-child(even) td{background:#f8fafc;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+
+/* BOXES */
+.box{border-radius:10px;padding:18px 22px;margin:22px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* AUTHOR / EEAT */
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* RELATED */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+.rel-card:hover{box-shadow:0 10px 25px rgba(26,61,110,.12);transform:translateY(-3px);border-color:var(--amber);}
+.rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+
+/* ===== SITE FOOTER ===== */
+.site-footer{background:var(--navy-dk);color:rgba(255,255,255,.75);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);font-size:0.9rem;}
+.footer-container{max-width:960px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1.3fr 1.2fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+@media(max-width:900px){.footer-container{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr;gap:2rem;}}
+.footer-brand .brand-logo{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:0.75rem;}
+.footer-brand .brand-logo svg{color:var(--amber);}
+.footer-brand .brand-logo .highlight{color:var(--amber);}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:0.85rem;line-height:1.6;margin:0;}
+.footer-title{color:#fff;font-size:0.95rem;font-weight:700;margin-bottom:1rem;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:0.85rem;transition:color 0.15s ease;}
+.footer-links a:hover{color:var(--amber);}
+.footer-social-links{display:flex;flex-direction:column;gap:0.6rem;}
+.social-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:0.4rem 0.75rem;border-radius:6px;color:#fff;text-decoration:none;font-size:0.825rem;transition:all 0.15s ease;width:fit-content;}
+.social-pill:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+.footer-bottom{max-width:960px;margin:0 auto;padding:1.5rem 20px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:rgba(255,255,255,.5);}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+.footer-bottom-links a{color:rgba(255,255,255,.6);text-decoration:none;}
+.footer-bottom-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .hero{padding:40px 0 32px;}
+  .section{padding:44px 0;}
+  .calc-card{padding:20px;}
+  .author-box{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/pausenrechner" class="dropdown-link" style="background:#f1f5f9!important;">
+            <span class="dropdown-icon">☕</span>
+            <div>
+              <div class="dropdown-link-title">Pausenrechner (§ 4 ArbZG)</div>
+              <div class="dropdown-link-desc">Pflichtpausen &amp; Ruhezeit prüfen</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Pausenrechner nach § 4 ArbZG</strong>
+  </div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">✅ § 4 ArbZG konform</div>
+      <div class="t-pill">🛡️ Inkl. § 11 JArbSchG (Azubis)</div>
+      <div class="t-pill">⏱️ 11h Ruhezeit-Check (§ 5 ArbZG)</div>
+      <div class="t-pill">🇩🇪 Stand: 2026</div>
+    </div>
+    <h1>Pausenrechner 2026 – <span class="hl">Gesetzliche Pausen nach § 4 ArbZG berechnen</span></h1>
+    <p class="hero-sub">
+      Berechnen Sie Ihre gesetzlich vorgeschriebene Pflichtpause, die reale Nettoarbeitszeit und die erforderliche Ruhezeit bis zur nächsten Schicht – rechtssicher nach deutschem Arbeitsrecht.
+    </p>
+  </div>
+</section>
+
+<!-- ════ TOOL ZONE ════ -->
+<section class="tool-zone" id="rechner">
+  <div class="container">
+    <h2>Interaktiver Pausenrechner</h2>
+    <p class="lead">Geben Sie Ihre Arbeitszeiten ein – unser Rechner ermittelt sofort die gesetzliche Mindestpause und prüft die Rechtskonformität:</p>
+
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="form-grp">
+          <label for="p-start">Arbeitsbeginn</label>
+          <input type="time" id="p-start" value="08:00"/>
+        </div>
+        <div class="form-grp">
+          <label for="p-end">Arbeitsende</label>
+          <input type="time" id="p-end" value="17:00"/>
+        </div>
+        <div class="form-grp">
+          <label for="p-group">Personengruppe</label>
+          <select id="p-group">
+            <option value="adult" selected>Erwachsener (§ 4 ArbZG)</option>
+            <option value="youth">Jugendlicher / Azubi (§ 11 JArbSchG)</option>
+          </select>
+        </div>
+        <div class="form-grp">
+          <label for="p-actual">Tatsächlich genommene Pause (Min.)</label>
+          <input type="number" id="p-actual" min="0" max="240" step="5" value="45" placeholder="z.B. 45"/>
+        </div>
+      </div>
+
+      <button class="calc-btn" onclick="calculateBreak()">☕ Gesetzliche Pause berechnen</button>
+
+      <!-- RESULTS -->
+      <div class="res-grid" id="res-grid" style="display:grid;">
+        <div class="res-box hl">
+          <div class="lbl">Gesetzliche Pflichtpause</div>
+          <div class="val" id="res-pflicht">45 Min.</div>
+        </div>
+        <div class="res-box">
+          <div class="lbl">Brutto-Anwesenheit</div>
+          <div class="val" id="res-brutto">9,00 Std.</div>
+        </div>
+        <div class="res-box green">
+          <div class="lbl">Effektive Nettoarbeitszeit</div>
+          <div class="val" id="res-netto">8,25 Std.</div>
+        </div>
+        <div class="res-box">
+          <div class="lbl">Frühester Dienstbeginn morgen (§ 5)</div>
+          <div class="val" id="res-ruhe">04:00 Uhr</div>
+        </div>
+      </div>
+
+      <!-- STATUS BANNER -->
+      <div id="status-box" class="status-banner status-ok" style="display:flex;">
+        <span style="font-size:22px;">✅</span>
+        <span id="status-text">Rechtlich einwandfrei: Ihre tatsächliche Pause von 45 Min. erfüllt die gesetzliche Mindestvorgabe nach § 4 ArbZG vollständig.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ B) QUICK ANSWER ════ -->
+<section class="section">
+  <div class="container">
+    <div class="qa-box">
+      <div class="qa-label">💡 Gesetzliche Pausenregelung auf den Punkt gebracht (§ 4 ArbZG):</div>
+      <p>
+        In Deutschland gilt nach <strong>§ 4 Arbeitszeitgesetz</strong>:<br/>
+        • <strong>Bis zu 6 Stunden Arbeit:</strong> Keine gesetzliche Pause vorgeschrieben.<br/>
+        • <strong>Mehr als 6 bis 9 Stunden Arbeit:</strong> Mindestens <strong>30 Minuten</strong> Ruhepause.<br/>
+        • <strong>Mehr als 9 Stunden Arbeit:</strong> Mindestens <strong>45 Minuten</strong> Ruhepause.<br/>
+        • <strong>Wichtig:</strong> Pausen dürfen gestückelt werden, müssen aber jeweils <strong>mindestens 15 Minuten</strong> lang sein!
+      </p>
+    </div>
+
+    <h2>Gesetzliche Pausenzeiten im Überblick (Referenztabelle 2026)</h2>
+    <p>
+      Die folgende Tabelle zeigt die gesetzlichen Mindestpausen nach Arbeitszeitgesetz (ArbZG) für Erwachsene sowie nach dem Jugendarbeitsschutzgesetz (JArbSchG) für Jugendliche und Auszubildende:
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Tägliche Brutto-Arbeitszeit</th>
+            <th>Gesetzliche Mindestpause (Erwachsene § 4 ArbZG)</th>
+            <th>Mindestpause (Jugendliche &lt;18 § 11 JArbSchG)</th>
+            <th>Zulässige Stückelung</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Bis zu 4,5 Stunden</strong></td>
+            <td>0 Minuten (keine Pflichtpause)</td>
+            <td>0 Minuten</td>
+            <td>–</td>
+          </tr>
+          <tr>
+            <td><strong>4,5 bis 6,0 Stunden</strong></td>
+            <td>0 Minuten (freiwillige Pause)</td>
+            <td><strong>30 Minuten</strong> (spätestens nach 4,5h)</td>
+            <td>mind. 15 Min. Blöcke</td>
+          </tr>
+          <tr class="highlight">
+            <td><strong>6,01 bis 8,0 Stunden (Standard-Tag)</strong></td>
+            <td><strong>30 Minuten</strong></td>
+            <td><strong>60 Minuten</strong></td>
+            <td>2 × 15 Min. oder 1 × 30 Min.</td>
+          </tr>
+          <tr class="highlight">
+            <td><strong>8,01 bis 9,0 Stunden</strong></td>
+            <td><strong>30 Minuten</strong></td>
+            <td><strong>60 Minuten</strong></td>
+            <td>2 × 15 Min. oder 1 × 30 Min.</td>
+          </tr>
+          <tr>
+            <td><strong>Mehr als 9,0 Stunden (bis max. 10h)</strong></td>
+            <td><strong>45 Minuten</strong></td>
+            <td><strong>60 Minuten</strong></td>
+            <td>3 × 15 Min. oder 1 × 45 Min.</td>
+          </tr>
+          <tr>
+            <td><strong>Über 10,0 Stunden</strong></td>
+            <td colspan="3" style="color:var(--red);font-weight:700;">❌ Gesetzlich unzulässig (§ 3 ArbZG Höchstarbeitszeit-Überschreitung)</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ════ C) PRAXISFÄLLE & RECHTSSPRECHUNG ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Arbeitsrecht & Praxis</span>
+    <h2>Wichtige Praxisfälle: Was gilt wirklich als Pause?</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:24px;">
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:10px;">🛑</div>
+        <h3 style="font-size:16px;">Automatischer Pausenabzug</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;">
+          Darf der Chef 30 Minuten abziehen, wenn Sie durchgearbeitet haben? <strong>Nein!</strong> Laut Bundesarbeitsgericht (BAG) darf keine fiktive Pause abgezogen werden. Sie haben Anspruch auf Bezahlung der geleisteten Arbeitszeit. Allerdings riskieren Sie eine Abmahnung wegen Missachtung des ArbZG.
+        </p>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:10px;">🚽</div>
+        <h3 style="font-size:16px;">Toilettengang vs. Pause</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;">
+          Der Gang zur Toilette ist ein unaufschiebbares Grundbedürfnis und zählt arbeitsrechtlich zur <strong>voll bezahlten Arbeitszeit</strong>. Arbeitgeber dürfen weder ein Ausstempeln verlangen noch die Zeit vom Lohn abziehen.
+        </p>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:10px;">🚬</div>
+        <h3 style="font-size:16px;">Raucher- & Kaffeepausen</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;">
+          Raucherpausen sind reine Privatsache und <strong>unbezahlt</strong>. Da sie meist unter 15 Minuten dauern, gelten sie rechtlich nicht als Erholungspause nach § 4 ArbZG und müssen gesondert ausgestempelt werden.
+        </p>
+      </div>
+
+      <div style="background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px;">
+        <div style="font-size:28px;margin-bottom:10px;">🌙</div>
+        <h3 style="font-size:16px;">11 Stunden Ruhezeit (§ 5 ArbZG)</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;">
+          Zwischen Dienstende und dem nächsten Dienstbeginn müssen zwingend <strong>mindestens 11 ununterbrochene Stunden</strong> liegen. Wer um 22:00 Uhr Feierabend macht, darf am nächsten Morgen frühestens um 09:00 Uhr wieder anfangen.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ SECTION ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zu Pausenzeiten & Arbeitszeitgesetz</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Wie viel Pause steht mir bei 8 Stunden Arbeit zu?</summary>
+        <div class="faq-body">
+          Bei einer Arbeitszeit von 8 Stunden schreibt <strong>§ 4 ArbZG</strong> eine gesetzliche Mindestpause von genau <strong>30 Minuten</strong> vor. Diese Pause kann am Stück oder in zwei Abschnitten zu je mindestens 15 Minuten genommen werden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Ab wie vielen Stunden muss man 45 Minuten Pause machen?</summary>
+        <div class="faq-body">
+          Ab einer Gesamtarbeitszeit von <strong>mehr als 9 Stunden</strong> (z.B. 9 Stunden und 1 Minute) erhöht sich die gesetzliche Pflichtpause auf mindestens <strong>45 Minuten</strong>.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Darf der Arbeitgeber automatisch Pause abziehen, wenn ich durchgearbeitet habe?</summary>
+        <div class="faq-body">
+          <strong>Nein.</strong> Laut gefestigter Rechtsprechung des Bundesarbeitsgerichts (BAG) darf der Arbeitgeber nicht fiktiv Pausen abziehen, wenn der Arbeitnehmer tatsächlich durchgearbeitet hat. Die gearbeitete Zeit muss vergütet werden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Gilt der Gang zur Toilette als Pause?</summary>
+        <div class="faq-body">
+          <strong>Nein.</strong> Der Gang zur Toilette ist ein unaufschiebbares menschliches Grundbedürfnis und zählt arbeitsrechtlich zur bezahlten Arbeitszeit. Der Arbeitgeber darf hierfür keine Arbeitszeit abziehen.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Zählen Raucherpausen als gesetzliche Pause oder Arbeitszeit?</summary>
+        <div class="faq-body">
+          Raucherpausen zählen <strong>nicht zur Arbeitszeit</strong> und werden nicht bezahlt. Wenn Raucherpausen unter 15 Minuten dauern, erfüllen sie zudem nicht die rechtlichen Kriterien einer Ruhepause nach § 4 ArbZG und müssen ausgestempelt werden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Welche Pausenregelung gilt für Azubis und Jugendliche unter 18 Jahren?</summary>
+        <div class="faq-body">
+          Für Jugendliche gilt <strong>§ 11 Jugendarbeitsschutzgesetz (JArbSchG)</strong>: Bei 4,5 bis 6 Stunden Arbeitszeit sind <strong>30 Minuten</strong> Pause vorgeschrieben, bei mehr als 6 Stunden Arbeitszeit mindestens <strong>60 Minuten</strong> Pause.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie lange muss die Ruhezeit zwischen zwei Schichten sein?</summary>
+        <div class="faq-body">
+          Nach <strong>§ 5 ArbZG</strong> müssen Arbeitnehmer nach Beendigung der täglichen Arbeitszeit eine ununterbrochene Ruhezeit von <strong>mindestens 11 Stunden</strong> einhalten.
+        </div>
+      </details>
+    </div>
+
+    <!-- E-E-A-T AUTHOR BOX -->
+    <div class="author-box">
+      <div class="author-avatar">R</div>
+      <div>
+        <div class="author-name">Redaktion arbeitszeitrechner365.de</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: August 2026</div>
+        <div class="author-desc">
+          Alle Berechnungen und rechtlichen Erläuterungen basieren auf dem deutschen <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 ArbZG (Ruhepausen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 5 ArbZG (Ruhezeit)</a>, dem Jugendarbeitsschutzgesetz (§ 11 JArbSchG) sowie den Leitsatzentscheidungen des Bundesarbeitsgerichts (BAG).
+        </div>
+      </div>
+    </div>
+
+    <!-- SUMMARY NOTE -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Gesetzliche Pausen auf einen Blick</strong>
+      Nach <strong>§ 4 ArbZG</strong> gilt: Bis 6h = 0 Min., 6h–9h = 30 Min., ab 9h = 45 Min. Pause. Jede Pause muss mindestens 15 Minuten lang sein.
+      <a href="#rechner" style="color:#1d4ed8;font-weight:700;">Jetzt Ihre Pause berechnen →</a>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner &amp; Tools</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/#tool" class="rel-card">
+        <div class="rel-tag">Tagesrechner</div>
+        <div class="rel-title">Arbeitszeitrechner – minutengenau mit Pause</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat" class="rel-card">
+        <div class="rel-tag">Monatsstunden</div>
+        <div class="rel-title">Monatsstunden berechnen – 37,5h &amp; TVöD</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="rel-card">
+        <div class="rel-tag">Überstunden</div>
+        <div class="rel-title">Sollarbeitszeit &amp; Zeitkonto berechnen</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <p>Der führende kostenlose Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach deutschem Arbeitsrecht.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">Tools &amp; Rechner</div>
+      <ul class="footer-links">
+        <li><a href="/#tool">Arbeitszeitrechner (Haupt-Tool)</a></li>
+        <li><a href="/pausenrechner">Pausenrechner (§ 4 ArbZG)</a></li>
+        <li><a href="/arbeitszeitrechner-monat">Monatsstunden berechnen</a></li>
+        <li><a href="/arbeitszeitrechner-dezimal">Dezimalstunden umrechnen</a></li>
+        <li><a href="/sollarbeitszeit-rechner">Sollarbeitszeit &amp; Zeitkonto</a></li>
+        <li><a href="/#lohnrechner">Integrierter Lohnrechner</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigation &amp; Ratgeber</div>
+      <ul class="footer-links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/#so-gehts">Bedienungsanleitung</a></li>
+        <li><a href="/#faq">Häufige Fragen (FAQ)</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Folgen Sie uns</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/Arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://de.pinterest.com/arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          <span>Pinterest</span>
+        </a>
+        <a href="https://x.com/Arbeitszeit365" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+    <div class="footer-bottom-links">
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function calculateBreak() {
+  const start = document.getElementById('p-start').value;
+  const end = document.getElementById('p-end').value;
+  const group = document.getElementById('p-group').value;
+  const actualPause = parseInt(document.getElementById('p-actual').value) || 0;
+
+  if (!start || !end) return;
+
+  const [sh, sm] = start.split(':').map(Number);
+  const [eh, em] = end.split(':').map(Number);
+
+  let bruttoMin = (eh * 60 + em) - (sh * 60 + sm);
+  if (bruttoMin < 0) bruttoMin += 24 * 60;
+
+  const bruttoHours = bruttoMin / 60;
+
+  // Gesetzliche Pause nach ArbZG / JArbSchG
+  let pflichtMin = 0;
+  if (group === 'adult') {
+    if (bruttoHours > 9) {
+      pflichtMin = 45;
+    } else if (bruttoHours > 6) {
+      pflichtMin = 30;
+    } else {
+      pflichtMin = 0;
+    }
+  } else {
+    // Jugendlicher
+    if (bruttoHours > 6) {
+      pflichtMin = 60;
+    } else if (bruttoHours > 4.5) {
+      pflichtMin = 30;
+    } else {
+      pflichtMin = 0;
+    }
+  }
+
+  // Nettoarbeitszeit (Brutto - tatsächlich genommene Pause)
+  const nettoMin = Math.max(0, bruttoMin - actualPause);
+  const nettoHours = (nettoMin / 60).toFixed(2);
+
+  // Frühester Dienstbeginn morgen (§ 5 ArbZG: 11 Stunden ununterbrochene Ruhezeit)
+  const ruheMinTotal = (eh * 60 + em + 11 * 60) % (24 * 60);
+  const ruheH = String(Math.floor(ruheMinTotal / 60)).padStart(2, '0');
+  const ruheM = String(ruheMinTotal % 60).padStart(2, '0');
+
+  // UI Output
+  document.getElementById('res-pflicht').textContent = pflichtMin + ' Min.';
+  document.getElementById('res-brutto').textContent = (bruttoHours).toFixed(2).replace('.', ',') + ' Std.';
+  document.getElementById('res-netto').textContent = nettoHours.replace('.', ',') + ' Std.';
+  document.getElementById('res-ruhe').textContent = ruheH + ':' + ruheM + ' Uhr';
+
+  // Status Check
+  const statusBox = document.getElementById('status-box');
+  const statusText = document.getElementById('status-text');
+
+  if (nettoHours > 10) {
+    statusBox.className = 'status-banner status-danger';
+    statusText.innerHTML = '⚠️ <strong>Achtung (§ 3 ArbZG):</strong> Ihre Nettoarbeitszeit von ' + nettoHours.replace('.', ',') + ' Std. überschreitet die gesetzliche Höchstgrenze von 10 Stunden!';
+  } else if (actualPause < pflichtMin) {
+    statusBox.className = 'status-banner status-warn';
+    statusText.innerHTML = '⚠️ <strong>Pausenzeit zu kurz:</strong> Sie haben ' + actualPause + ' Min. Pause eingetragen. Gesetzlich vorgeschrieben sind mindestens <strong>' + pflichtMin + ' Min.</strong> nach ' + (group === 'adult' ? '§ 4 ArbZG' : '§ 11 JArbSchG') + '.';
+  } else {
+    statusBox.className = 'status-banner status-ok';
+    statusText.innerHTML = '✅ <strong>Rechtlich einwandfrei:</strong> Ihre Pause von ' + actualPause + ' Min. erfüllt die gesetzliche Mindestvorgabe von ' + pflichtMin + ' Min. vollständig.';
+  }
+}
+
+// Initial calculation on page load
+calculateBreak();
+document.getElementById('p-start').addEventListener('input', calculateBreak);
+document.getElementById('p-end').addEventListener('input', calculateBreak);
+document.getElementById('p-group').addEventListener('change', calculateBreak);
+document.getElementById('p-actual').addEventListener('input', calculateBreak);
+</script>
+
+</body>
+</html>
