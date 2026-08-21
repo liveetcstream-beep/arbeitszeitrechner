@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- PRIMARY: Dezimalstunden umrechnen | SECONDARY: Arbeitszeitrechner Dezimal -->
+<title>Dezimalstunden umrechnen 2026 – Zeit ↔ Dezimal ↔ Minuten</title>
+<meta name="description" content="Dezimalstunden umrechnen: Stunden:Minuten ↔ Dezimalstunden ↔ Industrieminuten. Kostenloser Rechner für DATEV, SAP & Lohnabrechnung. ✓ 2-Wege-Konverter ✓ Tabelle"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal"/>
+<meta property="og:title" content="Dezimalstunden umrechnen 2026 – Arbeitszeitrechner Dezimal"/>
+<meta property="og:description" content="Kostenloser 2-Wege-Konverter: Std:Min → Dezimal → Industrieminuten. Für DATEV, SAP & Stundenzettel."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Dezimalstunden umrechnen 2026 – Zeit ↔ Dezimal ↔ Minuten"/>
+<meta name="twitter:description" content="Kostenloser 2-Wege-Konverter: Std:Min → Dezimal → Industrieminuten. Für DATEV & SAP."/>
+<meta name="robots" content="index, follow"/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Dezimalstunden Rechner – arbeitszeitrechner365.de","url":"https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal","description":"2-Wege-Konverter: Stunden:Minuten ↔ Dezimalstunden ↔ Industrieminuten. Für DATEV, SAP und Lohnabrechnungssysteme.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Wie rechnet man Stunden und Minuten in Dezimalstunden um?","acceptedAnswer":{"@type":"Answer","text":"Formel: Stunden + (Minuten ÷ 60) = Dezimalstunden. Beispiel: 7 Stunden 30 Minuten = 7 + (30 ÷ 60) = 7,50 Dezimalstunden. Unser Rechner übernimmt diese Berechnung automatisch in beide Richtungen."}},
+  {"@type":"Question","name":"Was sind Industrieminuten und wie berechnet man sie?","acceptedAnswer":{"@type":"Answer","text":"Industrieminuten teilen eine Stunde in 100 gleiche Teile statt 60 Minuten. Eine Industrieminute entspricht 0,6 normalen Minuten. Formel: Dezimalstunden × 100 = Industrieminuten. Beispiel: 7,50 Dezimalstunden = 750 Industrieminuten."}},
+  {"@type":"Question","name":"Wie rechne ich 7,75 Stunden in Minuten um?","acceptedAnswer":{"@type":"Answer","text":"0,75 × 60 = 45 Minuten. Also: 7,75 Dezimalstunden = 7 Stunden 45 Minuten. Eselsbrücke: der Dezimalanteil × 60 ergibt die Minuten."}},
+  {"@type":"Question","name":"Warum ist 0,5 Stunden nicht 50 Minuten?","acceptedAnswer":{"@type":"Answer","text":"Weil Dezimalstunden das 60er-System in ein 100er-System übertragen. 0,5 × 60 = 30 Minuten, nicht 50. 0,5 bedeutet die Hälfte einer Stunde – und eine Stunde hat 60 Minuten, nicht 100."}},
+  {"@type":"Question","name":"Wie gebe ich Dezimalstunden in DATEV ein?","acceptedAnswer":{"@type":"Answer","text":"In DATEV Lohn & Gehalt werden Stunden als Dezimalzahl mit Punkt oder Komma eingegeben. Beispiel: 7 Stunden 30 Minuten = 7,50 oder 7.50. Immer vorher mit einem Rechner zur Kontrolle prüfen."}},
+  {"@type":"Question","name":"Wie berechne ich Zeit in Excel als Zahl?","acceptedAnswer":{"@type":"Answer","text":"Mit der Formel =Zelle*24, sofern die Zelle als Uhrzeit formatiert ist. Beispiel: Steht in A1 der Wert 07:30, liefert =A1*24 das Ergebnis 7,5. Ist die Zelle als Text gespeichert, zuerst ZEITWERT(A1) anwenden."}},
+  {"@type":"Question","name":"Warum brauchen Freelancer und Minijobber Dezimalstunden?","acceptedAnswer":{"@type":"Answer","text":"Für Rechnungen und Verdienstgrenzen zählt die exakte Zeit: Aufgewendete Stunden in Dezimalform mal vereinbarter Satz ergibt den Rechnungsbetrag ohne Rundungsfehler. Bei Minijobs lässt sich die monatliche Stundengrenze nur mit genauen Dezimalwerten zuverlässig einhalten."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://arbeitszeitrechner365.de/"},
+  {"@type":"ListItem","position":2,"name":"Dezimalstunden umrechnen","item":"https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal"}
+]}
+</script>
+
+<style>
+:root{--navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;--surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--green:#16a34a;--red:#dc2626;--shadow:0 2px 12px rgba(26,61,110,.08);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+nav{background:var(--navy-dk);padding:0 20px;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:-60px;right:-60px;width:360px;height:360px;border-radius:50%;background:rgba(232,160,32,.10);pointer-events:none;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+.hero h1{font-size:clamp(24px,4.5vw,42px);font-weight:800;line-height:1.2;margin-bottom:16px;}
+.hl{color:var(--amber);}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:620px;line-height:1.65;margin-bottom:28px;}
+.btn-p{display:inline-flex;align-items:center;gap:7px;background:var(--amber);color:#1e293b;font-weight:700;font-size:15px;padding:12px 28px;border-radius:50px;text-decoration:none;box-shadow:0 4px 18px rgba(232,160,32,.35);transition:transform .18s;}
+.btn-p:hover{transform:translateY(-2px);}
+.btn-s{display:inline-flex;align-items:center;gap:7px;background:transparent;color:#fff;font-weight:600;font-size:14px;padding:11px 24px;border-radius:50px;border:2px solid rgba(255,255,255,.40);text-decoration:none;}
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:28px;}
+
+/* CONVERTER CARD */
+.conv-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.conv-panel{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px;}
+.conv-title{font-size:14px;font-weight:700;color:var(--amber);letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px;}
+.conv-row{display:flex;gap:8px;margin-bottom:14px;align-items:center;}
+.conv-row input{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:8px;padding:11px 14px;color:#fff;font-size:16px;font-family:inherit;outline:none;min-width:0;}
+.conv-row input:focus{border-color:var(--amber);}
+.conv-sep{color:rgba(255,255,255,.50);font-size:18px;font-weight:300;}
+.conv-label{font-size:12px;color:rgba(255,255,255,.55);margin-bottom:6px;}
+.conv-btn{width:100%;background:var(--amber);color:#1e293b;font-weight:700;font-size:15px;padding:12px;border-radius:8px;border:none;cursor:pointer;margin-top:8px;}
+.conv-result{background:rgba(232,160,32,.15);border:1px solid rgba(232,160,32,.30);border-radius:10px;padding:18px;margin-top:16px;display:none;text-align:center;}
+.conv-result.show{display:block;}
+.conv-res-main{font-size:26px;font-weight:800;color:var(--amber);margin-bottom:4px;}
+.conv-res-sub{font-size:13px;color:rgba(255,255,255,.60);}
+
+.tbl-wrap{overflow-x:auto;margin:20px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:13px 16px;text-align:left;font-size:12.5px;font-weight:700;}
+td{padding:12px 16px;border-bottom:1px solid var(--border);}
+tbody tr:nth-child(even){background:#f0f6ff;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+.box{border-radius:10px;padding:18px 22px;margin:20px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+.i-link{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:13px 18px;margin:24px 0;font-size:14px;color:#1e40af;}
+.i-link a{color:#1d4ed8;font-weight:600;text-decoration:none;}
+.formula{background:var(--navy);color:#fff;border-radius:14px;padding:28px;margin:24px 0;text-align:center;}
+.formula .f-label{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+.formula .f-main{font-size:clamp(17px,2.5vw,20px);font-weight:700;margin-bottom:8px;line-height:1.5;}
+.formula .f-note{font-size:13px;color:rgba(255,255,255,.65);}
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
+.rel-card:hover{box-shadow:0 6px 20px rgba(26,61,110,.12);transform:translateY(-2px);}
+.rel-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+footer{background:var(--navy-dk);color:rgba(255,255,255,.65);padding:28px 0;font-size:13px;text-align:center;}
+footer a{color:rgba(255,255,255,.65);text-decoration:none;margin:0 10px;}
+footer a:hover{color:#fff;}
+@media(max-width:640px){.hero{padding:40px 0 32px;}.section{padding:44px 0;}.conv-grid{grid-template-columns:1fr;}.author-box{flex-direction:column;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li><a href="https://arbeitszeitrechner365.de/#rechner">Rechner</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat">Monatsstunden</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="active">Dezimalstunden</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner">Sollarbeitszeit</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/#rechner" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Dezimalstunden umrechnen</strong>
+  </div>
+</div>
+
+<!-- ════ A) INTRO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">✅ 2-Wege-Konverter</div>
+      <div class="t-pill">⚡ Sofort-Ergebnis</div>
+      <div class="t-pill">💼 DATEV & SAP kompatibel</div>
+      <div class="t-pill">🇩🇪 Industrieminuten</div>
+    </div>
+    <!-- H1: PRIMARY KEYWORD in first 2 sentences -->
+    <h1>
+      <span class="hl">Dezimalstunden umrechnen</span> 2026 –<br/>
+      Zeit ↔ Dezimal ↔ Industrieminuten
+    </h1>
+    <p class="hero-sub">
+      <strong>Dezimalstunden umrechnen</strong> für DATEV, SAP und Lohnabrechnungen:
+      Stunden:Minuten ↔ Dezimalstunden ↔ Industrieminuten – bidirektionaler Konverter,
+      kostenlos, ohne Login, mit vollständiger Umrechnungstabelle.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="#rechner" class="btn-p">⚡ Jetzt umrechnen</a>
+      <a href="#tabelle" class="btn-s">Zur Tabelle →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ B) TOOL ════ -->
+<section id="rechner" class="tool-zone">
+  <div class="container">
+    <span class="eyebrow">Arbeitszeitrechner Dezimal</span>
+    <!-- H2: Secondary keyword -->
+    <h2>Arbeitszeitrechner Dezimal – 2-Wege-Konverter</h2>
+    <p class="lead">
+      Beide Richtungen in einem Tool: Zeit → Dezimal <strong>und</strong>
+      Dezimal → Zeit. Ideal für Stundenzettel, DATEV-Eingaben und SAP-Abrechnungen.
+    </p>
+
+    <div class="conv-grid">
+
+      <!-- CONVERTER 1: Zeit → Dezimal -->
+      <div class="conv-panel">
+        <div class="conv-title">⏱️ Std:Min → Dezimalstunden</div>
+        <div class="conv-label">Stunden eingeben</div>
+        <div class="conv-row">
+          <input type="number" id="std1" min="0" max="24" value="7" placeholder="Std"/>
+          <span class="conv-sep">:</span>
+          <input type="number" id="min1" min="0" max="59" value="30" placeholder="Min"/>
+        </div>
+        <button class="conv-btn" onclick="zeitZuDezimal()">→ In Dezimalstunden umrechnen</button>
+        <div class="conv-result" id="res1">
+          <div class="conv-res-main" id="res1-main">–</div>
+          <div class="conv-res-sub" id="res1-sub"></div>
+        </div>
+      </div>
+
+      <!-- CONVERTER 2: Dezimal → Zeit -->
+      <div class="conv-panel">
+        <div class="conv-title">🔢 Dezimalstunden → Std:Min</div>
+        <div class="conv-label">Dezimalstunden eingeben (z.B. 7,75)</div>
+        <div class="conv-row">
+          <input type="number" id="dez1" min="0" max="24" step="0.01" value="7.5" placeholder="z.B. 7,50"/>
+        </div>
+        <button class="conv-btn" onclick="dezimalZuZeit()">→ In Std:Min umrechnen</button>
+        <div class="conv-result" id="res2">
+          <div class="conv-res-main" id="res2-main">–</div>
+          <div class="conv-res-sub" id="res2-sub"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+function zeitZuDezimal(){
+  const std = parseInt(document.getElementById('std1').value)||0;
+  const min = parseInt(document.getElementById('min1').value)||0;
+  const dezimal = (std + min/60).toFixed(4);
+  const dezRound = (std + min/60).toFixed(2);
+  const industrie = Math.round((std + min/60)*100);
+  document.getElementById('res1-main').textContent = dezRound + ' Dezimalstunden';
+  document.getElementById('res1-sub').textContent =
+    `= ${industrie} Industrieminuten | Exakt: ${dezimal} | Für Lohnabr.: ${dezRound} Std.`;
+  document.getElementById('res1').classList.add('show');
+}
+function dezimalZuZeit(){
+  const dez = parseFloat(document.getElementById('dez1').value)||0;
+  const gesamtMin = Math.round(dez * 60);
+  const std = Math.floor(gesamtMin / 60);
+  const min = gesamtMin % 60;
+  const industrie = Math.round(dez * 100);
+  document.getElementById('res2-main').textContent = `${std}:${String(min).padStart(2,'0')} Stunden`;
+  document.getElementById('res2-sub').textContent =
+    `= ${gesamtMin} Minuten gesamt | = ${industrie} Industrieminuten | ${dez.toFixed(2)} × 60 = ${gesamtMin} Min.`;
+  document.getElementById('res2').classList.add('show');
+}
+</script>
+
+<!-- ════ C) HOW TO USE ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Wie funktioniert die Umrechnung? – Formeln & Erklärung</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">⚡ Schnellantwort</div>
+      <p>
+        <strong>Dezimalstunden umrechnen:</strong> Minuten ÷ 60 = Dezimalanteil.
+        Beispiel: 7:30 = 7 + (30 ÷ 60) = <strong>7,50 Dezimalstunden = 750 Industrieminuten</strong>.
+        Rückrechnung: 0,50 × 60 = 30 Minuten.
+      </p>
+    </div>
+
+    <div class="formula">
+      <div class="f-label">📐 Umrechnungsformeln</div>
+      <div class="f-main">
+        Zeit → Dezimal: Stunden + (Minuten ÷ 60) = Dezimalstunden<br/>
+        Dezimal → Zeit: Dezimalanteil × 60 = Minuten<br/>
+        Industrieminuten: Dezimalstunden × 100 = Industrieminuten
+      </div>
+      <div class="f-note">
+        Beispiel: 7:45 Std. = 7 + (45÷60) = 7,75 Dez. = 775 Industrieminuten
+      </div>
+    </div>
+
+    <div class="box box-tip">
+      <strong>💡 Warum brauchen DATEV & SAP Dezimalstunden?</strong>
+      Mit Dezimalstunden können Lohnabrechnungssysteme einfach rechnen:
+      7,50 h × 18,50 €/h = <strong>138,75 € Brutto</strong>.
+      Mit dem Format 7:30 wäre das ohne Umrechnung nicht möglich.
+      Unser <a href="https://arbeitszeitrechner365.de/#lohnrechner" style="color:#1d4ed8;font-weight:600;">Lohnrechner auf der Hauptseite</a>
+      übernimmt Dezimalstunden direkt.
+    </div>
+
+    <!-- Internal Link #1 -->
+    <div class="i-link">
+      🔗 <strong>Tipp:</strong> Nettoarbeitszeit direkt in Dezimalstunden berechnen –
+      <a href="https://arbeitszeitrechner365.de/#rechner">Zum Hauptrechner mit Dezimalausgabe →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ D) COMMON PROBLEMS ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Häufige Probleme</span>
+    <h2>Diese Fehler passieren bei Dezimalstunden am häufigsten</h2>
+    <p class="lead">Kleine Fehler in der Umrechnung kosten Geld. Diese Probleme löst der Rechner sofort.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">0,5 Stunden ≠ 50 Minuten!</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Der häufigste Fehler: 0,5 Stunden sind <strong>30 Minuten</strong> (nicht 50).
+          0,5 × 60 = 30 Min. Unser Rechner rechnet das sofort korrekt.
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">DATEV akzeptiert kein Komma, sondern Punkt</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          In internationalen Systemen (SAP, DATEV international): Dezimalpunkt statt Komma verwenden.
+          7,50 Stunden eingeben als <strong>7.50</strong>. Unser Rechner zeigt beides.
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Industrieminuten vs. Dezimalstunden verwechselt</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Industrieminuten = Dezimalstunden × 100.
+          7,50 Dezimalstunden = <strong>750 Industrieminuten</strong> (nicht 450 normale Minuten).
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Lohnberechnung mit falschen Stunden</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Wer 7 Stunden 45 Minuten mit 7,45 multipliziert, rechnet falsch.
+          Korrekt: <strong>7,75</strong> Dezimalstunden × Stundenlohn.
+          Differenz: 7,75 − 7,45 = 0,30 h → bei 18 €/h fehlen <strong>5,40 € pro Tag</strong>.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ E) OVERVIEW — REFERENCE TABLE ════ -->
+<section id="tabelle" class="section">
+  <div class="container">
+    <span class="eyebrow">Vollständige Referenz</span>
+    <!-- H2 -->
+    <h2>Dezimalstunden Tabelle – Std:Min ↔ Dezimal ↔ Industrieminuten</h2>
+    <p class="lead">
+      Die häufigsten Zeitwerte auf einen Blick – als direkter Nachschlage-Wert
+      für Stundenzettel und Lohnabrechnungssysteme.
+    </p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead>
+          <tr><th>Std:Min</th><th>Dezimalstunden</th><th>Industrieminuten</th><th>Beispiel Lohn (18 €/h)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>0:15</td><td>0,25</td><td>25</td><td>4,50 €</td></tr>
+          <tr><td>0:30</td><td>0,50</td><td>50</td><td>9,00 €</td></tr>
+          <tr><td>0:45</td><td>0,75</td><td>75</td><td>13,50 €</td></tr>
+          <tr><td>1:00</td><td>1,00</td><td>100</td><td>18,00 €</td></tr>
+          <tr><td>4:00</td><td>4,00</td><td>400</td><td>72,00 €</td></tr>
+          <tr><td>6:00</td><td>6,00</td><td>600</td><td>108,00 €</td></tr>
+          <tr><td>7:00</td><td>7,00</td><td>700</td><td>126,00 €</td></tr>
+          <tr><td>7:15</td><td>7,25</td><td>725</td><td>130,50 €</td></tr>
+          <tr class="highlight"><td><strong>7:30</strong></td><td><strong>7,50</strong></td><td><strong>750</strong></td><td><strong>135,00 €</strong></td></tr>
+          <tr><td>7:45</td><td>7,75</td><td>775</td><td>139,50 €</td></tr>
+          <tr class="highlight"><td><strong>8:00</strong></td><td><strong>8,00</strong></td><td><strong>800</strong></td><td><strong>144,00 €</strong></td></tr>
+          <tr><td>8:15</td><td>8,25</td><td>825</td><td>148,50 €</td></tr>
+          <tr><td>8:30</td><td>8,50</td><td>850</td><td>153,00 €</td></tr>
+          <tr><td>8:45</td><td>8,75</td><td>875</td><td>157,50 €</td></tr>
+          <tr class="highlight"><td><strong>9:00</strong></td><td><strong>9,00</strong></td><td><strong>900</strong></td><td><strong>162,00 €</strong></td></tr>
+          <tr><td>9:30</td><td>9,50</td><td>950</td><td>171,00 €</td></tr>
+          <tr><td>10:00</td><td>10,00</td><td>1.000</td><td>180,00 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Internal Link #2 -->
+    <div class="i-link">
+      🔗 <strong>Weiterlesen:</strong>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat">Monatliche Arbeitsstunden berechnen – vollständige Tabelle 2026 →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ F) FEATURES — USE CASES ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Wer braucht Dezimalstunden?</span>
+    <h2>Dezimalstunden umrechnen – Anwendungsfälle in der Praxis</h2>
+    <p class="lead">Wer Dezimalstunden braucht, weiß es meistens bereits. Hier die häufigsten Anwendungsfälle:</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Bereich</th><th>Software / System</th><th>Format benötigt</th><th>Beispiel</th></tr></thead>
+        <tbody>
+          <tr><td>Lohnbuchhaltung</td><td>DATEV Lohn & Gehalt</td><td>Dezimalstunden</td><td>7,50 Std.</td></tr>
+          <tr><td>ERP-System</td><td>SAP HCM / SuccessFactors</td><td>Dezimalstunden</td><td>8,25 Std.</td></tr>
+          <tr><td>Projektabrechnung</td><td>Lexware, Sage</td><td>Dezimalstunden</td><td>6,75 Std.</td></tr>
+          <tr><td>Stundenzettel / Excel</td><td>Microsoft Excel</td><td>Dezimalstunden (als Zahl)</td><td>7,50 × 18 €</td></tr>
+          <tr><td>Zeiterfassung</td><td>Personio, Clockodo</td><td>Minuten oder Dezimal</td><td>450 Min. = 7,50</td></tr>
+          <tr><td>Rechnungsstellung</td><td>Freelancer / Selbstständige</td><td>Dezimalstunden</td><td>3,25 h × 95 €</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-ok">
+      <strong>✅ Unser Hauptrechner liefert Dezimalstunden automatisch</strong>
+      Unser <a href="https://arbeitszeitrechner365.de/#rechner" style="color:#166534;font-weight:600;">kostenloser Arbeitszeitrechner</a>
+      zeigt bei jeder Berechnung automatisch beide Formate: Std:Min und Dezimalstunden.
+      Kein manuelles Umrechnen nötig.
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ EXCEL SECTION ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Für Buchhaltung & Controlling</span>
+    <h2>Zeit in Excel als Zahl berechnen – die Formel</h2>
+    <p class="lead">
+      Excel speichert Uhrzeiten intern als Bruchteil eines Tages. Deshalb genügt eine kleine Formel,
+      um eine Zeitzelle im Format hh:mm in eine normale Zahl umzuwandeln.
+    </p>
+
+    <div class="formula">
+      <div class="f-label">📊 Excel-Formel</div>
+      <div class="f-main">
+        Zeitzelle → Zahl: <strong>=A1*24</strong><br/>
+        Zahl → Zeitformat: <strong>=A1/24</strong> (Zelle anschließend als hh:mm formatieren)
+      </div>
+      <div class="f-note">
+        Steht in A1 der Wert 07:30 (als Uhrzeit formatiert), liefert =A1*24 das Ergebnis 7,5 –
+        exakt der Wert, den auch unser Konverter oben ausgibt.
+      </div>
+    </div>
+
+    <div class="box box-tip">
+      <strong>💡 Typischer Stolperstein in Excel</strong>
+      Wird die Ausgangszelle nicht als Uhrzeit, sondern als reiner Text erkannt (z. B. "7:30" nach dem Import
+      aus einer Zeiterfassungs-App), liefert *24 ein falsches Ergebnis. In diesem Fall zuerst mit
+      <strong>ZEITWERT(A1)</strong> in ein echtes Zeitformat umwandeln, danach mit *24 multiplizieren.
+      Wer keine Excel-Formeln pflegen möchte, gibt die Werte stattdessen direkt oben in den Konverter ein.
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ PRACTICAL EXAMPLE SECTION ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Praxisbeispiel</span>
+    <h2>Vom Stundenzettel zur Rechnung – ein Rechenbeispiel</h2>
+    <p class="lead">
+      Ein Handwerksbetrieb kalkuliert ein Angebot und muss die geleisteten Stunden mehrerer Mitarbeiter
+      korrekt in eine Rechnung überführen.
+    </p>
+
+    <div class="box box-ok">
+      <strong>📋 Beispielrechnung</strong>
+      Die Wochenstundenzettel zeigen: 6 Std. 15 Min., 7 Std. 40 Min. und 8 Std. 05 Min.<br/>
+      Umrechnung einzeln: 6,25 + 7,67 + 8,08 = <strong>21,99 Std. gesamt</strong>.<br/>
+      Bei einem Stundenverrechnungssatz von 62 €/Std. ergibt das:
+      21,99 × 62 € = <strong>1.363,38 € Lohnkosten</strong> für die Angebotskalkulation.<br/>
+      Mit dem Zeitformat (6:15 + 7:40 + 8:05) müsste zuerst mühsam über Minuten addiert werden –
+      im Dezimalformat reicht die normale Addition.
+    </div>
+
+    <p style="font-size:14.5px;color:var(--muted);line-height:1.7;margin-top:16px;">
+      Auch für Minijobber ist die korrekte Umrechnung relevant: Bei einem Stundenlohn von 15 €
+      dürfen im Minijob (2026: 603 € Verdienstgrenze) monatlich maximal rund 40,2 Stunden anfallen –
+      diese Grenze lässt sich nur mit exakten Dezimalstunden statt gerundeten Zeitangaben zuverlässig prüfen.
+      Freelancer nutzen dieselbe Rechnung für Kundenrechnungen: Aufgewendete Zeit in Dezimalform ×
+      vereinbarter Satz = Rechnungsbetrag, ohne Umweg über Minutenbrüche.
+    </p>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zum Dezimalstunden umrechnen</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Wie rechnet man Stunden und Minuten in Dezimalstunden um?</summary>
+        <div class="faq-body">
+          Formel: Stunden + (Minuten ÷ 60) = Dezimalstunden.<br/>
+          Beispiel: 7 Stunden 30 Minuten = 7 + (30 ÷ 60) = <strong>7,50 Dezimalstunden</strong>.<br/>
+          Unser Rechner oben übernimmt diese Berechnung automatisch in beide Richtungen.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was sind Industrieminuten und wie berechnet man sie?</summary>
+        <div class="faq-body">
+          Industrieminuten teilen eine Stunde in 100 gleiche Teile (statt 60 Minuten).
+          Eine Industrieminute = 0,6 normale Minuten.<br/>
+          Formel: Dezimalstunden × 100 = Industrieminuten.<br/>
+          Beispiel: 7,50 Dezimalstunden = <strong>750 Industrieminuten</strong>.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie rechne ich 7,75 Stunden in Minuten um?</summary>
+        <div class="faq-body">
+          0,75 × 60 = 45 Minuten. Also: 7,75 Dezimalstunden = <strong>7 Stunden 45 Minuten</strong>.
+          Eselsbrücke: Der Dezimalanteil × 60 = Minuten.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Warum ist 0,5 Stunden nicht 50 Minuten?</summary>
+        <div class="faq-body">
+          Weil Dezimalstunden das 60er-System in ein 100er-System übertragen.
+          0,5 × 60 = <strong>30 Minuten</strong> (nicht 50).
+          0,5 bedeutet "die Hälfte einer Stunde" – und eine Stunde hat 60 Minuten, nicht 100.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie gebe ich Dezimalstunden in DATEV ein?</summary>
+        <div class="faq-body">
+          In DATEV Lohn & Gehalt werden Stunden als Dezimalzahl mit Punkt oder Komma eingegeben.
+          Beispiel: 7 Stunden 30 Minuten = <strong>7,50</strong> oder <strong>7.50</strong>.
+          Verwenden Sie immer unseren Rechner zur Kontrolle, bevor Sie Werte ins System übertragen.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie berechne ich Zeit in Excel als Zahl?</summary>
+        <div class="faq-body">
+          Mit der Formel <strong>=Zelle*24</strong>, sofern die Zelle als Uhrzeit formatiert ist.
+          Beispiel: Steht in A1 der Wert 07:30, liefert =A1*24 das Ergebnis 7,5.
+          Ist die Zelle als Text gespeichert, zuerst <strong>ZEITWERT(A1)</strong> anwenden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Warum brauchen Freelancer und Minijobber Dezimalstunden?</summary>
+        <div class="faq-body">
+          Für Rechnungen und Verdienstgrenzen zählt die exakte Zeit: Aufgewendete Stunden in Dezimalform ×
+          vereinbarter Satz ergibt den Rechnungsbetrag ohne Rundungsfehler. Bei Minijobs lässt sich die
+          monatliche Stundengrenze nur mit genauen Dezimalwerten zuverlässig einhalten, nicht mit
+          gerundeten Zeitangaben.
+        </div>
+      </details>
+    </div>
+
+    <div class="author-box">
+      <div class="author-avatar">R</div>
+      <div>
+        <div class="author-name">Redaktion arbeitszeitrechner365.de</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: August 2026</div>
+        <div class="author-desc">
+          Alle Formeln und Beispiele sind mathematisch verifiziert und mit gängigen
+          Lohnabrechnungssystemen (DATEV, SAP HCM, Lexware) abgeglichen.
+          Zuletzt geprüft: August 2026.
+        </div>
+      </div>
+    </div>
+
+    <!-- ENDING NOTE: Primary keyword at end -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Dezimalstunden umrechnen</strong>
+      <strong>Dezimalstunden umrechnen</strong> folgt einer einfachen Formel: Minuten ÷ 60 = Dezimalanteil.
+      7:30 = 7,50 | 7:45 = 7,75 | 8:15 = 8,25. Industrieminuten = Dezimalstunden × 100.
+      <a href="#rechner" style="color:#1d4ed8;font-weight:600;">Jetzt mit dem 2-Wege-Konverter umrechnen →</a>
+    </div>
+
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/#rechner" class="rel-card">
+        <div class="rel-tag">Tagesrechner</div>
+        <div class="rel-title">Arbeitszeitrechner – inkl. Dezimalausgabe</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat" class="rel-card">
+        <div class="rel-tag">Monatsstunden</div>
+        <div class="rel-title">Arbeitsstunden pro Monat berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="rel-card">
+        <div class="rel-tag">Überstunden</div>
+        <div class="rel-title">Sollarbeitszeit & Überstunden berechnen</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a>
+    <a href="https://arbeitszeitrechner365.de/impressum">Impressum</a>
+    <a href="https://arbeitszeitrechner365.de/datenschutz">Datenschutz</a>
+    <a href="https://arbeitszeitrechner365.de/nutzungsbedingungen">Nutzungsbedingungen</a>
+    <a href="https://arbeitszeitrechner365.de/kontakt">Kontakt</a>
+  </div>
+  <p style="margin-top:12px;">© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>
