@@ -754,8 +754,9 @@ function initSideConverter() {
 // --------------------------------------------------------------------------
 function initRatingWidget() {
   // Seed values — honest starting point for a new site
-  const SEED_TOTAL = 84.6;   // sum of all star values (seed: 18 × 4.7)
-  const SEED_COUNT = 18;     // number of seed ratings
+  const SEED_TOTAL = 73.5;   // sum of all star values (seed: 15 × 4.9)
+  const SEED_COUNT = 15;     // number of seed ratings
+
 
   const LS_KEY_TOTAL = 'az365_rating_total';
   const LS_KEY_COUNT = 'az365_rating_count';
