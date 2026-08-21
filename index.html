@@ -515,8 +515,40 @@
       <!-- Desktop Nav -->
       <nav aria-label="Hauptnavigation" class="desktop-nav">
         <ul class="nav-links">
-          <li><a href="/#tool">Rechner</a></li>
-          <li><a href="/#tool">Lohnrechner</a></li>
+          <li class="nav-dropdown-item">
+            <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+            <div class="nav-dropdown-menu">
+              <a href="/#tool" class="dropdown-link">
+                <span class="dropdown-icon">⏱️</span>
+                <div>
+                  <div class="dropdown-link-title">Arbeitszeitrechner</div>
+                  <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+                </div>
+              </a>
+              <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+                <span class="dropdown-icon">📅</span>
+                <div>
+                  <div class="dropdown-link-title">Monatsstunden berechnen</div>
+                  <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+                </div>
+              </a>
+              <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+                <span class="dropdown-icon">⚙️</span>
+                <div>
+                  <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+                  <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+                </div>
+              </a>
+              <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+                <span class="dropdown-icon">⚖️</span>
+                <div>
+                  <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+                  <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="/#lohnrechner">Lohnrechner</a></li>
           <li><a href="/ueber-uns">Über uns</a></li>
           <li><a href="/#faq">FAQ</a></li>
           <li><a href="/kontakt">Kontakt</a></li>
@@ -531,9 +563,21 @@
         <ul class="mobile-nav-links">
           <li><a href="/#tool" class="mobile-nav-link">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M4 21h16a2 2 0 002-2V5a2 2 0 00-2-2H4a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
-            Rechner
+            Arbeitszeitrechner (Täglich)
           </a></li>
-          <li><a href="/#tool" class="mobile-nav-link">
+          <li><a href="/arbeitszeitrechner-monat" class="mobile-nav-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+            Monatsstunden berechnen
+          </a></li>
+          <li><a href="/arbeitszeitrechner-dezimal" class="mobile-nav-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/></svg>
+            Dezimalstunden-Konverter
+          </a></li>
+          <li><a href="/sollarbeitszeit-rechner" class="mobile-nav-link">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+            Sollarbeitszeit &amp; Zeitkonto
+          </a></li>
+          <li><a href="/#lohnrechner" class="mobile-nav-link">
             <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
             Lohnrechner
           </a></li>

@@ -64,13 +64,27 @@ p{margin-bottom:16px;line-height:1.8;}
 .lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
 
 /* NAV */
-nav{background:var(--navy-dk);padding:0 20px;}
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
 .nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
 .nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
-.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
 .nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
 .nav-links a:hover,.nav-links a.active{color:#fff;}
 .nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
 
 /* BREADCRUMB */
 .breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
@@ -211,12 +225,44 @@ details.faq[open] summary::after{content:'−';}
   <div class="nav-inner">
     <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
     <ul class="nav-links">
-      <li><a href="https://arbeitszeitrechner365.de/#rechner">Rechner</a></li>
-      <li><a href="https://arbeitszeitrechner365.de/#lohnrechner">Lohnrechner</a></li>
-      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat" class="active">Monatsstunden</a></li>
-      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal">Dezimalstunden</a></li>
-      <li><a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner">Sollarbeitszeit</a></li>
-      <li><a href="https://arbeitszeitrechner365.de/#rechner" class="nav-cta">⚡ Berechnen</a></li>
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
     </ul>
   </div>
 </nav>
