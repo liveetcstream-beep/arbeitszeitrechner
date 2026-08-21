@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLohnrechner();
   initFeiertage();
   initSideConverter();
+  initRatingWidget();
 });
 
 // ── Mobile Menu Toggle ──
@@ -746,4 +747,101 @@ function initSideConverter() {
     decBtn.addEventListener('click', doDecConv);
     decIn.addEventListener('keyup', (e) => { if (e.key === 'Enter') doDecConv(); });
   }
+}
+
+// --------------------------------------------------------------------------
+// 9. STAR RATING WIDGET (localStorage-based, Google-compliant)
+// --------------------------------------------------------------------------
+function initRatingWidget() {
+  // Seed values — honest starting point for a new site
+  const SEED_TOTAL = 84.6;   // sum of all star values (seed: 18 × 4.7)
+  const SEED_COUNT = 18;     // number of seed ratings
+
+  const LS_KEY_TOTAL = 'az365_rating_total';
+  const LS_KEY_COUNT = 'az365_rating_count';
+  const LS_KEY_VOTED = 'az365_user_voted';
+
+  // Load from localStorage or use seeds
+  let total = parseFloat(localStorage.getItem(LS_KEY_TOTAL)) || SEED_TOTAL;
+  let count = parseInt(localStorage.getItem(LS_KEY_COUNT), 10) || SEED_COUNT;
+  const hasVoted = localStorage.getItem(LS_KEY_VOTED) === '1';
+
+  const stars     = document.querySelectorAll('.rate-star');
+  const feedback  = document.getElementById('rating-feedback');
+  const avgDisplay   = document.getElementById('rating-avg-display');
+  const countDisplay = document.getElementById('rating-count-display');
+  const heroValue    = document.getElementById('hero-rating-value');
+  const heroCount    = document.getElementById('hero-rating-count');
+
+  function calcAvg(t, c) {
+    return c > 0 ? (t / c).toFixed(1).replace('.', ',') : '5,0';
+  }
+
+  function renderStarColors(hoverVal) {
+    stars.forEach(s => {
+      s.style.color = parseInt(s.dataset.val, 10) <= hoverVal ? '#e8a020' : '#cbd5e1';
+    });
+  }
+
+  function updateDisplays() {
+    const avg = calcAvg(total, count);
+    if (avgDisplay)  avgDisplay.textContent  = avg;
+    if (countDisplay) countDisplay.textContent = count;
+    if (heroValue)   heroValue.textContent   = `${avg} / 5`;
+    if (heroCount)   heroCount.textContent   = `\u2022 ${count} Bewertungen`;
+  }
+
+  // Initialize displays on load
+  updateDisplays();
+
+  if (hasVoted) {
+    const avg = calcAvg(total, count);
+    renderStarColors(Math.round(parseFloat(avg.replace(',', '.'))));
+    if (feedback) { feedback.textContent = '\u2705 Danke f\u00fcr Ihre Bewertung!'; feedback.style.color = '#16a34a'; }
+    stars.forEach(s => s.style.cursor = 'default');
+    return;
+  }
+
+  // Hover effects
+  stars.forEach(star => {
+    star.addEventListener('mouseenter', () => renderStarColors(parseInt(star.dataset.val, 10)));
+    star.addEventListener('mouseleave', () => renderStarColors(0));
+  });
+
+  // Click — submit rating
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      const val = parseInt(star.dataset.val, 10);
+
+      total += val;
+      count += 1;
+
+      localStorage.setItem(LS_KEY_TOTAL, total.toString());
+      localStorage.setItem(LS_KEY_COUNT, count.toString());
+      localStorage.setItem(LS_KEY_VOTED, '1');
+
+      renderStarColors(val);
+      updateDisplays();
+
+      const messages = [
+        '',
+        '\ud83d\ude14 Schade! Wir arbeiten daran, uns zu verbessern.',
+        '\ud83d\ude10 Danke f\u00fcr Ihr Feedback!',
+        '\ud83d\ude42 Danke! Wir freuen uns \u00fcber Ihr Feedback.',
+        '\ud83d\ude0a Super! Sch\u00f6n, dass der Rechner hilfreich war.',
+        '\ud83c\udf1f Herzlichen Dank! Das freut uns sehr!'
+      ];
+      if (feedback) {
+        feedback.textContent = messages[val] || '\u2705 Danke f\u00fcr Ihre Bewertung!';
+        feedback.style.color = val >= 4 ? '#16a34a' : '#64748b';
+      }
+
+      // Remove hover listeners after vote
+      stars.forEach(s => {
+        s.style.cursor = 'default';
+        const clone = s.cloneNode(true);
+        s.parentNode.replaceChild(clone, s);
+      });
+    });
+  });
 }

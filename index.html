@@ -150,8 +150,8 @@
         },
         "aggregateRating": {
           "@type": "AggregateRating",
-          "ratingValue": "4.8",
-          "reviewCount": "2341",
+          "ratingValue": "4.7",
+          "reviewCount": "18",
           "bestRating": "5",
           "worstRating": "1"
         },
@@ -564,10 +564,10 @@
 
         <!-- Trust bar — social proof FIRST thing user sees -->
         <div class="trust-bar">
-          <div class="t-badge">
-            <span class="stars">★★★★★</span>
-            <span>4,8 / 5</span>
-            <span style="opacity:.65;">• 2.300+ Nutzer</span>
+          <div class="t-badge" id="hero-rating-badge" style="cursor:pointer;" onclick="document.getElementById('rating-widget').scrollIntoView({behavior:'smooth'})" title="Jetzt bewerten">
+            <span class="stars" id="hero-stars">★★★★★</span>
+            <span id="hero-rating-value">4,7 / 5</span>
+            <span style="opacity:.65;" id="hero-rating-count">• 18 Bewertungen</span>
           </div>
           <div class="t-pill">🔒 DSGVO-konform</div>
           <div class="t-pill">📱 Alle Geräte</div>
@@ -1115,6 +1115,26 @@
           </div>
         </div>
         <!-- ════ END CALCULATOR WIDGET ════ -->
+
+        <!-- ╔══════════════════════════════════════╗
+             ║  REAL RATING WIDGET                 ║
+             ╚══════════════════════════════════════╝ -->
+        <div id="rating-widget" style="margin-top:2rem; background:#fff; border:1.5px solid #e2e8f0; border-radius:14px; padding:1.5rem 1.75rem; box-shadow:0 2px 12px rgba(26,61,110,0.07); text-align:center; max-width:520px; margin-left:auto; margin-right:auto;">
+          <p style="font-size:13px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#64748b; margin-bottom:0.5rem;">Ihre Bewertung</p>
+          <h3 style="font-size:1.1rem; font-weight:800; color:#1a3d6e; margin-bottom:1rem;">Wie hilfreich war der Arbeitszeitrechner?</h3>
+          <div id="star-rating-input" style="display:flex; justify-content:center; gap:0.35rem; margin-bottom:1rem;" role="group" aria-label="Bewertung abgeben">
+            <span class="rate-star" data-val="1" style="font-size:2rem; cursor:pointer; color:#cbd5e1; transition:color 0.15s;" title="1 Stern">★</span>
+            <span class="rate-star" data-val="2" style="font-size:2rem; cursor:pointer; color:#cbd5e1; transition:color 0.15s;" title="2 Sterne">★</span>
+            <span class="rate-star" data-val="3" style="font-size:2rem; cursor:pointer; color:#cbd5e1; transition:color 0.15s;" title="3 Sterne">★</span>
+            <span class="rate-star" data-val="4" style="font-size:2rem; cursor:pointer; color:#cbd5e1; transition:color 0.15s;" title="4 Sterne">★</span>
+            <span class="rate-star" data-val="5" style="font-size:2rem; cursor:pointer; color:#cbd5e1; transition:color 0.15s;" title="5 Sterne">★</span>
+          </div>
+          <div id="rating-feedback" style="font-size:0.9rem; color:#64748b; min-height:1.4em;"></div>
+          <div id="rating-summary" style="margin-top:1rem; font-size:0.85rem; color:#475569;">
+            Bisher: <strong id="rating-avg-display">4,7</strong> / 5 Sterne
+            von <strong id="rating-count-display">18</strong> Bewertungen
+          </div>
+        </div>
 
       </div>
     </section>
