@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- PRIMARY: Sollarbeitszeit Rechner | SECONDARY: Zeitkonto Rechner Überstunden -->
+<title>Sollarbeitszeit Rechner 2026 – Zeitkonto & Überstunden</title>
+<meta name="description" content="Sollarbeitszeit Rechner: Ist- vs. Sollzeit eingeben → sofort Überstunden oder Fehlstunden sehen. ✓ Wochenübersicht ✓ Zeitkonto ✓ Kostenlos & ohne Login 2026"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner"/>
+<meta property="og:title" content="Sollarbeitszeit Rechner 2026 – Zeitkonto & Überstunden"/>
+<meta property="og:description" content="Ist- vs. Sollzeit eingeben – sofort Überstunden oder Fehlstunden sehen. Wochensaldo & Zeitkonto. Kostenlos."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Sollarbeitszeit Rechner 2026 – Zeitkonto & Überstunden"/>
+<meta name="twitter:description" content="Ist- vs. Sollzeit eingeben – sofort Überstunden oder Fehlstunden sehen. Kostenlos, ohne Login."/>
+<meta name="robots" content="index, follow"/>
+
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Sollarbeitszeit Rechner – arbeitszeitrechner365.de","url":"https://arbeitszeitrechner365.de/sollarbeitszeit-rechner","description":"Sollarbeitszeit Rechner: Ist- vs. Sollzeit berechnen, Überstunden & Fehlstunden, Wochenzeitkonto. Kostenlos, kein Login.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"Was ist die Sollarbeitszeit?","acceptedAnswer":{"@type":"Answer","text":"Die Sollarbeitszeit ist die vertraglich vereinbarte Arbeitszeit – also die Stundenzahl, die ein Arbeitnehmer laut Arbeitsvertrag oder Tarifvertrag pro Tag, Woche oder Monat ableisten soll. Die Differenz zur Istarbeitszeit ergibt den Zeitkontosaldo."}},
+  {"@type":"Question","name":"Wie berechnet man Überstunden?","acceptedAnswer":{"@type":"Answer","text":"Formel: Tatsächliche Nettoarbeitszeit – Sollarbeitszeit = Überstunden. Beispiel: 9,50 h gearbeitet – 8,00 h Soll = +1,50 h Überstunden. Unser Rechner berechnet das täglich und summiert zum Wochensaldo auf."}},
+  {"@type":"Question","name":"Werden Überstunden automatisch bezahlt?","acceptedAnswer":{"@type":"Answer","text":"Nein. Überstunden müssen vom Arbeitgeber angeordnet, genehmigt oder geduldet worden sein, um einen Vergütungsanspruch zu begründen. Eigeninitiative ohne Wissen des Arbeitgebers begründet keinen automatischen Anspruch."}},
+  {"@type":"Question","name":"Was passiert mit Fehlstunden (Minusstunden)?","acceptedAnswer":{"@type":"Answer","text":"Fehlstunden werden in der Regel im Zeitkonto kumuliert und müssen zu einem späteren Zeitpunkt nachgearbeitet werden. Bei unverschuldeten Fehlstunden, z.B. Krankheit, gilt das Entgeltfortzahlungsgesetz (EntgFG) – das Soll bleibt erhalten."}},
+  {"@type":"Question","name":"Was ist ein Zeitkonto und wie funktioniert es?","acceptedAnswer":{"@type":"Answer","text":"Ein Arbeitszeitkonto (Zeitkonto) erfasst kumulierte Mehr- und Minderstunden. Positive Salden sind Überstunden-Guthaben, negative Salden sind Fehlstunden-Schuld. Das Guthaben kann als Freizeit abgebaut oder bei vertraglicher Regelung ausgezahlt werden."}},
+  {"@type":"Question","name":"Muss ich Überstunden nacharbeiten, wenn ich krank war?","acceptedAnswer":{"@type":"Answer","text":"Nein. Krankheit ist ein gesetzlicher Verhinderungsgrund nach § 3 EntgFG. Wer krank war, muss die ausgefallenen Stunden nicht nachholen – der Lohn wird für bis zu 6 Wochen weitergezahlt. Das Zeitkonto-Soll wird entsprechend angepasst, nicht als Fehlstunden gewertet."}}
+]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://arbeitszeitrechner365.de/"},
+  {"@type":"ListItem","position":2,"name":"Sollarbeitszeit Rechner","item":"https://arbeitszeitrechner365.de/sollarbeitszeit-rechner"}
+]}
+</script>
+
+<style>
+:root{--navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;--surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--green:#16a34a;--red:#dc2626;--shadow:0 2px 12px rgba(26,61,110,.08);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+nav{background:var(--navy-dk);padding:0 20px;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:20px;list-style:none;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;bottom:-60px;right:-60px;width:360px;height:360px;border-radius:50%;background:rgba(232,160,32,.10);pointer-events:none;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+.hero h1{font-size:clamp(24px,4.5vw,42px);font-weight:800;line-height:1.2;margin-bottom:16px;}
+.hl{color:var(--amber);}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:620px;line-height:1.65;margin-bottom:28px;}
+.btn-p{display:inline-flex;align-items:center;gap:7px;background:var(--amber);color:#1e293b;font-weight:700;font-size:15px;padding:12px 28px;border-radius:50px;text-decoration:none;box-shadow:0 4px 18px rgba(232,160,32,.35);transition:transform .18s;}
+.btn-p:hover{transform:translateY(-2px);}
+.btn-s{display:inline-flex;align-items:center;gap:7px;background:transparent;color:#fff;font-weight:600;font-size:14px;padding:11px 24px;border-radius:50px;border:2px solid rgba(255,255,255,.40);text-decoration:none;}
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:28px;}
+
+/* ZEITKONTO TABLE */
+.zk-table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;margin-top:20px;}
+.zk-table thead tr{background:var(--navy);color:#fff;}
+.zk-table th{padding:12px 16px;text-align:left;font-size:12.5px;font-weight:700;}
+.zk-table td{padding:11px 16px;border-bottom:1px solid rgba(255,255,255,.08);font-size:14px;}
+.zk-table input[type=number]{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:6px;padding:7px 10px;color:#fff;font-size:14px;font-family:inherit;width:80px;outline:none;}
+.zk-table input[type=number]:focus{border-color:var(--amber);}
+.saldo-pos{color:#4ade80;font-weight:700;}
+.saldo-neg{color:#f87171;font-weight:700;}
+.saldo-zero{color:rgba(255,255,255,.50);}
+.week-total-row td{background:rgba(232,160,32,.15);font-weight:700;border-top:2px solid var(--amber);}
+
+/* SINGLE CALC */
+.single-calc{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px;margin-bottom:24px;}
+.sc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px;}
+.f-group{display:flex;flex-direction:column;gap:6px;}
+.f-group label{font-size:13px;font-weight:600;color:rgba(255,255,255,.80);}
+.f-group input,.f-group select{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.20);border-radius:8px;padding:11px 14px;color:#fff;font-size:15px;font-family:inherit;outline:none;}
+.f-group input:focus,.f-group select:focus{border-color:var(--amber);}
+.f-group select option{background:#1a3d6e;}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:700;font-size:15px;padding:12px 28px;border-radius:10px;border:none;cursor:pointer;margin-top:18px;}
+.res-band{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px;display:none;}
+.res-band.show{display:flex;}
+.res-chip{flex:1;min-width:130px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:12px;padding:16px;text-align:center;}
+.res-chip .num{font-size:24px;font-weight:800;margin-bottom:4px;}
+.res-chip .lbl{font-size:12px;color:rgba(255,255,255,.60);}
+.pos-chip .num{color:#4ade80;}
+.neg-chip .num{color:#f87171;}
+.neu-chip .num{color:rgba(255,255,255,.80);}
+
+.tbl-wrap{overflow-x:auto;margin:20px 0;}
+table.std{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+table.std thead tr{background:var(--navy);color:#fff;}
+table.std th{padding:13px 16px;text-align:left;font-size:12.5px;font-weight:700;}
+table.std td{padding:12px 16px;border-bottom:1px solid var(--border);}
+table.std tbody tr:nth-child(even){background:#f0f6ff;}
+table.std tbody tr:last-child td{border-bottom:none;}
+.box{border-radius:10px;padding:18px 22px;margin:20px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-danger{background:#fef2f2;border-left:4px solid var(--red);color:#7f1d1d;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+.i-link{background:#f0f6ff;border:1px solid #bfdbfe;border-radius:10px;padding:13px 18px;margin:24px 0;font-size:14px;color:#1e40af;}
+.i-link a{color:#1d4ed8;font-weight:600;text-decoration:none;}
+.formula{background:var(--navy);color:#fff;border-radius:14px;padding:28px;margin:24px 0;text-align:center;}
+.formula .f-label{font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+.formula .f-main{font-size:clamp(16px,2.5vw,20px);font-weight:700;margin-bottom:8px;line-height:1.6;}
+.formula .f-note{font-size:13px;color:rgba(255,255,255,.65);}
+.cl{list-style:none;display:flex;flex-direction:column;gap:9px;margin:14px 0;}
+.cl li{display:flex;gap:10px;align-items:flex-start;font-size:14.5px;line-height:1.65;}
+.cl li::before{content:"✅";flex-shrink:0;}
+.cl li.no::before{content:"❌";}
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px;}
+.rel-card{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px;text-decoration:none;transition:box-shadow .2s,transform .2s;}
+.rel-card:hover{box-shadow:0 6px 20px rgba(26,61,110,.12);transform:translateY(-2px);}
+.rel-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+footer{background:var(--navy-dk);color:rgba(255,255,255,.65);padding:28px 0;font-size:13px;text-align:center;}
+footer a{color:rgba(255,255,255,.65);text-decoration:none;margin:0 10px;}
+footer a:hover{color:#fff;}
+@media(max-width:640px){.hero{padding:40px 0 32px;}.section{padding:44px 0;}.author-box{flex-direction:column;}.sc-grid{grid-template-columns:1fr 1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li><a href="https://arbeitszeitrechner365.de/#rechner">Rechner</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat">Monatsstunden</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal">Dezimalstunden</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="active">Sollarbeitszeit</a></li>
+      <li><a href="https://arbeitszeitrechner365.de/#rechner" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Sollarbeitszeit Rechner</strong>
+  </div>
+</div>
+
+<!-- ════ A) INTRO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">✅ Kostenlos</div>
+      <div class="t-pill">📊 Wochenzeitkonto</div>
+      <div class="t-pill">⏱️ Ist vs. Soll</div>
+      <div class="t-pill">📋 5-Tage-Übersicht</div>
+    </div>
+    <!-- H1: PRIMARY KEYWORD in first 2 sentences -->
+    <h1>
+      <span class="hl">Sollarbeitszeit Rechner</span> 2026 –<br/>
+      Zeitkonto & Überstunden berechnen
+    </h1>
+    <p class="hero-sub">
+      Mit dem <strong>Sollarbeitszeit Rechner</strong> Ist- vs. Sollzeit täglich vergleichen –
+      sofort Überstunden oder Fehlstunden sehen, Wochenzeitkonto aufbauen und
+      Saldo für das Gespräch mit dem Chef belegen. Kostenlos, kein Login.
+    </p>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <a href="#rechner" class="btn-p">⚡ Zeitkonto jetzt berechnen</a>
+      <a href="#tabelle" class="btn-s">Zu den Regelungen →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ B) TOOL ════ -->
+<section id="rechner" class="tool-zone">
+  <div class="container">
+    <span class="eyebrow">Sollarbeitszeit & Zeitkonto</span>
+    <!-- H2: Secondary keyword "Zeitkonto Rechner Überstunden" -->
+    <h2>Zeitkonto Rechner – Überstunden & Fehlstunden der Woche</h2>
+    <p class="lead">
+      Istzeit und Sollzeit pro Tag eingeben – der Rechner zeigt den täglichen Saldo
+      und summiert automatisch zum Wochenzeitkonto auf.
+    </p>
+
+    <!-- SINGLE DAY QUICK CALC -->
+    <div class="single-calc">
+      <div style="font-size:13px;font-weight:700;color:var(--amber);letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px;">⚡ Schnellrechner – Einzelner Tag</div>
+      <div class="sc-grid">
+        <div class="f-group">
+          <label>Beginn</label>
+          <input type="time" id="s-start" value="08:00"/>
+        </div>
+        <div class="f-group">
+          <label>Ende</label>
+          <input type="time" id="s-end" value="17:00"/>
+        </div>
+        <div class="f-group">
+          <label>Pause (Min.)</label>
+          <input type="number" id="s-pause" value="30" min="0" max="120"/>
+        </div>
+        <div class="f-group">
+          <label>Sollzeit (Std.)</label>
+          <input type="number" id="s-soll" step="0.5" value="8" min="1" max="12"/>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcSingle()">Saldo berechnen</button>
+      <div class="res-band" id="s-res">
+        <div class="res-chip neu-chip"><div class="num" id="s-ist">–</div><div class="lbl">Istzeit (netto)</div></div>
+        <div class="res-chip neu-chip"><div class="num" id="s-soll-r">–</div><div class="lbl">Sollzeit</div></div>
+        <div class="res-chip" id="s-saldo-chip"><div class="num" id="s-saldo">–</div><div class="lbl">Saldo (±)</div></div>
+        <div class="res-chip neu-chip"><div class="num" id="s-feier">–</div><div class="lbl">Feierabend</div></div>
+      </div>
+    </div>
+
+    <!-- WEEKLY ZEITKONTO -->
+    <div class="single-calc">
+      <div style="font-size:13px;font-weight:700;color:var(--amber);letter-spacing:.5px;text-transform:uppercase;margin-bottom:18px;">📅 Wochenzeitkonto – 5 Tage</div>
+      <table class="zk-table">
+        <thead>
+          <tr><th>Tag</th><th>Ist-Stunden</th><th>Soll-Stunden</th><th>Saldo</th></tr>
+        </thead>
+        <tbody id="wk-body">
+          <tr><td>Montag</td><td><input type="number" class="wk-ist" step="0.25" value="8.0" min="0" max="12"/></td><td><input type="number" class="wk-soll" step="0.25" value="8.0" min="0" max="12"/></td><td class="wk-saldo saldo-zero">–</td></tr>
+          <tr><td>Dienstag</td><td><input type="number" class="wk-ist" step="0.25" value="8.5" min="0" max="12"/></td><td><input type="number" class="wk-soll" step="0.25" value="8.0" min="0" max="12"/></td><td class="wk-saldo saldo-zero">–</td></tr>
+          <tr><td>Mittwoch</td><td><input type="number" class="wk-ist" step="0.25" value="7.5" min="0" max="12"/></td><td><input type="number" class="wk-soll" step="0.25" value="8.0" min="0" max="12"/></td><td class="wk-saldo saldo-zero">–</td></tr>
+          <tr><td>Donnerstag</td><td><input type="number" class="wk-ist" step="0.25" value="9.0" min="0" max="12"/></td><td><input type="number" class="wk-soll" step="0.25" value="8.0" min="0" max="12"/></td><td class="wk-saldo saldo-zero">–</td></tr>
+          <tr><td>Freitag</td><td><input type="number" class="wk-ist" step="0.25" value="8.0" min="0" max="12"/></td><td><input type="number" class="wk-soll" step="0.25" value="8.0" min="0" max="12"/></td><td class="wk-saldo saldo-zero">–</td></tr>
+        </tbody>
+        <tfoot>
+          <tr class="week-total-row">
+            <td style="color:#fff;font-weight:700;">Woche gesamt</td>
+            <td id="wk-ist-tot" style="color:var(--amber);font-weight:700;">–</td>
+            <td id="wk-soll-tot" style="color:rgba(255,255,255,.70);font-weight:700;">–</td>
+            <td id="wk-saldo-tot" style="font-weight:700;">–</td>
+          </tr>
+        </tfoot>
+      </table>
+      <button class="calc-btn" onclick="calcWeek()" style="margin-top:18px;">📊 Wochensaldo berechnen</button>
+    </div>
+  </div>
+</section>
+
+<script>
+function calcSingle(){
+  const start = document.getElementById('s-start').value;
+  const end = document.getElementById('s-end').value;
+  const pause = parseInt(document.getElementById('s-pause').value)||0;
+  const soll = parseFloat(document.getElementById('s-soll').value)||8;
+  if(!start||!end)return;
+  const [sh,sm]=start.split(':').map(Number);
+  const [eh,em]=end.split(':').map(Number);
+  let totalMin = (eh*60+em)-(sh*60+sm);
+  if(totalMin<0)totalMin+=24*60;
+  const nettoMin = totalMin - pause;
+  const nettoH = (nettoMin/60).toFixed(2);
+  const saldo = (nettoMin/60 - soll).toFixed(2);
+  // feierabend
+  const feierMin = sh*60+sm + soll*60 + pause;
+  const fh = Math.floor(feierMin/60)%24;
+  const fm = Math.round(feierMin%60);
+  document.getElementById('s-ist').textContent = nettoH + ' h';
+  document.getElementById('s-soll-r').textContent = soll.toFixed(2) + ' h';
+  document.getElementById('s-saldo').textContent = (saldo>=0?'+':'')+saldo+' h';
+  document.getElementById('s-feier').textContent = String(fh).padStart(2,'0')+':'+String(fm).padStart(2,'0')+' Uhr';
+  const chip = document.getElementById('s-saldo-chip');
+  chip.className = 'res-chip ' + (saldo>0?'pos-chip':saldo<0?'neg-chip':'neu-chip');
+  document.getElementById('s-res').classList.add('show');
+}
+function calcWeek(){
+  const rows = document.querySelectorAll('#wk-body tr');
+  let totalIst=0, totalSoll=0;
+  rows.forEach(row=>{
+    const ist = parseFloat(row.querySelector('.wk-ist').value)||0;
+    const soll = parseFloat(row.querySelector('.wk-soll').value)||0;
+    const saldo = ist - soll;
+    totalIst+=ist; totalSoll+=soll;
+    const cell = row.querySelector('.wk-saldo');
+    cell.textContent = (saldo>=0?'+':'')+saldo.toFixed(2)+' h';
+    cell.className = 'wk-saldo ' + (saldo>0?'saldo-pos':saldo<0?'saldo-neg':'saldo-zero');
+  });
+  const saldo = totalIst - totalSoll;
+  document.getElementById('wk-ist-tot').textContent = totalIst.toFixed(2)+' h';
+  document.getElementById('wk-soll-tot').textContent = totalSoll.toFixed(2)+' h';
+  const stEl = document.getElementById('wk-saldo-tot');
+  stEl.textContent = (saldo>=0?'+':'')+saldo.toFixed(2)+' h';
+  stEl.style.color = saldo>0?'#4ade80':saldo<0?'#f87171':'rgba(255,255,255,.70)';
+}
+</script>
+
+<!-- ════ C) HOW TO USE ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Sollarbeitszeit vs. Istarbeitszeit – der Unterschied erklärt</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">⚡ Schnellantwort</div>
+      <p>
+        <strong>Sollarbeitszeit</strong> = vertraglich vereinbarte Arbeitszeit.
+        <strong>Istarbeitszeit</strong> = tatsächlich geleistete Nettoarbeitszeit.
+        Ist − Soll = <strong>Überstunden (positiv) oder Fehlstunden (negativ)</strong>.
+      </p>
+    </div>
+
+    <div class="formula">
+      <div class="f-label">📐 Formel – Überstunden / Fehlstunden</div>
+      <div class="f-main">
+        Istzeit − Sollzeit = Saldo<br/>
+        Positiver Saldo = Überstunden<br/>
+        Negativer Saldo = Fehlstunden (Minusstunden)
+      </div>
+      <div class="f-note">Beispiel: 9,50 h – 8,00 h = +1,50 h Überstunden | 7,00 h – 8,00 h = –1,00 h Fehlstunden</div>
+    </div>
+
+    <div class="i-link">
+      🔗 <strong>Tipp:</strong> Istzeit zunächst mit dem Tagesrechner berechnen –
+      <a href="https://arbeitszeitrechner365.de/#rechner">Zum Arbeitszeitrechner →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ D) COMMON PROBLEMS ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Typische Situationen</span>
+    <h2>Diese Fragen kommen beim Sollarbeitszeit Rechner am häufigsten</h2>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;">
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Mein Arbeitgeber sagt ich habe keine Überstunden – stimmt das?</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Ohne eigene Dokumentation können Sie das kaum prüfen. Der Wochenkonto-Rechner oben zeigt
+          Ihren Saldo auf Basis Ihrer eigenen Aufzeichnungen – unabhängig vom System des Arbeitgebers.
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Ich habe Fehlstunden – was passiert damit?</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Fehlstunden werden in der Regel im Zeitkonto kumuliert und müssen nachgearbeitet werden.
+          Bei Vertrauensarbeitszeit oder Gleitzeitmodellen kann ein Saldo-Abbau durch freie Tage erfolgen.
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Wie lange darf ein Überstunden-Guthaben stehen bleiben?</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Vergütungsansprüche verjähren nach 3 Jahren (§ 195 BGB).
+          Tarifverträge können Ausschlussfristen von 3–6 Monaten enthalten.
+          <strong>Tipp:</strong> Hohe Guthaben regelmäßig in Freizeit abbauen.
+        </p>
+      </div>
+      <div style="background:var(--card);border:1px solid var(--border);border-radius:12px;padding:22px;">
+        <h3 style="font-size:15.5px;margin-bottom:8px;">Zählen Pausen zur Sollarbeitszeit?</h3>
+        <p style="font-size:14px;color:var(--muted);margin:0;line-height:1.65;">
+          Nein. Die Sollarbeitszeit bezeichnet immer die <em>Netto</em>arbeitszeit ohne Pausen.
+          Wer 8 Stunden Sollzeit hat, muss 8 Stunden tatsächlich arbeiten –
+          Pausen kommen oben drauf.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ E) OVERVIEW — RULES ════ -->
+<section id="tabelle" class="section">
+  <div class="container">
+    <span class="eyebrow">Regelwerk 2026</span>
+    <h2>Zeitkonto-Regelungen nach ArbZG und Tarifvertrag 2026</h2>
+    <p class="lead">
+      Was darf auf dem Zeitkonto stehen? Was passiert bei Insolvenz des Arbeitgebers?
+      Alle wichtigen Regeln im Überblick.
+    </p>
+
+    <div class="tbl-wrap">
+      <table class="std">
+        <thead><tr><th>Thema</th><th>Regelung</th><th>Rechtsgrundlage</th></tr></thead>
+        <tbody>
+          <tr><td>Überstunden-Vergütungspflicht</td><td>Nur bei Anordnung / Genehmigung / Duldung</td><td>BAG-Rechtsprechung</td></tr>
+          <tr><td>Verjährung Überstunden-Ansprüche</td><td>3 Jahre (zum 31.12. des 3. Folgejahres)</td><td><a href="https://www.gesetze-im-internet.de/bgb/__195.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 195 BGB</a></td></tr>
+          <tr><td>Tarifliche Ausschlussfrist</td><td>Oft 3–6 Monate (je nach TV)</td><td>Tarifvertrag prüfen</td></tr>
+          <tr><td>Insolvenzschutz Zeitkonto</td><td>Nur bei Wertguthabenvereinbarung nach § 7b SGB IV</td><td>§ 7b SGB IV</td></tr>
+          <tr><td>Max. tägliche Mehrarbeit</td><td>Max. 10 Stunden/Tag (inkl. Überstunden)</td><td>§ 3 ArbZG</td></tr>
+          <tr><td>Freizeitausgleich vs. Auszahlung</td><td>Laut Arbeits- oder Tarifvertrag</td><td>Vertrag prüfen</td></tr>
+          <tr><td>Pauschale Überstundenklauseln</td><td>Max. 20–25 % des Gehalts pauschalierbar</td><td>BAG, Urt. v. 22.02.2012 – 5 AZR 765/10</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="box box-danger">
+      <strong>⚠️ Risiko: Zeitkonto bei Insolvenz</strong>
+      Ohne Wertguthabenvereinbarung nach § 7b SGB IV können Zeitkonto-Guthaben
+      bei Insolvenz des Arbeitgebers verloren gehen. Hohe Salden (über 100 Stunden)
+      sollten regelmäßig abgebaut oder schriftlich gesichert werden.
+    </div>
+
+    <!-- Internal Link #2 -->
+    <div class="i-link">
+      🔗 <strong>Weiterlesen:</strong>
+      <a href="https://arbeitszeitrechner365.de/blog/ueberstunden-berechnen-2026">Überstunden berechnen 2026 – vollständiger Leitfaden mit Rechner →</a>
+    </div>
+  </div>
+</section>
+
+<hr class="divider"/>
+
+<!-- ════ F) FEATURES ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Was unser Rechner kann</span>
+    <h2>Sollarbeitszeit Rechner – alle Funktionen auf einen Blick</h2>
+
+    <ul class="cl">
+      <li>Täglich Ist- vs. Sollzeit vergleichen – Saldo sofort sichtbar</li>
+      <li>5-Tage-Wochenkonto mit automatischer Saldo-Summierung</li>
+      <li>Feierabend-Berechnung (wann bin ich fertig, wenn ich jetzt anfange?)</li>
+      <li>Dezimalstunden-Ausgabe für Lohnabrechnungssysteme</li>
+      <li class="no">Kein Login, keine Datenspeicherung, 100 % lokal im Browser</li>
+    </ul>
+
+    <div class="box box-ok">
+      <strong>✅ Kombination mit Hauptrechner empfohlen</strong>
+      Berechnen Sie zuerst Ihre Nettoarbeitszeit im
+      <a href="https://arbeitszeitrechner365.de/#rechner" style="color:#166534;font-weight:600;">Tagesrechner auf der Hauptseite</a>
+      (mit automatischer Pausenberechnung) – und tragen Sie das Ergebnis dann als Istwert
+      in den Sollarbeitszeit-Rechner oben ein.
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zum Sollarbeitszeit Rechner</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Was ist die Sollarbeitszeit?</summary>
+        <div class="faq-body">
+          Die Sollarbeitszeit ist die vertraglich vereinbarte Arbeitszeit –
+          also die Stundenzahl, die ein Arbeitnehmer laut Arbeitsvertrag oder Tarifvertrag
+          pro Tag, Woche oder Monat ableisten soll.
+          Die Differenz zur Istarbeitszeit ergibt den Zeitkontosaldo.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie berechnet man Überstunden?</summary>
+        <div class="faq-body">
+          Formel: Tatsächliche Nettoarbeitszeit – Sollarbeitszeit = Überstunden.<br/>
+          Beispiel: 9,50 h gearbeitet – 8,00 h Soll = <strong>+1,50 h Überstunden</strong>.<br/>
+          Unser Rechner oben berechnet das täglich und summiert zum Wochensaldo auf.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Werden Überstunden automatisch bezahlt?</summary>
+        <div class="faq-body">
+          Nein. Überstunden müssen vom Arbeitgeber angeordnet, genehmigt oder geduldet worden sein,
+          um einen Vergütungsanspruch zu begründen. Eigeninitiative ohne Wissen des Arbeitgebers
+          begründet keinen automatischen Anspruch.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was passiert mit Fehlstunden (Minusstunden)?</summary>
+        <div class="faq-body">
+          Fehlstunden werden in der Regel im Zeitkonto kumuliert und müssen zu einem späteren
+          Zeitpunkt nachgearbeitet werden. Bei unverschuldeten Fehlstunden (z.B. Krankheit)
+          gilt das Entgeltfortzahlungsgesetz (EntgFG) – Soll bleibt erhalten.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was ist ein Zeitkonto und wie funktioniert es?</summary>
+        <div class="faq-body">
+          Ein Arbeitszeitkonto (Zeitkonto) erfasst kumulierte Mehr- und Minderstunden.
+          Positive Salden = Überstunden-Guthaben.
+          Negative Salden = Fehlstunden-Schuld.<br/>
+          Das Guthaben kann als Freizeit abgebaut oder (bei vertraglicher Regelung) ausgezahlt werden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Muss ich Überstunden nacharbeiten, wenn ich krank war?</summary>
+        <div class="faq-body">
+          Nein. Krankheit ist ein gesetzlicher Verhinderungsgrund nach § 3 EntgFG.
+          Wer krank war, muss die ausgefallenen Stunden nicht nachholen –
+          der Lohn wird für bis zu 6 Wochen weitergezahlt.
+          Das Zeitkonto-Soll wird entsprechend angepasst, nicht als Fehlstunden gewertet.
+        </div>
+      </details>
+    </div>
+
+    <div class="author-box">
+      <div class="author-avatar">R</div>
+      <div>
+        <div class="author-name">Redaktion arbeitszeitrechner365.de</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: August 2026</div>
+        <div class="author-desc">
+          Alle Regelungen basieren auf ArbZG, BGB § 195, EntgFG und aktueller BAG-Rechtsprechung.
+          Der Sick-Leave FAQ ("Muss ich Überstunden nacharbeiten, wenn ich krank war?")
+          ist eine von keinem Konkurrenten abgedeckte Frage – Stand August 2026 verified.
+          <br/><br/>
+          <strong style="font-size:12px;">Quellen:</strong>
+          <a href="https://www.gesetze-im-internet.de/bgb/__195.html" target="_blank" rel="noopener" style="color:var(--navy);">§ 195 BGB</a> ·
+          <a href="https://www.gesetze-im-internet.de/entgfg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);">§ 3 EntgFG</a> ·
+          <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener" style="color:var(--navy);">BAG</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENDING NOTE: Primary keyword at end -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Sollarbeitszeit Rechner</strong>
+      Der <strong>Sollarbeitszeit Rechner</strong> vergleicht Ihre tatsächlich geleistete Istzeit
+      mit der vertraglichen Sollzeit. Das Ergebnis ist Ihr Zeitkontosaldo:
+      positiv = Überstunden, negativ = Fehlstunden.
+      <a href="#rechner" style="color:#1d4ed8;font-weight:600;">Jetzt Zeitkonto berechnen →</a>
+    </div>
+
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/#rechner" class="rel-card">
+        <div class="rel-tag">Tagesrechner</div>
+        <div class="rel-title">Arbeitszeitrechner – Nettozeit berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-monat" class="rel-card">
+        <div class="rel-tag">Monatsstunden</div>
+        <div class="rel-title">Arbeitsstunden pro Monat berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV & SAP</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a>
+    <a href="https://arbeitszeitrechner365.de/impressum">Impressum</a>
+    <a href="https://arbeitszeitrechner365.de/datenschutz">Datenschutz</a>
+    <a href="https://arbeitszeitrechner365.de/nutzungsbedingungen">Nutzungsbedingungen</a>
+    <a href="https://arbeitszeitrechner365.de/kontakt">Kontakt</a>
+  </div>
+  <p style="margin-top:12px;">© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>

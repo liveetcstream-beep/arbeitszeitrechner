@@ -7,6 +7,7 @@
     { "source": "/robots.txt", "destination": "/robots.txt" },
     { "source": "/arbeitszeitrechner-monat", "destination": "/arbeitszeitrechner-monat.html" },
     { "source": "/arbeitszeitrechner-dezimal", "destination": "/arbeitszeitrechner-dezimal.html" },
+    { "source": "/sollarbeitszeit-rechner", "destination": "/sollarbeitszeit-rechner.html" },
     { "source": "/ueber-uns", "destination": "/ueber-uns.html" },
     { "source": "/kontakt", "destination": "/kontakt.html" },
     { "source": "/datenschutz", "destination": "/datenschutz.html" },
