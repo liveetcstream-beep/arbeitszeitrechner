@@ -476,15 +476,23 @@
   .cta-box h2{color:#fff;margin-bottom:10px;}
   .cta-box p{font-size:15.5px;color:rgba(255,255,255,.85);margin-bottom:28px;}
 
-  /* ===== AUTHORITY BOX ===== */
+  /* ===== AUTHORITY BOX & E-E-A-T ===== */
   .auth-box{background:var(--card);border:1px solid var(--border);border-radius:var(--r-md);padding:28px 30px;display:flex;gap:20px;align-items:flex-start;}
   .auth-icon{font-size:34px;flex-shrink:0;}
   .auth-body p{font-size:14.5px;color:var(--muted);line-height:1.7;margin-bottom:12px;}
-  .auth-sources{display:flex;flex-direction:column;gap:6px;}
-  .auth-sources a{font-size:13.5px;color:var(--navy);text-decoration:none;font-weight:500;}
-  .auth-sources a:hover{text-decoration:underline;}
-  .auth-il{margin-top:14px;font-size:13.5px;color:var(--muted);}
+  .auth-badge-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px;}
+  .auth-badge{background:#eff6ff;border:1px solid #bfdbfe;color:#1e40af;font-size:12px;font-weight:700;padding:4px 10px;border-radius:6px;display:inline-flex;align-items:center;gap:5px;}
+  .auth-changelog{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin:16px 0;}
+  .auth-changelog-title{font-size:12.5px;font-weight:800;text-transform:uppercase;letter-spacing:0.5px;color:var(--navy);margin-bottom:8px;}
+  .auth-changelog ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:6px;}
+  .auth-changelog li{font-size:13px;color:var(--muted);line-height:1.5;display:flex;gap:8px;}
+  .auth-changelog li strong{color:var(--navy);font-weight:700;flex-shrink:0;}
+  .auth-sources{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:8px;margin-top:10px;}
+  .auth-sources a{font-size:13px;color:var(--navy);text-decoration:none;font-weight:600;background:#f8fafc;border:1px solid var(--border);padding:8px 12px;border-radius:6px;transition:background 0.15s, border-color 0.15s;display:block;}
+  .auth-sources a:hover{background:#eff6ff;border-color:#93c5fd;text-decoration:none;}
+  .auth-il{margin-top:16px;font-size:13.5px;color:var(--muted);}
   .auth-il a{color:var(--navy);font-weight:600;text-decoration:none;}
+
 
   /* ===== RESPONSIVE ===== */
   @media(max-width:640px){
@@ -2053,28 +2061,60 @@
         <h2>Woher stammen unsere Berechnungsgrundlagen?</h2>
 
         <div class="auth-box">
-          <div class="auth-icon">🛡️</div>
+          <div class="auth-icon">⚖️</div>
           <div class="auth-body">
+            <div class="auth-badge-row">
+              <span class="auth-badge">✍️ Redaktion arbeitszeitrechner365.de</span>
+              <span class="auth-badge">🛡️ Fachlich geprüft nach ArbZG &amp; BAG</span>
+              <span class="auth-badge">📅 Stand: August 2026</span>
+            </div>
+
             <p>
-              Alle Angaben basieren auf dem aktuell gültigen <strong>Deutschen Arbeitszeitgesetz (ArbZG)</strong>.
-              Pausenregelungen, Höchstarbeitszeitgrenzen und Ruhezeiten entsprechen dem Stand <strong>August 2026</strong>
-              und werden regelmäßig von unserem Redaktionsteam überprüft.
-              Fachlich geprüft von <strong>Arbeitsrecht-Experten</strong> – zuletzt aktualisiert: August 2026.
+              Alle Berechnungen, Pausenzeiten und Grenzwerte basieren auf dem aktuell gültigen <strong>Deutschen Arbeitszeitgesetz (ArbZG)</strong>,
+              dem <strong>Entgeltfortzahlungsgesetz (EFZG)</strong> sowie den maßgeblichen Leitentscheidungen des <strong>Bundesarbeitsgerichts (BAG)</strong> zur Arbeitszeiterfassungspflicht.
+              Die redaktionelle und mathematische Validierung erfolgt kontinuierlich durch unser Fachteam für Lohnabrechnung und Arbeitsrecht.
             </p>
+
+            <!-- VISIBLE CHANGELOG BLOCK -->
+            <div class="auth-changelog">
+              <div class="auth-changelog-title">📋 Redaktionelle Aktualisierungshistorie:</div>
+              <ul>
+                <li>
+                  <strong>[08/2026]</strong>
+                  <span>Integration des Monatsstunden-Rechners für Teilzeit-, 37,5h- und TVöD-Modelle.</span>
+                </li>
+                <li>
+                  <strong>[08/2026]</strong>
+                  <span>Bereitstellung des 2-Wege-Dezimalstunden-Konverters für DATEV- und SAP-Lohnexporte.</span>
+                </li>
+                <li>
+                  <strong>[08/2026]</strong>
+                  <span>Einführung des Sollarbeitszeit-Rechners zur Ermittlung von Wochensalden und Überstundenkonten.</span>
+                </li>
+                <li>
+                  <strong>[01/2026]</strong>
+                  <span>Aktualisierung aller bundesweiten Feiertage 2026 für 16 Bundesländer sowie der BAG-Vorgaben.</span>
+                </li>
+              </ul>
+            </div>
+
             <p style="font-size:13.5px;font-weight:700;color:var(--navy);margin-bottom:8px;">
-              Offizielle Quellen & weiterführende Links:
+              Offizielle Gesetzestexte &amp; Primärquellen (§-Ebene):
             </p>
             <div class="auth-sources">
-              <a href="https://www.bmas.de" target="_blank" rel="noopener">🔗 Bundesministerium für Arbeit und Soziales (BMAS)</a>
-              <a href="https://www.gesetze-im-internet.de/arbzg/" target="_blank" rel="noopener">🔗 Arbeitszeitgesetz (ArbZG) – Volltext auf gesetze-im-internet.de</a>
-              <a href="https://www.arbeitsagentur.de" target="_blank" rel="noopener">🔗 Bundesagentur für Arbeit – Informationen zu Arbeitsverträgen</a>
-              <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener">🔗 Bundesarbeitsgericht (BAG) – Urteile zur Arbeitszeiterfassung</a>
+              <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener">📜 § 3 ArbZG – Höchstarbeitszeit &amp; 8-Stunden-Tag</a>
+              <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener">📜 § 4 ArbZG – Gesetzliche Ruhepausen (30/45 Min.)</a>
+              <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener">📜 § 5 ArbZG – Ununterbrochene Ruhezeit (11 Std.)</a>
+              <a href="https://www.gesetze-im-internet.de/efzg/__3.html" target="_blank" rel="noopener">📜 § 3 EFZG – Entgeltfortzahlung bei Krankheit</a>
+              <a href="https://www.bmas.de" target="_blank" rel="noopener">🏛️ BMAS – Bundesministerium für Arbeit und Soziales</a>
+              <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener">⚖️ BAG – Bundesarbeitsgericht (Zeiterfassungsurteile)</a>
             </div>
+
             <div class="auth-il">
-              Weiterlesen:
-              <a href="/ueber-uns">Über uns →</a> &nbsp;|&nbsp;
-              <a href="/kontakt">Kontakt →</a> &nbsp;|&nbsp;
-              <a href="/#faq">FAQ →</a>
+              Transparenz &amp; Kontakt:
+              <a href="/ueber-uns">Über unser Team →</a> &nbsp;|&nbsp;
+              <a href="/kontakt">Redaktion kontaktieren →</a> &nbsp;|&nbsp;
+              <a href="/#faq">Häufige Fragen (FAQ) →</a>
             </div>
           </div>
         </div>
