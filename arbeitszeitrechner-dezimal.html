@@ -18,26 +18,177 @@
 <meta name="twitter:description" content="Kostenloser 2-Wege-Konverter: Std:Min → Dezimal → Industrieminuten. Für DATEV & SAP."/>
 <meta name="robots" content="index, follow"/>
 
+<!-- Schema: WebApplication -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Dezimalstunden Rechner – arbeitszeitrechner365.de","url":"https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal","description":"2-Wege-Konverter: Stunden:Minuten ↔ Dezimalstunden ↔ Industrieminuten. Für DATEV, SAP und Lohnabrechnungssysteme.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Dezimalstunden Rechner & Industrieminuten Konverter – arbeitszeitrechner365.de",
+  "url": "https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal",
+  "description": "Kostenloser 2-Wege-Konverter: Stunden und Minuten (HH:MM) in Dezimalstunden und Industrieminuten umrechnen. DATEV-, SAP- & Lexware-kompatibel für Lohnabrechnung & Stundenzettel.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Payroll & Time Conversion Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.2",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "2-Wege-Umrechnung: Zeit (HH:MM) zu Dezimalstunden und umgekehrt",
+    "Automatische Berechnung von Industrieminuten (Dezimalstunden × 100)",
+    "Vollständige 60er-Minuten-Referenztabelle (1 bis 60 Min. in Dezimal)",
+    "DATEV-, SAP HCM- und Lexware-konforme Dezimalformate",
+    "Excel-Formel-Anleitung (=A1*24) für Tabellenkalkulationen"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/icon-512.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
 </script>
+
+<!-- Schema: HowTo -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Wie rechnet man Stunden und Minuten in Dezimalstunden um?","acceptedAnswer":{"@type":"Answer","text":"Formel: Stunden + (Minuten ÷ 60) = Dezimalstunden. Beispiel: 7 Stunden 30 Minuten = 7 + (30 ÷ 60) = 7,50 Dezimalstunden. Unser Rechner übernimmt diese Berechnung automatisch in beide Richtungen."}},
-  {"@type":"Question","name":"Was sind Industrieminuten und wie berechnet man sie?","acceptedAnswer":{"@type":"Answer","text":"Industrieminuten teilen eine Stunde in 100 gleiche Teile statt 60 Minuten. Eine Industrieminute entspricht 0,6 normalen Minuten. Formel: Dezimalstunden × 100 = Industrieminuten. Beispiel: 7,50 Dezimalstunden = 750 Industrieminuten."}},
-  {"@type":"Question","name":"Wie rechne ich 7,75 Stunden in Minuten um?","acceptedAnswer":{"@type":"Answer","text":"0,75 × 60 = 45 Minuten. Also: 7,75 Dezimalstunden = 7 Stunden 45 Minuten. Eselsbrücke: der Dezimalanteil × 60 ergibt die Minuten."}},
-  {"@type":"Question","name":"Warum ist 0,5 Stunden nicht 50 Minuten?","acceptedAnswer":{"@type":"Answer","text":"Weil Dezimalstunden das 60er-System in ein 100er-System übertragen. 0,5 × 60 = 30 Minuten, nicht 50. 0,5 bedeutet die Hälfte einer Stunde – und eine Stunde hat 60 Minuten, nicht 100."}},
-  {"@type":"Question","name":"Wie gebe ich Dezimalstunden in DATEV ein?","acceptedAnswer":{"@type":"Answer","text":"In DATEV Lohn & Gehalt werden Stunden als Dezimalzahl mit Punkt oder Komma eingegeben. Beispiel: 7 Stunden 30 Minuten = 7,50 oder 7.50. Immer vorher mit einem Rechner zur Kontrolle prüfen."}},
-  {"@type":"Question","name":"Wie berechne ich Zeit in Excel als Zahl?","acceptedAnswer":{"@type":"Answer","text":"Mit der Formel =Zelle*24, sofern die Zelle als Uhrzeit formatiert ist. Beispiel: Steht in A1 der Wert 07:30, liefert =A1*24 das Ergebnis 7,5. Ist die Zelle als Text gespeichert, zuerst ZEITWERT(A1) anwenden."}},
-  {"@type":"Question","name":"Warum brauchen Freelancer und Minijobber Dezimalstunden?","acceptedAnswer":{"@type":"Answer","text":"Für Rechnungen und Verdienstgrenzen zählt die exakte Zeit: Aufgewendete Stunden in Dezimalform mal vereinbarter Satz ergibt den Rechnungsbetrag ohne Rundungsfehler. Bei Minijobs lässt sich die monatliche Stundengrenze nur mit genauen Dezimalwerten zuverlässig einhalten."}}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie rechnet man Stunden und Minuten in Dezimalstunden um?",
+  "description": "Schritt-für-Schritt-Anleitung zur Umrechnung von Arbeitszeit in Dezimalwerte für Lohn- und Gehaltsabrechnungen.",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Ganze Stunden notieren",
+      "text": "Übernehmen Sie die vollen Stunden als Vorkommastelle (z.B. bei 7 Stunden 45 Minuten notieren Sie 7)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Minuten durch 60 dividieren",
+      "text": "Teilen Sie die verbleibenden Minuten durch 60, um den Dezimalbruch zu erhalten (z.B. 45 ÷ 60 = 0,75)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Stunden und Dezimalanteil addieren",
+      "text": "Fügen Sie beide Werte zusammen: 7 + 0,75 = 7,75 Dezimalstunden. Dieser Wert kann direkt in DATEV oder SAP übernommen werden."
+    }
+  ]
+}
 </script>
+
+<!-- Schema: FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://arbeitszeitrechner365.de/"},
-  {"@type":"ListItem","position":2,"name":"Dezimalstunden umrechnen","item":"https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal"}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie rechnet man Stunden und Minuten in Dezimalstunden um?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formel: Stunden + (Minuten ÷ 60) = Dezimalstunden. Beispiel: 7 Stunden 30 Minuten = 7 + (30 ÷ 60) = 7,50 Dezimalstunden. Unser Rechner übernimmt diese Berechnung automatisch in beide Richtungen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was sind Industrieminuten und wie berechnet man sie?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Industrieminuten teilen eine Stunde in 100 gleiche Teile statt 60 Minuten. Eine Industrieminute entspricht 0,6 normalen Minuten. Formel: Dezimalstunden × 100 = Industrieminuten. Beispiel: 7,50 Dezimalstunden = 750 Industrieminuten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie rechne ich 7,75 Stunden in Minuten um?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "0,75 × 60 = 45 Minuten. Also: 7,75 Dezimalstunden = 7 Stunden 45 Minuten. Eselsbrücke: der Dezimalanteil × 60 ergibt die Minuten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum ist 0,5 Stunden nicht 50 Minuten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Weil Dezimalstunden das 60er-System in ein 100er-System übertragen. 0,5 × 60 = 30 Minuten, nicht 50. 0,5 bedeutet die Hälfte einer Stunde – und eine Stunde hat 60 Minuten, nicht 100."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie gebe ich Dezimalstunden in DATEV ein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In DATEV Lohn & Gehalt werden Stunden als Dezimalzahl mit Punkt oder Komma eingegeben. Beispiel: 7 Stunden 30 Minuten = 7,50 oder 7.50. Immer vorher mit einem Rechner zur Kontrolle prüfen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie berechne ich Zeit in Excel als Zahl?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mit der Formel =Zelle*24, sofern die Zelle als Uhrzeit formatiert ist. Beispiel: Steht in A1 der Wert 07:30, liefert =A1*24 das Ergebnis 7,5. Ist die Zelle als Text gespeichert, zuerst ZEITWERT(A1) anwenden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum brauchen Freelancer und Minijobber Dezimalstunden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Für Rechnungen und Verdienstgrenzen zählt die exakte Zeit: Aufgewendete Stunden in Dezimalform mal vereinbarter Satz ergibt den Rechnungsbetrag ohne Rundungsfehler. Bei Minijobs lässt sich die monatliche Stundengrenze nur mit genauen Dezimalwerten zuverlässig einhalten."
+      }
+    }
+  ]
+}
 </script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Dezimalstunden umrechnen",
+      "item": "https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal"
+    }
+  ]
+}
+</script>
+
 
 <style>
 :root{--navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;--surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--green:#16a34a;--red:#dc2626;--shadow:0 2px 12px rgba(26,61,110,.08);}

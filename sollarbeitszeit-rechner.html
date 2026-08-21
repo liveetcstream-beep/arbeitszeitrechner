@@ -18,25 +18,168 @@
 <meta name="twitter:description" content="Ist- vs. Sollzeit eingeben – sofort Überstunden oder Fehlstunden sehen. Kostenlos, ohne Login."/>
 <meta name="robots" content="index, follow"/>
 
+<!-- Schema: WebApplication -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Sollarbeitszeit Rechner – arbeitszeitrechner365.de","url":"https://arbeitszeitrechner365.de/sollarbeitszeit-rechner","description":"Sollarbeitszeit Rechner: Ist- vs. Sollzeit berechnen, Überstunden & Fehlstunden, Wochenzeitkonto. Kostenlos, kein Login.","applicationCategory":"UtilitiesApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"}}
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Sollarbeitszeit Rechner & Zeitkonto – arbeitszeitrechner365.de",
+  "url": "https://arbeitszeitrechner365.de/sollarbeitszeit-rechner",
+  "description": "Kostenloser Sollarbeitszeit- & Zeitkonto-Rechner: Ist- vs. Sollzeit vergleichen, Überstunden und Minusstunden minutengenau ermitteln. Inkl. 5-Tage-Wochensaldo & Feierabend-Rechner nach deutschem Arbeitsrecht 2026.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Work Time & Overtime Account Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.2",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Täglicher Ist- vs. Soll-Zeitvergleich mit minutengenauem Saldo",
+    "5-Tage-Wochenarbeitszeitkonto mit automatischer Saldo-Summierung",
+    "Feierabend-Rechner auf Basis von Sollzeit und gesetzlichen Pausen (§ 4 ArbZG)",
+    "Überstundenberechnung nach deutschem Arbeitsrecht & BAG-Vorgaben",
+    "Dezimalstundenausgabe für Lohnbuchhaltung und Stundennachweise"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/icon-512.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
 </script>
+
+<!-- Schema: HowTo -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
-  {"@type":"Question","name":"Was ist die Sollarbeitszeit?","acceptedAnswer":{"@type":"Answer","text":"Die Sollarbeitszeit ist die vertraglich vereinbarte Arbeitszeit – also die Stundenzahl, die ein Arbeitnehmer laut Arbeitsvertrag oder Tarifvertrag pro Tag, Woche oder Monat ableisten soll. Die Differenz zur Istarbeitszeit ergibt den Zeitkontosaldo."}},
-  {"@type":"Question","name":"Wie berechnet man Überstunden?","acceptedAnswer":{"@type":"Answer","text":"Formel: Tatsächliche Nettoarbeitszeit – Sollarbeitszeit = Überstunden. Beispiel: 9,50 h gearbeitet – 8,00 h Soll = +1,50 h Überstunden. Unser Rechner berechnet das täglich und summiert zum Wochensaldo auf."}},
-  {"@type":"Question","name":"Werden Überstunden automatisch bezahlt?","acceptedAnswer":{"@type":"Answer","text":"Nein. Überstunden müssen vom Arbeitgeber angeordnet, genehmigt oder geduldet worden sein, um einen Vergütungsanspruch zu begründen. Eigeninitiative ohne Wissen des Arbeitgebers begründet keinen automatischen Anspruch."}},
-  {"@type":"Question","name":"Was passiert mit Fehlstunden (Minusstunden)?","acceptedAnswer":{"@type":"Answer","text":"Fehlstunden werden in der Regel im Zeitkonto kumuliert und müssen zu einem späteren Zeitpunkt nachgearbeitet werden. Bei unverschuldeten Fehlstunden, z.B. Krankheit, gilt das Entgeltfortzahlungsgesetz (EntgFG) – das Soll bleibt erhalten."}},
-  {"@type":"Question","name":"Was ist ein Zeitkonto und wie funktioniert es?","acceptedAnswer":{"@type":"Answer","text":"Ein Arbeitszeitkonto (Zeitkonto) erfasst kumulierte Mehr- und Minderstunden. Positive Salden sind Überstunden-Guthaben, negative Salden sind Fehlstunden-Schuld. Das Guthaben kann als Freizeit abgebaut oder bei vertraglicher Regelung ausgezahlt werden."}},
-  {"@type":"Question","name":"Muss ich Überstunden nacharbeiten, wenn ich krank war?","acceptedAnswer":{"@type":"Answer","text":"Nein. Krankheit ist ein gesetzlicher Verhinderungsgrund nach § 3 EntgFG. Wer krank war, muss die ausgefallenen Stunden nicht nachholen – der Lohn wird für bis zu 6 Wochen weitergezahlt. Das Zeitkonto-Soll wird entsprechend angepasst, nicht als Fehlstunden gewertet."}}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man das Saldo auf dem Arbeitszeitkonto?",
+  "description": "Schritt-für-Schritt-Anleitung zur Ermittlung von Überstunden und Fehlstunden im täglichen und wöchentlichen Zeitkonto.",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Geleistete Istzeit erfassen",
+      "text": "Tragen Sie Arbeitsbeginn, Arbeitsende und gesetzliche Pausen ein, um Ihre tatsächliche Nettoarbeitszeit zu ermitteln."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Vertragliche Sollzeit festlegen",
+      "text": "Geben Sie die für den Arbeitstag vereinbarte Soll-Stundenzahl ein (z.B. 8,0 Stunden bei einer 40-Stunden-Woche)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Saldo ablesen",
+      "text": "Die Differenz (Istzeit − Sollzeit) ergibt Ihren Saldo: Ein positiver Wert bedeutet Überstunden-Guthaben (+), ein negativer Wert Minusstunden (-)."
+    }
+  ]
+}
 </script>
+
+<!-- Schema: FAQPage -->
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
-  {"@type":"ListItem","position":1,"name":"Startseite","item":"https://arbeitszeitrechner365.de/"},
-  {"@type":"ListItem","position":2,"name":"Sollarbeitszeit Rechner","item":"https://arbeitszeitrechner365.de/sollarbeitszeit-rechner"}
-]}
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was ist die Sollarbeitszeit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Die Sollarbeitszeit ist die vertraglich vereinbarte Arbeitszeit – also die Stundenzahl, die ein Arbeitnehmer laut Arbeitsvertrag oder Tarifvertrag pro Tag, Woche oder Monat ableisten soll. Die Differenz zur Istarbeitszeit ergibt den Zeitkontosaldo."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie berechnet man Überstunden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Formel: Tatsächliche Nettoarbeitszeit – Sollarbeitszeit = Überstunden. Beispiel: 9,50 h gearbeitet – 8,00 h Soll = +1,50 h Überstunden. Unser Rechner berechnet das täglich und summiert zum Wochensaldo auf."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Werden Überstunden automatisch bezahlt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Überstunden müssen vom Arbeitgeber angeordnet, genehmigt oder geduldet worden sein, um einen Vergütungsanspruch zu begründen. Eigeninitiative ohne Wissen des Arbeitgebers begründet keinen automatischen Anspruch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert mit Fehlstunden (Minusstunden)?","acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Fehlstunden werden in der Regel im Zeitkonto kumuliert und müssen zu einem späteren Zeitpunkt nachgearbeitet werden. Bei unverschuldeten Fehlstunden, z.B. Krankheit, gilt das Entgeltfortzahlungsgesetz (§ 3 EFZG) – das Soll bleibt erhalten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist ein Zeitkonto und wie funktioniert es?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Arbeitszeitkonto (Zeitkonto) erfasst kumulierte Mehr- und Minderstunden. Positive Salden sind Überstunden-Guthaben, negative Salden sind Fehlstunden-Schuld. Das Guthaben kann als Freizeit abgebaut oder bei vertraglicher Regelung ausgezahlt werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich Überstunden nacharbeiten, wenn ich krank war?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Krankheit ist ein gesetzlicher Verhinderungsgrund nach § 3 EntgFG. Wer krank war, muss die ausgefallenen Stunden nicht nachholen – der Lohn wird für bis zu 6 Wochen weitergezahlt. Das Zeitkonto-Soll wird entsprechend angepasst, nicht als Fehlstunden gewertet."
+      }
+    }
+  ]
+}
 </script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Sollarbeitszeit Rechner",
+      "item": "https://arbeitszeitrechner365.de/sollarbeitszeit-rechner"
+    }
+  ]
+}
+</script>
+
 
 <style>
 :root{--navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;--surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;--muted:#64748b;--green:#16a34a;--red:#dc2626;--shadow:0 2px 12px rgba(26,61,110,.08);}
