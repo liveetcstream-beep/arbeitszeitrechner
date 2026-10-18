@@ -53,6 +53,10 @@
     {
       "source": "/arbeitszeitrechner-schichtarbeit",
       "destination": "/arbeitszeitrechner-schichtarbeit.html"
+    },
+    {
+      "source": "/urlaubstage-rechner",
+      "destination": "/urlaubstage-rechner.html"
     }
   ]
 }
