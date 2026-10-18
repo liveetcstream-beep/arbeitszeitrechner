@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ✅ PRIMARY: Überstunden berechnen | SECONDARY: Zuschlag, Freizeitausgleich & ArbZG -->
+<title>Überstunden Rechner 2026 – Vergütung & Freizeitausgleich</title>
+<meta name="description" content="Überstunden berechnen 2026: Ist- vs. Sollzeit eingeben → sofort Überstunden, Vergütung & Freizeitausgleich sehen. Nach ArbZG. Kostenlos!"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/ueberstunden-rechner"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:title" content="Überstunden Rechner 2026 – Vergütung & Freizeitausgleich"/>
+<meta property="og:description" content="Überstunden berechnen: Ist- vs. Sollzeit eingeben → sofort Überstunden, Vergütung mit Zuschlag oder Freizeitausgleich. Nach ArbZG und BAG-Rechtsprechung. Kostenlos."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/ueberstunden-rechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:title" content="Überstunden Rechner 2026 – Vergütung & Freizeitausgleich"/>
+<meta name="twitter:description" content="Überstunden in Stunden und Euro berechnen – mit Zuschlag oder Freizeitausgleich. Kostenlos."/>
+<meta name="robots" content="index, follow"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Überstunden Rechner 2026 – Vergütung & Freizeitausgleich",
+  "url": "https://arbeitszeitrechner365.de/ueberstunden-rechner",
+  "description": "Kostenloser Überstunden-Rechner für Deutschland: Ist- vs. Soll-Arbeitszeit eingeben und sofort Überstunden in Stunden und Euro berechnen – mit Zuschlag-Modellen (Rechenbeispiele) oder Freizeitausgleich. Mit ArbZG-Grenzen (§ 3), BAG-Rechtsprechung zur Anordnung und Minusstunden-Regeln nach EFZG.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Overtime Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.1",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Überstunden-Berechnung: Ist-Arbeitszeit minus Soll-Arbeitszeit – als Wochen- oder Tageseingabe",
+    "Vergütungs-Rechenbeispiel mit Stundenlohn und Zuschlag-Modellen (1,0× / 1,25× / 1,5× als Beispiele)",
+    "Freizeitausgleich-Äquivalent in Stunden (1:1-Basis)",
+    "ArbZG-Grenzprüfung: Warnung bei über 10 Stunden pro Tag (§ 3 ArbZG)",
+    "Minusstunden-Hinweis: keine Nacharbeit bei Krankheit (§ 3 EFZG)",
+    "Dezimalstunden-Ausgabe für DATEV-, SAP- und Lexware-Lohnabrechnung",
+    "Hinweis zur Arbeitszeiterfassungspflicht nach BAG-Beschluss 2022",
+    "100% DSGVO-konform ohne Registrierung und ohne Server-Datenspeicherung"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/assets/logo.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man Überstunden?",
+  "description": "Schritt-für-Schritt-Anleitung zur Berechnung von Überstunden aus Ist- und Soll-Arbeitszeit – inklusive Vergütungs-Rechenbeispiel und Freizeitausgleich.",
+  "totalTime": "PT1M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Soll-Arbeitszeit festlegen",
+      "text": "Tragen Sie Ihre vertragliche Arbeitszeit ein – zum Beispiel 40 Stunden pro Woche oder 8 Stunden pro Tag. Das ist die Basis, ab der jede zusätzliche Stunde als Überstunde zählt."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Tatsächlich gearbeitete Zeit eintragen",
+      "text": "Geben Sie die wirklich geleisteten Stunden ein – pro Woche oder pro Tag. Der Rechner zieht die Sollzeit ab: 47,5 minus 40 ergibt 7,5 Überstunden."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Vergütung oder Freizeitausgleich wählen",
+      "text": "Mit Stundenlohn und Zuschlag-Modell (Rechenbeispiele 1,0×/1,25×/1,5×) schätzt der Rechner die Vergütung – oder Sie lesen das Freizeitausgleich-Äquivalent in Stunden ab. Beachten Sie: Einen gesetzlichen Zuschlagssatz gibt es in Deutschland nicht."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "ArbZG-Grenzen prüfen",
+      "text": "Der Rechner warnt automatisch, wenn ein Arbeitstag 10 Stunden überschreitet (§ 3 ArbZG). Minusstunden – etwa durch Krankheit – müssen nach § 3 EFZG nicht nachgearbeitet werden."
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Muss mein Arbeitgeber Überstunden bezahlen, wenn im Vertrag nichts dazu steht?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grundsätzlich ja. Sind Überstunden angeordnet, gebilligt oder geduldet worden, schulden Sie die Vergütung nach § 612 BGB – auch ohne ausdrückliche Klausel. Einen Zuschlag gibt es allerdings nur, wenn Arbeitsvertrag, Tarifvertrag oder Betriebsvereinbarung einen vorsehen; das Arbeitszeitgesetz selbst kennt keinen Zuschlagssatz."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Überstunden darf ich pro Woche maximal leisten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Arbeitszeitgesetz begrenzt nicht die Überstunden direkt, sondern den Arbeitstag: maximal 10 Stunden (§ 3 ArbZG), im Schnitt 8 Stunden über sechs Monate. Bei 40 Vertragsstunden sind also bis zu 20 Überstunden pro Woche rechtlich denkbar – sofern Ruhezeiten (§ 5 ArbZG) und Pausen (§ 4 ArbZG) eingehalten werden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Sind Überstunden mit meinem Gehalt schon abgegolten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nur bei einer wirksamen Klausel mit klarer Begrenzung – etwa „bis zu 10 Überstunden monatlich“. Pauschale Abgeltungen ohne Obergrenze hält die Rechtsprechung häufig für unwirksam, besonders bei niedrigen Gehältern. Gerade bei Formulierungen wie „erforderliche Überstunden sind abgegolten“ lohnt der genaue Blick: Ohne konkrete Stundengrenze sind solche Klauseln nach der BAG-Rechtsprechung regelmäßig unwirksam. Fragen Sie im Zweifel Ihren Betriebsrat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kann ich Freizeitausgleich statt Auszahlung verlangen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das hängt von Ihrem Vertrag ab. Viele Tarifverträge – etwa der TVöD (§ 8) – sehen den Freizeitausgleich als Regelfall vor; die Auszahlung kommt nur in Betracht, wenn der Ausgleich aus betrieblichen Gründen nicht möglich ist. Ohne Regelung einigen Sie sich mit Ihrem Arbeitgeber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Überstunden und Mehrarbeit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Überstunden sind Arbeitsstunden über Ihre vertragliche Arbeitszeit hinaus. Mehrarbeit ist der Begriff des Arbeitszeitgesetzes für alles über 8 Stunden täglich hinaus (§ 3 ArbZG). Wer 40 Stunden vereinbart hat und 45 arbeitet, leistet 5 Überstunden – Mehrarbeit im ArbZG-Sinne aber erst ab der 9. Stunde eines Tages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich Minusstunden nacharbeiten, wenn ich krank war?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Krankheitsbedingte Ausfallzeiten dürfen nicht nachgearbeitet werden (§ 3 EFZG) – sie gelten im Arbeitszeitkonto als geleistete Zeit. Das gilt auch dann, wenn Ihr Zeitkonto dadurch ins Minus gerutscht ist: Der Arbeitgeber darf krankheitsbedingte Fehlzeiten nicht als Minusstunden verbuchen. Auch Kurzarbeit oder Betriebsstörungen gehen zulasten des Arbeitgebers (Betriebsrisiko)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie weise ich meine Überstunden im Streitfall nach?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seit dem BAG-Beschluss vom 13. September 2022 muss Ihr Arbeitgeber Beginn, Ende und Dauer der Arbeitszeit systematisch erfassen – das erleichtert den Nachweis erheblich. Dokumentieren Sie trotzdem selbst: Datum, Zeiten und wer die Mehrarbeit angeordnet oder geduldet hat. Die Darlegungs- und Beweislast trägt der Arbeitnehmer."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Überstunden Rechner",
+      "item": "https://arbeitszeitrechner365.de/ueberstunden-rechner"
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;
+  --surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;
+  --muted:#64748b;--green:#16a34a;--red:#dc2626;
+  --shadow:0 2px 12px rgba(26,61,110,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;line-height:1.2;margin-bottom:14px;color:#fff;}
+h1 .hl{color:var(--amber);}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+
+/* NAV */
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:640px;line-height:1.65;margin-bottom:24px;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+
+/* QUICK ANSWER */
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+
+/* TOOL ZONE */
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:24px;}
+
+/* PRESET PILLS */
+.preset-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.preset-btn{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;cursor:pointer;transition:all .15s ease;}
+.preset-btn:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+
+/* PAUSENRECHNER CARD */
+.calc-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(0,0,0,.25);}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.form-grp{display:flex;flex-direction:column;gap:6px;}
+.form-grp label{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.9);}
+.form-grp input,.form-grp select{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:11px 14px;color:#ffffff;font-size:15.5px;font-weight:600;font-family:inherit;outline:none;}
+.form-grp input:focus,.form-grp select:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+.form-grp select option{background:#1a3d6e;color:#fff;}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:800;font-size:16px;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;margin-top:20px;transition:transform .15s, box-shadow .15s;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,160,32,.4);}
+
+/* RESULT CARDS */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;}
+.res-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 16px;text-align:center;}
+.res-box .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:6px;font-weight:600;}
+.res-box .val{font-size:24px;font-weight:800;color:#fff;}
+.res-box.hl .val{color:var(--amber);}
+.res-box.green .val{color:#4ade80;}
+
+/* STATUS BANNER */
+.status-banner{border-radius:10px;padding:14px 18px;margin-top:20px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:12px;line-height:1.5;}
+.status-ok{background:rgba(74,222,128,.15);border:1.5px solid #4ade80;color:#86efac;}
+.status-warn{background:rgba(232,160,32,.18);border:1.5px solid var(--amber);color:#fde047;}
+.status-danger{background:rgba(239,68,68,.20);border:1.5px solid #f87171;color:#fca5a5;}
+
+/* SPLIT BREAK VALIDATOR */
+.split-box{background:rgba(255,255,255,.04);border:1px dashed rgba(255,255,255,.2);border-radius:12px;padding:18px;margin-top:20px;}
+.split-header{font-size:13.5px;font-weight:700;color:var(--amber);margin-bottom:12px;display:flex;align-items:center;gap:6px;}
+.split-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;}
+
+/* TABLE STYLING */
+.tbl-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:14px 16px;text-align:left;font-size:13px;font-weight:700;}
+td{padding:13px 16px;border-bottom:1px solid var(--border);background:#fff;}
+tbody tr:nth-child(even) td{background:#f8fafc;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+
+/* CARDS & GRIDS */
+.card-grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:24px;}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);}
+.feature-card .icon{font-size:30px;margin-bottom:12px;}
+.feature-card h3{font-size:16px;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.65;}
+
+/* BOXES */
+.box{border-radius:10px;padding:18px 22px;margin:22px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+
+/* CHECKLIST */
+.check-list{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+.check-list li{position:relative;padding-left:28px;font-size:14.5px;color:var(--text);line-height:1.6;}
+.check-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:800;font-size:16px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* AUTHOR / EEAT */
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* RELATED */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+.rel-card:hover{box-shadow:0 10px 25px rgba(26,61,110,.12);transform:translateY(-3px);border-color:var(--amber);}
+.rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+
+/* ===== SITE FOOTER ===== */
+.site-footer{background:var(--navy-dk);color:rgba(255,255,255,.75);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);font-size:0.9rem;}
+.footer-container{max-width:960px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1.3fr 1.2fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+@media(max-width:900px){.footer-container{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr;gap:2rem;}}
+.footer-brand .brand-logo{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:0.75rem;}
+.footer-brand .brand-logo svg{color:var(--amber);}
+.footer-brand .brand-logo .highlight{color:var(--amber);}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:0.85rem;line-height:1.6;margin:0;}
+.footer-title{color:#fff;font-size:0.95rem;font-weight:700;margin-bottom:1rem;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:0.85rem;transition:color 0.15s ease;}
+.footer-links a:hover{color:var(--amber);}
+.footer-social-links{display:flex;flex-direction:column;gap:0.6rem;}
+.social-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:0.4rem 0.75rem;border-radius:6px;color:#fff;text-decoration:none;font-size:0.825rem;transition:all 0.15s ease;width:fit-content;}
+.social-pill:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+.footer-bottom{max-width:960px;margin:0 auto;padding:1.5rem 20px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:rgba(255,255,255,.5);}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+.footer-bottom-links a{color:rgba(255,255,255,.6);text-decoration:none;}
+.footer-bottom-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .hero{padding:40px 0 32px;}
+  .section{padding:44px 0;}
+  .calc-card{padding:20px;}
+  .author-box{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/pausenrechner" class="dropdown-link" style="background:#f1f5f9!important;">
+            <span class="dropdown-icon">☕</span>
+            <div>
+              <div class="dropdown-link-title">Pausenrechner (§ 4 ArbZG)</div>
+              <div class="dropdown-link-desc">Pflichtpausen &amp; Ruhezeit prüfen</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Überstunden Rechner</strong>
+  </div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">✅ Ist- vs. Sollzeit-Prinzip</div>
+      <div class="t-pill">💶 Vergütung in Euro</div>
+      <div class="t-pill">🕐 Freizeitausgleich 1:1</div>
+      <div class="t-pill">⚖️ § 3 ArbZG-Grenzen</div>
+      <div class="t-pill">🇩🇪 Stand: 2026</div>
+    </div>
+    <h1>Überstunden Berechnen 2026 – <span class="hl">Vergütung &amp; Freizeitausgleich</span> Rechner</h1>
+    <p class="hero-sub">Ihre Soll- und Ist-Arbeitszeit eingeben und sofort sehen: Wie viele Überstunden haben Sie geleistet? Was wären sie in Euro wert – und wie viele Stunden Freizeitausgleich stünden Ihnen zu? Mit ArbZG-Grenzprüfung, Zuschlag-Rechenbeispielen und den wichtigsten Regeln nach deutschem Arbeitsrecht. Kostenlos, ohne Login – alle Daten bleiben in Ihrem Browser.</p>
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p><strong>Überstunden</strong> sind alle Arbeitsstunden über Ihre <strong>vertragliche Arbeitszeit</strong> hinaus – also Ist-Zeit minus Soll-Zeit. Beispiel: 47,5 Stunden gearbeitet bei 40 Vertragsstunden = <strong>7,5 Überstunden</strong>. Einen <strong>gesetzlichen Zuschlagssatz</strong> gibt es in Deutschland nicht; Zuschläge kommen aus Arbeitsvertrag, Tarifvertrag oder Betriebsvereinbarung. Der Rechner unten ermittelt Ihre Überstunden, ein Vergütungs-Rechenbeispiel und das Freizeitausgleich-Äquivalent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TOOL ZONE ════ -->
+<section class="tool-zone" id="rechner">
+  <div class="container">
+    <span class="eyebrow">Überstunden-Rechner</span>
+    <h2>Ihre Überstunden jetzt berechnen</h2>
+    <p class="lead">Wählen Sie ein Preset oder tragen Sie Ihre Werte individuell ein – pro Woche oder pro Tag. Der Rechner zieht die Sollzeit von der Ist-Zeit ab und prüft automatisch die ArbZG-Grenzen.</p>
+
+    <div class="preset-bar">
+      <button class="preset-btn" onclick="applyUeber('woche',40,45)">💼 40h-Woche, 45h gearbeitet</button>
+      <button class="preset-btn" onclick="applyUeber('woche',38.5,42)">🏛️ TVöD 38,5h, 42h gearbeitet</button>
+      <button class="preset-btn" onclick="applyUeber('woche',40,32)">📉 Minusstunden: 40h Soll, 32h Ist</button>
+      <button class="preset-btn" onclick="applyUeber('tag',8,11)">🌙 11h-Tag bei 8h Soll</button>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="form-grp">
+          <label for="ue-modus">Abrechnungszeitraum</label>
+          <select id="ue-modus" onchange="toggleUeberModus()">
+            <option value="woche" selected>Pro Woche</option>
+            <option value="tag">Pro Tag</option>
+          </select>
+        </div>
+        <div class="form-grp">
+          <label for="ue-soll" id="ue-soll-label">Soll-Arbeitszeit / Woche (Std.)</label>
+          <input type="number" id="ue-soll" value="40" min="0" max="80" step="0.5"/>
+        </div>
+        <div class="form-grp">
+          <label for="ue-ist" id="ue-ist-label">Tatsächlich gearbeitet / Woche (Std.)</label>
+          <input type="number" id="ue-ist" value="45" min="0" max="100" step="0.25"/>
+        </div>
+        <div class="form-grp">
+          <label for="ue-lohn">Stundenlohn in € (optional)</label>
+          <input type="number" id="ue-lohn" value="" min="0" max="500" step="0.01" placeholder="z. B. 18,50"/>
+        </div>
+        <div class="form-grp">
+          <label for="ue-zuschlag">Zuschlag-Modell (Rechenbeispiel)</label>
+          <select id="ue-zuschlag">
+            <option value="1" selected>Kein Zuschlag (× 1,0)</option>
+            <option value="1.25">25 % Beispiel-Zuschlag (× 1,25)</option>
+            <option value="1.5">50 % Beispiel-Zuschlag (× 1,5)</option>
+          </select>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcUeber()">⚡ Überstunden berechnen</button>
+
+      <div class="res-grid" id="ue-results" style="display:none;">
+        <div class="res-box hl"><div class="lbl">Überstunden</div><div class="val" id="r-ueber">–</div></div>
+        <div class="res-box green"><div class="lbl">Freizeitausgleich (1:1)</div><div class="val" id="r-frei">–</div></div>
+        <div class="res-box"><div class="lbl">Vergütung (Rechenbeispiel)</div><div class="val" id="r-euro">–</div></div>
+        <div class="res-box"><div class="lbl">Dezimalstunden (DATEV)</div><div class="val" id="r-dez">–</div></div>
+      </div>
+      <div id="ue-status"></div>
+
+      <div class="box box-warn" style="background:rgba(232,160,32,.10);border-left:4px solid var(--amber);color:#fde68a;margin-top:20px;">
+        <strong>Kein gesetzlicher Zuschlag in Deutschland</strong> Das Arbeitszeitgesetz kennt <strong>keinen Zuschlagssatz</strong> für Überstunden. Die Zuschlag-Modelle oben sind reine <strong>Rechenbeispiele</strong> – ob und wie viel Zuschlag Ihnen zusteht, regeln Ihr <strong>Arbeitsvertrag, Tarifvertrag</strong> (z. B. IG Metall, TVöD) oder Ihre <strong>Betriebsvereinbarung</strong>.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTENT: DEFINITION ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Was sind Überstunden? Die Definition</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Definition</div>
+      <p><strong>Überstunden</strong> sind alle Arbeitsstunden, die über Ihre <strong>vertraglich vereinbarte Arbeitszeit</strong> hinausgehen – also Ist-Arbeitszeit minus Soll-Arbeitszeit. Davon zu unterscheiden: <strong>Mehrarbeit</strong> ist der Begriff des Arbeitszeitgesetzes für alles über <strong>8 Stunden täglich</strong> hinaus (<strong>§ 3 ArbZG</strong>), <strong>Gleitzeitguthaben</strong> sind Plusstunden innerhalb eines vereinbarten Gleitzeitrahmens, <strong>Minusstunden</strong> das Gegenstück bei Unterschreitung der Sollzeit.</p>
+    </div>
+
+    <p>Ein Beispiel aus der Praxis: Eine Marketing-Managerin in Berlin (10115) hat <strong>40 Wochenstunden</strong> im Arbeitsvertrag stehen – das ist ihre <strong>Sollarbeitszeit</strong>, also die vertraglich geschuldete Arbeitszeit. In einer heißen Projektwoche arbeitet sie von Montag bis Freitag jeweils 9,5 Stunden, also <strong>47,5 Stunden</strong> – das ist ihre <strong>Ist-Arbeitszeit</strong>. Die Differenz von <strong>7,5 Stunden</strong> sind ihre Überstunden für diese Woche. So einfach ist die Grundformel – und genau sie wendet der Rechner oben an.</p>
+
+    <p>Wichtig ist die Abgrenzung zum Arbeitszeitgesetz: Das ArbZG spricht nicht von Überstunden, sondern von <strong>Arbeitszeit</strong> und <strong>Mehrarbeit</strong>. Nach <strong>§ 3 Satz 1 ArbZG</strong> darf die werktägliche Arbeitszeit <strong>8 Stunden nicht überschreiten</strong> – sie kann nur auf bis zu <strong>10 Stunden verlängert</strong> werden, wenn innerhalb von sechs Monaten im Schnitt 8 Stunden nicht überschritten werden. Unsere Managerin mit ihren 9,5-Stunden-Tagen bewegt sich also noch im legalen Rahmen, solange der Sechs-Monats-Schnitt stimmt. Die <strong>11 Stunden Ruhezeit</strong> zwischen zwei Arbeitstagen (<strong>§ 5 ArbZG</strong>) und die <strong>Pausenregelung</strong> (<strong>§ 4 ArbZG</strong>: 30 Minuten ab 6 Stunden, 45 Minuten ab 9 Stunden) gelten dabei unverändert – Überstunden hebeln keine Schutzvorschrift aus.</p>
+
+    <h3>Zählt die Pause zu den Überstunden?</h3>
+    <p><strong>Nein.</strong> Pausen sind keine Arbeitszeit im Sinne des ArbZG und zählen deshalb auch nicht zu den Überstunden. Wer von 8:00 bis 18:30 Uhr im Büro ist und 45 Minuten Pause macht, hat <strong>10 Stunden Anwesenheit, aber 9:15 Stunden Arbeitszeit</strong> – bei 8 Stunden Sollzeit also 1:15 Überstunden, nicht 2,5. Genau deshalb lohnt sich der <a href="/pausenrechner" style="color:var(--navy);font-weight:600;">Pausenrechner nach § 4 ArbZG</a>, bevor Sie Ihre Überstunden berechnen.</p>
+  </div>
+</section>
+
+<!-- ════ CONTENT: BERECHNUNG ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Berechnung</span>
+    <h2>Wie werden Überstunden berechnet? Mit Rechenbeispiel</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p>Überstunden = <strong>tatsächlich gearbeitete Zeit minus vertragliche Sollzeit</strong>. Bei 47,5 Ist-Stunden und 40 Soll-Stunden sind das <strong>7,5 Überstunden</strong>. Für die Vergütung multiplizieren Sie die Stunden mit Ihrem <strong>Stundenlohn</strong> und – falls vereinbart – dem <strong>Zuschlagsfaktor</strong>: 7,5 × 18,50 € × 1,25 = <strong>173,44 €</strong> (Rechenbeispiel).</p>
+    </div>
+
+    <p>Die Berechnung selbst ist simpel – die Tücken stecken im Detail. <strong>Schritt 1:</strong> Ermitteln Sie Ihre Sollzeit für den Zeitraum. Bei Vollzeit sind das meist 40 Stunden pro Woche, im <strong>TVöD</strong> 39 Stunden (Bund) bzw. 38,5 Stunden in einigen Bereichen, in der <strong>IG Metall</strong> 35 Stunden. <strong>Schritt 2:</strong> Ermitteln Sie die Ist-Zeit – am besten aus einer <strong>lückenlosen Zeiterfassung</strong>, zu der Ihr Arbeitgeber seit dem <strong>BAG-Beschluss vom 13. September 2022</strong> ohnehin verpflichtet ist. <strong>Schritt 3:</strong> Ist minus Soll = Überstunden.</p>
+
+    <p>Ein <strong>durchgerechnetes Beispiel</strong>: Ein Mechatroniker in Stuttgart (70173, IG-Metall-Gebiet) hat 35 Vertragsstunden. In einer Woche mit Samstags-Sonderschicht kommt er auf 44,25 Stunden. Überstunden: 44,25 − 35 = <strong>9,25 Stunden</strong>. In <strong>Dezimalstunden</strong> für die Lohnabrechnung (DATEV, SAP, Lexware) sind das 9,25 – in Stunden und Minuten <strong>9:15</strong>. Mit einem Stundenlohn von 22,00 € und einem tariflichen Zuschlag von 25 % (Rechenbeispiel!) ergibt sich: 9,25 × 22,00 € × 1,25 = <strong>254,38 €</strong>. Ob Ihnen tatsächlich 25 % zustehen, steht in Ihrem Tarifvertrag – das Arbeitszeitgesetz selbst sieht keinen Cent Zuschlag vor.</p>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>Szenario</th><th>Soll</th><th>Ist</th><th>Überstunden</th><th>Vergütung (Beispiel 18,50 €, ×1,25)</th></tr></thead>
+        <tbody>
+          <tr><td>Standard-Vollzeit</td><td>40,0 h</td><td>47,5 h</td><td><strong>7,5 h</strong></td><td>173,44 €</td></tr>
+          <tr><td>TVöD 39h-Woche</td><td>39,0 h</td><td>43,0 h</td><td><strong>4,0 h</strong></td><td>92,50 €</td></tr>
+          <tr><td>IG Metall 35h-Woche</td><td>35,0 h</td><td>44,25 h</td><td><strong>9,25 h</strong></td><td>213,91 €</td></tr>
+          <tr class="highlight"><td>Minusstunden (Krankheit)</td><td>40,0 h</td><td>32,0 h</td><td><strong>−8,0 h (keine Nacharbeit!)</strong></td><td>–</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Die letzte Zeile verdient einen eigenen Hinweis: Wer krank war, muss <strong>keine Minusstunden nacharbeiten</strong> – <strong>§ 3 EFZG</strong> (Entgeltfortzahlungsgesetz) stellt klar, dass krankheitsbedingte Ausfallzeiten als <strong>geleistete Arbeitszeit</strong> gelten. Ein Arbeitgeber, der Ihnen nach einer Krankheitswoche „−8 Stunden" ins Zeitkonto schreibt und Nacharbeit verlangt, handelt rechtswidrig. Mehr dazu weiter unten im Abschnitt zu Minusstunden.</p>
+
+    <p>Für die <strong>Lohnabrechnung</strong> werden Überstunden übrigens immer in <strong>Dezimalstunden</strong> erfasst – 7:30 Stunden sind 7,5, nicht 7,30. Ein klassischer Fehler bei der DATEV-Eingabe, der bares Geld kostet. Unser <a href="/arbeitszeitrechner-dezimal" style="color:var(--navy);font-weight:600;">Dezimalstunden-Rechner</a> rechnet Stunden und Minuten fehlerfrei in Dezimalwerte um.</p>
+  </div>
+</section>
+
+<!-- ════ CONTENT: ZUSCHLAG ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Vergütung</span>
+    <h2>Gibt es einen gesetzlichen Überstundenzuschlag in Deutschland?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p><strong>Nein.</strong> Das deutsche Arbeitszeitgesetz kennt <strong>keinen gesetzlichen Zuschlagssatz</strong> für Überstunden – anders als etwa Frankreich oder die USA. Ob Sie 0 %, 25 % oder 50 % extra bekommen, steht in Ihrem <strong>Arbeitsvertrag</strong>, einem <strong>Tarifvertrag</strong> (z. B. IG Metall, TVöD) oder einer <strong>Betriebsvereinbarung</strong>. Ohne solche Regelung schuldet der Arbeitgeber nur den normalen Stundenlohn (<strong>§ 612 BGB</strong>).</p>
+    </div>
+
+    <p>Das ist der <strong>größte Irrtum</strong> rund um Überstunden: Viele Beschäftigte gehen selbstverständlich davon aus, dass „Überstunden automatisch 25 % extra" bedeuten. Tatsächlich ist der Zuschlag reine <strong>Verhandlungssache</strong>. In der Praxis sehen viele Tarifverträge gestaffelte Zuschläge vor – in der Metall- und Elektroindustrie sind <strong>25 % für die ersten Mehrarbeitsstunden</strong> üblich, in anderen Branchen 30 oder 50 Prozent für Nacht-, Sonn- und Feiertagsarbeit. Im <strong>öffentlichen Dienst (TVöD)</strong> ist dagegen der <strong>Freizeitausgleich der Regelfall</strong> (§ 8 TVöD): Überstunden werden primär durch Freizeit abgegolten, die Auszahlung kommt nur in Betracht, wenn der Ausgleich aus dienstlichen Gründen nicht möglich ist.</p>
+
+    <p>Auch ohne Zuschlag gilt: <strong>Angeordnete Überstunden müssen bezahlt werden.</strong> Sind sie vom Arbeitgeber <strong>angeordnet, gebilligt oder auch nur geduldet</strong> worden, entsteht ein Vergütungsanspruch nach <strong>§ 612 Abs. 1 BGB</strong> – selbst wenn im Arbeitsvertrag kein Wort dazu steht. Die Rechtsprechung des <strong>Bundesarbeitsgerichts</strong> verlangt dafür allerdings, dass der Arbeitnehmer darlegt und im Streitfall beweist: <strong>wann</strong> er gearbeitet hat und <strong>dass</strong> der Arbeitgeber es wusste oder angeordnet hat. Genau hier hilft die <strong>Arbeitszeiterfassungspflicht</strong> seit dem BAG-Beschluss 2022: Wo der Arbeitgeber systematisch erfassen muss, wird der Nachweis deutlich leichter.</p>
+
+    <h3>„Überstunden sind mit dem Gehalt abgegolten" – wirksam?</h3>
+    <p>Solche Klauseln finden sich besonders in Agenturen und Start-ups – etwa in Berlin (10115) – und in der Gastronomie, zum Beispiel in Köln (50667). Die Antwort der Rechtsprechung: <strong>Nur mit klarer Begrenzung.</strong> Eine Klausel wie „bis zu 10 Überstunden monatlich sind mit dem Gehalt abgegolten" kann wirksam sein. Eine <strong>pauschale Abgeltung ohne Obergrenze</strong> („alle erforderlichen Überstunden") hält das BAG dagegen regelmäßig für <strong>unwirksam</strong> – insbesondere bei Gehältern knapp über dem Mindestlohn, wo jede unbezahlte Stunde den effektiven Stundenlohn unter die <strong>Mindestlohngrenze (12,82 €/h, 2026)</strong> drücken könnte. Faustregel: Je höher das Gehalt und je klarer die Grenze, desto eher hält die Klausel.</p>
+  </div>
+</section>
+
+<!-- ════ CONTENT: AUSZAHLUNG VS FREIZEIT ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Abgeltung</span>
+    <h2>Überstunden auszahlen lassen oder Freizeitausgleich nehmen?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p>Beides ist möglich – <strong>was gilt, steht in Ihrem Vertrag</strong>. Der <strong>Freizeitausgleich</strong> (Stunden 1:1 in Freizeit umwandeln) ist in vielen Tarifverträgen der Regelfall und steuerlich oft günstiger. Die <strong>Auszahlung</strong> lohnt sich bei hohem Stundenlohn plus Zuschlag, ist aber voll <strong>lohnsteuer- und sozialversicherungspflichtig</strong>. Ohne Regelung einigen Sie sich mit Ihrem Arbeitgeber.</p>
+    </div>
+
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th></th><th>Auszahlung</th><th>Freizeitausgleich</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Prinzip</strong></td><td>Stunden × Lohn (× Zuschlag)</td><td>Stunden 1:1 als Freizeit</td></tr>
+          <tr><td><strong>Steuern/Sozialabgaben</strong></td><td>Voll steuer- und SV-pflichtig</td><td>Keine Abzüge, reine Zeit</td></tr>
+          <tr><td><strong>Zuschlag</strong></td><td>Kann mit ausgezahlt werden</td><td>Meist nur Stunden, kein Geld-Zuschlag</td></tr>
+          <tr><td><strong>Typisch bei</strong></td><td>Privatwirtschaft, IG-Metall-Bereich</td><td>TVöD/TV-L (§ 8 TVöD), öffentlicher Dienst</td></tr>
+          <tr><td><strong>Vorteil</strong></td><td>Sofort mehr Geld auf dem Konto</td><td>Echte Erholung, keine Steuerlast</td></tr>
+          <tr><td><strong>Achtung</strong></td><td>Kann in höhere Steuerprogression rutschen</td><td>Verfallfristen im Arbeitszeitkonto beachten</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Ein Rechenbeispiel für die Entscheidung: 10 Überstunden bei 20,00 € Stundenlohn und 25 % Zuschlag (Rechenbeispiel) bringen <strong>250,00 € brutto</strong> – davon gehen Lohnsteuer und Sozialabgaben ab, netto bleiben je nach Steuerklasse etwa 130 bis 160 €. Der Freizeitausgleich bringt <strong>10 Stunden Freizeit</strong> – bei einem 8-Stunden-Tag also 1,25 freie Tage, ganz ohne Abzüge. Viele Beschäftigte unterschätzen, wie wertvoll die Zeit ist: Bei 20 € netto pro Stunde „kaufen" Sie sich mit 10 Überstunden gerade einmal einen halben Tagessatz zurück.</p>
+
+    <p>Wichtig bei beiden Varianten: <strong>Verfallfristen</strong>. Viele Arbeitszeitkonten sehen vor, dass Plusstunden innerhalb von <strong>6 oder 12 Monaten</strong> abgebaut werden müssen – sonst verfallen sie. Prüfen Sie Ihre <strong>Betriebsvereinbarung</strong> oder fragen Sie den <strong>Betriebsrat</strong>: Nach <strong>§ 87 Abs. 1 Nr. 2 und 3 BetrVG</strong> hat er bei Arbeitszeitfragen ein echtes <strong>Mitbestimmungsrecht</strong>.</p>
+  </div>
+</section>
+
+<!-- ════ CONTENT: ANORDNUNG ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Arbeitsrecht</span>
+    <h2>Wann darf der Arbeitgeber Überstunden anordnen?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p>Überstunden dürfen nur geleistet werden, wenn sie <strong>angeordnet, gebilligt oder geduldet</strong> sind – etwa durch eine <strong>Klausel im Arbeitsvertrag</strong>, eine <strong>Betriebsvereinbarung</strong> oder eine <strong>konkrete Anweisung</strong>. In <strong>Notfällen</strong> (Gefahr für Betrieb oder Leib und Leben) kann die Anordnung auch ohne vertragliche Grundlage erfolgen. <strong>Eigenmächtige</strong> Überstunden ohne Wissen des Arbeitgebers muss niemand bezahlen.</p>
+    </div>
+
+    <p>Die <strong>Anordnung</strong> ist der Dreh- und Angelpunkt des gesamten Überstundenrechts. Nach ständiger <strong>BAG-Rechtsprechung</strong> entsteht ein Vergütungsanspruch nur für Stunden, die der Arbeitgeber <strong>ausdrücklich angeordnet</strong>, nachträglich <strong>gebilligt</strong> oder <strong>wissentlich geduldet</strong> hat – also etwa, wenn die Chefin jeden Abend sieht, dass Sie noch am Schreibtisch sitzen, und nichts sagt. Was der Arbeitgeber <strong>weder wusste noch wissen musste</strong>, bleibt unbezahlt. Deshalb der wichtigste Praxistipp überhaupt: <strong>Lassen Sie Überstunden immer schriftlich anordnen</strong> – eine kurze E-Mail („Bitte heute bis 19 Uhr wegen Kundenprojekt X") genügt.</p>
+
+    <p>Der Arbeitgeber darf die Anordnung allerdings nicht willkürlich aussprechen: Sie braucht einen <strong>sachlichen Grund</strong> (Auftragsspitze, Notfall, unaufschiebbare Termine) und muss <strong>zumutbar</strong> sein – familiäre Pflichten oder ein zweiter Job können entgegenstehen. Und selbst angeordnete Überstunden enden an der <strong>10-Stunden-Grenze des § 3 ArbZG</strong>: Was darüber hinausgeht, ist schlicht verboten, Anordnung hin oder her. In Betrieben mit <strong>Betriebsrat</strong> kommt hinzu, dass jede Verlängerung der Arbeitszeit dessen <strong>Zustimmung</strong> braucht (<strong>§ 87 Abs. 1 Nr. 2 BetrVG</strong>) – ohne sie ist die Anordnung bereits aus diesem Grund unwirksam.</p>
+
+    <h3>Vertrauensarbeitszeit: Keine Zeiterfassung nötig?</h3>
+    <p><strong>Doch – seit 2022.</strong> Viele Unternehmen – von der Hamburger Logistikfirma (20095) bis zum Münchner Tech-Start-up (80331) – arbeiten mit <strong>Vertrauensarbeitszeit</strong>: keine Stechuhr, keine Kernzeiten, nur Ergebnisse zählen. Der <strong>BAG-Beschluss vom 13. September 2022 (1 ABR 22/21)</strong> hat klargestellt, dass daraus <strong>keine Ausnahme</strong> von der Erfassungspflicht folgt: Ausgehend vom <strong>EuGH-Urteil vom 14. Mai 2019 (C-55/18)</strong> muss der Arbeitgeber ein <strong>objektives, verlässliches und zugängliches System</strong> zur Erfassung von Beginn, Ende und Dauer der täglichen Arbeitszeit einrichten – für <strong>alle</strong> Beschäftigten, auch bei Vertrauensarbeitszeit. Für Sie als Arbeitnehmer ist das ein Vorteil: Wo lückenlos erfasst wird, lassen sich Überstunden im Streitfall <strong>belegen statt behaupten</strong>.</p>
+  </div>
+</section>
+
+<!-- ════ CONTENT: MINUSSTUNDEN ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">Minusstunden</span>
+    <h2>Minusstunden: Wann Sie nacharbeiten müssen – und wann nicht</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p><strong>Minusstunden</strong> entstehen, wenn Sie weniger als die Sollzeit arbeiten. <strong>Nacharbeiten müssen Sie nur</strong>, wenn die Minusstunden <strong>in Ihrer Verantwortung</strong> liegen – etwa bei <strong>Gleitzeit</strong> innerhalb des vereinbarten Rahmens. Bei <strong>Krankheit (§ 3 EFZG)</strong>, <strong>Feiertagen</strong>, <strong>Urlaub</strong> oder <strong>Betriebsstörungen</strong> (Betriebsrisiko des Arbeitgebers) ist eine Nacharbeit <strong>ausgeschlossen</strong>.</p>
+    </div>
+
+    <p>Das <strong>Arbeitszeitkonto</strong> – also das Konto, auf dem Plus- und Minusstunden saldiert werden – ist für viele Beschäftigte eine Blackbox. Die Grundregel ist einfach: <strong>Wer die Minusstunden verursacht hat, trägt sie.</strong> Kommen Sie wegen eines privaten Termins zwei Stunden später und arbeiten im Gleitzeitrahmen kürzer, gleichen Sie die Stunden aus. Fällt dagegen die Hälfte der Belegschaft wegen einer Grippewelle aus und Sie werden nach Hause geschickt, ist das <strong>Betriebsrisiko des Arbeitgebers</strong> – die Minusstunden dürfen Ihnen nicht angelastet werden.</p>
+
+    <p>Besonders wichtig: <strong>Krankheit.</strong> Nach <strong>§ 3 Abs. 1 EFZG</strong> haben Sie bei unverschuldeter Arbeitsunfähigkeit Anspruch auf <strong>Entgeltfortzahlung für sechs Wochen</strong> – und die ausgefallene Zeit gilt als <strong>geleistete Arbeitszeit</strong>. Ihr Arbeitgeber darf Ihnen für Krankheitstage weder Minusstunden anschreiben noch Nacharbeit verlangen. Das Gleiche gilt für <strong>Feiertage</strong> (§ 2 EFZG): Fällt ein Arbeitstag auf einen gesetzlichen Feiertag Ihres Bundeslands, entsteht <strong>kein Minus</strong> – die Zeit gilt als gearbeitet. Wer sein Zeitkonto im <a href="/sollarbeitszeit-rechner" style="color:var(--navy);font-weight:600;">Sollarbeitszeit-Rechner</a> prüft und dort unerklärliche Minusstunden findet, sollte genau hier nachhaken.</p>
+
+    <div class="box box-tip">
+      <strong>Praxis-Tipp: Zeitkonto regelmäßig prüfen</strong>
+      Lassen Sie sich Ihr Arbeitszeitkonto <strong>mindestens quartalsweise</strong> aushändigen – dazu sind viele Arbeitgeber ohnehin verpflichtet. Prüfen Sie jede Buchung: Wurden Pausen korrekt abgezogen (<a href="/pausenrechner" style="color:#1d4ed8;font-weight:700;">Pausenrechner</a>)? Stehen Krankheitstage als „geleistet"? Nur was <strong>dokumentiert</strong> ist, können Sie im Streitfall auch <strong>belegen</strong>.
+    </div>
+  </div>
+</section>
+
+
+<!-- ════ FAQ SECTION ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zu Überstunden</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Muss mein Arbeitgeber Überstunden bezahlen, wenn im Vertrag nichts dazu steht?</summary>
+        <div class="faq-body">
+          Grundsätzlich <strong>ja</strong>. Sind Überstunden <strong>angeordnet, gebilligt oder geduldet</strong> worden, schulden Sie die Vergütung nach <strong>§ 612 BGB</strong> – auch ohne ausdrückliche Klausel. Einen <strong>Zuschlag</strong> gibt es allerdings nur, wenn Arbeitsvertrag, Tarifvertrag oder Betriebsvereinbarung einen vorsehen; das Arbeitszeitgesetz selbst kennt keinen Zuschlagssatz.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie viele Überstunden darf ich pro Woche maximal leisten?</summary>
+        <div class="faq-body">
+          Das Arbeitszeitgesetz begrenzt nicht die Überstunden direkt, sondern den <strong>Arbeitstag: maximal 10 Stunden</strong> (<strong>§ 3 ArbZG</strong>), im Schnitt 8 Stunden über sechs Monate. Bei 40 Vertragsstunden sind also bis zu 20 Überstunden pro Woche rechtlich denkbar – sofern <strong>Ruhezeiten (§ 5 ArbZG)</strong> und <strong>Pausen (§ 4 ArbZG)</strong> eingehalten werden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Sind Überstunden mit meinem Gehalt schon abgegolten?</summary>
+        <div class="faq-body">
+          Nur bei einer <strong>wirksamen Klausel mit klarer Begrenzung</strong> – etwa „bis zu 10 Überstunden monatlich“. Pauschale Abgeltungen <strong>ohne Obergrenze</strong> hält die Rechtsprechung häufig für <strong>unwirksam</strong>, besonders bei niedrigen Gehältern. Gerade bei Formulierungen wie „erforderliche Überstunden sind abgegolten“ lohnt der genaue Blick: Ohne konkrete Stundengrenze sind solche Klauseln nach der <strong>BAG-Rechtsprechung</strong> regelmäßig unwirksam. Fragen Sie im Zweifel Ihren <strong>Betriebsrat</strong>.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Kann ich Freizeitausgleich statt Auszahlung verlangen?</summary>
+        <div class="faq-body">
+          Das hängt von Ihrem <strong>Vertrag</strong> ab. Viele Tarifverträge – etwa der <strong>TVöD (§ 8)</strong> – sehen den <strong>Freizeitausgleich als Regelfall</strong> vor; die Auszahlung kommt nur in Betracht, wenn der Ausgleich aus betrieblichen Gründen nicht möglich ist. Ohne Regelung einigen Sie sich mit Ihrem Arbeitgeber.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was ist der Unterschied zwischen Überstunden und Mehrarbeit?</summary>
+        <div class="faq-body">
+          <strong>Überstunden</strong> sind Arbeitsstunden über Ihre <strong>vertragliche Arbeitszeit</strong> hinaus. <strong>Mehrarbeit</strong> ist der Begriff des Arbeitszeitgesetzes für alles über <strong>8 Stunden täglich</strong> hinaus (<strong>§ 3 ArbZG</strong>). Wer 40 Stunden vereinbart hat und 45 arbeitet, leistet 5 Überstunden – Mehrarbeit im ArbZG-Sinne aber erst ab der 9. Stunde eines Tages.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Muss ich Minusstunden nacharbeiten, wenn ich krank war?</summary>
+        <div class="faq-body">
+          <strong>Nein.</strong> Krankheitsbedingte Ausfallzeiten dürfen <strong>nicht nachgearbeitet</strong> werden (<strong>§ 3 EFZG</strong>) – sie gelten im Arbeitszeitkonto als <strong>geleistete Zeit</strong>. Das gilt auch dann, wenn Ihr Zeitkonto dadurch ins Minus gerutscht ist: Der Arbeitgeber darf krankheitsbedingte Fehlzeiten nicht als Minusstunden verbuchen. Auch Kurzarbeit oder Betriebsstörungen gehen zulasten des Arbeitgebers (<strong>Betriebsrisiko</strong>).
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie weise ich meine Überstunden im Streitfall nach?</summary>
+        <div class="faq-body">
+          Seit dem <strong>BAG-Beschluss vom 13. September 2022</strong> muss Ihr Arbeitgeber Beginn, Ende und Dauer der Arbeitszeit <strong>systematisch erfassen</strong> – das erleichtert den Nachweis erheblich. Dokumentieren Sie trotzdem selbst: <strong>Datum, Zeiten</strong> und wer die Mehrarbeit <strong>angeordnet oder geduldet</strong> hat. Die Darlegungs- und Beweislast trägt der Arbeitnehmer.
+        </div>
+      </details>
+    </div>
+
+    <!-- E-E-A-T AUTHOR BOX -->
+    <div class="author-box">
+      <div class="author-avatar">R</div>
+      <div>
+        <div class="author-name">Redaktion arbeitszeitrechner365.de</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: Oktober 2026</div>
+        <div class="author-desc">
+          Alle Berechnungen und rechtlichen Erläuterungen basieren auf dem deutschen <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 ArbZG (Höchstarbeitszeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 ArbZG (Pausen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 5 ArbZG (Ruhezeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/bgb/__612.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 612 BGB (Vergütung)</a>,
+          <a href="https://www.gesetze-im-internet.de/efzg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 EFZG (Entgeltfortzahlung)</a>,
+          <a href="https://www.gesetze-im-internet.de/betrvg/__87.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 87 BetrVG (Mitbestimmung)</a> sowie der Rechtsprechung des <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Bundesarbeitsgerichts (BAG)</a>, insbesondere dem Beschluss zur Arbeitszeiterfassung vom 13. September 2022.
+        </div>
+      </div>
+    </div>
+
+    <!-- KEINE RECHTSBERATUNG -->
+    <div class="box box-warn" style="margin-top:24px;">
+      <strong>Keine Rechtsberatung</strong>
+      Diese Seite dient der allgemeinen Information und ersetzt keine individuelle Rechtsberatung. Arbeitsrechtliche Fragen hängen immer vom Einzelfall, Ihrem Arbeitsvertrag, Tarifvertrag und Ihrer Betriebsvereinbarung ab. Wenden Sie sich bei konkreten Streitigkeiten an Ihren <strong>Betriebsrat</strong>, Ihre <strong>Gewerkschaft</strong> oder einen <strong>Fachanwalt für Arbeitsrecht</strong>.
+    </div>
+
+    <!-- SUMMARY NOTE -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Überstunden auf einen Blick</strong>
+      Überstunden = Ist-Zeit minus Soll-Zeit. Einen gesetzlichen Zuschlagssatz gibt es in Deutschland nicht – Zuschläge kommen aus Vertrag oder Tarif. Angewiesene Überstunden müssen bezahlt werden (§ 612 BGB); maximal 10 Stunden pro Tag (§ 3 ArbZG). Freizeitausgleich oder Auszahlung regelt Ihr Vertrag – im TVöD hat der Ausgleich Vorrang. Krankheit erzeugt keine Minusstunden (§ 3 EFZG).
+      <a href="#rechner" style="color:#1d4ed8;font-weight:700;">Jetzt Ihre Überstunden berechnen →</a>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner &amp; Tools</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/#tool" class="rel-card">
+        <div class="rel-tag">Tagesrechner</div>
+        <div class="rel-title">Arbeitszeitrechner – minutengenau mit Pause</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="rel-card">
+        <div class="rel-tag">Zeitkonto</div>
+        <div class="rel-title">Sollarbeitszeit &amp; Zeitkonto berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/pausenrechner" class="rel-card">
+        <div class="rel-tag">Pausen</div>
+        <div class="rel-title">Pausenrechner – Pflichtpause nach § 4 ArbZG</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-schichtarbeit" class="rel-card">
+        <div class="rel-tag">Schichtarbeit</div>
+        <div class="rel-title">Schichtarbeit-Rechner – Nachtzuschlag &amp; Ruhezeit</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/urlaubstage-rechner" class="rel-card">
+        <div class="rel-tag">Urlaub</div>
+        <div class="rel-title">Urlaubstage berechnen – Teilzeit &amp; Vollzeit</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/minijob-rechner" class="rel-card">
+        <div class="rel-tag">Minijob</div>
+        <div class="rel-title">Minijob-Rechner – 556-Euro-Grenze 2026</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <p>Präziser kostenloser Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach deutschem Arbeitsrecht.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">Tools &amp; Rechner</div>
+      <ul class="footer-links">
+        <li><a href="/#tool">Arbeitszeitrechner (Haupt-Tool)</a></li>
+        <li><a href="/pausenrechner">Pausenrechner (§ 4 ArbZG)</a></li>
+        <li><a href="/arbeitszeitrechner-monat">Monatsstunden berechnen</a></li>
+        <li><a href="/arbeitszeitrechner-dezimal">Dezimalstunden umrechnen</a></li>
+        <li><a href="/sollarbeitszeit-rechner">Sollarbeitszeit &amp; Zeitkonto</a></li>
+        <li><a href="/#lohnrechner">Integrierter Lohnrechner</a></li>
+        <li><a href="/#fuer-wen">Für alle Berufstypen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigation &amp; Ratgeber</div>
+      <ul class="footer-links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/#so-gehts">Bedienungsanleitung</a></li>
+        <li><a href="/#faq">Häufige Fragen (FAQ)</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Folgen Sie uns</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/Arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://de.pinterest.com/arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          <span>Pinterest</span>
+        </a>
+        <a href="https://x.com/Arbeitszeit365" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+    <div class="footer-bottom-links">
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function fmtDE(n, dec){
+  return n.toFixed(dec === undefined ? 1 : dec).replace('.', ',');
+}
+function fmtEUR(n){
+  return n.toFixed(2).replace('.', ',') + ' \u20AC';
+}
+function toggleUeberModus(){
+  var m = document.getElementById('ue-modus').value;
+  if(m === 'tag'){
+    document.getElementById('ue-soll-label').textContent = 'Soll-Arbeitszeit / Tag (Std.)';
+    document.getElementById('ue-ist-label').textContent = 'Tats\u00E4chlich gearbeitet / Tag (Std.)';
+    document.getElementById('ue-soll').value = 8;
+    document.getElementById('ue-ist').value = 9.5;
+  } else {
+    document.getElementById('ue-soll-label').textContent = 'Soll-Arbeitszeit / Woche (Std.)';
+    document.getElementById('ue-ist-label').textContent = 'Tats\u00E4chlich gearbeitet / Woche (Std.)';
+    document.getElementById('ue-soll').value = 40;
+    document.getElementById('ue-ist').value = 45;
+  }
+  calcUeber();
+}
+function applyUeber(modus, soll, ist){
+  document.getElementById('ue-modus').value = modus;
+  toggleUeberModus();
+  document.getElementById('ue-soll').value = soll;
+  document.getElementById('ue-ist').value = ist;
+  calcUeber();
+}
+function calcUeber(){
+  var modus = document.getElementById('ue-modus').value;
+  var soll = parseFloat(String(document.getElementById('ue-soll').value).replace(',', '.'));
+  var ist = parseFloat(String(document.getElementById('ue-ist').value).replace(',', '.'));
+  var lohnRaw = String(document.getElementById('ue-lohn').value).replace(',', '.');
+  var lohn = lohnRaw === '' ? 0 : parseFloat(lohnRaw);
+  var faktor = parseFloat(document.getElementById('ue-zuschlag').value);
+  var box = document.getElementById('ue-status');
+
+  if(isNaN(soll) || soll < 0 || isNaN(ist) || ist < 0){
+    document.getElementById('ue-results').style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">\u26A0\uFE0F <span>Bitte tragen Sie g\u00FCltige Stundenwerte ein (Soll- und Ist-Arbeitszeit).</span></div>';
+    return;
+  }
+  if(isNaN(lohn) || lohn < 0) lohn = 0;
+
+  /* Kernformel: \u00DCberstunden = Ist-Zeit minus Soll-Zeit */
+  var ueber = ist - soll;
+
+  document.getElementById('ue-results').style.display = 'grid';
+  document.getElementById('r-ueber').textContent = fmtDE(ueber) + ' Std.';
+  document.getElementById('r-frei').textContent = ueber > 0 ? fmtDE(ueber) + ' Std.' : '\u2013';
+  if(lohn > 0 && ueber > 0){
+    document.getElementById('r-euro').textContent = fmtEUR(ueber * lohn * faktor) + ' *';
+  } else {
+    document.getElementById('r-euro').textContent = '\u2013';
+  }
+  document.getElementById('r-dez').textContent = fmtDE(ueber, 2);
+
+  var html = '';
+  if(ueber > 0){
+    html += '<div class="status-banner status-ok">\u2705 <span>Sie haben <strong>' + fmtDE(ueber) + ' \u00DCberstunden</strong> geleistet' + (modus === 'woche' ? ' in dieser Woche' : ' an diesem Tag') + '.</span></div>';
+  } else if(ueber < 0){
+    html += '<div class="status-banner status-warn">\u2139\uFE0F <span><strong>' + fmtDE(Math.abs(ueber)) + ' Minusstunden.</strong> Lagen Krankheit, Feiertag oder Betriebsst\u00F6rung vor, m\u00FCssen Sie <strong>nicht nacharbeiten</strong> (\u00A7 3 EFZG, Betriebsrisiko des Arbeitgebers). Nur Minusstunden aus Gleitzeit gleichen Sie im vereinbarten Rahmen aus.</span></div>';
+  } else {
+    html += '<div class="status-banner status-ok">\u2705 <span>Ist- und Sollzeit sind identisch \u2013 keine \u00DCber-, keine Minusstunden.</span></div>';
+  }
+
+  /* ArbZG-Grenzen */
+  if(modus === 'tag' && ist > 10){
+    html += '<div class="status-banner status-danger">\uD83D\uDED1 <span><strong>Achtung \u00A7 3 ArbZG:</strong> ' + fmtDE(ist) + ' Stunden \u00FCberschreiten die H\u00F6chstarbeitszeit von <strong>10 Stunden pro Tag</strong>. Solche Tage sind rechtswidrig \u2013 auch mit Anordnung des Arbeitgebers.</span></div>';
+  } else if(modus === 'tag' && ist > 8){
+    html += '<div class="status-banner status-warn">\u26A0\uFE0F <span>Hinweis: \u00DCber 8 Stunden t\u00E4glich ist nur als <strong>Ausnahme</strong> zul\u00E4ssig \u2013 im Schnitt von sechs Monaten d\u00FCrfen es nicht mehr als 8 Stunden sein (\u00A7 3 ArbZG). Pausen (\u00A7 4) und 11 Stunden Ruhezeit (\u00A7 5) gelten trotzdem.</span></div>';
+  }
+
+  if(faktor > 1 && ueber > 0){
+    html += '<div class="status-banner status-warn">\uD83D\uDCB6 <span><strong>Rechenbeispiel:</strong> Der Zuschlag von ' + Math.round((faktor - 1) * 100) + ' % ist ein Beispielwert. Einen <strong>gesetzlichen Zuschlagssatz</strong> gibt es in Deutschland nicht \u2013 ma\u00DFgeblich sind Ihr Arbeitsvertrag, Tarifvertrag oder Ihre Betriebsvereinbarung.</span></div>';
+  }
+  if(ueber > 0 && lohn <= 0){
+    html += '<div class="status-banner status-ok">\uD83D\uDCA1 <span>Tipp: Tragen Sie Ihren <strong>Stundenlohn</strong> ein, um die Verg\u00FCtung Ihrer \u00DCberstunden in Euro zu sch\u00E4tzen.</span></div>';
+  }
+  box.innerHTML = html;
+}
+document.getElementById('ue-modus').addEventListener('change', toggleUeberModus);
+['ue-soll','ue-ist','ue-lohn','ue-zuschlag'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', calcUeber);
+});
+calcUeber();
+</script>
+
+</body>
+</html>

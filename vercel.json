@@ -57,6 +57,18 @@
     {
       "source": "/urlaubstage-rechner",
       "destination": "/urlaubstage-rechner.html"
+    },
+    {
+      "source": "/minijob-rechner",
+      "destination": "/minijob-rechner.html"
+    },
+    {
+      "source": "/ueberstunden-rechner",
+      "destination": "/ueberstunden-rechner.html"
+    },
+    {
+      "source": "/feiertage-rechner",
+      "destination": "/feiertage-rechner.html"
     }
   ]
 }
