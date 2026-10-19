@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ✅ PRIMARY: Gleitzeit-Rechner | SECONDARY: Gleitzeitkonto, Kernarbeitszeit, ArbZG -->
+<title>Gleitzeit-Rechner: Gleitzeitkonto &amp; Kernarbeitszeit 2026</title>
+<meta name="description" content="Gleitzeit-Rechner 2026: Start-/Endzeiten eingeben → Tagesbilanz, Wochensaldo & Gleitzeitkonto. Mit Kernarbeitszeit-Check nach ArbZG. Kostenlos, ohne Login"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/gleitzeit-rechner"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:title" content="Gleitzeit-Rechner: Gleitzeitkonto &amp; Kernarbeitszeit 2026"/>
+<meta property="og:description" content="Gleitzeit-Rechner: Arbeitszeiten pro Wochentag eingeben und sofort Tagesbilanz, Wochenbilanz und Gleitzeitkonto-Saldo sehen – mit Kernarbeitszeit-Prüfung und ArbZG-Hinweisen. Kostenlos."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/gleitzeit-rechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:title" content="Gleitzeit-Rechner: Gleitzeitkonto &amp; Kernarbeitszeit 2026"/>
+<meta name="twitter:description" content="Gleitzeitkonto berechnen: Tagesbilanz, Wochenbilanz & Kernarbeitszeit-Check. Kostenlos."/>
+<meta name="robots" content="index, follow"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Gleitzeit-Rechner – Gleitzeitkonto & Kernarbeitszeit berechnen",
+  "url": "https://arbeitszeitrechner365.de/gleitzeit-rechner",
+  "description": "Kostenloser Gleitzeit-Rechner für Deutschland: pro Wochentag Arbeitsbeginn, Arbeitsende und Pause eintragen und automatisch Tagesbilanz (Ist minus Soll), Wochenbilanz und neuen Gleitzeitkonto-Saldo berechnen – inklusive Kernarbeitszeit-Prüfung, Rahmenarbeitszeit-Check und ArbZG-Hinweisen zu Tageshöchstgrenze, Pausen und Ruhezeit.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Flextime Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.1",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Tagesbilanz pro Wochentag: Ist-Zeit minus Sollarbeitszeit in Stunden und Industrieminuten",
+    "Wochenbilanz und Fortschreibung des Gleitzeitkontos mit frei einstellbarem Übertrag",
+    "Kernarbeitszeit-Prüfung mit individuell einstellbarer Kernzeit (z. B. 9:00–15:00 Uhr)",
+    "Rahmenarbeitszeit-Check (typischer Korridor 6:00–20:00 Uhr)",
+    "ArbZG-Compliance-Hinweise: 10-Stunden-Grenze (§ 3 ArbZG), Pausenstaffel (§ 4 ArbZG), 11 Stunden Ruhezeit (§ 5 ArbZG)",
+    "100% DSGVO-konform ohne Registrierung und ohne Server-Datenspeicherung"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/assets/logo.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man die Tagesbilanz im Gleitzeitkonto?",
+  "description": "Schritt-für-Schritt-Anleitung zur Berechnung von Tagesbilanz, Wochenbilanz und Gleitzeitkonto-Saldo bei Gleitzeit.",
+  "totalTime": "PT2M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Arbeitsbeginn, Arbeitsende und Pause eintragen",
+      "text": "Tragen Sie pro Wochentag Arbeitsbeginn und Arbeitsende sowie die Pausenminuten ein. Der Rechner ermittelt daraus die Ist-Zeit nach der Formel: (Arbeitsende minus Arbeitsbeginn) minus Pause."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Sollarbeitszeit festlegen",
+      "text": "Die Sollarbeitszeit ist die vertraglich geschuldete Arbeitszeit pro Tag – bei Vollzeit meist 8 Stunden, im öffentlichen Dienst (TVöD) durchschnittlich 7,8 Stunden pro Tag. Tragen Sie Ihren Wert ein."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Tagesbilanz berechnen",
+      "text": "Die Tagesbilanz ergibt sich aus Ist-Zeit minus Sollarbeitszeit. Beispiel: 8,5 Stunden Ist-Zeit bei 8 Stunden Soll ergeben plus 0,5 Stunden – das sind 50 Industrieminuten Plusstunden auf dem Gleitzeitkonto."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Wochenbilanz und Kontostand ermitteln",
+      "text": "Alle Tagesbilanzen werden zur Wochenbilanz summiert und auf den Übertrag addiert. Die Formel lautet: Neuer Kontostand = alter Saldo + Wochenbilanz. Der Rechner prüft zusätzlich Kernarbeitszeit und ArbZG-Grenzen."
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Ist Gleitzeit im Arbeitszeitgesetz (ArbZG) geregelt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein, das ArbZG enthält keinen eigenen Paragrafen zur Gleitzeit. Ob und wie Gleitzeit gilt, regeln Ihr Arbeitsvertrag, eine Betriebsvereinbarung oder ein Tarifvertrag. Die Schutzgrenzen des ArbZG gelten trotzdem uneingeschränkt weiter: höchstens 10 Stunden pro Tag (§ 3 ArbZG), Pausen nach § 4 ArbZG und 11 Stunden Ruhezeit nach § 5 ArbZG."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Plusstunden darf mein Gleitzeitkonto maximal enthalten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Eine gesetzliche Obergrenze gibt es nicht – entscheidend ist Ihre Gleitzeit-Vereinbarung. Viele Betriebsvereinbarungen und Tarifverträge legen Kappungsgrenzen fest, etwa einen Korridor von minus 20 bis plus 40 Stunden. Überschüssige Stunden können verfallen oder müssen abgebaut werden. Prüfen Sie deshalb Ihre Betriebsvereinbarung oder fragen Sie den Betriebsrat."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Darf mein Arbeitgeber Minusstunden nach einer Krankschreibung einbuchen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein. Bei Arbeitsunfähigkeit erhalten Sie bis zu sechs Wochen Ihr volles Entgelt weiter (§ 3 Abs. 1 EFZG). Der Krankheitstag wird mit der Sollarbeitszeit gutgeschrieben – die ständige Rechtsprechung des Bundesarbeitsgerichts verbietet, Krankheitstage als Minusstunden im Gleitzeitkonto zu verbuchen. Reichen Sie die elektronische Arbeitsunfähigkeitsbescheinigung (eAU) rechtzeitig ein."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was passiert mit meinem Gleitzeitkonto, wenn ich kündige?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das regelt Ihre Gleitzeit-Vereinbarung – einen allgemeinen gesetzlichen Auszahlungsanspruch gibt es nicht. Üblich sind drei Wege: Abbau der Plusstunden durch Freizeit vor dem Ausscheiden, Auszahlung mit dem letzten Gehalt oder – seltener – Verfall. Klären Sie die Regelung frühzeitig mit der Personalabteilung, damit keine Stunden verloren gehen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss ich während der gesamten Kernarbeitszeit anwesend sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grundsätzlich ja: Die Kernarbeitszeit ist genau die Zeitspanne, in der alle Beschäftigten anwesend sein müssen – typischerweise etwa 9:00 bis 15:00 Uhr. Ausnahmen wie Arzttermine oder dienstliche Abwesenheit regelt Ihre Betriebsvereinbarung. Wer die Kernzeit regelmäßig unterschreitet, verletzt seine arbeitsvertraglichen Pflichten."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gilt die 11-Stunden-Ruhezeit auch bei Gleitzeit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, uneingeschränkt. Nach § 5 Abs. 1 ArbZG müssen zwischen Arbeitsende und nächstem Arbeitsbeginn mindestens 11 Stunden ununterbrochene Ruhezeit liegen – auch bei flexiblen Arbeitszeiten. Wer bis 20:00 Uhr gleitet, darf frühestens um 7:00 Uhr wieder beginnen. Tarifverträge können die Ruhezeit in bestimmten Branchen auf 10 Stunden verkürzen (§ 5 Abs. 3 ArbZG)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie rechne ich Gleitzeitstunden in Industrieminuten für DATEV um?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teilen Sie die Minuten durch 60 und multiplizieren Sie mit 100: 45 Minuten entsprechen 75 Industrieminuten, 30 Minuten entsprechen 50. In Dezimalstunden ausgedrückt sind 8 Stunden 30 Minuten also 8,50 Stunden. Unser Dezimalstunden-Rechner übernimmt die Umrechnung in beide Richtungen fehlerfrei – ein häufiger Grund für falsche Lohnabrechnungen."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Gleitzeit Rechner",
+      "item": "https://arbeitszeitrechner365.de/gleitzeit-rechner"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;
+  --surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;
+  --muted:#64748b;--green:#16a34a;--red:#dc2626;
+  --shadow:0 2px 12px rgba(26,61,110,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;line-height:1.2;margin-bottom:14px;color:#fff;}
+h1 .hl{color:var(--amber);}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+
+/* NAV */
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:640px;line-height:1.65;margin-bottom:24px;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+
+/* QUICK ANSWER */
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+
+/* TOOL ZONE */
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:24px;}
+
+/* PRESET PILLS */
+.preset-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.preset-btn{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;cursor:pointer;transition:all .15s ease;}
+.preset-btn:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+
+/* CALC CARD */
+.calc-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(0,0,0,.25);}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.form-grp{display:flex;flex-direction:column;gap:6px;}
+.form-grp label{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.9);}
+.form-grp input,.form-grp select{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:11px 14px;color:#ffffff;font-size:15.5px;font-weight:600;font-family:inherit;outline:none;}
+.form-grp input:focus,.form-grp select:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+.form-grp select option{background:#1a3d6e;color:#fff;}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:800;font-size:16px;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;margin-top:20px;transition:transform .15s, box-shadow .15s;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,160,32,.4);}
+
+/* CALC TABLE (dark tool zone) */
+.calc-table{box-shadow:none;}
+.calc-table thead tr{background:rgba(255,255,255,.10);}
+.calc-table th{color:#fff;}
+.calc-table td{background:rgba(255,255,255,.05);color:#fff;border-bottom:1px solid rgba(255,255,255,.10);}
+.calc-table tbody tr:nth-child(even) td{background:rgba(255,255,255,.09);}
+.calc-table td strong{color:#fff;}
+.calc-table input[type="time"],.calc-table input[type="number"]{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:9px 10px;color:#fff;font-size:14.5px;font-weight:600;font-family:inherit;width:100%;outline:none;color-scheme:dark;}
+.calc-table input:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+
+/* RESULT CARDS */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;}
+.res-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 16px;text-align:center;}
+.res-box .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:6px;font-weight:600;}
+.res-box .val{font-size:24px;font-weight:800;color:#fff;}
+.res-box.hl .val{color:var(--amber);}
+.res-box.green .val{color:#4ade80;}
+
+/* STATUS BANNER */
+.status-banner{border-radius:10px;padding:14px 18px;margin-top:20px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:12px;line-height:1.5;}
+.status-ok{background:rgba(74,222,128,.15);border:1.5px solid #4ade80;color:#86efac;}
+.status-warn{background:rgba(232,160,32,.18);border:1.5px solid var(--amber);color:#fde047;}
+.status-danger{background:rgba(239,68,68,.20);border:1.5px solid #f87171;color:#fca5a5;}
+
+/* TABLE STYLING */
+.tbl-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:14px 16px;text-align:left;font-size:13px;font-weight:700;}
+td{padding:13px 16px;border-bottom:1px solid var(--border);background:#fff;}
+tbody tr:nth-child(even) td{background:#f8fafc;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+
+/* CARDS & GRIDS */
+.card-grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:24px;}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);}
+.feature-card .icon{font-size:30px;margin-bottom:12px;}
+.feature-card h3{font-size:16px;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.65;}
+
+/* BOXES */
+.box{border-radius:10px;padding:18px 22px;margin:22px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+
+/* CHECKLIST */
+.check-list{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+.check-list li{position:relative;padding-left:28px;font-size:14.5px;color:var(--text);line-height:1.6;}
+.check-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:800;font-size:16px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* AUTHOR / EEAT */
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* RELATED */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+.rel-card:hover{box-shadow:0 10px 25px rgba(26,61,110,.12);transform:translateY(-3px);border-color:var(--amber);}
+.rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+
+/* ===== SITE FOOTER ===== */
+.site-footer{background:var(--navy-dk);color:rgba(255,255,255,.75);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);font-size:0.9rem;}
+.footer-container{max-width:960px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1.3fr 1.2fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+@media(max-width:900px){.footer-container{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr;gap:2rem;}}
+.footer-brand .brand-logo{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:0.75rem;}
+.footer-brand .brand-logo svg{color:var(--amber);}
+.footer-brand .brand-logo .highlight{color:var(--amber);}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:0.85rem;line-height:1.6;margin:0;}
+.footer-title{color:#fff;font-size:0.95rem;font-weight:700;margin-bottom:1rem;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:0.85rem;transition:color 0.15s ease;}
+.footer-links a:hover{color:var(--amber);}
+.footer-social-links{display:flex;flex-direction:column;gap:0.6rem;}
+.social-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:0.4rem 0.75rem;border-radius:6px;color:#fff;text-decoration:none;font-size:0.825rem;transition:all 0.15s ease;width:fit-content;}
+.social-pill:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+.footer-bottom{max-width:960px;margin:0 auto;padding:1.5rem 20px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:rgba(255,255,255,.5);}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+.footer-bottom-links a{color:rgba(255,255,255,.6);text-decoration:none;}
+.footer-bottom-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .hero{padding:40px 0 32px;}
+  .section{padding:44px 0;}
+  .calc-card{padding:20px;}
+  .author-box{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/pausenrechner" class="dropdown-link" style="background:#f1f5f9!important;">
+            <span class="dropdown-icon">☕</span>
+            <div>
+              <div class="dropdown-link-title">Pausenrechner (§ 4 ArbZG)</div>
+              <div class="dropdown-link-desc">Pflichtpausen &amp; Ruhezeit prüfen</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Gleitzeit Rechner</strong>
+  </div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">✅ Gleitzeitkonto: Plus/Minus automatisch</div>
+      <div class="t-pill">⏰ Kernarbeitszeit-Prüfung</div>
+      <div class="t-pill">⚖️ § 3 &amp; § 5 ArbZG-Check</div>
+      <div class="t-pill">📊 Industrieminuten für DATEV</div>
+      <div class="t-pill">🇩🇪 Stand: 2026</div>
+    </div>
+    <h1>Gleitzeit-Rechner – <span class="hl">Gleitzeitkonto</span> &amp; Kernarbeitszeit berechnen</h1>
+    <p class="hero-sub">Tragen Sie pro Wochentag Arbeitsbeginn, Arbeitsende und Pause ein: Der Rechner ermittelt Ihre Ist-Zeit, die Tagesbilanz in Stunden und Industrieminuten, die Wochenbilanz sowie Ihren neuen Gleitzeitkonto-Saldo – inklusive Kernarbeitszeit-Prüfung und ArbZG-Hinweisen zu Tageshöchstgrenze, Pausen und Ruhezeit. Kostenlos, ohne Login.</p>
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p><strong>Gleitzeit</strong> bedeutet: Sie bestimmen Beginn und Ende Ihrer Arbeitszeit innerhalb einer vereinbarten <strong>Rahmenarbeitszeit</strong> (typisch 6:00–20:00 Uhr) selbst – nur während der <strong>Kernarbeitszeit</strong> (z. B. 9:00–15:00 Uhr) müssen Sie anwesend sein. Die Differenz zwischen Ihrer <strong>Ist-Zeit</strong> und der <strong>Sollarbeitszeit</strong> (z. B. 8 Stunden) wird täglich als Plus- oder Minusstunden auf Ihrem <strong>Gleitzeitkonto</strong> verbucht: <strong>Tagesbilanz = Ist-Zeit − Sollarbeitszeit.</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TOOL ZONE ════ -->
+<section class="tool-zone" id="rechner">
+  <div class="container">
+    <span class="eyebrow">Gleitzeit-Rechner</span>
+    <h2>Ihr Gleitzeitkonto jetzt berechnen</h2>
+    <p class="lead">Arbeitsbeginn, Arbeitsende und Pause pro Wochentag eintragen – der Rechner ermittelt Tagesbilanz, Wochenbilanz und neuen Kontostand und prüft Kernarbeitszeit, Rahmenzeit sowie die ArbZG-Grenzen.</p>
+
+    <div class="preset-bar">
+      <button class="preset-btn" onclick="presetGleitzeit('beispiel')">📋 Beispielwoche (langer Donnerstag)</button>
+      <button class="preset-btn" onclick="presetGleitzeit('standard')">⏰ 37,5-h-Woche (Frühschluss Freitag)</button>
+    </div>
+
+    <div class="calc-card">
+      <div class="tbl-wrap" style="margin:0 0 20px;">
+        <table class="calc-table">
+          <thead>
+            <tr><th>Tag</th><th>Arbeitsbeginn</th><th>Arbeitsende</th><th>Pause (Min.)</th></tr>
+          </thead>
+          <tbody>
+            <tr><td><strong>Montag</strong></td><td><input type="time" id="g-start-0" value="08:00"/></td><td><input type="time" id="g-end-0" value="17:00"/></td><td><input type="number" id="g-pause-0" value="30" min="0" max="180" step="5"/></td></tr>
+            <tr><td><strong>Dienstag</strong></td><td><input type="time" id="g-start-1" value="08:00"/></td><td><input type="time" id="g-end-1" value="17:00"/></td><td><input type="number" id="g-pause-1" value="30" min="0" max="180" step="5"/></td></tr>
+            <tr><td><strong>Mittwoch</strong></td><td><input type="time" id="g-start-2" value="08:00"/></td><td><input type="time" id="g-end-2" value="16:00"/></td><td><input type="number" id="g-pause-2" value="30" min="0" max="180" step="5"/></td></tr>
+            <tr><td><strong>Donnerstag</strong></td><td><input type="time" id="g-start-3" value="08:00"/></td><td><input type="time" id="g-end-3" value="18:00"/></td><td><input type="number" id="g-pause-3" value="45" min="0" max="180" step="5"/></td></tr>
+            <tr><td><strong>Freitag</strong></td><td><input type="time" id="g-start-4" value="08:00"/></td><td><input type="time" id="g-end-4" value="15:30"/></td><td><input type="number" id="g-pause-4" value="30" min="0" max="180" step="5"/></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="calc-grid">
+        <div class="form-grp">
+          <label for="g-soll">Sollarbeitszeit pro Tag (Stunden)</label>
+          <input type="number" id="g-soll" value="8" min="1" max="12" step="0.25"/>
+        </div>
+        <div class="form-grp">
+          <label for="g-uebertrag">Übertrag Gleitzeitkonto (Stunden, ±)</label>
+          <input type="number" id="g-uebertrag" value="0" step="0.25"/>
+        </div>
+        <div class="form-grp">
+          <label for="g-kern-von">Kernarbeitszeit von</label>
+          <input type="time" id="g-kern-von" value="09:00"/>
+        </div>
+        <div class="form-grp">
+          <label for="g-kern-bis">Kernarbeitszeit bis</label>
+          <input type="time" id="g-kern-bis" value="15:00"/>
+        </div>
+      </div>
+      <button class="calc-btn" onclick="calcGleitzeit()">⚡ Gleitzeit berechnen</button>
+
+      <div class="tbl-wrap" id="g-table-wrap" style="margin:24px 0 0;">
+        <table class="calc-table">
+          <thead>
+            <tr><th>Tag</th><th>Arbeitszeit</th><th>Pause</th><th>Ist-Zeit</th><th>Tagesbilanz</th></tr>
+          </thead>
+          <tbody id="g-dayrows"></tbody>
+        </table>
+      </div>
+
+      <div class="res-grid" id="g-results" style="display:none;">
+        <div class="res-box"><div class="lbl">Ist-Zeit (Woche)</div><div class="val" id="r-ist">–</div></div>
+        <div class="res-box"><div class="lbl">Sollarbeitszeit (Woche)</div><div class="val" id="r-soll">–</div></div>
+        <div class="res-box hl"><div class="lbl">Wochenbilanz</div><div class="val" id="r-bilanz">–</div></div>
+        <div class="res-box green"><div class="lbl">Neuer Kontostand</div><div class="val" id="r-saldo">–</div></div>
+      </div>
+      <div id="g-status"></div>
+
+      <div class="box box-warn" style="background:rgba(232,160,32,.10);border-left:4px solid var(--amber);color:#fde68a;margin-top:20px;">
+        <strong>Kernzeit vs. Rahmenzeit – bitte nicht verwechseln:</strong> Die <strong>Kernarbeitszeit</strong> (z. B. 9:00–15:00 Uhr) ist Anwesenheitspflicht für alle. Die <strong>Rahmenarbeitszeit</strong> (typisch 6:00–20:00 Uhr) ist der äußere Korridor, in dem Sie Beginn und Ende Ihrer Arbeitszeit frei wählen dürfen. Beide Zeiten stehen in Ihrer Betriebsvereinbarung, Ihrem Tarifvertrag oder Ihrem Arbeitsvertrag.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTENT: GLEITZEIT GRUNDLAGEN ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Was ist Gleitzeit – und was ist sie nicht?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Definition</div>
+      <p><strong>Gleitzeit</strong> ist eine Arbeitszeitform, bei der Beschäftigte Beginn und Ende ihrer täglichen Arbeitszeit innerhalb einer vereinbarten <strong>Rahmenarbeitszeit</strong> selbst bestimmen – mit Ausnahme einer festgelegten <strong>Kernarbeitszeit</strong>, in der Anwesenheitspflicht besteht. Das <strong>Gleitzeitkonto</strong> ist ein Arbeitszeitkonto, auf dem die Differenz zwischen geleisteter <strong>Ist-Zeit</strong> und geschuldeter <strong>Sollarbeitszeit</strong> als Plus- oder Minusstunden fortgeschrieben wird.</p>
+    </div>
+
+    <p>Drei Begriffe müssen Sie sauber trennen, weil sie im Alltag ständig durcheinandergeworfen werden. Die <strong>Sollarbeitszeit</strong> – also die vertraglich geschuldete Arbeitszeit – legt fest, wie viele Stunden Sie pro Tag oder Woche arbeiten müssen: bei Vollzeit meist 8 Stunden täglich, im öffentlichen Dienst (TVöD) durchschnittlich 7,8 Stunden. Die <strong>Ist-Zeit</strong> ist das, was Sie tatsächlich gearbeitet haben: (Arbeitsende − Arbeitsbeginn) − Pause. Und die <strong>Rahmenarbeitszeit</strong> begrenzt den Korridor, in dem Sie Ihre Arbeitszeit überhaupt legen dürfen – typischerweise 6:00 bis 20:00 Uhr. Die <strong>Kernarbeitszeit</strong> schließlich ist die Zeitspanne mitten in diesem Korridor, in der alle anwesend sein müssen, damit Teams, Kunden und Besprechungen funktionieren – ein klassisches Beispiel ist 9:00 bis 15:00 Uhr.</p>
+
+    <p>Wichtig: Gleitzeit ist nicht dasselbe wie <strong>Vertrauensarbeitszeit</strong>. Bei der Vertrauensarbeitszeit verzichtet der Arbeitgeber weitgehend auf die Kontrolle von Beginn und Ende – es zählt nur das Ergebnis. Bei der Gleitzeit hingegen wird jede Stunde erfasst und auf dem Gleitzeitkonto verbucht. Gerade deshalb ist die Gleitzeit seit dem Grundsatzbeschluss des <strong>Bundesarbeitsgerichts vom September 2022</strong> zur Arbeitszeiterfassungspflicht – aufbauend auf dem <strong>EuGH-Urteil von 2019</strong> – das sauberste Modell: Die Erfassung ist ohnehin vorgeschrieben, und das Gleitzeitkonto macht sie für beide Seiten transparent.</p>
+
+    <p>Eine Besonderheit sollten Sie kennen: Das <strong>Arbeitszeitgesetz (ArbZG)</strong> enthält <strong>keinen einzigen Paragrafen</strong>, der das Wort „Gleitzeit“ regelt. Ob Gleitzeit in Ihrem Betrieb gilt und wie genau – Kappungsgrenzen, Abbaufristen, Kernzeiten –, steht in Ihrem <strong>Arbeitsvertrag</strong>, in einer <strong>Betriebsvereinbarung</strong> oder in einem <strong>Tarifvertrag</strong> (etwa TVöD, TV-L oder den Tarifverträgen der IG Metall). Das ArbZG liefert trotzdem den unverrückbaren Rahmen: keine dieser Vereinbarungen darf die gesetzlichen Schutzgrenzen unterschreiten.</p>
+
+    <h2 style="margin-top:40px;">Wie funktioniert ein Gleitzeitkonto?</h2>
+    <p>Das Prinzip ist denkbar einfach und folgt einer einzigen Formel: <strong>Tagesbilanz = Ist-Zeit − Sollarbeitszeit.</strong> Arbeiten Sie an einem Tag länger als geschuldet, entstehen <strong>Plusstunden</strong>; hören Sie früher auf, entstehen <strong>Minusstunden</strong>. Am Ende der Woche werden alle Tagesbilanzen zur <strong>Wochenbilanz</strong> summiert, und diese wird auf Ihren bisherigen Saldo addiert: <strong>Neuer Kontostand = alter Saldo (Übertrag) + Wochenbilanz.</strong> Genau diese Rechnung führt der Rechner oben automatisch aus – inklusive Umrechnung in <strong>Industrieminuten</strong>, also Hundertstelstunden, wie sie DATEV, SAP HCM und Lexware in der Lohnabrechnung verwenden.</p>
+    <p>Plusstunden sind dabei kein Selbstzweck: Sie dienen dem <strong>Zeitausgleich</strong> – also dem früheren Feierabend oder dem freien Gleittag, wenn es die betriebliche Lage erlaubt. Minusstunden müssen Sie umgekehrt wieder „reinarbeiten“. Die Spielregeln dafür – wie viele Plusstunden Sie ansammeln dürfen, bis wann Minusstunden ausgeglichen sein müssen, ob Stunden verfallen oder gekappt werden – legt Ihre Gleitzeit-Vereinbarung fest. Ein Blick in die Betriebsvereinbarung lohnt sich also, bevor das Konto überläuft.</p>
+
+    <div class="box box-tip">
+      <strong>Gleitzeitkonto ≠ Überstundenkonto:</strong> Auf dem Gleitzeitkonto landen nur die Differenzen aus Ihrer flexiblen Tagesgestaltung. <strong>Überstunden</strong> – also vom Arbeitgeber angeordnete Mehrarbeit über die Sollarbeitszeit hinaus – werden gesondert behandelt und oft mit Zuschlägen vergütet. Wenn Sie regelmäßig deutlich über Ihrem Soll liegen, prüfen Sie mit unserem <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" style="color:#1d4ed8;font-weight:700;">Überstunden-Rechner</a>, ob es sich noch um Gleitzeit oder bereits um anzuordnende Überstunden handelt.
+    </div>
+
+    <h2 style="margin-top:40px;">Wie berechnet sich meine Tagesbilanz? Schritt für Schritt</h2>
+    <p>Die Berechnung folgt immer denselben vier Schritten – ob Sie sie per Hand, in Excel oder mit dem Rechner oben durchführen:</p>
+    <p><strong>1. Bruttoarbeitszeit ermitteln.</strong> Ziehen Sie den Arbeitsbeginn vom Arbeitsende ab. Beispiel: 8:00 bis 17:00 Uhr ergibt 9,0 Stunden.</p>
+    <p><strong>2. Pause abziehen.</strong> Pausen zählen nicht als Arbeitszeit. Bei 30 Minuten Pause bleiben von 9,0 Stunden noch <strong>8,5 Stunden Ist-Zeit</strong>.</p>
+    <p><strong>3. Mit der Sollarbeitszeit vergleichen.</strong> Beträgt Ihr Soll 8,0 Stunden, lautet die Tagesbilanz: 8,5 − 8,0 = <strong>+0,5 Stunden</strong> – also 50 Industrieminuten Plusstunden.</p>
+    <p><strong>4. Auf das Konto buchen.</strong> Die Tagesbilanz wird zum bisherigen Saldo addiert. So wächst Ihr Gleitzeitkonto Tag für Tag.</p>
+
+    <div class="box box-ok">
+      <strong>Rechenbeispiel – eine typische Gleitzeitwoche:</strong> Ihre Sollarbeitszeit beträgt <strong>8,0 Stunden</strong> pro Tag. <strong>Montag:</strong> 8:00–17:00 Uhr, 30 Min. Pause → 8,5 h Ist → <strong>+0,5 h</strong>. <strong>Dienstag:</strong> 8:00–17:00 Uhr, 30 Min. Pause → 8,5 h → <strong>+0,5 h</strong>. <strong>Mittwoch:</strong> 8:00–16:00 Uhr, 30 Min. Pause → 7,5 h → <strong>−0,5 h</strong>. <strong>Donnerstag:</strong> 8:00–18:00 Uhr, 45 Min. Pause → 9,25 h → <strong>+1,25 h</strong>. <strong>Freitag:</strong> 8:00–15:30 Uhr, 30 Min. Pause → 7,0 h → <strong>−1,0 h</strong>. Wochen-Ist: <strong>40,75 h</strong>, Wochen-Soll: <strong>40,0 h</strong> → <strong>Wochenbilanz +0,75 h</strong> (75 Industrieminuten). Bei einem Übertrag von 0 beträgt Ihr neuer Kontostand <strong>+0,75 Stunden</strong>. Genau diese Beispielwoche ist im Rechner oben bereits voreingestellt – Sie können sie direkt nachrechnen.
+    </div>
+
+    <h2 style="margin-top:40px;">Was bedeuten Kernarbeitszeit und Rahmenarbeitszeit?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Definition</div>
+      <p>Die <strong>Kernarbeitszeit</strong> ist die Zeitspanne, in der alle Beschäftigten anwesend sein müssen – zum Beispiel 9:00 bis 15:00 Uhr. Die <strong>Rahmenarbeitszeit</strong> ist der äußere Korridor, innerhalb dessen Sie Beginn und Ende Ihrer Arbeit frei wählen dürfen – typischerweise 6:00 bis 20:00 Uhr. Zwischen diesen beiden Zeiten liegt Ihre <strong>Gleitzeitspanne</strong>: die frei gestaltbare Zeit vor und nach der Kernzeit.</p>
+    </div>
+
+    <p>Die Kernarbeitszeit ist der Kompromiss zwischen Ihrer Flexibilität und den betrieblichen Abläufen: Besprechungen, Kundentermine und Teamarbeit brauchen verlässliche Überschneidungszeiten. Deshalb gilt während der Kernzeit <strong>Anwesenheitspflicht</strong> – Ausnahmen wie Arzttermine, Außentermine oder dienstliche Abwesenheit regelt Ihre Betriebsvereinbarung. Wer die Kernzeit regelmäßig unterschreitet, verletzt seine arbeitsvertraglichen Pflichten; der Rechner oben warnt Sie deshalb automatisch, wenn Ihre eingetragene Arbeitszeit die Kernzeit nicht vollständig abdeckt.</p>
+
+    <div class="box box-warn">
+      <strong>Typisches Beispiel aus dem öffentlichen Dienst:</strong> Viele kommunale Gleitzeit-Betriebsvereinbarungen – etwa in einer Stadtverwaltung in Berlin (10115) oder München (80331) – legen die Kernarbeitszeit auf <strong>9:00 bis 15:00 Uhr</strong> (freitags oft 9:00 bis 12:00 Uhr) und die Rahmenarbeitszeit auf <strong>6:00 bis 20:00 Uhr</strong> fest. Im <strong>TVöD</strong> (Bund und Kommunen) beträgt die regelmäßige wöchentliche Arbeitszeit im Schnitt <strong>39 Stunden</strong> – das entspricht einer Sollarbeitszeit von <strong>7,8 Stunden pro Tag</strong>. Tragen Sie in diesem Fall 7,8 als Sollarbeitszeit in den Rechner ein; die Tagesbilanz rechnet dann exakt gegen diesen Wert.
+    </div>
+
+    <h3>Darf ich bei Gleitzeit auch nach 20:00 Uhr arbeiten?</h3>
+    <p><strong>Das hängt von Ihrer Vereinbarung ab.</strong> Viele Betriebe legen die Rahmenarbeitszeit auf 6:00 bis 20:00 Uhr fest – außerhalb dürfen Sie dann grundsätzlich nicht arbeiten. Das ArbZG selbst verbietet Spätarbeit nicht, solange die 10-Stunden-Tagesgrenze und die 11 Stunden Ruhezeit (§§ 3, 5 ArbZG) eingehalten werden. Nachtarbeit ab 23:00 Uhr unterliegt zusätzlich den besonderen Regeln des § 6 ArbZG.</p>
+
+    <h2 style="margin-top:40px;">Gilt das Arbeitszeitgesetz eigentlich auch bei Gleitzeit?</h2>
+    <p><strong>Ja, vollständig.</strong> Gleitzeit hebt keine einzige Schutzvorschrift auf: Die Tageshöchstgrenze von 10 Stunden (§ 3 ArbZG), die Pausenstaffel nach § 4 ArbZG und die 11 Stunden Ruhezeit (§ 5 ArbZG) gelten für jede Arbeitszeitform. Flexibel ist nur die Lage Ihrer Arbeitszeit innerhalb der vereinbarten Rahmenarbeitszeit – nicht ihre Dauer. Keine Betriebsvereinbarung und kein Tarifvertrag kann diese Grenzen zu Ihren Ungunsten unterschreiten.</p>
+
+    <h3>Muss ich bei Gleitzeit Pausen einhalten?</h3>
+    <p><strong>Ja.</strong> Die Pausenstaffel des § 4 ArbZG gilt unabhängig von der Arbeitszeitform: Über 6 Stunden Arbeit sind mindestens 30 Minuten Pause Pflicht, über 9 Stunden mindestens 45 Minuten – jeweils in Blöcken von mindestens 15 Minuten. Die Pause zählt nicht als Arbeitszeit und erhöht Ihre Tagesbilanz nicht; der Rechner zieht sie automatisch von der Ist-Zeit ab. Details zur korrekten Pausenberechnung finden Sie in unserem <a href="https://arbeitszeitrechner365.de/pausenrechner" style="color:#1d4ed8;font-weight:700;">Pausenrechner nach § 4 ArbZG</a>.</p>
+
+    <h3>Was passiert, wenn ich an einem Tag mehr als 10 Stunden arbeite?</h3>
+    <p><strong>Das ist unzulässig – auch bei Gleitzeit.</strong> § 3 ArbZG setzt die absolute Tageshöchstgrenze auf 10 Stunden; darüber hinaus darf kein Tag gehen, egal was die Betriebsvereinbarung vorsieht. Bis zu 10 Stunden sind nur erlaubt, wenn im Schnitt von sechs Monaten oder 24 Wochen 8 Stunden nicht überschritten werden. Der Rechner warnt Sie automatisch, sobald ein Tag diese Grenzen reißt.</p>
+
+    <h3>Was bedeutet die 11-Stunden-Ruhezeit konkret für meine Gleitzeit?</h3>
+    <p>Nach <strong>§ 5 Abs. 1 ArbZG</strong> müssen zwischen Arbeitsende und dem nächsten Arbeitsbeginn mindestens <strong>11 Stunden ununterbrochene Ruhezeit</strong> liegen – auch bei flexiblen Arbeitszeiten. Konkret: Wer abends bis 20:00 Uhr gleitet, darf frühestens um 7:00 Uhr wieder beginnen. In bestimmten Branchen können Tarifverträge die Ruhezeit auf 10 Stunden verkürzen (§ 5 Abs. 3 ArbZG). Der Rechner prüft die Ruhezeit automatisch zwischen allen aufeinanderfolgenden Arbeitstagen und warnt Sie bei Unterschreitung.</p>
+
+    <h2 style="margin-top:40px;">Was passiert mit Plus- und Minusstunden?</h2>
+    <p>Plusstunden bauen Sie in der Regel durch <strong>Freizeitausgleich</strong> ab: früherer Feierabend, späterer Arbeitsbeginn oder ein ganzer <strong>Gleittag</strong> – je nachdem, was Ihre Vereinbarung erlaubt und was der Betrieb hergibt. Minusstunden arbeiten Sie umgekehrt durch längere Tage wieder rein. Entscheidend sind die <strong>Fristen und Kappungsgrenzen</strong> Ihrer Regelung: Viele Betriebsvereinbarungen sehen vor, dass das Konto nur innerhalb eines bestimmten Korridors schwanken darf und zu einem Stichtag (oft Quartals- oder Jahresende) ausgeglichen sein muss.</p>
+    <p>Achtung bei der <strong>Kappung</strong>: Überschreiten Ihre Plusstunden die vereinbarte Obergrenze, können die überschüssigen Stunden ersatzlos verfallen – Sie haben dann umsonst gearbeitet. Behalten Sie Ihr Konto deshalb im Blick und planen Sie den Abbau rechtzeitig, statt die Stunden bis zum Stichtag anzusparen. Umgekehrt dürfen Minusstunden nicht beliebig auflaufen: Wer dauerhaft im Minus ist, muss mit einer Abmahnung rechnen, weil die Sollarbeitszeit eine vertragliche Pflicht ist.</p>
+    <p>Ein häufiger Streitpunkt: <strong>Darf der Arbeitgeber Plusstunden einseitig anordnen oder streichen?</strong> Nein – weder das Ansammeln noch der Abbau von Gleitzeitstunden darf einseitig diktiert werden, solange die Vereinbarung nichts anderes vorsieht. Der Arbeitgeber kann allerdings im Rahmen seines Direktionsrechts die Lage der Arbeitszeit steuern und bei betrieblichen Gründen den Abbau von Plusstunden anordnen – etwa durch Freistellung. Bei anhaltendem Streit hilft der Betriebsrat weiter; er hat bei der Arbeitszeitgestaltung ein Mitbestimmungsrecht nach § 87 Abs. 1 Nr. 2 BetrVG.</p>
+
+    <h2 style="margin-top:40px;">Krankheit, Urlaub und Feiertage: Was wird wie auf dem Gleitzeitkonto verbucht?</h2>
+    <p>Hier passieren in der Praxis die meisten – und teuersten – Fehler. Die Grundregel lautet: <strong>Tage, an denen Sie ohne Ihr Verschulden nicht arbeiten, werden mit der Sollarbeitszeit gutgeschrieben.</strong> Sie erzeugen weder Plus- noch Minusstunden.</p>
+
+    <h3>Darf mein Arbeitgeber Minusstunden nach einer Krankschreibung in mein Gleitzeitkonto einbuchen?</h3>
+    <p><strong>Nein.</strong> Während einer Arbeitsunfähigkeit erhalten Sie bis zu sechs Wochen Ihr volles Entgelt weiter (<strong>§ 3 Abs. 1 EFZG</strong> – Entgeltfortzahlungsgesetz), und der Krankheitstag wird mit Ihrer Sollarbeitszeit gutgeschrieben. Das Bundesarbeitsgericht verbietet in ständiger Rechtsprechung, Krankheitstage als Minusstunden zu verbuchen. Achten Sie darauf, dass die Personalabteilung die elektronische Arbeitsunfähigkeitsbescheinigung (<strong>eAU</strong>) korrekt als Sollzeit erfasst – und nicht etwa als „0 Stunden gearbeitet“.</p>
+    <p>Auch im <strong>Urlaub</strong> gilt das Sollzeit-Prinzip: Urlaubstage werden mit der Sollarbeitszeit gutgeschrieben und nicht auf das Gleitzeitkonto angerechnet. Werden Sie im Urlaub krank, werden die Krankheitstage nach <strong>§ 9 BUrlG</strong> nicht auf den Urlaub angerechnet – per eAU nachgewiesen, bleiben Ihnen diese Urlaubstage erhalten. Ihren anteiligen Urlaubsanspruch – gerade bei Teilzeit eine beliebte Fehlerquelle – berechnen Sie mit unserem <a href="https://arbeitszeitrechner365.de/urlaubstage-rechner" style="color:#1d4ed8;font-weight:700;">Urlaubstage-Rechner nach BUrlG</a>.</p>
+    <p><strong>Feiertage</strong> mindern ebenfalls Ihre Sollarbeitszeit: An einem gesetzlichen Feiertag wird die Sollzeit um den Tagesanteil gekürzt – Sie müssen die Stunden nicht nacharbeiten. Welche Tage Feiertage sind, bestimmt Ihr <strong>Bundesland</strong>: <strong>Fronleichnam</strong> ist Feiertag in Bayern, Baden-Württemberg, Nordrhein-Westfalen, Hessen, Rheinland-Pfalz und dem Saarland – nicht aber in Berlin (10115) oder Hamburg. Umgekehrt kennt nur <strong>Sachsen</strong> den <strong>Buß- und Bettag</strong> als gesetzlichen Feiertag. Arbeiten Sie in München (80331), haben Sie also andere Sollzeit-Kürzungen als Ihre Kollegin in Berlin – bei identischem Arbeitszeitgesetz. Alle Feiertage je Bundesland listet unser <a href="https://arbeitszeitrechner365.de/feiertage-rechner" style="color:#1d4ed8;font-weight:700;">Feiertage-Rechner</a>.</p>
+
+    <h2 style="margin-top:40px;">Wie trage ich Gleitzeitstunden richtig in DATEV oder SAP ein?</h2>
+    <p>Der Klassiker unter den Lohnabrechnungs-Fehlern: <strong>Dezimalstunden</strong> falsch umgerechnet. Lohnprogramme wie <strong>DATEV</strong>, <strong>SAP HCM</strong> oder <strong>Lexware</strong> rechnen nicht mit Minuten, sondern mit <strong>Industrieminuten</strong> – also Hundertstelstunden. 30 Minuten sind 50 Industrieminuten, 45 Minuten sind 75. Wer 8 Stunden 30 Minuten als „8,30“ einträgt, meldet in Wahrheit 8 Stunden und 18 Minuten – und wundert sich über die falsche Abrechnung.</p>
+    <p>Die Umrechnung ist simpel: <strong>Minuten ÷ 60 × 100 = Industrieminuten.</strong> Beispiel: 9 Stunden 15 Minuten = 9 + (15 ÷ 60 × 100 ÷ 100) = <strong>9,25 Dezimalstunden</strong>. Der Rechner oben zeigt Ihnen jede Tagesbilanz bereits in Stunden <em>und</em> Industrieminuten an – übernehmen Sie einfach den angezeigten Wert. Für die Umrechnung in beide Richtungen nutzen Sie zusätzlich unseren <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" style="color:#1d4ed8;font-weight:700;">Dezimalstunden-Rechner (DATEV &amp; SAP Konverter)</a>.</p>
+
+    <div class="box box-tip">
+      <strong>Schmerzpunkt vieler Beschäftigter:</strong> Die Gehaltsabrechnung stimmt nicht, weil Gleitzeitstunden falsch in Dezimalstunden umgerechnet wurden – etwa 7 Stunden 45 Minuten als „7,45“ statt korrekt „7,75“ eingetragen. Rechnen Sie Ihre Tagesbilanzen mit dem Tool oben nach und vergleichen Sie das Ergebnis mit Ihrer Lohnabrechnung. Differenzen klären Sie am besten zuerst mit der Personalabteilung – meist handelt es sich um einen simplen Eingabefehler, nicht um Absicht.
+    </div>
+
+    <h2 style="margin-top:40px;">Muss Gleitzeit elektronisch erfasst werden?</h2>
+    <p><strong>Ja – und zwar lückenlos.</strong> Seit dem Grundsatzbeschluss des <strong>Bundesarbeitsgerichts vom 13. September 2022</strong> (1 ABR 22/21) – aufbauend auf dem <strong>EuGH-Urteil vom 14. Mai 2019</strong> (C-55/18) – müssen Arbeitgeber in Deutschland die <strong>gesamte Arbeitszeit</strong> ihrer Beschäftigten systematisch erfassen. Das gilt für Gleitzeit genauso wie für feste Arbeitszeiten: Beginn, Ende und Dauer der täglichen Arbeitszeit müssen objektiv, verlässlich und zugänglich dokumentiert sein – ob per Stempeluhr, App, Excel-Tabelle oder Zeiterfassungssoftware.</p>
+    <p>Für Sie hat das zwei praktische Folgen. Erstens: <strong>Führen Sie Ihre Zeiten gewissenhaft</strong> – das Gleitzeitkonto ist nur so korrekt wie Ihre Einträge. Zweitens: <strong>Prüfen Sie Ihr Konto regelmäßig</strong>, am besten monatlich, und gleichen Sie es mit Ihren eigenen Aufzeichnungen ab. Gerade bei Gleitzeit schleichen sich Fehler ein – vergessene Pausenbuchungen, falsch erfasste Kernzeiten oder nicht gutgeschriebene Krankheitstage. Einmal im Monat geprüft, vermeiden Sie böse Überraschungen beim Jahresabschluss des Kontos.</p>
+
+    <h2 style="margin-top:40px;">Gleitzeit in der Praxis: TVöD, TV-L und IG Metall</h2>
+    <p>Im <strong>öffentlichen Dienst</strong> ist Gleitzeit besonders verbreitet – und besonders gut geregelt. Im <strong>TVöD</strong> (Bund und Kommunen) beträgt die regelmäßige wöchentliche Arbeitszeit im Schnitt <strong>39 Stunden</strong> (§ 6 Abs. 1 TVöD), also <strong>7,8 Stunden pro Tag</strong>. Die Details der Gleitzeit – Kernzeiten, Rahmen, Kappungsgrenzen – regeln Dienstvereinbarungen der jeweiligen Behörde. Im <strong>TV-L</strong> (Länder) gelten je nach Bundesland ähnliche Modelle mit eigenen Dienstvereinbarungen.</p>
+    <p>In der <strong>Metall- und Elektroindustrie</strong> sehen die Tarifverträge der <strong>IG Metall</strong> ebenfalls flexible Arbeitszeitmodelle vor – dort oft eingebettet in weitergehende Wahloptionen zwischen Zeit und Geld. Auch hier gilt: Die tariflichen oder betrieblichen Gleitzeitregeln konkretisieren nur die Ausgestaltung; die Schutzgrenzen der §§ 3 bis 5 ArbZG bleiben unantastbar. Arbeiten Sie in <strong>Teilzeit</strong> nach dem <strong>Teilzeit- und Befristungsgesetz (TzBfG)</strong>, gilt Ihre individuell vereinbarte Stundenzahl als Sollarbeitszeit – tragen Sie sie einfach in den Rechner ein. Ihre exakte Sollzeit je Wochenmodell ermitteln Sie mit unserem <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" style="color:#1d4ed8;font-weight:700;">Sollarbeitszeit-Rechner</a>.</p>
+
+    <h2 style="margin-top:40px;">Was passiert mit dem Gleitzeitkonto bei Kündigung?</h2>
+    <p>Auch das regelt Ihre <strong>Gleitzeit-Vereinbarung</strong> – einen allgemeinen gesetzlichen Anspruch auf Auszahlung gibt es nicht. In der Praxis gibt es drei Wege: <strong>Abbau durch Freizeit</strong> vor dem Ausscheiden (die sauberste Lösung), <strong>Auszahlung</strong> der Plusstunden mit dem letzten Gehalt oder – seltener und ärgerlich – <strong>Verfall</strong> bei Kappung. Klären Sie die Regelung frühzeitig mit der Personalabteilung, sobald eine Kündigung im Raum steht, damit keine hart erarbeiteten Stunden verloren gehen.</p>
+    <p>Bei <strong>Minusstunden</strong> zum Ausscheidenszeitpunkt kann der Arbeitgeber den Gegenwert grundsätzlich vom letzten Gehalt abziehen oder eine Nacharbeit verlangen – je nach Vereinbarung. Auch hier gilt: Frühzeitig klären ist besser als nachträglich streiten. Und falls das Arbeitsverhältnis ohnehin endet, denken Sie auch an Ihren <strong>Resturlaub</strong>: Nicht genommener Urlaub wird bei Beendigung nach § 7 Abs. 4 BUrlG abgegolten.</p>
+
+    <div class="box box-tip">
+      <strong>Kein Ersatz für Rechtsberatung:</strong> Diese Seite erklärt die rechtlichen Grundlagen der Gleitzeit nach bestem Wissen und mit exakten Paragrafenverweisen (ArbZG, EFZG, BUrlG, TzBfG). Die konkrete Ausgestaltung der Gleitzeit steht in Ihrem Arbeitsvertrag, Ihrer Betriebsvereinbarung oder Ihrem Tarifvertrag – diese Seite ersetzt keine individuelle Rechtsberatung. Bei konkreten Streitfällen – etwa um Kappung, Verfall oder Abbaufristen – wenden Sie sich an Ihren Betriebsrat, Ihre Gewerkschaft oder einen Fachanwalt für Arbeitsrecht.
+    </div>
+
+    <div class="box box-ok" style="text-align:center;">
+      <strong style="font-size:17px;">Wie steht Ihr Gleitzeitkonto?</strong><br/>
+      Tragen Sie oben Ihre Arbeitswoche ein und sehen Sie in unter einer Minute Tagesbilanz, Wochenbilanz und neuen Kontostand – inklusive Kernarbeitszeit- und ArbZG-Prüfung. Kostenlos, ohne Anmeldung, alle Daten bleiben in Ihrem Browser.
+      <br/><a href="#rechner" style="display:inline-block;margin-top:12px;background:var(--navy);color:#fff;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">⚡ Jetzt Gleitzeit berechnen</a>
+      <br/><span style="display:inline-block;margin-top:10px;font-size:13px;">Zurück zur <a href="https://arbeitszeitrechner365.de/" style="color:var(--navy);font-weight:700;">Startseite von arbeitszeitrechner365.de</a> mit allen Arbeitszeit-Tools.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ SECTION ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zur Gleitzeit</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Ist Gleitzeit im Arbeitszeitgesetz (ArbZG) geregelt?</summary>
+        <div class="faq-body">
+          Nein, das ArbZG enthält keinen eigenen Paragrafen zur Gleitzeit. Ob und wie Gleitzeit gilt, regeln Ihr Arbeitsvertrag, eine Betriebsvereinbarung oder ein Tarifvertrag. Die Schutzgrenzen des ArbZG gelten trotzdem uneingeschränkt weiter: höchstens 10 Stunden pro Tag (<strong>§ 3 ArbZG</strong>), Pausen nach <strong>§ 4 ArbZG</strong> und 11 Stunden Ruhezeit nach <strong>§ 5 ArbZG</strong>.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie viele Plusstunden darf mein Gleitzeitkonto maximal enthalten?</summary>
+        <div class="faq-body">
+          Eine gesetzliche Obergrenze gibt es nicht – entscheidend ist Ihre Gleitzeit-Vereinbarung. Viele Betriebsvereinbarungen und Tarifverträge legen Kappungsgrenzen fest, etwa einen Korridor von minus 20 bis plus 40 Stunden. Überschüssige Stunden können verfallen oder müssen abgebaut werden. Prüfen Sie deshalb Ihre Betriebsvereinbarung oder fragen Sie den Betriebsrat.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Darf mein Arbeitgeber Minusstunden nach einer Krankschreibung einbuchen?</summary>
+        <div class="faq-body">
+          Nein. Bei Arbeitsunfähigkeit erhalten Sie bis zu sechs Wochen Ihr volles Entgelt weiter (<strong>§ 3 Abs. 1 EFZG</strong>). Der Krankheitstag wird mit der Sollarbeitszeit gutgeschrieben – die ständige Rechtsprechung des Bundesarbeitsgerichts verbietet, Krankheitstage als Minusstunden im Gleitzeitkonto zu verbuchen. Reichen Sie die elektronische Arbeitsunfähigkeitsbescheinigung (<strong>eAU</strong>) rechtzeitig ein.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was passiert mit meinem Gleitzeitkonto, wenn ich kündige?</summary>
+        <div class="faq-body">
+          Das regelt Ihre Gleitzeit-Vereinbarung – einen allgemeinen gesetzlichen Auszahlungsanspruch gibt es nicht. Üblich sind drei Wege: Abbau der Plusstunden durch Freizeit vor dem Ausscheiden, Auszahlung mit dem letzten Gehalt oder – seltener – Verfall. Klären Sie die Regelung frühzeitig mit der Personalabteilung, damit keine Stunden verloren gehen.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Muss ich während der gesamten Kernarbeitszeit anwesend sein?</summary>
+        <div class="faq-body">
+          Grundsätzlich ja: Die Kernarbeitszeit ist genau die Zeitspanne, in der alle Beschäftigten anwesend sein müssen – typischerweise etwa 9:00 bis 15:00 Uhr. Ausnahmen wie Arzttermine oder dienstliche Abwesenheit regelt Ihre Betriebsvereinbarung. Wer die Kernzeit regelmäßig unterschreitet, verletzt seine arbeitsvertraglichen Pflichten.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Gilt die 11-Stunden-Ruhezeit auch bei Gleitzeit?</summary>
+        <div class="faq-body">
+          Ja, uneingeschränkt. Nach <strong>§ 5 Abs. 1 ArbZG</strong> müssen zwischen Arbeitsende und nächstem Arbeitsbeginn mindestens 11 Stunden ununterbrochene Ruhezeit liegen – auch bei flexiblen Arbeitszeiten. Wer bis 20:00 Uhr gleitet, darf frühestens um 7:00 Uhr wieder beginnen. Tarifverträge können die Ruhezeit in bestimmten Branchen auf 10 Stunden verkürzen (<strong>§ 5 Abs. 3 ArbZG</strong>).
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie rechne ich Gleitzeitstunden in Industrieminuten für DATEV um?</summary>
+        <div class="faq-body">
+          Teilen Sie die Minuten durch 60 und multiplizieren Sie mit 100: 45 Minuten entsprechen 75 Industrieminuten, 30 Minuten entsprechen 50. In Dezimalstunden ausgedrückt sind 8 Stunden 30 Minuten also 8,50 Stunden. Unser <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" style="color:#1d4ed8;font-weight:700;">Dezimalstunden-Rechner</a> übernimmt die Umrechnung in beide Richtungen fehlerfrei – ein häufiger Grund für falsche Lohnabrechnungen.
+        </div>
+      </details>
+    </div>
+
+    <!-- E-E-A-T AUTHOR BOX -->
+    <div class="author-box">
+      <div class="author-avatar">R</div>
+      <div>
+        <div class="author-name">Redaktion arbeitszeitrechner365.de</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: Oktober 2026</div>
+        <div class="author-desc">
+          Geprüft nach dem Redaktionsstandard von arbeitszeitrechner365.de (Gründer &amp; Leitender Softwareentwickler Muhammad Bilal; Fachredakteur für Arbeitsrecht &amp; HR Tobias Weber). Alle rechtlichen Erläuterungen basieren auf dem deutschen <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 ArbZG (Höchstarbeitszeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 ArbZG (Pausen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 5 ArbZG (Ruhezeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__6.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 6 ArbZG (Nachtarbeit)</a> sowie <a href="https://www.gesetze-im-internet.de/entgfg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 EFZG (Entgeltfortzahlung)</a> und der Rechtsprechung des <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Bundesarbeitsgerichts (BAG)</a>, insbesondere zum Beschluss vom 13.09.2022 zur Arbeitszeiterfassungspflicht.
+        </div>
+      </div>
+    </div>
+
+    <!-- SUMMARY NOTE -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Gleitzeit auf einen Blick</strong>
+      Gleitzeit = freie Lage der Arbeitszeit innerhalb der Rahmenarbeitszeit (typisch 6:00–20:00 Uhr) bei Anwesenheitspflicht in der Kernarbeitszeit (z. B. 9:00–15:00 Uhr). Tagesbilanz = Ist-Zeit − Sollarbeitszeit; Wochenbilanz = Summe der Tagesbilanzen; neuer Kontostand = Übertrag + Wochenbilanz. Das ArbZG gilt uneingeschränkt: max. 10 Stunden pro Tag (§ 3), Pausen nach § 4, 11 Stunden Ruhezeit (§ 5). Krankheitstage werden mit der Sollzeit gutgeschrieben – niemals als Minusstunden (§ 3 EFZG).
+      <a href="#rechner" style="color:#1d4ed8;font-weight:700;">Jetzt Ihr Gleitzeitkonto berechnen →</a>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner &amp; Tools</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/#tool" class="rel-card">
+        <div class="rel-tag">Tagesrechner</div>
+        <div class="rel-title">Arbeitszeitrechner – minutengenau mit Pause</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" class="rel-card">
+        <div class="rel-tag">Überstunden</div>
+        <div class="rel-title">Überstunden-Rechner – Zuschläge &amp; Abbau</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="rel-card">
+        <div class="rel-tag">Sollarbeitszeit</div>
+        <div class="rel-title">Sollarbeitszeit &amp; Zeitkonto berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/pausenrechner" class="rel-card">
+        <div class="rel-tag">Pausen</div>
+        <div class="rel-title">Pausenrechner – Pflichtpause nach § 4 ArbZG</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <p>Präziser kostenloser Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach deutschem Arbeitsrecht.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">Tools &amp; Rechner</div>
+      <ul class="footer-links">
+        <li><a href="/#tool">Arbeitszeitrechner (Haupt-Tool)</a></li>
+        <li><a href="/pausenrechner">Pausenrechner (§ 4 ArbZG)</a></li>
+        <li><a href="/arbeitszeitrechner-monat">Monatsstunden berechnen</a></li>
+        <li><a href="/arbeitszeitrechner-dezimal">Dezimalstunden umrechnen</a></li>
+        <li><a href="/sollarbeitszeit-rechner">Sollarbeitszeit &amp; Zeitkonto</a></li>
+        <li><a href="/#lohnrechner">Integrierter Lohnrechner</a></li>
+        <li><a href="/#fuer-wen">Für alle Berufstypen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigation &amp; Ratgeber</div>
+      <ul class="footer-links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/#so-gehts">Bedienungsanleitung</a></li>
+        <li><a href="/#faq">Häufige Fragen (FAQ)</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Folgen Sie uns</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/Arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://de.pinterest.com/arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          <span>Pinterest</span>
+        </a>
+        <a href="https://x.com/Arbeitszeit365" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+    <div class="footer-bottom-links">
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function fmtDE(n, dec){
+  return n.toFixed(dec === undefined ? 1 : dec).replace('.', ',');
+}
+var G_TAGE = ['Montag','Dienstag','Mittwoch','Donnerstag','Freitag'];
+
+function toMin(t){
+  if(!t || t.indexOf(':') < 0) return NaN;
+  var p = t.split(':');
+  var h = parseInt(p[0], 10), m = parseInt(p[1], 10);
+  if(isNaN(h) || isNaN(m)) return NaN;
+  return h * 60 + m;
+}
+function fmtHM(min){
+  var h = Math.floor(min / 60), m = min % 60;
+  if(m < 0){ m = 0; }
+  return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m;
+}
+function signDE(hours, dec){
+  var s = hours < -1e-9 ? '\u2212' : '+';
+  return s + fmtDE(Math.abs(hours), dec === undefined ? 2 : dec) + ' h';
+}
+function presetGleitzeit(modus){
+  var starts = ['08:00','08:00','08:00','08:00','08:00'];
+  var ends, pausen;
+  if(modus === 'standard'){
+    ends = ['16:30','16:30','16:30','16:30','14:00'];
+    pausen = [30,30,30,30,30];
+  } else {
+    ends = ['17:00','17:00','16:00','18:00','15:30'];
+    pausen = [30,30,30,45,30];
+  }
+  for(var i = 0; i < 5; i++){
+    document.getElementById('g-start-' + i).value = starts[i];
+    document.getElementById('g-end-' + i).value = ends[i];
+    document.getElementById('g-pause-' + i).value = pausen[i];
+  }
+  calcGleitzeit();
+}
+function calcGleitzeit(){
+  var soll = parseFloat(String(document.getElementById('g-soll').value).replace(',', '.'));
+  var uebertrag = parseFloat(String(document.getElementById('g-uebertrag').value).replace(',', '.'));
+  var kernVon = toMin(document.getElementById('g-kern-von').value);
+  var kernBis = toMin(document.getElementById('g-kern-bis').value);
+  if(isNaN(soll) || soll <= 0) soll = 8;
+  if(isNaN(uebertrag)) uebertrag = 0;
+  if(isNaN(kernVon)) kernVon = 540;   /* 09:00 */
+  if(isNaN(kernBis)) kernBis = 900;   /* 15:00 */
+
+  var rows = '';
+  var istWoche = 0, gearbeiteteTage = 0, hasRows = false;
+  var warnKern = [], warnRahmen = [], warnZehn = [], warnAcht = [], warnPause = [];
+  var startZeiten = [], endZeiten = [];
+
+  for(var i = 0; i < 5; i++){
+    var s = toMin(document.getElementById('g-start-' + i).value);
+    var e = toMin(document.getElementById('g-end-' + i).value);
+    var p = parseFloat(String(document.getElementById('g-pause-' + i).value).replace(',', '.'));
+    if(isNaN(s) || isNaN(e) || e <= s){
+      /* Tag ohne gueltige Zeiten: wird uebersprungen */
+      continue;
+    }
+    if(isNaN(p) || p < 0) p = 0;
+    var ist = (e - s - p) / 60;
+    if(ist < 0) ist = 0;
+    var bilanz = ist - soll;
+    var indMin = Math.round(bilanz * 100);
+    istWoche += ist;
+    gearbeiteteTage++;
+    hasRows = true;
+    startZeiten[i] = s;
+    endZeiten[i] = e;
+
+    var bilanzFarbe = bilanz > 1e-9 ? 'color:#4ade80;' : (bilanz < -1e-9 ? 'color:#fca5a5;' : '');
+    var indVorzeichen = indMin >= 0 ? '+' : '\u2212';
+    rows += '<tr><td><strong>' + G_TAGE[i] + '</strong></td>'
+      + '<td>' + fmtHM(s) + ' \u2013 ' + fmtHM(e) + '</td>'
+      + '<td>' + Math.round(p) + ' Min.</td>'
+      + '<td>' + fmtDE(ist, 2) + ' h</td>'
+      + '<td style="' + bilanzFarbe + '">' + signDE(bilanz) + ' (' + indVorzeichen + Math.abs(indMin) + ' Industrieminuten)</td></tr>';
+
+    if(s > kernVon || e < kernBis) warnKern.push(G_TAGE[i]);
+    if(s < 360 || e > 1200) warnRahmen.push(G_TAGE[i]);
+    if(ist > 10 + 1e-9) warnZehn.push(G_TAGE[i]);
+    else if(ist > 8 + 1e-9) warnAcht.push(G_TAGE[i]);
+    if(ist > 9 + 1e-9 && p < 45) warnPause.push(G_TAGE[i]);
+    else if(ist > 6 + 1e-9 && p < 30) warnPause.push(G_TAGE[i]);
+  }
+
+  if(!hasRows){
+    document.getElementById('g-table-wrap').style.display = 'none';
+    document.getElementById('g-results').style.display = 'none';
+    document.getElementById('g-status').innerHTML = '<div class="status-banner status-warn">\u26A0\uFE0F <span>Bitte tragen Sie f\u00FCr mindestens einen Wochentag Arbeitsbeginn und Arbeitsende ein.</span></div>';
+    return;
+  }
+  document.getElementById('g-dayrows').innerHTML = rows;
+  document.getElementById('g-table-wrap').style.display = 'block';
+
+  var sollWoche = soll * gearbeiteteTage;
+  var bilanzWoche = istWoche - sollWoche;
+  var saldoNeu = uebertrag + bilanzWoche;
+
+  document.getElementById('g-results').style.display = 'grid';
+  document.getElementById('r-ist').textContent = fmtDE(istWoche, 2) + ' h';
+  document.getElementById('r-soll').textContent = fmtDE(sollWoche, 2) + ' h';
+  document.getElementById('r-bilanz').textContent = signDE(bilanzWoche);
+  document.getElementById('r-saldo').textContent = signDE(saldoNeu);
+
+  var html = '';
+  /* Ruhezeit nach § 5 ArbZG zwischen aufeinanderfolgenden Arbeitstagen */
+  for(var d = 0; d < 4; d++){
+    if(startZeiten[d] !== undefined && startZeiten[d + 1] !== undefined){
+      var ruhe = (1440 - endZeiten[d]) + startZeiten[d + 1];
+      if(ruhe < 660){
+        html += '<div class="status-banner status-danger">\uD83D\uDED1 <span><strong>\u00A7 5 ArbZG:</strong> Die Ruhezeit zwischen ' + G_TAGE[d] + ' (' + fmtHM(endZeiten[d]) + ' Uhr) und ' + G_TAGE[d + 1] + ' (' + fmtHM(startZeiten[d + 1]) + ' Uhr) betr\u00E4gt nur ' + fmtDE(ruhe / 60, 2) + ' Stunden \u2013 vorgeschrieben sind mindestens <strong>11 Stunden</strong>.</span></div>';
+      }
+    }
+  }
+  if(warnZehn.length){
+    html += '<div class="status-banner status-danger">\uD83D\uDED1 <span><strong>\u00A7 3 ArbZG:</strong> Mehr als <strong>10 Stunden</strong> an ' + warnZehn.join(', ') + ' \u2013 das \u00FCberschreitet die absolute Tagesh\u00F6chstgrenze. Auch bei Gleitzeit unzul\u00E4ssig.</span></div>';
+  } else if(warnAcht.length){
+    html += '<div class="status-banner status-warn">\u26A0\uFE0F <span><strong>\u00A7 3 ArbZG:</strong> \u00DCber <strong>8 Stunden</strong> an ' + warnAcht.join(', ') + ' \u2013 nur zul\u00E4ssig, wenn im Schnitt von 6 Monaten bzw. 24 Wochen 8 Stunden nicht \u00FCberschritten werden (Ausgleichspflicht).</span></div>';
+  }
+  if(warnPause.length){
+    html += '<div class="status-banner status-warn">\u2615 <span><strong>\u00A7 4 ArbZG:</strong> Pausenhinweis f\u00FCr ' + warnPause.join(', ') + ': \u00FCber 6 Stunden \u2192 mindestens 30 Minuten Pause, \u00FCber 9 Stunden \u2192 mindestens 45 Minuten.</span></div>';
+  }
+  if(warnKern.length){
+    html += '<div class="status-banner status-warn">\u23F0 <span><strong>Kernarbeitszeit:</strong> An ' + warnKern.join(', ') + ' deckt Ihre Arbeitszeit die Kernzeit (' + fmtHM(kernVon) + ' \u2013 ' + fmtHM(kernBis) + ' Uhr) nicht vollst\u00E4ndig ab \u2013 w\u00E4hrend der Kernzeit besteht Anwesenheitspflicht.</span></div>';
+  }
+  if(warnRahmen.length){
+    html += '<div class="status-banner status-warn">\uD83C\uDF19 <span><strong>Rahmenarbeitszeit:</strong> An ' + warnRahmen.join(', ') + ' liegt Arbeitszeit vor 6:00 oder nach 20:00 Uhr \u2013 au\u00DFerhalb des typischen Gleitzeitrahmens. Pr\u00FCfen Sie Ihre Betriebsvereinbarung.</span></div>';
+  }
+  if(bilanzWoche > 1e-9){
+    html += '<div class="status-banner status-ok">\u2705 <span>Wochenergebnis: <strong>' + signDE(bilanzWoche) + '</strong> Plusstunden (' + Math.round(bilanzWoche * 100) + ' Industrieminuten). Ihr neuer Gleitzeitkonto-Saldo betr\u00E4gt <strong>' + signDE(saldoNeu) + '</strong>.</span></div>';
+  } else if(bilanzWoche < -1e-9){
+    html += '<div class="status-banner status-warn">\uD83D\uDCC9 <span>Wochenergebnis: <strong>' + signDE(bilanzWoche) + '</strong> Minusstunden. Ihr neuer Gleitzeitkonto-Saldo betr\u00E4gt <strong>' + signDE(saldoNeu) + '</strong> \u2013 planen Sie den Ausgleich rechtzeitig ein.</span></div>';
+  } else {
+    html += '<div class="status-banner status-ok">\u2705 <span>Ausgeglichene Woche: Ist- und Sollarbeitszeit stimmen \u00FCberein. Ihr Gleitzeitkonto bleibt bei <strong>' + signDE(saldoNeu) + '</strong>.</span></div>';
+  }
+  html += '<div class="status-banner status-ok">\u2139\uFE0F <span>Alle Berechnungen laufen zu 100 % lokal in Ihrem Browser \u2013 es werden keine Daten \u00FCbertragen oder gespeichert (DSGVO-konform, kein Login n\u00F6tig).</span></div>';
+  document.getElementById('g-status').innerHTML = html;
+}
+
+var gIds = ['g-soll','g-uebertrag','g-kern-von','g-kern-bis'];
+for(var k = 0; k < 5; k++){
+  gIds.push('g-start-' + k, 'g-end-' + k, 'g-pause-' + k);
+}
+gIds.forEach(function(id){
+  var el = document.getElementById(id);
+  if(el) el.addEventListener('input', calcGleitzeit);
+});
+calcGleitzeit();
+</script>
+
+</body>
+</html>
