@@ -73,6 +73,10 @@
     {
       "source": "/gleitzeit-rechner",
       "destination": "/gleitzeit-rechner.html"
+    },
+    {
+      "source": "/nachtschicht-rechner",
+      "destination": "/nachtschicht-rechner.html"
     }
   ]
 }

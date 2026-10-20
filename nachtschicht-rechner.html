@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ✅ PRIMARY: Nachtschicht Rechner | SECONDARY: Nachtzuschlag 25 %, § 6 ArbZG & Nachtstunden -->
+<title>Nachtschicht-Rechner: Nachtzuschlag & Stunden berechnen</title>
+<meta name="description" content="Nachtschicht-Rechner: Nachtstunden (23–6 Uhr) und Nachtzuschlag nach § 6 ArbZG berechnen – mit Lohn, Industrieminuten und Ruhezeit-Check. Kostenlos!"/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/nachtschicht-rechner"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:title" content="Nachtschicht-Rechner: Nachtzuschlag & Stunden berechnen"/>
+<meta property="og:description" content="Nachtschicht berechnen: Nachtstunden 23–6 Uhr, Nachtzuschlag nach § 6 ArbZG, Lohn, Industrieminuten & Ruhezeit-Check nach § 5 ArbZG. Kostenlos, ohne Login."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/nachtschicht-rechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:title" content="Nachtschicht-Rechner: Nachtzuschlag & Stunden berechnen"/>
+<meta name="twitter:description" content="Nachtstunden 23–6 Uhr und Nachtzuschlag nach § 6 ArbZG berechnen. Kostenlos."/>
+<meta name="robots" content="index, follow"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Nachtschicht Rechner – Nachtstunden & Nachtzuschlag nach § 6 ArbZG",
+  "url": "https://arbeitszeitrechner365.de/nachtschicht-rechner",
+  "description": "Kostenloser Nachtschicht-Rechner für Deutschland: Nachtstunden in der Nachtzeit 23–6 Uhr (§ 2 ArbZG) bei Schichten über Mitternacht ermitteln, Nachtzuschlag (Standard 25 %) auf den Bruttolohn berechnen, Lohn und Industrieminuten ausgeben sowie die 8-Stunden-Regel (§ 3 ArbZG) und die 11-Stunden-Ruhezeit (§ 5 ArbZG) prüfen.",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Night Shift Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.1",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Nachtstunden-Berechnung: Überlappung der Schicht mit der Nachtzeit 23:00–06:00 (§ 2 Abs. 3 ArbZG), auch über Mitternacht",
+    "Proportionale Pausenverrechnung auf den Nachtanteil der Schicht",
+    "Lohnberechnung: Grundlohn + Nachtzuschlag in Prozent (Standard 25 %), steuerfreie Anteile nach § 3b EStG",
+    "Dezimalstunden- und Industrieminuten-Ausgabe für DATEV, SAP HCM und Lexware",
+    "8-Stunden-Prüfung nach § 3 ArbZG und Ruhezeit-Check (11 Stunden, § 5 ArbZG) zum nächsten Schichtbeginn",
+    "Nachtarbeitnehmer-Status nach § 2 Abs. 5 ArbZG und Ausgleichsanspruch nach § 6 Abs. 5 ArbZG",
+    "100% DSGVO-konform ohne Registrierung und ohne Server-Datenspeicherung"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/assets/logo.png"
+    }
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "bestRating": "5",
+    "worstRating": "1",
+    "ratingCount": "15"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man Nachtstunden und Nachtzuschlag?",
+  "description": "Schritt-für-Schritt-Anleitung zur Berechnung der Nachtstunden einer Schicht und des Nachtzuschlags nach dem Arbeitszeitgesetz (ArbZG).",
+  "totalTime": "PT2M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Schichtbeginn und Schichtende eintragen",
+      "text": "Tragen Sie Beginn und Ende Ihrer Schicht ein, zum Beispiel 22:00 bis 06:00 Uhr. Der Rechner erkennt automatisch, dass die Schicht über Mitternacht geht, und rechnet den Folgetag mit."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Pause und Stundenlohn eingeben",
+      "text": "Geben Sie Ihre unbezahlte Pause in Minuten und Ihren Brutto-Stundenlohn ein. Die Pause wird anteilig auf Tag- und Nachtstunden verteilt, so wie es in der Lohnabrechnung üblich ist."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Nachtzuschlag-Satz festlegen",
+      "text": "Standard sind 25 Prozent – prüfen Sie Ihren Tarifvertrag: Die IG Metall sieht in der Metall- und Elektroindustrie 25 Prozent vor, der TVöD eigene Sätze für Nachtarbeit. Ohne Tarifvertrag gilt der angemessene Ausgleich nach § 6 Abs. 5 ArbZG."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Ergebnis prüfen und Ruhezeit einhalten",
+      "text": "Der Rechner zeigt Nachtstunden, Lohn, Zuschlag und Industrieminuten – und prüft die 8-Stunden-Regel (§ 3 ArbZG) sowie die 11-Stunden-Ruhezeit (§ 5 ArbZG) bis zum nächsten Schichtbeginn."
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Was gilt rechtlich als Nachtarbeit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Als Nachtzeit gilt die Zeit von 23:00 bis 06:00 Uhr (§ 2 Abs. 3 ArbZG; in Bäckereien und Konditoreien 22:00 bis 05:00 Uhr). Nachtarbeit ist Arbeit, die mehr als zwei Stunden der Nachtzeit umfasst (§ 2 Abs. 4 ArbZG). Wer in Wechselschicht nachts arbeitet oder mindestens 48 Nachtdienste im Jahr leistet, gilt als Nachtarbeitnehmer (§ 2 Abs. 5 ArbZG)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie hoch muss der Nachtzuschlag mindestens sein?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das Gesetz nennt keinen festen Prozentsatz: § 6 Abs. 5 ArbZG verlangt nur einen angemessenen Ausgleich – entweder bezahlte freie Tage oder einen Zuschlag auf den Bruttolohn. In der Praxis haben sich 25 Prozent durchgesetzt, Tarifverträge legen eigene Sätze fest (IG Metall 25 Prozent, TVöD 20 Prozent). Prüfen Sie Ihren Arbeits- oder Tarifvertrag."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Ist der Nachtzuschlag steuerfrei?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, teilweise: Nach § 3b EStG sind Zuschläge für Nachtarbeit bis 25 Prozent des Grundlohns steuerfrei, bis 40 Prozent, wenn die Arbeit vor 0:00 Uhr beginnt. Der Grundlohn darf höchstens 50 Euro je Stunde betragen. Alles darüber ist steuer- und sozialversicherungspflichtig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Darf eine Nachtschicht länger als 8 Stunden dauern?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Grundsätzlich nein: Die werktägliche Arbeitszeit darf 8 Stunden nicht überschreiten (§ 3 ArbZG). Sie kann auf bis zu 10 Stunden verlängert werden, wenn innerhalb von sechs Monaten oder 24 Wochen im Schnitt 8 Stunden nicht überschritten werden. Für Nachtarbeit gilt zusätzlich § 6 Abs. 2 ArbZG: Im Monats- oder 4-Wochen-Schnitt sind höchstens 8 Stunden je 24 Stunden zulässig."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viel Ruhezeit muss nach einer Nachtschicht liegen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Mindestens 11 Stunden ununterbrochen nach Schichtende (§ 5 Abs. 1 ArbZG). In Krankenhäusern, Pflege, Gaststätten und Verkehr kann sie auf 10 Stunden verkürzt werden, wenn eine andere Ruhezeit auf mindestens 12 Stunden verlängert wird (§ 5 Abs. 2 ArbZG). Bei Schichtwechsel ist einmal wöchentlich eine Verkürzung auf 8 Stunden möglich (§ 5 Abs. 3 ArbZG)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Gibt es einen extra Zuschlag, wenn die Nachtschicht auf einen Feiertag fällt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja: Nacht- und Feiertagszuschlag können nebeneinander gezahlt werden – das steht meist im Tarifvertrag. Der Feiertagszuschlag ist nach § 3b EStG bis 125 Prozent des Grundlohns steuerfrei. Welche Tage Feiertage sind, hängt vom Bundesland ab: Fronleichnam gilt etwa in Bayern, Baden-Württemberg und NRW, nicht in Berlin oder Hamburg."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss die Nachtschicht elektronisch erfasst werden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja: Seit dem BAG-Beschluss von September 2022 (aufbauend auf dem EuGH-Urteil von 2019) muss der Arbeitgeber Beginn, Ende und Dauer der täglichen Arbeitszeit systematisch erfassen – auch für Nachtschichten. Üblich sind elektronische Systeme wie DATEV, SAP HCM oder Lexware. Sie sollten Ihre Schichten zusätzlich selbst dokumentieren."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Dürfen Schwangere und Jugendliche nachts arbeiten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein, grundsätzlich nicht: Das Mutterschutzgesetz (§ 5 MuSchG) verbietet die Beschäftigung schwangerer und stillender Frauen zwischen 20:00 und 06:00 Uhr. Auch Jugendliche dürfen nach § 14 JArbSchG nicht zwischen 20:00 und 06:00 Uhr arbeiten, mit wenigen Ausnahmen etwa in Bäckereien ab 05:00 Uhr."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Nachtschicht Rechner",
+      "item": "https://arbeitszeitrechner365.de/nachtschicht-rechner"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;
+  --surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;
+  --muted:#64748b;--green:#16a34a;--red:#dc2626;
+  --shadow:0 2px 12px rgba(26,61,110,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;line-height:1.2;margin-bottom:14px;color:#fff;}
+h1 .hl{color:var(--amber);}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+
+/* NAV */
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:640px;line-height:1.65;margin-bottom:24px;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+
+/* QUICK ANSWER */
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+
+/* TOOL ZONE */
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:24px;}
+
+/* PRESET PILLS */
+.preset-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.preset-btn{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;cursor:pointer;transition:all .15s ease;}
+.preset-btn:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+
+/* CALC CARD */
+.calc-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(0,0,0,.25);}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.form-grp{display:flex;flex-direction:column;gap:6px;}
+.form-grp label{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.9);}
+.form-grp input,.form-grp select{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:11px 14px;color:#ffffff;font-size:15.5px;font-weight:600;font-family:inherit;outline:none;}
+.form-grp input:focus,.form-grp select:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+.form-grp select option{background:#1a3d6e;color:#fff;}
+.check-row{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:14px;color:rgba(255,255,255,.85);}
+.check-row input{width:18px;height:18px;accent-color:var(--amber);}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:800;font-size:16px;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;margin-top:20px;transition:transform .15s, box-shadow .15s;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,160,32,.4);}
+
+/* RESULT CARDS */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;}
+.res-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 16px;text-align:center;}
+.res-box .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:6px;font-weight:600;}
+.res-box .val{font-size:24px;font-weight:800;color:#fff;}
+.res-box.hl .val{color:var(--amber);}
+.res-box.green .val{color:#4ade80;}
+
+/* STATUS BANNER */
+.status-banner{border-radius:10px;padding:14px 18px;margin-top:20px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:12px;line-height:1.5;}
+.status-ok{background:rgba(74,222,128,.15);border:1.5px solid #4ade80;color:#86efac;}
+.status-warn{background:rgba(232,160,32,.18);border:1.5px solid var(--amber);color:#fde047;}
+.status-danger{background:rgba(239,68,68,.20);border:1.5px solid #f87171;color:#fca5a5;}
+
+/* TABLE STYLING */
+.tbl-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:14px 16px;text-align:left;font-size:13px;font-weight:700;}
+td{padding:13px 16px;border-bottom:1px solid var(--border);background:#fff;}
+tbody tr:nth-child(even) td{background:#f8fafc;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+
+/* CARDS & GRIDS */
+.card-grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:24px;}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);}
+.feature-card .icon{font-size:30px;margin-bottom:12px;}
+.feature-card h3{font-size:16px;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.65;}
+
+/* BOXES */
+.box{border-radius:10px;padding:18px 22px;margin:22px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+
+/* CHECKLIST */
+.check-list{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+.check-list li{position:relative;padding-left:28px;font-size:14.5px;color:var(--text);line-height:1.6;}
+.check-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:800;font-size:16px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* AUTHOR / EEAT */
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* RELATED */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+.rel-card:hover{box-shadow:0 10px 25px rgba(26,61,110,.12);transform:translateY(-3px);border-color:var(--amber);}
+.rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+
+/* ===== SITE FOOTER ===== */
+.site-footer{background:var(--navy-dk);color:rgba(255,255,255,.75);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);font-size:0.9rem;}
+.footer-container{max-width:960px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1.3fr 1.2fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+@media(max-width:900px){.footer-container{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr;gap:2rem;}}
+.footer-brand .brand-logo{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:0.75rem;}
+.footer-brand .brand-logo svg{color:var(--amber);}
+.footer-brand .brand-logo .highlight{color:var(--amber);}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:0.85rem;line-height:1.6;margin:0;}
+.footer-title{color:#fff;font-size:0.95rem;font-weight:700;margin-bottom:1rem;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:0.85rem;transition:color 0.15s ease;}
+.footer-links a:hover{color:var(--amber);}
+.footer-social-links{display:flex;flex-direction:column;gap:0.6rem;}
+.social-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:0.4rem 0.75rem;border-radius:6px;color:#fff;text-decoration:none;font-size:0.825rem;transition:all 0.15s ease;width:fit-content;}
+.social-pill:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+.footer-bottom{max-width:960px;margin:0 auto;padding:1.5rem 20px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:rgba(255,255,255,.5);}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+.footer-bottom-links a{color:rgba(255,255,255,.6);text-decoration:none;}
+.footer-bottom-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .hero{padding:40px 0 32px;}
+  .section{padding:44px 0;}
+  .calc-card{padding:20px;}
+  .author-box{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/pausenrechner" class="dropdown-link" style="background:#f1f5f9!important;">
+            <span class="dropdown-icon">☕</span>
+            <div>
+              <div class="dropdown-link-title">Pausenrechner (§ 4 ArbZG)</div>
+              <div class="dropdown-link-desc">Pflichtpausen &amp; Ruhezeit prüfen</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Nachtschicht Rechner</strong>
+  </div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">🌙 Nachtzeit 23–6 Uhr (§ 2 ArbZG)</div>
+      <div class="t-pill">💶 Nachtzuschlag 25 % Standard</div>
+      <div class="t-pill">⏱️ 8h-Regel &amp; 11h Ruhezeit</div>
+      <div class="t-pill">🧾 Steuerfrei nach § 3b EStG</div>
+      <div class="t-pill">🇩🇪 Stand: 2026</div>
+    </div>
+    <h1>Nachtschicht-Rechner: <span class="hl">Nachtstunden &amp; Nachtzuschlag</span> berechnen</h1>
+    <p class="hero-sub">Schichtbeginn und Schichtende eingeben – der Rechner ermittelt Ihre Nachtstunden in der Nachtzeit von 23:00 bis 06:00 Uhr, berechnet den Nachtzuschlag auf Ihren Bruttolohn und prüft die 8-Stunden-Regel (§ 3 ArbZG) sowie die 11-Stunden-Ruhezeit (§ 5 ArbZG). Kostenlos, ohne Login – alle Daten bleiben in Ihrem Browser.</p>
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p>Als <strong>Nachtzeit</strong> gilt die Zeit von <strong>23:00 bis 06:00 Uhr</strong> (§ 2 Abs. 3 ArbZG). Wer mehr als zwei Stunden dieser Zeit arbeitet, leistet <strong>Nachtarbeit</strong> – und hat Anspruch auf einen <strong>angemessenen Ausgleich</strong> (§ 6 Abs. 5 ArbZG), meist einen Nachtzuschlag von <strong>25 %</strong>. Der Zuschlag ist bis 25 % des Grundlohns <strong>steuerfrei</strong> (§ 3b EStG). Der Rechner unten ermittelt Ihre exakten Nachtstunden, Ihren Lohn und den Zuschlag.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TOOL ZONE ════ -->
+<section class="tool-zone" id="rechner">
+  <div class="container">
+    <span class="eyebrow">Nachtschicht-Rechner</span>
+    <h2>Ihre Nachtschicht jetzt berechnen</h2>
+    <p class="lead">Wählen Sie ein Preset oder tragen Sie Ihre Werte individuell ein. Der Rechner ermittelt den Nachtanteil Ihrer Schicht (23:00–06:00 Uhr), den Nachtzuschlag auf Ihren Bruttolohn und prüft die gesetzlichen Grenzen.</p>
+
+    <div class="preset-bar">
+      <button class="preset-btn" onclick="applyNacht('22:00','06:00',30,18,25)">🌙 Klassische Nachtschicht 22–6 Uhr</button>
+      <button class="preset-btn" onclick="applyNacht('21:00','05:30',30,16.5,25)">🏭 Industrieschicht 21:00–05:30</button>
+      <button class="preset-btn" onclick="applyNacht('20:00','04:00',45,19,25)">🚑 Spät-Nacht 20:00–04:00</button>
+      <button class="preset-btn" onclick="applyNacht('23:00','07:00',30,17.5,40)">🛡️ Dauernacht ab 23 Uhr (40 %)</button>
+      <button class="preset-btn" onclick="applyNacht('18:00','02:00',30,15,25)">🍽️ Gastronomie 18:00–02:00</button>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="form-grp">
+          <label for="n-start">Schichtbeginn</label>
+          <input type="time" id="n-start" value="22:00"/>
+        </div>
+        <div class="form-grp">
+          <label for="n-end">Schichtende</label>
+          <input type="time" id="n-end" value="06:00"/>
+        </div>
+        <div class="form-grp">
+          <label for="n-pause">Unbezahlte Pause (Minuten)</label>
+          <input type="number" id="n-pause" value="30" min="0" max="720"/>
+        </div>
+        <div class="form-grp">
+          <label for="n-lohn">Brutto-Stundenlohn (€)</label>
+          <input type="number" id="n-lohn" value="18" min="0.01" step="0.01"/>
+        </div>
+        <div class="form-grp">
+          <label for="n-zuschlag">Nachtzuschlag (%)</label>
+          <input type="number" id="n-zuschlag" value="25" min="0" max="200"/>
+        </div>
+        <div class="form-grp">
+          <label for="n-bundesland">Bundesland (Feiertage)</label>
+          <select id="n-bundesland">
+            <option value="bw">Baden-Württemberg</option>
+            <option value="by" selected>Bayern</option>
+            <option value="be">Berlin</option>
+            <option value="bb">Brandenburg</option>
+            <option value="hb">Bremen</option>
+            <option value="hh">Hamburg</option>
+            <option value="he">Hessen</option>
+            <option value="mv">Mecklenburg-Vorpommern</option>
+            <option value="ni">Niedersachsen</option>
+            <option value="nw">Nordrhein-Westfalen</option>
+            <option value="rp">Rheinland-Pfalz</option>
+            <option value="sl">Saarland</option>
+            <option value="sn">Sachsen</option>
+            <option value="st">Sachsen-Anhalt</option>
+            <option value="sh">Schleswig-Holstein</option>
+            <option value="th">Thüringen</option>
+          </select>
+        </div>
+        <div class="form-grp">
+          <label for="n-next">Nächster Schichtbeginn (optional)</label>
+          <input type="time" id="n-next" value=""/>
+        </div>
+      </div>
+      <label class="check-row">
+        <input type="checkbox" id="n-feiertag"/>
+        <span>Die Schicht fällt auf einen <strong>Feiertag</strong> in meinem Bundesland (Feiertagszuschlag-Hinweis)</span>
+      </label>
+      <button class="calc-btn" onclick="calcNacht()">⚡ Nachtschicht berechnen</button>
+
+      <div class="res-grid" id="n-results" style="display:none;">
+        <div class="res-box"><div class="lbl">Schichtdauer (netto)</div><div class="val" id="r-dauer">–</div></div>
+        <div class="res-box hl"><div class="lbl">Nachtstunden (23–6 Uhr)</div><div class="val" id="r-nacht">–</div></div>
+        <div class="res-box"><div class="lbl">Tagstunden</div><div class="val" id="r-tag">–</div></div>
+        <div class="res-box"><div class="lbl">Grundlohn (brutto)</div><div class="val" id="r-lohn">–</div></div>
+        <div class="res-box green"><div class="lbl">Nachtzuschlag (brutto)</div><div class="val" id="r-zuschlag">–</div></div>
+        <div class="res-box hl"><div class="lbl">Gesamtlohn (brutto)</div><div class="val" id="r-gesamt">–</div></div>
+        <div class="res-box"><div class="lbl">Dezimalstunden</div><div class="val" id="r-dezimal">–</div></div>
+        <div class="res-box"><div class="lbl">Industrieminuten</div><div class="val" id="r-im">–</div></div>
+      </div>
+      <div id="n-status"></div>
+
+      <div class="box box-warn" style="background:rgba(232,160,32,.10);border-left:4px solid var(--amber);color:#fde68a;margin-top:20px;">
+        <strong>So rechnet das Tool:</strong> Die Pause wird <strong>anteilig</strong> auf Tag- und Nachtstunden verteilt – so wie es in der Lohnabrechnung (DATEV, SAP HCM, Lexware) üblich ist. Liegt das Schichtende zeitlich vor dem Beginn, geht der Rechner automatisch vom <strong>Folgetag</strong> aus. Der Zuschlag wird nur auf die <strong>Netto-Nachtstunden</strong> berechnet.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTENT: GRUNDLAGEN ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Was gilt rechtlich als Nachtarbeit?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Definition</div>
+      <p>Die <strong>Nachtzeit</strong> ist die Zeit von <strong>23:00 bis 06:00 Uhr</strong> – in Bäckereien und Konditoreien von 22:00 bis 05:00 Uhr (<strong>§ 2 Abs. 3 ArbZG</strong>). <strong>Nachtarbeit</strong> ist jede Arbeit, die <strong>mehr als zwei Stunden</strong> der Nachtzeit umfasst (<strong>§ 2 Abs. 4 ArbZG</strong>). Wer normalerweise in Wechselschicht nachts arbeitet oder mindestens 48 Nachtdienste im Jahr leistet, ist <strong>Nachtarbeitnehmer</strong> (<strong>§ 2 Abs. 5 ArbZG</strong>).</p>
+    </div>
+
+    <p>Das <strong>Arbeitszeitgesetz (ArbZG)</strong> – also das Bundesgesetz, das seit 1994 die Höchstarbeitszeiten, Pausen, Ruhezeiten sowie die Nacht- und Schichtarbeit in Deutschland regelt – schützt Nachtbeschäftigte besonders, weil Nachtarbeit nach gesicherten arbeitswissenschaftlichen Erkenntnissen gesundheitlich belastender ist als Tagesarbeit (<strong>§ 6 Abs. 1 ArbZG</strong>). Praktisch bedeutet das: kürzere Höchstarbeitszeiten, ein Anspruch auf arbeitsmedizinische Untersuchungen und ein <strong>angemessener Ausgleich</strong> für die geleisteten Nachtstunden.</p>
+
+    <p>Beachten Sie die Zwei-Stunden-Grenze: Arbeiten Sie zum Beispiel in der Spätschicht von 14:00 bis 22:00 Uhr, leisten Sie keine Nachtarbeit – denn in der Nachtzeit von 23:00 bis 06:00 Uhr arbeiten Sie null Stunden. Endet Ihre Schicht dagegen um 23:30 Uhr, fallen 30 Minuten in die Nachtzeit – noch keine Nachtarbeit im Rechtssinn. Erst wenn <strong>mehr als zwei Stunden</strong> in der Nachtzeit liegen, etwa bei einer Schicht von 20:00 bis 04:00 Uhr (fünf Nachtstunden), greifen die besonderen Regeln der §§ 2 und 6 ArbZG.</p>
+
+    <div class="box box-tip">
+      <strong>Definition: Nachtzeit (§ 2 Abs. 3 ArbZG)</strong> Die Nachtzeit ist die Zeit von 23:00 bis 06:00 Uhr. In Bäckereien und Konditoreien gilt die Zeit von 22:00 bis 05:00 Uhr. Diese Zeitfenster sind starr: Nur Stunden, die tatsächlich in diese Zeiträume fallen, zählen als Nachtstunden – eine Schicht von 21:00 bis 05:00 Uhr enthält also genau sechs Nachtstunden (23:00–05:00 Uhr).
+    </div>
+
+    <div class="box box-tip">
+      <strong>Definition: Nachtarbeitnehmer (§ 2 Abs. 5 ArbZG)</strong> Nachtarbeitnehmer sind Beschäftigte, die entweder aufgrund ihrer Arbeitszeitgestaltung normalerweise Nachtarbeit in Wechselschicht zu leisten haben oder Nachtarbeit an mindestens 48 Tagen im Kalenderjahr leisten. Als Nachtarbeitnehmer haben Sie Anspruch auf arbeitsmedizinische Untersuchungen (§ 6 Abs. 3 ArbZG) und auf einen angemessenen Ausgleich (§ 6 Abs. 5 ArbZG).
+    </div>
+
+    <h3>Bin ich Nachtarbeitnehmer, wenn ich nur gelegentlich nachts arbeite?</h3>
+    <p><strong>Kommt auf die Häufigkeit an.</strong> Wer in Wechselschicht – etwa Früh-, Spät- und Nachtschicht im Wechsel – normalerweise auch nachts arbeitet, gilt als Nachtarbeitnehmer. Gleiches gilt, wenn Sie im Kalenderjahr <strong>mindestens 48 Nachtdienste</strong> leisten (<strong>§ 2 Abs. 5 ArbZG</strong>) – das entspricht im Schnitt vier Nächten pro Monat. Darunter fallen Sie trotzdem unter den Ausgleichsanspruch des <strong>§ 6 Abs. 5 ArbZG</strong> für jede geleistete Nachtstunde, nur die Sonderrechte (Untersuchung, Umsetzungsanspruch) hängen am Nachtarbeitnehmer-Status.</p>
+
+    <h2 style="margin-top:40px;">Wie berechnet man die Nachtstunden einer Schicht?</h2>
+    <p>Die Rechnung folgt drei Schritten – und genau so rechnet auch das Tool oben:</p>
+    <p><strong>1. Brutto-Schichtdauer bestimmen.</strong> Liegt das Schichtende zeitlich vor dem Schichtbeginn, geht die Schicht über Mitternacht: Addieren Sie 24 Stunden zum Ende. Beispiel: Beginn 22:00 Uhr, Ende 06:00 Uhr → 8 Stunden (480 Minuten).</p>
+    <p><strong>2. Nachtanteil ermitteln.</strong> Schneiden Sie die Schicht mit der Nachtzeit 23:00–06:00 Uhr. Bei 22:00–06:00 Uhr fallen die Stunden 23:00–06:00 Uhr in die Nachtzeit – also 7 Stunden (420 Minuten). Die Stunde von 22:00 bis 23:00 Uhr ist Tagzeit.</p>
+    <p><strong>3. Pause anteilig abziehen.</strong> Unbezahlte Pausen mindern die bezahlte Arbeitszeit – und zwar anteilig auf Tag- und Nachtanteil. Das ist die übliche Praxis in der Lohnabrechnung (DATEV, SAP HCM, Lexware). Nur die Netto-Nachtstunden sind zuschlagspflichtig.</p>
+
+    <div class="box box-ok">
+      <strong>Rechenbeispiel – Nachtschicht in der Logistik:</strong> Sie arbeiten von <strong>22:00 bis 06:00 Uhr</strong> in einem Logistikzentrum bei München (80331), mit <strong>30 Minuten</strong> unbezahlter Pause, bei einem Brutto-Stundenlohn von <strong>18,00 €</strong> und einem Nachtzuschlag von <strong>25 %</strong>. Rechnung: Brutto-Schichtdauer 8,0 Stunden (480 Minuten). Nachtanteil 23:00–06:00 Uhr = 7,0 Stunden (420 Minuten). Pausenanteil auf die Nacht: 30 Min. × 420 ÷ 480 = 26,25 Min. → Netto-Nachtstunden (420 − 26,25) ÷ 60 = <strong>6,56 Stunden</strong>. Netto-Schicht: 7,5 Stunden, davon 0,94 Tagstunden. Grundlohn: 7,5 × 18,00 € = <strong>135,00 €</strong>. Nachtzuschlag: 6,5625 × 18,00 € × 25 % = <strong>29,53 €</strong>. Gesamtlohn: <strong>164,53 €</strong>. In Dezimalstunden: <strong>7,50 Stunden = 750 Industrieminuten</strong> – so geben Sie die Schicht in DATEV oder SAP ein.
+    </div>
+
+    <div class="box box-tip">
+      <strong>Dezimalstunden &amp; Industrieminuten – kurz erklärt:</strong> Dezimalstunden sind Stunden mit Nachkommastellen statt Minuten: 7 Stunden 30 Minuten = 7,50 Stunden. Industrieminuten teilen die Stunde in 100 Teile: 7,50 Stunden = 750 Industrieminuten. Lohnprogramme wie DATEV, SAP HCM und Lexware erwarten Zeitangaben fast immer in diesem Format – ein klassischer Fehler ist, „7:30“ als 7,30 Stunden einzutragen. Der Rechner oben gibt beide Werte aus.
+    </div>
+
+    <h2 style="margin-top:40px;">Wie hoch ist der Nachtzuschlag – und ist er Pflicht?</h2>
+    <p><strong>Ja, ein Ausgleich ist Pflicht – die Höhe regelt meist der Tarifvertrag.</strong> Das Gesetz schreibt keinen festen Prozentsatz vor: <strong>§ 6 Abs. 5 ArbZG</strong> verlangt lediglich einen <strong>angemessenen Ausgleich</strong> – entweder in Form <strong>bezahlter freier Tage</strong> oder eines <strong>Zuschlags auf das Bruttoarbeitsentgelt</strong>. In der Praxis haben sich <strong>25 %</strong> als Standard durchgesetzt; Arbeitsgerichte haben diesen Satz vielfach als angemessene Größenordnung bestätigt.</p>
+    <p>Prüfen Sie zuerst Ihren <strong>Tarifvertrag</strong> – er darf die gesetzlichen Mindestanforderungen nur verbessern: In der <strong>Metall- und Elektroindustrie</strong> sehen die Tarifverträge der <strong>IG Metall</strong> für Nachtarbeit einen Zuschlag von <strong>25 %</strong> vor. Der <strong>TVöD</strong> (öffentlicher Dienst, etwa in Krankenhäusern oder kommunalen Betrieben) legt eigene <strong>Zeitzuschläge für Nachtarbeit</strong> fest – dort beträgt der Satz 20 %. Ohne Tarifvertrag greift der gesetzliche Ausgleichsanspruch: Der Arbeitgeber schuldet Ihnen einen angemessenen Zuschlag oder bezahlte Freizeit – <strong>nichts</strong> zu zahlen, ist keine Option.</p>
+
+    <div class="box box-warn">
+      <strong>Schmerzpunkt vieler Nachtbeschäftigter:</strong> Der Nachtzuschlag fehlt auf der Lohnabrechnung, wird nur auf einen Teil der Nachtstunden gezahlt oder mit der falschen Prozentzahl berechnet – etwa weil das Lohnprogramm (DATEV, SAP HCM, Lexware) die Schichtzeiten falsch einliest. Rechnen Sie Ihre Schicht mit dem Tool oben nach und vergleichen Sie Nachtstunden und Zuschlagssatz Zeile für Zeile mit Ihrer Abrechnung. Differenzen klären Sie zuerst mit der Personalabteilung oder dem Betriebsrat – häufig handelt es sich um einen Einstellungsfehler im Abrechnungssystem, nicht um böse Absicht.
+    </div>
+
+    <h2 style="margin-top:40px;">Ist der Nachtzuschlag steuerfrei?</h2>
+    <p><strong>Teilweise – bis zu klaren Grenzen.</strong> Nach <strong>§ 3b EStG</strong> (Einkommensteuergesetz) sind Zuschläge für Nachtarbeit bis <strong>25 % des Grundlohns</strong> steuerfrei. Beginnt Ihre Arbeit <strong>vor 0:00 Uhr</strong> – also zum Beispiel bei einer Schicht von 22:00 bis 06:00 Uhr –, sind sogar bis zu <strong>40 %</strong> steuerfrei. Wichtig: Der <strong>Grundlohn</strong> darf höchstens <strong>50 € je Stunde</strong> betragen; alles darüber ist voll steuer- und sozialversicherungspflichtig.</p>
+    <p>Ein Beispiel: Bei einem Stundenlohn von 18,00 € und 25 % Nachtzuschlag sind die vollen 29,53 € aus unserem Rechenbeispiel steuerfrei – denn 25 % liegen innerhalb der 25-Prozent-Grenze und der Stundenlohn deutlich unter 50 €. Zahlen Sie im Tarifvertrag 40 % Zuschlag bei Schichtbeginn 22:00 Uhr, bleibt auch dieser Betrag steuerfrei. Erst ein Zuschlag <strong>über</strong> den Grenzen wird steuerpflichtig – der Rechner oben weist Sie darauf hin, wenn Ihr eingegebener Satz die Steuerfreigrenze überschreitet.</p>
+
+    <h3>Gilt die Steuerfreiheit auch für Sonn- und Feiertagszuschläge?</h3>
+    <p><strong>Ja, mit eigenen Grenzen.</strong> Nach <strong>§ 3b EStG</strong> sind Zuschläge für <strong>Sonntagsarbeit bis 50 %</strong>, für <strong>Feiertagsarbeit bis 125 %</strong> und für Arbeit am <strong>24. Dezember ab 14:00 Uhr</strong>, am <strong>25. und 26. Dezember</strong>, am <strong>31. Dezember ab 14:00 Uhr</strong> sowie am <strong>1. Januar</strong> bis <strong>150 %</strong> des Grundlohns steuerfrei. Fällt Ihre Nachtschicht auf einen Feiertag, können Nacht- und Feiertagszuschlag nebeneinander gezahlt werden – die steuerfreien Höchstgrenzen gelten jeweils für sich.</p>
+
+    <h2 style="margin-top:40px;">Wie lang darf eine Nachtschicht maximal dauern?</h2>
+    <p><strong>Acht Stunden – mit eng begrenzten Ausnahmen.</strong> Die werktägliche Arbeitszeit darf <strong>8 Stunden nicht überschreiten</strong> (<strong>§ 3 ArbZG</strong>). Sie kann auf bis zu <strong>10 Stunden</strong> verlängert werden, wenn innerhalb von <strong>sechs Kalendermonaten oder 24 Wochen</strong> im Durchschnitt 8 Stunden werktäglich nicht überschritten werden. Für Nachtarbeit gilt zusätzlich die Sonderregel des <strong>§ 6 Abs. 2 ArbZG</strong>: Die Arbeitszeit der Nachtarbeitnehmer darf <strong>8 Stunden je 24 Stunden</strong> nicht überschreiten – eine Verlängerung auf 10 Stunden ist nur zulässig, wenn innerhalb eines <strong>Kalendermonats oder vier Wochen</strong> im Durchschnitt 8 Stunden je 24 Stunden nicht überschritten werden.</p>
+    <p>Der Ausgleichszeitraum ist bei Nachtarbeit also deutlich kürzer (ein Monat statt sechs Monate) – der Gesetzgeber will verhindern, dass sich lange Nachtschichten über Monate aufsummieren. Der Rechner oben warnt Sie, sobald Ihre Netto-Schichtdauer die 8-Stunden-Grenze überschreitet, und meldet eine klare Überschreitung ab 10 Stunden. Übrigens: Auch wenn Ihre Schicht „nur“ 8 Stunden dauert, aber regelmäßig Nachtarbeit umfasst, muss der Arbeitgeber die Arbeitszeit nach <strong>gesicherten arbeitswissenschaftlichen Erkenntnissen</strong> gestalten (<strong>§ 6 Abs. 1 ArbZG</strong>) – etwa durch vorausschauende Schichtpläne und ausreichende Erholungsphasen.</p>
+
+    <h3>Darf mein Chef die 11 Stunden Ruhezeit zwischen Spät- und Frühschicht unterschreiten?</h3>
+    <p><strong>Grundsätzlich nein.</strong> Nach Beendigung der täglichen Arbeitszeit müssen <strong>mindestens 11 Stunden ununterbrochene Ruhezeit</strong> liegen (<strong>§ 5 Abs. 1 ArbZG</strong>) – das gilt auch zwischen einer Nachtschicht und der nächsten Schicht. Endet Ihre Nachtschicht um 06:00 Uhr, darf die nächste Schicht frühestens um <strong>17:00 Uhr</strong> beginnen. Tragen Sie oben Ihren nächsten Schichtbeginn ein, prüft der Rechner die Ruhezeit automatisch.</p>
+
+    <h2 style="margin-top:40px;">Wann darf die Ruhezeit verkürzt werden?</h2>
+    <p>Ausnahmen gibt es, aber sie sind eng gefasst. In <strong>Krankenhäusern und anderen Einrichtungen zur Behandlung, Pflege und Betreuung</strong>, in <strong>Gaststätten und Schankwirtschaften</strong>, im <strong>Verkehr</strong>, im <strong>Rundfunk</strong> sowie in der <strong>Landwirtschaft und Tierhaltung</strong> kann die Ruhezeit auf <strong>10 Stunden</strong> verkürzt werden – aber nur, wenn innerhalb eines Kalendermonats oder von vier Wochen eine andere Ruhezeit auf <strong>mindestens 12 Stunden</strong> verlängert wird (<strong>§ 5 Abs. 2 ArbZG</strong>).</p>
+    <p>Eine weitere Sonderregel gilt für <strong>Schichtbetriebe</strong>: Bei <strong>Schichtwechsel</strong> kann die Ruhezeit einmal wöchentlich auf <strong>mindestens 8 Stunden</strong> verkürzt werden – vorausgesetzt, eine andere Ruhezeit in der Woche beträgt mindestens <strong>12 Stunden</strong> (<strong>§ 5 Abs. 3 ArbZG</strong>). Für Sie praktisch: Ein schneller Wechsel von der Nachtschicht in die Frühschicht ist damit nur in diesem engen Rahmen zulässig – ein „durchgehender“ Doppel-Dienst ohne 11 Stunden Pause ist es nie.</p>
+
+    <div class="box box-tip">
+      <strong>Definition: Ruhezeit (§ 5 ArbZG)</strong> Die Ruhezeit ist die ununterbrochene Freizeit zwischen zwei Arbeitstagen – sie beträgt mindestens 11 Stunden. Sie beginnt mit dem tatsächlichen Arbeitsende (nicht mit dem Verlassen des Gebäudes) und muss frei von jeglicher Arbeitsleistung sein – auch Bereitschaftsdienst zählt als Arbeitszeit. Die Ruhezeit schützt gerade Nachtbeschäftigte: Wer um 06:00 Uhr aus der Nachtschicht kommt, braucht den Tag zum Schlafen.
+    </div>
+
+    <h2 style="margin-top:40px;">Welche Pausen gelten in der Nachtschicht?</h2>
+    <p><strong>Die gleichen wie am Tag – sie werden nur oft vergessen.</strong> Nach <strong>§ 4 ArbZG</strong> steht Ihnen bei mehr als <strong>6 Stunden</strong> Arbeitszeit eine Pause von mindestens <strong>30 Minuten</strong> zu, bei mehr als <strong>9 Stunden</strong> mindestens <strong>45 Minuten</strong>. Länger als <strong>6 Stunden</strong> dürfen Sie nicht ohne Pause arbeiten. Die Pausen können in Zeitabschnitte von jeweils <strong>mindestens 15 Minuten</strong> aufgeteilt werden – praktisch für Nachtschichten, in denen keine lange Pause möglich ist.</p>
+    <p>Wichtig: Pausen sind <strong>keine Arbeitszeit</strong> und werden nicht bezahlt – deshalb zieht der Rechner oben Ihre Pause von der Schichtdauer ab. Prüfen Sie mit unserem <a href="https://arbeitszeitrechner365.de/pausenrechner" style="color:var(--navy);font-weight:600;">Pausenrechner (§ 4 ArbZG)</a>, ob Ihre Schicht die gesetzlichen Pausen einhält – gerade in der Nacht wird die Pause gern „vergessen“, weil weniger los ist.</p>
+
+    <h2 style="margin-top:40px;">Zählt die Nachtschicht auf einen Feiertag extra?</h2>
+    <p><strong>Ja – und das kann sich deutlich lohnen.</strong> Fällt Ihre Nachtschicht auf einen gesetzlichen Feiertag, können <strong>Nachtzuschlag und Feiertagszuschlag nebeneinander</strong> gezahlt werden – maßgeblich ist Ihr Tarifvertrag oder Arbeitsvertrag. Der Feiertagszuschlag ist nach <strong>§ 3b EStG bis 125 %</strong> des Grundlohns steuerfrei. Ob der Tag überhaupt ein Feiertag ist, bestimmt Ihr <strong>Bundesland</strong> – und hier unterscheiden sich die Länder erheblich.</p>
+    <p><strong>Fronleichnam</strong> ist gesetzlicher Feiertag in Bayern, Baden-Württemberg, Nordrhein-Westfalen, Hessen, Rheinland-Pfalz und dem Saarland – nicht aber in Berlin (10115), Hamburg (20095) oder Sachsen. <strong>Allerheiligen</strong> kennen nur Bayern, Baden-Württemberg, NRW, Rheinland-Pfalz und das Saarland. Umgekehrt ist der <strong>Buß- und Bettag</strong> nur in <strong>Sachsen</strong> ein gesetzlicher Feiertag. Arbeiten Sie also in Köln (50667), profitieren Sie von anderen Feiertagszuschlägen als Ihre Kollegin in Berlin (10115) – bei identischem ArbZG. Wählen Sie oben Ihr Bundesland und setzen Sie den Haken bei „Feiertag“, erhalten Sie den passenden Hinweis für Ihre Schicht.</p>
+
+    <h2 style="margin-top:40px;">Muss die Nachtschicht dokumentiert werden?</h2>
+    <p><strong>Ja – vom Arbeitgeber, und am besten auch von Ihnen.</strong> Seit dem Grundsatzbeschluss des <strong>Bundesarbeitsgerichts vom September 2022</strong> – aufbauend auf dem <strong>EuGH-Urteil von 2019</strong> – muss der Arbeitgeber <strong>Beginn, Ende und Dauer</strong> der täglichen Arbeitszeit systematisch erfassen. Das gilt selbstverständlich auch für Nachtschichten – in DATEV, SAP HCM, Lexware oder einem anderen elektronischen System. Eine handschriftliche Stundenzettel-Praxis genügt den Anforderungen in der Regel nicht mehr.</p>
+    <p>Für Sie hat das einen doppelten Nutzen: Erstens können Sie Ihre erfassten Zeiten mit dem Tool oben abgleichen – stimmen Nachtstunden und Zuschlag mit der Lohnabrechnung überein? Zweitens sind Ihre Aufzeichnungen die beste Grundlage, wenn es um <strong>Überstunden</strong> oder strittige Zuschläge geht. Dokumentieren Sie jede Nachtschicht mit Datum, Beginn, Ende und Pause – und prüfen Sie monatlich Ihr <strong>Zeitkonto</strong> mit unserem <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" style="color:var(--navy);font-weight:600;">Sollarbeitszeit-Rechner</a> sowie angefallene Mehrarbeit mit dem <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" style="color:var(--navy);font-weight:600;">Überstunden-Rechner</a>.</p>
+
+    <h2 style="margin-top:40px;">Was gilt für Schichtarbeit allgemein?</h2>
+    <p>Nachtarbeit ist fast immer Teil eines <strong>Schichtsystems</strong> – Früh-, Spät- und Nachtschicht im Wechsel (<strong>Wechselschicht</strong>). Für die Planung solcher Systeme gelten alle Regeln dieser Seite gemeinsam: 8-Stunden-Grenze (§ 3 ArbZG), Pausen (§ 4 ArbZG), 11 Stunden Ruhezeit (§ 5 ArbZG) und der Ausgleich für Nachtstunden (§ 6 Abs. 5 ArbZG). Wer zwischen Schichten <strong>Gleitzeit</strong> nutzt, sollte zusätzlich die Kernarbeitszeiten beachten – unser <a href="https://arbeitszeitrechner365.de/gleitzeit-rechner" style="color:var(--navy);font-weight:600;">Gleitzeit-Rechner</a> hilft dabei. Einen Gesamtüberblick über Schichtmodelle, Zuschläge und Ruhezeiten gibt der <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-schichtarbeit" style="color:var(--navy);font-weight:600;">Schichtarbeit-Rechner</a>.</p>
+
+    <div class="box box-tip">
+      <strong>Kein Ersatz für Rechtsberatung:</strong> Diese Seite erklärt die gesetzlichen Grundlagen der Nachtarbeit nach bestem Wissen und mit exakten Paragrafenverweisen (ArbZG, EStG, MuSchG, JArbSchG). Sie ersetzt keine individuelle Rechtsberatung. Bei konkreten Streitfällen – etwa fristgebundenen Ausschlussfristen in Ihrem Tarifvertrag – wenden Sie sich an Ihren Betriebsrat, Ihre Gewerkschaft oder einen Fachanwalt für Arbeitsrecht.
+    </div>
+
+    <div class="box box-ok" style="text-align:center;">
+      <strong style="font-size:17px;">Wie viele Nachtstunden haben Sie geleistet?</strong><br/>
+      Geben Sie oben Schichtbeginn und Schichtende ein und sehen Sie in unter einer Minute Ihre Nachtstunden, Ihren Nachtzuschlag und ob Ruhezeit und Höchstarbeitszeit eingehalten sind – kostenlos und ohne Anmeldung.
+      <br/><a href="#rechner" style="display:inline-block;margin-top:12px;background:var(--navy);color:#fff;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">⚡ Jetzt Nachtschicht berechnen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ SECTION ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zur Nachtschicht</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Was gilt rechtlich als Nachtarbeit?</summary>
+        <div class="faq-body">
+          Als Nachtzeit gilt die Zeit von 23:00 bis 06:00 Uhr (§ 2 Abs. 3 ArbZG; in Bäckereien und Konditoreien 22:00 bis 05:00 Uhr). Nachtarbeit ist Arbeit, die mehr als zwei Stunden der Nachtzeit umfasst (§ 2 Abs. 4 ArbZG). Wer in Wechselschicht nachts arbeitet oder mindestens 48 Nachtdienste im Jahr leistet, gilt als Nachtarbeitnehmer (§ 2 Abs. 5 ArbZG).
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie hoch muss der Nachtzuschlag mindestens sein?</summary>
+        <div class="faq-body">
+          Das Gesetz nennt keinen festen Prozentsatz: § 6 Abs. 5 ArbZG verlangt nur einen angemessenen Ausgleich – entweder bezahlte freie Tage oder einen Zuschlag auf den Bruttolohn. In der Praxis haben sich 25 Prozent durchgesetzt, Tarifverträge legen eigene Sätze fest (IG Metall 25 Prozent, TVöD 20 Prozent). Prüfen Sie Ihren Arbeits- oder Tarifvertrag.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Ist der Nachtzuschlag steuerfrei?</summary>
+        <div class="faq-body">
+          Ja, teilweise: Nach § 3b EStG sind Zuschläge für Nachtarbeit bis 25 Prozent des Grundlohns steuerfrei, bis 40 Prozent, wenn die Arbeit vor 0:00 Uhr beginnt. Der Grundlohn darf höchstens 50 Euro je Stunde betragen. Alles darüber ist steuer- und sozialversicherungspflichtig.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Darf eine Nachtschicht länger als 8 Stunden dauern?</summary>
+        <div class="faq-body">
+          Grundsätzlich nein: Die werktägliche Arbeitszeit darf 8 Stunden nicht überschreiten (§ 3 ArbZG). Sie kann auf bis zu 10 Stunden verlängert werden, wenn innerhalb von sechs Monaten oder 24 Wochen im Schnitt 8 Stunden nicht überschritten werden. Für Nachtarbeit gilt zusätzlich § 6 Abs. 2 ArbZG: Im Monats- oder 4-Wochen-Schnitt sind höchstens 8 Stunden je 24 Stunden zulässig.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie viel Ruhezeit muss nach einer Nachtschicht liegen?</summary>
+        <div class="faq-body">
+          Mindestens 11 Stunden ununterbrochen nach Schichtende (§ 5 Abs. 1 ArbZG). In Krankenhäusern, Pflege, Gaststätten und Verkehr kann sie auf 10 Stunden verkürzt werden, wenn eine andere Ruhezeit auf mindestens 12 Stunden verlängert wird (§ 5 Abs. 2 ArbZG). Bei Schichtwechsel ist einmal wöchentlich eine Verkürzung auf 8 Stunden möglich (§ 5 Abs. 3 ArbZG).
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Gibt es einen extra Zuschlag, wenn die Nachtschicht auf einen Feiertag fällt?</summary>
+        <div class="faq-body">
+          Ja: Nacht- und Feiertagszuschlag können nebeneinander gezahlt werden – das steht meist im Tarifvertrag. Der Feiertagszuschlag ist nach § 3b EStG bis 125 Prozent des Grundlohns steuerfrei. Welche Tage Feiertage sind, hängt vom Bundesland ab: Fronleichnam gilt etwa in Bayern, Baden-Württemberg und NRW, nicht in Berlin oder Hamburg.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Muss die Nachtschicht elektronisch erfasst werden?</summary>
+        <div class="faq-body">
+          Ja: Seit dem BAG-Beschluss von September 2022 (aufbauend auf dem EuGH-Urteil von 2019) muss der Arbeitgeber Beginn, Ende und Dauer der täglichen Arbeitszeit systematisch erfassen – auch für Nachtschichten. Üblich sind elektronische Systeme wie DATEV, SAP HCM oder Lexware. Sie sollten Ihre Schichten zusätzlich selbst dokumentieren.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Dürfen Schwangere und Jugendliche nachts arbeiten?</summary>
+        <div class="faq-body">
+          Nein, grundsätzlich nicht: Das Mutterschutzgesetz (§ 5 MuSchG) verbietet die Beschäftigung schwangerer und stillender Frauen zwischen 20:00 und 06:00 Uhr. Auch Jugendliche dürfen nach § 14 JArbSchG nicht zwischen 20:00 und 06:00 Uhr arbeiten, mit wenigen Ausnahmen etwa in Bäckereien ab 05:00 Uhr.
+        </div>
+      </details>
+    </div>
+
+    <!-- E-E-A-T AUTHOR BOX -->
+    <div class="author-box">
+      <div class="author-avatar">W</div>
+      <div>
+        <div class="author-name">Tobias Weber – Fachredakteur für Arbeitsrecht &amp; HR</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: Oktober 2026</div>
+        <div class="author-desc">
+          Alle Berechnungen und rechtlichen Erläuterungen basieren auf dem deutschen <a href="https://www.gesetze-im-internet.de/arbzg/__2.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 2 ArbZG (Begriffsbestimmungen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 ArbZG (Arbeitszeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 ArbZG (Ruhepausen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 5 ArbZG (Ruhezeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__6.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 6 ArbZG (Nacht- und Schichtarbeit)</a> sowie
+          <a href="https://www.gesetze-im-internet.de/estg/__3b.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3b EStG (steuerfreie Zuschläge)</a>
+          und der Rechtsprechung des <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Bundesarbeitsgerichts (BAG)</a>.
+          Diese Seite ist keine Rechtsberatung – bei individuellen Fragen wenden Sie sich an Ihren Betriebsrat oder einen Fachanwalt für Arbeitsrecht.
+        </div>
+      </div>
+    </div>
+
+    <!-- SUMMARY NOTE -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Nachtschicht auf einen Blick</strong>
+      Nachtzeit = 23:00–06:00 Uhr (§ 2 Abs. 3 ArbZG). Mehr als 2 Stunden Nachtzeit = Nachtarbeit mit Anspruch auf angemessenen Ausgleich (§ 6 Abs. 5 ArbZG), in der Praxis meist 25 % Zuschlag. Maximal 8 Stunden je 24 Stunden (§ 6 Abs. 2 ArbZG), danach 11 Stunden Ruhezeit (§ 5 Abs. 1 ArbZG). Zuschlag steuerfrei bis 25 % des Grundlohns (§ 3b EStG), bis 40 % bei Arbeitsbeginn vor 0:00 Uhr.
+      <a href="#rechner" style="color:#1d4ed8;font-weight:700;">Jetzt Ihre Nachtschicht berechnen →</a>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner &amp; Tools</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-schichtarbeit" class="rel-card">
+        <div class="rel-tag">Schichtarbeit</div>
+        <div class="rel-title">Schichtarbeit-Rechner – Zuschläge &amp; Ruhezeit</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/pausenrechner" class="rel-card">
+        <div class="rel-tag">Pausen</div>
+        <div class="rel-title">Pausenrechner – Pflichtpause nach § 4 ArbZG</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" class="rel-card">
+        <div class="rel-tag">Überstunden</div>
+        <div class="rel-title">Überstunden-Rechner – Mehrarbeit berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/gleitzeit-rechner" class="rel-card">
+        <div class="rel-tag">Gleitzeit</div>
+        <div class="rel-title">Gleitzeit-Rechner – Arbeitszeitkonto &amp; Kernzeit</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/sollarbeitszeit-rechner" class="rel-card">
+        <div class="rel-tag">Zeitkonto</div>
+        <div class="rel-title">Sollarbeitszeit &amp; Zeitkonto berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <p>Präziser kostenloser Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach deutschem Arbeitsrecht.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">Tools &amp; Rechner</div>
+      <ul class="footer-links">
+        <li><a href="/#tool">Arbeitszeitrechner (Haupt-Tool)</a></li>
+        <li><a href="/pausenrechner">Pausenrechner (§ 4 ArbZG)</a></li>
+        <li><a href="/arbeitszeitrechner-monat">Monatsstunden berechnen</a></li>
+        <li><a href="/arbeitszeitrechner-dezimal">Dezimalstunden umrechnen</a></li>
+        <li><a href="/sollarbeitszeit-rechner">Sollarbeitszeit &amp; Zeitkonto</a></li>
+        <li><a href="/#lohnrechner">Integrierter Lohnrechner</a></li>
+        <li><a href="/#fuer-wen">Für alle Berufstypen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigation &amp; Ratgeber</div>
+      <ul class="footer-links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/#so-gehts">Bedienungsanleitung</a></li>
+        <li><a href="/#faq">Häufige Fragen (FAQ)</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Folgen Sie uns</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/Arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://de.pinterest.com/arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          <span>Pinterest</span>
+        </a>
+        <a href="https://x.com/Arbeitszeit365" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+    <div class="footer-bottom-links">
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function fmtDE(n, dec){
+  return n.toFixed(dec === undefined ? 2 : dec).replace('.', ',');
+}
+function fmtEUR(n){
+  return n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
+}
+function t2m(v){
+  var p = String(v || '').split(':');
+  if(p.length < 2) return NaN;
+  return parseInt(p[0], 10) * 60 + parseInt(p[1], 10);
+}
+function fmtClock(mins){
+  mins = ((Math.round(mins) % 1440) + 1440) % 1440;
+  var h = Math.floor(mins / 60), m = mins % 60;
+  return (h < 10 ? '0' : '') + h + ':' + (m < 10 ? '0' : '') + m + ' Uhr';
+}
+function fmtDur(mins){
+  var h = Math.floor(mins / 60), m = Math.round(mins % 60);
+  if(m === 60){ h += 1; m = 0; }
+  return h + ' Std. ' + (m < 10 ? '0' : '') + m + ' Min.';
+}
+function applyNacht(start, end, pause, lohn, zuschlag){
+  document.getElementById('n-start').value = start;
+  document.getElementById('n-end').value = end;
+  document.getElementById('n-pause').value = pause;
+  document.getElementById('n-lohn').value = String(lohn).replace('.', ',');
+  document.getElementById('n-zuschlag').value = zuschlag;
+  calcNacht();
+}
+function num(id){
+  return parseFloat(String(document.getElementById(id).value).replace(',', '.'));
+}
+function calcNacht(){
+  var box = document.getElementById('n-status');
+  var res = document.getElementById('n-results');
+  var s = t2m(document.getElementById('n-start').value);
+  var e = t2m(document.getElementById('n-end').value);
+  var pause = num('n-pause');
+  var lohn = num('n-lohn');
+  var pct = num('n-zuschlag');
+  var nextRaw = document.getElementById('n-next').value;
+  var feiertag = document.getElementById('n-feiertag').checked;
+  var bundesland = document.getElementById('n-bundesland').selectedOptions[0].text;
+
+  if(isNaN(s) || isNaN(e)){
+    res.style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Bitte Schichtbeginn und Schichtende eintragen.</span></div>';
+    return;
+  }
+  if(isNaN(pause) || pause < 0) pause = 0;
+  if(isNaN(lohn) || lohn <= 0){
+    res.style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Bitte einen gültigen Brutto-Stundenlohn eingeben (z. B. 18).</span></div>';
+    return;
+  }
+  if(isNaN(pct) || pct < 0) pct = 0;
+
+  /* Schicht über Mitternacht: Ende auf den Folgetag legen */
+  var startAbs = s;
+  var endAbs = e <= s ? e + 1440 : e;
+  var totalMin = endAbs - startAbs;
+  if(totalMin <= 0 || totalMin > 24 * 60){
+    res.style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Die Schichtdauer liegt außerhalb des plausiblen Bereichs (max. 24 Stunden). Bitte Beginn und Ende prüfen.</span></div>';
+    return;
+  }
+  if(pause >= totalMin){
+    res.style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Die Pause ist länger als die Schicht selbst. Bitte die Pausenminuten prüfen.</span></div>';
+    return;
+  }
+
+  /* Nachtanteil: Überlappung mit der Nachtzeit 23:00–06:00 (§ 2 Abs. 3 ArbZG) */
+  var nightMin = 0;
+  for(var k = -1; k <= 1; k++){
+    var nw0 = 1380 + 1440 * k, nw1 = 1800 + 1440 * k; /* 23:00 bis 06:00 Folgetag */
+    nightMin += Math.max(0, Math.min(endAbs, nw1) - Math.max(startAbs, nw0));
+  }
+  /* Pause anteilig auf Tag- und Nachtanteil verteilen (Lohnabrechnungs-Praxis) */
+  var nightNetMin = nightMin - pause * (totalMin > 0 ? nightMin / totalMin : 0);
+  var netMin = totalMin - pause;
+  var dayNetMin = netMin - nightNetMin;
+
+  var totalH = netMin / 60;
+  var nightH = nightNetMin / 60;
+  var dayH = Math.max(0, dayNetMin / 60);
+
+  var grundlohn = totalH * lohn;
+  var zuschlag = nightH * lohn * (pct / 100);
+  var gesamt = grundlohn + zuschlag;
+  var dezimal = totalH;
+  var im = Math.round(totalH * 100);
+
+  res.style.display = 'grid';
+  document.getElementById('r-dauer').textContent = fmtDur(netMin);
+  document.getElementById('r-nacht').textContent = fmtDur(nightNetMin) + ' (' + fmtDE(nightH) + ' h)';
+  document.getElementById('r-tag').textContent = fmtDur(dayNetMin) + ' (' + fmtDE(dayH) + ' h)';
+  document.getElementById('r-lohn').textContent = fmtEUR(grundlohn);
+  document.getElementById('r-zuschlag').textContent = fmtEUR(zuschlag);
+  document.getElementById('r-gesamt').textContent = fmtEUR(gesamt);
+  document.getElementById('r-dezimal').textContent = fmtDE(dezimal) + ' h';
+  document.getElementById('r-im').textContent = im + ' IM';
+
+  var html = '';
+
+  /* § 6 Abs. 2 ArbZG: Nachtarbeit max. 8 Std. je 24 Std. (Ausgleich im Monats-/4-Wochen-Schnitt) */
+  if(totalH > 10){
+    html += '<div class="status-banner status-danger">🛑 <span><strong>Überschreitung:</strong> Ihre Netto-Schicht dauert ' + fmtDE(totalH) + ' Stunden – mehr als die absolute Höchstgrenze von 10 Stunden (§ 3 ArbZG). Eine solche Schicht ist unzulässig.</span></div>';
+  } else if(totalH > 8){
+    html += '<div class="status-banner status-warn">⚠️ <span><strong>8-Stunden-Regel (§ 3 ArbZG):</strong> Ihre Schicht dauert ' + fmtDE(totalH) + ' Stunden. Zulässig nur, wenn im Schnitt von sechs Monaten bzw. 24 Wochen 8 Stunden werktäglich nicht überschritten werden – für Nachtarbeit gilt der strengere Monats-/4-Wochen-Schnitt (§ 6 Abs. 2 ArbZG).</span></div>';
+  } else {
+    html += '<div class="status-banner status-ok">✅ <span><strong>Arbeitszeit-Check bestanden:</strong> ' + fmtDE(totalH) + ' Stunden netto liegen innerhalb der 8-Stunden-Regel (§ 3 ArbZG). Beachten Sie bei regelmäßiger Nachtarbeit den Monats-/4-Wochen-Schnitt (§ 6 Abs. 2 ArbZG).</span></div>';
+  }
+
+  /* § 2 Abs. 5 ArbZG: Nachtarbeitnehmer-Status */
+  if(nightH > 2){
+    html += '<div class="status-banner status-ok">🌙 <span><strong>Nachtarbeit i. S. d. § 6 ArbZG:</strong> ' + fmtDE(nightH) + ' Nachtstunden – mehr als zwei Stunden Nachtzeit (§ 2 Abs. 4 ArbZG). Sie haben Anspruch auf einen angemessenen Ausgleich, z. B. den berechneten Zuschlag (§ 6 Abs. 5 ArbZG).</span></div>';
+  } else if(nightH > 0){
+    html += '<div class="status-banner status-warn">ℹ️ <span>Hinweis: ' + fmtDE(nightH) + ' Nachtstunden liegen unter der Zwei-Stunden-Grenze des § 2 Abs. 4 ArbZG – die Sonderregeln für Nachtarbeit greifen formal nicht, der Zuschlag wird dennoch wie eingegeben berechnet.</span></div>';
+  } else {
+    html += '<div class="status-banner status-warn">ℹ️ <span>Hinweis: Diese Schicht enthält keine Stunden in der Nachtzeit 23:00–06:00 Uhr – es fällt kein Nachtzuschlag an.</span></div>';
+  }
+
+  /* § 5 Abs. 1 ArbZG: 11 Stunden Ruhezeit */
+  if(nextRaw){
+    var ns = t2m(nextRaw);
+    var endClock = endAbs % 1440;
+    var nextAbs = ns <= endClock ? ns + 1440 : ns;
+    var gapMin = nextAbs - endClock;
+    var gapH = gapMin / 60;
+    if(gapH < 11){
+      html += '<div class="status-banner status-danger">🛑 <span><strong>Ruhezeit verletzt (§ 5 ArbZG):</strong> Zwischen Schichtende (' + fmtClock(endClock) + ') und nächstem Schichtbeginn (' + fmtClock(ns) + ') liegen nur ' + fmtDE(gapH) + ' Stunden – vorgeschrieben sind mindestens 11 Stunden ununterbrochene Ruhezeit.</span></div>';
+    } else {
+      html += '<div class="status-banner status-ok">✅ <span><strong>Ruhezeit eingehalten (§ 5 ArbZG):</strong> ' + fmtDE(gapH) + ' Stunden bis zum nächsten Schichtbeginn – die Mindestruhezeit von 11 Stunden ist gewahrt.</span></div>';
+    }
+  }
+
+  /* § 3b EStG: Steuerfreiheit des Zuschlags */
+  var steuerLimit = (s >= 720) ? 40 : 25; /* Arbeitsbeginn vor 0:00 Uhr = Abendbeginn */
+  if(pct > 0 && nightH > 0){
+    if(pct <= steuerLimit && lohn <= 50){
+      html += '<div class="status-banner status-ok">🧾 <span><strong>Steuerfrei (§ 3b EStG):</strong> ' + pct + ' % Nachtzuschlag liegen innerhalb der Steuerfreigrenze (' + steuerLimit + ' %) und Ihr Stundenlohn unter 50 € – der Zuschlag von ' + fmtEUR(zuschlag) + ' ist steuer- und sozialversicherungsfrei.</span></div>';
+    } else if(pct > steuerLimit){
+      var steuerfreiAnteil = nightH * lohn * (steuerLimit / 100);
+      html += '<div class="status-banner status-warn">🧾 <span><strong>Steuerhinweis (§ 3b EStG):</strong> Nur ' + steuerLimit + ' % sind steuerfrei (' + fmtEUR(steuerfreiAnteil) + ') – der Rest Ihres ' + pct + ' %-Zuschlags (' + fmtEUR(zuschlag - steuerfreiAnteil) + ') ist steuer- und sozialversicherungspflichtig.</span></div>';
+    } else if(lohn > 50){
+      html += '<div class="status-banner status-warn">🧾 <span><strong>Steuerhinweis (§ 3b EStG):</strong> Ihr Grundlohn übersteigt 50 € je Stunde – damit ist der Zuschlag trotz ' + pct + ' % voll steuer- und sozialversicherungspflichtig.</span></div>';
+    }
+  }
+
+  /* § 4 ArbZG: Pausenhinweis */
+  if(totalH > 9 && pause < 45){
+    html += '<div class="status-banner status-warn">☕ <span><strong>Pausenhinweis (§ 4 ArbZG):</strong> Bei mehr als 9 Stunden Arbeitszeit sind mindestens 45 Minuten Pause vorgeschrieben – Sie haben nur ' + Math.round(pause) + ' Minuten eingetragen.</span></div>';
+  } else if(totalH > 6 && pause < 30){
+    html += '<div class="status-banner status-warn">☕ <span><strong>Pausenhinweis (§ 4 ArbZG):</strong> Bei mehr als 6 Stunden Arbeitszeit sind mindestens 30 Minuten Pause vorgeschrieben – Sie haben nur ' + Math.round(pause) + ' Minuten eingetragen.</span></div>';
+  }
+
+  if(feiertag){
+    html += '<div class="status-banner status-ok">🎉 <span><strong>Feiertag in ' + bundesland + ':</strong> Zusätzlich zum Nachtzuschlag kann ein Feiertagszuschlag anfallen – steuerfrei bis 125 % des Grundlohns (§ 3b EStG). Die Kombination regelt Ihr Tarif- oder Arbeitsvertrag.</span></div>';
+  }
+
+  box.innerHTML = html;
+}
+['n-start','n-end','n-pause','n-lohn','n-zuschlag','n-next','n-bundesland','n-feiertag'].forEach(function(id){
+  var el = document.getElementById(id);
+  el.addEventListener(el.type === 'checkbox' ? 'change' : 'input', calcNacht);
+});
+calcNacht();
+</script>
+
+</body>
+</html>
