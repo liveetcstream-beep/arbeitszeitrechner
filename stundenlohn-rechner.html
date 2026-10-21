@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!-- ✅ PRIMARY: Stundenlohn Rechner | SECONDARY: Bruttomonatsgehalt umrechnen, 4,35-Faktor & Mindestlohn nach MiLoG -->
+<title>Stundenlohn berechnen: Brutto & Stundenlohn-Rechner</title>
+<meta name="description" content="Stundenlohn berechnen: Aus Bruttogehalt und Wochenstunden den Stundenlohn ermitteln – oder umgekehrt. Mit 4,35-Faktor, Mindestlohn-Check und Jahresgehalt."/>
+<link rel="canonical" href="https://arbeitszeitrechner365.de/stundenlohn-rechner"/>
+<meta property="og:locale" content="de_DE"/>
+<meta property="og:title" content="Stundenlohn berechnen: Brutto & Stundenlohn-Rechner"/>
+<meta property="og:description" content="Stundenlohn aus Monatsgehalt berechnen oder Monatsgehalt aus Stundenlohn – mit 4,35-Faktor, Mindestlohn-Check nach MiLoG und Jahresgehalt. Kostenlos, ohne Login."/>
+<meta property="og:url" content="https://arbeitszeitrechner365.de/stundenlohn-rechner"/>
+<meta property="og:type" content="website"/>
+<meta property="og:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://arbeitszeitrechner365.de/og-image.jpg"/>
+<meta name="twitter:title" content="Stundenlohn berechnen: Brutto & Stundenlohn-Rechner"/>
+<meta name="twitter:description" content="Stundenlohn aus Monatsgehalt oder Monatsgehalt aus Stundenlohn berechnen – mit Mindestlohn-Check. Kostenlos."/>
+<meta name="robots" content="index, follow"/>
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+
+<!-- Schema: WebApplication -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Stundenlohn Rechner – Stundenlohn aus Monatsgehalt und Monatsgehalt aus Stundenlohn",
+  "url": "https://arbeitszeitrechner365.de/stundenlohn-rechner",
+  "description": "Kostenloser Stundenlohn-Rechner für Deutschland: Bruttomonatsgehalt und Wochenstunden in den Stundenlohn umrechnen (Formel: Monatsgehalt geteilt durch Wochenstunden mal 4,35) oder aus dem Stundenlohn das Bruttomonats- und Jahresgehalt ermitteln – inklusive Monatsstunden, Dezimalstunden für DATEV, SAP HCM und Lexware sowie Mindestlohn-Check nach dem Mindestlohngesetz (MiLoG).",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Hourly Wage Calculator",
+  "operatingSystem": "All modern Web Browsers (Desktop, Tablet, iOS, Android)",
+  "browserRequirements": "Requires JavaScript. Requires HTML5.",
+  "inLanguage": "de-DE",
+  "softwareVersion": "2026.1",
+  "isAccessibleForFree": true,
+  "featureList": [
+    "Stundenlohn aus Bruttomonatsgehalt und Wochenstunden (Formel: Monatsgehalt / (Wochenstunden × 4,35))",
+    "Bruttomonatsgehalt und Jahresgehalt aus dem Stundenlohn",
+    "Monatsstunden (Wochenstunden × 4,35) sowie Dezimalstunden und Industrieminuten für DATEV, SAP HCM und Lexware",
+    "Mindestlohn-Check nach dem Mindestlohngesetz (MiLoG): Vergleich mit dem gesetzlichen Mindestlohn von 13,90 Euro pro Stunde (seit 1. Januar 2026)",
+    "Minijob-Hinweis: Abgleich mit der Minijob-Grenze von 603 Euro im Monat (2026)",
+    "100% DSGVO-konform ohne Registrierung und ohne Server-Datenspeicherung"
+  ],
+  "screenshot": "https://arbeitszeitrechner365.de/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "Redaktion arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/ueber-uns"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "arbeitszeitrechner365.de",
+    "url": "https://arbeitszeitrechner365.de/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://arbeitszeitrechner365.de/assets/logo.png"
+    }
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
+}
+</script>
+
+<!-- Schema: HowTo -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "Wie berechnet man den Stundenlohn?",
+  "description": "Schritt-für-Schritt-Anleitung zur Berechnung des Stundenlohns aus dem Bruttomonatsgehalt – und umgekehrt vom Stundenlohn zum Monatsgehalt.",
+  "totalTime": "PT2M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Rechenrichtung wählen",
+      "text": "Wählen Sie, ob Sie aus Ihrem Bruttomonatsgehalt den Stundenlohn ermitteln wollen oder aus Ihrem Stundenlohn das Monatsgehalt. Der Rechner zeigt jeweils nur die Eingaben, die Sie für diese Richtung brauchen."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Wochenstunden eintragen",
+      "text": "Tragen Sie Ihre vertraglichen Wochenstunden ein, zum Beispiel 40 Stunden bei Vollzeit oder 20 Stunden bei Teilzeit nach dem Teilzeit- und Befristungsgesetz (TzBfG). Der Rechner multipliziert sie mit dem Faktor 4,35 und erhält so Ihre Monatsstunden."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Gehalt oder Stundenlohn eingeben",
+      "text": "Geben Sie Ihr Bruttomonatsgehalt ein – also den Lohn vor Steuern und Sozialabgaben – oder Ihren Brutto-Stundenlohn. Der Rechner rechnet sofort in beide Richtungen und zeigt zusätzlich das Jahresgehalt."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Mindestlohn-Check prüfen",
+      "text": "Der Rechner vergleicht Ihren Stundenlohn automatisch mit dem gesetzlichen Mindestlohn von 13,90 Euro pro Stunde (seit 1. Januar 2026, § 1 MiLoG) und zeigt Ihnen, ob Ihr Lohn darüber liegt – und welches Monatsgehalt dem Mindestlohn bei Ihren Wochenstunden entspricht."
+    }
+  ]
+}
+</script>
+
+<!-- Schema: FAQPage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wie berechnet man den Stundenlohn aus dem Monatsgehalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Teilen Sie Ihr Bruttomonatsgehalt durch Ihre monatlichen Arbeitsstunden. Diese ergeben sich aus Ihren Wochenstunden multipliziert mit dem Faktor 4,35, also den durchschnittlichen Wochen pro Monat. Beispiel: 3.000 Euro geteilt durch 174 Stunden (40 Stunden mal 4,35) ergibt 17,24 Euro pro Stunde. Der Rechner oben führt diese Rechnung für Sie aus."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie berechnet man aus dem Stundenlohn das Monatsgehalt?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Multiplizieren Sie Ihren Brutto-Stundenlohn mit Ihren Wochenstunden und dem Faktor 4,35. Beispiel: 20 Euro mal 40 Stunden mal 4,35 ergibt 3.480 Euro brutto im Monat. Das Jahresgehalt erhalten Sie, indem Sie das Monatsgehalt mit zwölf multiplizieren – hier also 41.760 Euro. Zuschläge, etwa für Nachtarbeit, kommen gegebenenfalls hinzu."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Warum rechnet man mit dem Faktor 4,35?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ein Jahr hat 52 Wochen, geteilt durch zwölf Monate ergibt das durchschnittlich 4,333 Wochen pro Monat. In der Lohnabrechnung hat sich der gerundete Faktor 4,35 durchgesetzt, weil er auch Feiertage und die ungleiche Monatslänge ausgleicht. Er ist in DATEV, SAP HCM und Lexware Standard. Mit 40 Wochenstunden ergeben sich so 174 Monatsstunden."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der gesetzliche Mindestlohn 2026?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Seit dem 1. Januar 2026 beträgt der gesetzliche Mindestlohn 13,90 Euro brutto pro Stunde (§ 1 MiLoG). Ihr Stundenlohn darf nicht darunter liegen, außer es greift eine gesetzliche Ausnahme, etwa für Auszubildende oder Langzeitarbeitslose in den ersten sechs Monaten. Der Rechner prüft Ihren Stundenlohn automatisch gegen diesen Satz und warnt bei Unterschreitung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Zählen Überstunden und Zuschläge zum Stundenlohn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nein, der Grund-Stundenlohn ist Ihr vertraglicher Lohn je Arbeitsstunde ohne Zuschläge. Überstundenzuschläge, Nachtzuschläge nach § 6 ArbZG oder Feiertagszuschläge werden zusätzlich gezahlt und erhöhen Ihr effektives Einkommen, ändern aber nicht Ihren vertraglichen Stundenlohn. Prüfen Sie Mehrarbeit separat mit dem Überstunden-Rechner, um Zuschläge korrekt zu erfassen."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Wie viele Stunden darf ich bei einem Minijob höchstens arbeiten?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Das hängt von Ihrem Stundenlohn ab: Die Minijob-Grenze beträgt seit 2026 603 Euro im Monat (zuvor 556 Euro). Bei einem Stundenlohn von 13,90 Euro entspricht das rund 43,4 Stunden im Monat, also etwa zehn Stunden pro Woche. Verdienen Sie mehr pro Stunde, sinkt die zulässige Stundenzahl. Der Minijob-Rechner zeigt Ihnen die genaue Grenze für Ihren Lohn."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Was ist der Unterschied zwischen Brutto- und Netto-Stundenlohn?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Der Brutto-Stundenlohn ist der Lohn vor Abzug von Lohnsteuer und Sozialversicherungsbeiträgen – er steht in Ihrem Arbeitsvertrag. Der Netto-Stundenlohn ist das, was nach allen Abzügen je Stunde übrig bleibt. Er hängt von Ihrer Steuerklasse, Ihrem Bundesland, der Krankenkasse und weiteren Faktoren ab. Dieser Rechner arbeitet bewusst mit Bruttowerten, wie die Lohnabrechnung."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Muss mein Arbeitgeber meine Arbeitszeit erfassen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja: Seit dem BAG-Beschluss von September 2022, aufbauend auf dem EuGH-Urteil von 2019, muss der Arbeitgeber Beginn, Ende und Dauer Ihrer täglichen Arbeitszeit systematisch erfassen. Das gilt auch für Teilzeit und Minijobs. Führen Sie Ihre Stunden zusätzlich selbst mit – etwa im Zeitkonto – damit Ihr Stundenlohn und Ihr Monatsgehalt jederzeit nachprüfbar bleiben."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Schema: BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Startseite",
+      "item": "https://arbeitszeitrechner365.de/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Stundenlohn Rechner",
+      "item": "https://arbeitszeitrechner365.de/stundenlohn-rechner"
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#1a3d6e;--navy-dk:#0f2540;--amber:#e8a020;--amber-lt:#fef6e4;
+  --surface:#f4f6fb;--card:#fff;--border:#e2e8f0;--text:#1e293b;
+  --muted:#64748b;--green:#16a34a;--red:#dc2626;
+  --shadow:0 2px 12px rgba(26,61,110,.08);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--surface);color:var(--text);font-size:16px;line-height:1.75;}
+.container{max-width:960px;margin:0 auto;padding:0 20px;}
+.section{padding:64px 0;}
+.section-alt{background:var(--card);}
+.divider{border:none;border-top:1px solid var(--border);}
+.eyebrow{display:inline-block;font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--amber);margin-bottom:10px;}
+h1{font-size:clamp(24px,4.5vw,40px);font-weight:800;line-height:1.2;margin-bottom:14px;color:#fff;}
+h1 .hl{color:var(--amber);}
+h2{font-size:clamp(22px,3.5vw,32px);font-weight:800;color:var(--navy);line-height:1.25;margin-bottom:14px;}
+h3{font-size:clamp(17px,2.5vw,21px);font-weight:700;color:var(--navy);margin-bottom:10px;}
+p{margin-bottom:16px;line-height:1.8;}
+.lead{font-size:16.5px;color:var(--muted);max-width:680px;line-height:1.75;margin-bottom:36px;}
+
+/* NAV */
+nav{background:var(--navy-dk);padding:0 20px;position:relative;z-index:900;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:56px;}
+.nav-logo{color:#fff;text-decoration:none;font-weight:700;font-size:15px;}
+.nav-links{display:flex;gap:18px;list-style:none;align-items:center;}
+.nav-links a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .15s;}
+.nav-links a:hover,.nav-links a.active{color:#fff;}
+.nav-cta{background:var(--amber);color:#1e293b!important;font-weight:700!important;padding:7px 16px;border-radius:50px;}
+
+/* ── Dropdown Menu ── */
+.nav-dropdown-item{position:relative;display:inline-flex;align-items:center;}
+.nav-dropdown-toggle{display:inline-flex;align-items:center;gap:4px;cursor:pointer;}
+.dropdown-chevron{transition:transform .2s ease;}
+.nav-dropdown-item:hover .dropdown-chevron{transform:rotate(180deg);}
+.nav-dropdown-menu{position:absolute;top:calc(100% + 12px);left:-10px;background:#ffffff;min-width:280px;border-radius:12px;padding:8px;box-shadow:0 12px 32px rgba(15,37,64,.2),0 2px 6px rgba(15,37,64,.08);border:1px solid #e2e8f0;opacity:0;visibility:hidden;transform:translateY(8px);transition:all .2s ease;z-index:1000;display:flex;flex-direction:column;gap:2px;}
+.nav-dropdown-item:hover .nav-dropdown-menu,.nav-dropdown-item:focus-within .nav-dropdown-menu{opacity:1;visibility:visible;transform:translateY(0);}
+.dropdown-link{display:flex!important;align-items:center;gap:10px;padding:8px 10px!important;border-radius:8px!important;text-decoration:none;background:transparent!important;transition:background .15s ease!important;}
+.dropdown-link:hover{background:#f1f5f9!important;}
+.dropdown-icon{font-size:18px;flex-shrink:0;}
+.dropdown-link-title{font-size:13px;font-weight:700;color:#1a3d6e!important;line-height:1.3;}
+.dropdown-link-desc{font-size:11.5px;color:#64748b!important;line-height:1.25;margin-top:1px;}
+
+.breadcrumb{background:var(--card);border-bottom:1px solid var(--border);padding:10px 20px;}
+.breadcrumb-inner{max-width:960px;margin:0 auto;font-size:13px;color:var(--muted);}
+.breadcrumb a{color:var(--navy);text-decoration:none;}
+
+/* HERO */
+.hero{background:linear-gradient(140deg,var(--navy-dk) 0%,#1a3d6e 60%,#2c5282 100%);color:#fff;padding:52px 0 44px;position:relative;overflow:hidden;}
+.hero-sub{font-size:16.5px;color:rgba(255,255,255,.88);max-width:640px;line-height:1.65;margin-bottom:24px;}
+.trust-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.t-pill{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);border-radius:50px;padding:5px 13px;font-size:12.5px;}
+
+/* QUICK ANSWER */
+.qa-box{background:var(--amber-lt);border-left:5px solid var(--amber);border-radius:0 12px 12px 0;padding:20px 24px;margin:32px 0;}
+.qa-label{font-size:10.5px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#92400e;margin-bottom:7px;}
+.qa-box p{font-size:15px;color:#78350f;font-weight:500;line-height:1.7;margin:0;}
+
+/* TOOL ZONE */
+.tool-zone{background:var(--navy-dk);padding:52px 0;}
+.tool-zone h2{color:#fff;margin-bottom:8px;}
+.tool-zone .lead{color:rgba(255,255,255,.72);margin-bottom:24px;}
+
+/* PRESET PILLS */
+.preset-bar{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;}
+.preset-btn{background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.20);color:#fff;font-size:12.5px;font-weight:600;padding:6px 14px;border-radius:50px;cursor:pointer;transition:all .15s ease;}
+.preset-btn:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+
+/* CALC CARD */
+.calc-card{background:rgba(255,255,255,.06);border:1.5px solid rgba(255,255,255,.15);border-radius:16px;padding:32px;box-shadow:0 14px 36px rgba(0,0,0,.25);}
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;}
+.form-grp{display:flex;flex-direction:column;gap:6px;}
+.form-grp label{font-size:13.5px;font-weight:700;color:rgba(255,255,255,.9);}
+.form-grp input,.form-grp select{background:rgba(255,255,255,.10);border:1.5px solid rgba(255,255,255,.25);border-radius:8px;padding:11px 14px;color:#ffffff;font-size:15.5px;font-weight:600;font-family:inherit;outline:none;}
+.form-grp input:focus,.form-grp select:focus{border-color:var(--amber);background:rgba(255,255,255,.18);}
+.form-grp select option{background:#1a3d6e;color:#fff;}
+.check-row{display:flex;align-items:center;gap:10px;margin-top:18px;font-size:14px;color:rgba(255,255,255,.85);}
+.check-row input{width:18px;height:18px;accent-color:var(--amber);}
+.calc-btn{background:var(--amber);color:#1e293b;font-weight:800;font-size:16px;padding:13px 30px;border-radius:10px;border:none;cursor:pointer;margin-top:20px;transition:transform .15s, box-shadow .15s;}
+.calc-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,160,32,.4);}
+
+/* RESULT CARDS */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin-top:24px;}
+.res-box{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:18px 16px;text-align:center;}
+.res-box .lbl{font-size:12px;color:rgba(255,255,255,.65);margin-bottom:6px;font-weight:600;}
+.res-box .val{font-size:24px;font-weight:800;color:#fff;}
+.res-box.hl .val{color:var(--amber);}
+.res-box.green .val{color:#4ade80;}
+
+/* STATUS BANNER */
+.status-banner{border-radius:10px;padding:14px 18px;margin-top:20px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:12px;line-height:1.5;}
+.status-ok{background:rgba(74,222,128,.15);border:1.5px solid #4ade80;color:#86efac;}
+.status-warn{background:rgba(232,160,32,.18);border:1.5px solid var(--amber);color:#fde047;}
+.status-danger{background:rgba(239,68,68,.20);border:1.5px solid #f87171;color:#fca5a5;}
+
+/* TABLE STYLING */
+.tbl-wrap{overflow-x:auto;margin:24px 0;}
+table{width:100%;border-collapse:collapse;font-size:14.5px;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+thead tr{background:var(--navy);color:#fff;}
+th{padding:14px 16px;text-align:left;font-size:13px;font-weight:700;}
+td{padding:13px 16px;border-bottom:1px solid var(--border);background:#fff;}
+tbody tr:nth-child(even) td{background:#f8fafc;}
+tbody tr:last-child td{border-bottom:none;}
+tbody tr.highlight td{background:var(--amber-lt);font-weight:700;}
+
+/* CARDS & GRIDS */
+.card-grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:20px;margin-top:24px;}
+.feature-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;box-shadow:var(--shadow);}
+.feature-card .icon{font-size:30px;margin-bottom:12px;}
+.feature-card h3{font-size:16px;margin-bottom:8px;}
+.feature-card p{font-size:14px;color:var(--muted);margin:0;line-height:1.65;}
+
+/* BOXES */
+.box{border-radius:10px;padding:18px 22px;margin:22px 0;font-size:14.5px;line-height:1.7;}
+.box-tip{background:#eff6ff;border-left:4px solid #3b82f6;color:#1e40af;}
+.box-warn{background:#fff7ed;border-left:4px solid var(--amber);color:#78350f;}
+.box-ok{background:#f0fdf4;border-left:4px solid var(--green);color:#166534;}
+.box strong{display:block;margin-bottom:5px;}
+
+/* CHECKLIST */
+.check-list{list-style:none;padding:0;margin:18px 0;display:flex;flex-direction:column;gap:10px;}
+.check-list li{position:relative;padding-left:28px;font-size:14.5px;color:var(--text);line-height:1.6;}
+.check-list li::before{content:"✓";position:absolute;left:0;top:0;color:var(--green);font-weight:800;font-size:16px;}
+
+/* FAQ */
+.faq-list{display:flex;flex-direction:column;gap:10px;}
+details.faq{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;}
+details.faq[open]{border-color:var(--navy);}
+details.faq summary{padding:16px 20px;font-size:15px;font-weight:600;cursor:pointer;list-style:none;color:var(--navy);display:flex;justify-content:space-between;align-items:center;}
+details.faq summary::-webkit-details-marker{display:none;}
+details.faq summary::after{content:'+';font-size:20px;color:var(--amber);flex-shrink:0;margin-left:10px;}
+details.faq[open] summary::after{content:'−';}
+.faq-body{padding:0 20px 16px;font-size:14.5px;color:var(--muted);line-height:1.7;}
+
+/* AUTHOR / EEAT */
+.author-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:24px;display:flex;gap:18px;align-items:flex-start;margin-top:40px;}
+.author-avatar{width:54px;height:54px;border-radius:50%;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:800;flex-shrink:0;}
+.author-name{font-weight:700;color:var(--navy);font-size:15px;margin-bottom:2px;}
+.author-creds{font-size:12px;color:var(--amber);font-weight:600;margin-bottom:6px;}
+.author-desc{font-size:13.5px;color:var(--muted);line-height:1.6;}
+
+/* RELATED */
+.rel-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:20px;}
+.rel-card{background:var(--card);border:1.5px solid var(--border);border-radius:12px;padding:20px;text-decoration:none;transition:box-shadow .2s,transform .2s,border-color .2s;display:block;}
+.rel-card:hover{box-shadow:0 10px 25px rgba(26,61,110,.12);transform:translateY(-3px);border-color:var(--amber);}
+.rel-tag{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;color:var(--amber);margin-bottom:6px;}
+.rel-title{font-size:14.5px;font-weight:700;color:var(--navy);line-height:1.4;}
+
+/* ===== SITE FOOTER ===== */
+.site-footer{background:var(--navy-dk);color:rgba(255,255,255,.75);padding:4rem 0 2rem;border-top:1px solid rgba(255,255,255,.1);font-size:0.9rem;}
+.footer-container{max-width:960px;margin:0 auto;padding:0 20px;display:grid;grid-template-columns:2fr 1.3fr 1.2fr 1fr;gap:2.5rem;margin-bottom:3rem;}
+@media(max-width:900px){.footer-container{grid-template-columns:1fr 1fr;}}
+@media(max-width:600px){.footer-container{grid-template-columns:1fr;gap:2rem;}}
+.footer-brand .brand-logo{display:inline-flex;align-items:center;gap:0.5rem;font-size:1.2rem;font-weight:800;color:#fff;text-decoration:none;margin-bottom:0.75rem;}
+.footer-brand .brand-logo svg{color:var(--amber);}
+.footer-brand .brand-logo .highlight{color:var(--amber);}
+.footer-brand p{color:rgba(255,255,255,.65);font-size:0.85rem;line-height:1.6;margin:0;}
+.footer-title{color:#fff;font-size:0.95rem;font-weight:700;margin-bottom:1rem;letter-spacing:0.5px;}
+.footer-links{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.5rem;}
+.footer-links a{color:rgba(255,255,255,.7);text-decoration:none;font-size:0.85rem;transition:color 0.15s ease;}
+.footer-links a:hover{color:var(--amber);}
+.footer-social-links{display:flex;flex-direction:column;gap:0.6rem;}
+.social-pill{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);padding:0.4rem 0.75rem;border-radius:6px;color:#fff;text-decoration:none;font-size:0.825rem;transition:all 0.15s ease;width:fit-content;}
+.social-pill:hover{background:var(--amber);color:#1e293b;border-color:var(--amber);}
+.footer-bottom{max-width:960px;margin:0 auto;padding:1.5rem 20px 0;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.8rem;color:rgba(255,255,255,.5);}
+.footer-bottom-links{display:flex;gap:1.25rem;}
+.footer-bottom-links a{color:rgba(255,255,255,.6);text-decoration:none;}
+.footer-bottom-links a:hover{color:#fff;}
+
+@media(max-width:640px){
+  .hero{padding:40px 0 32px;}
+  .section{padding:44px 0;}
+  .calc-card{padding:20px;}
+  .author-box{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a href="https://arbeitszeitrechner365.de/" class="nav-logo">arbeitszeitrechner365.de</a>
+    <ul class="nav-links">
+      <li class="nav-dropdown-item">
+        <a href="/#tool" class="nav-dropdown-toggle">Rechner <svg class="dropdown-chevron" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></a>
+        <div class="nav-dropdown-menu">
+          <a href="/#tool" class="dropdown-link">
+            <span class="dropdown-icon">⏱️</span>
+            <div>
+              <div class="dropdown-link-title">Arbeitszeitrechner</div>
+              <div class="dropdown-link-desc">Täglich mit gesetzlicher Pause</div>
+            </div>
+          </a>
+          <a href="/pausenrechner" class="dropdown-link" style="background:#f1f5f9!important;">
+            <span class="dropdown-icon">☕</span>
+            <div>
+              <div class="dropdown-link-title">Pausenrechner (§ 4 ArbZG)</div>
+              <div class="dropdown-link-desc">Pflichtpausen &amp; Ruhezeit prüfen</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-monat" class="dropdown-link">
+            <span class="dropdown-icon">📅</span>
+            <div>
+              <div class="dropdown-link-title">Monatsstunden berechnen</div>
+              <div class="dropdown-link-desc">37,5h, TVöD &amp; Wochenmodelle</div>
+            </div>
+          </a>
+          <a href="/arbeitszeitrechner-dezimal" class="dropdown-link">
+            <span class="dropdown-icon">⚙️</span>
+            <div>
+              <div class="dropdown-link-title">Dezimalstunden umrechnen</div>
+              <div class="dropdown-link-desc">2-Wege DATEV &amp; SAP Konverter</div>
+            </div>
+          </a>
+          <a href="/sollarbeitszeit-rechner" class="dropdown-link">
+            <span class="dropdown-icon">⚖️</span>
+            <div>
+              <div class="dropdown-link-title">Sollarbeitszeit &amp; Zeitkonto</div>
+              <div class="dropdown-link-desc">Ist- vs. Sollzeit &amp; Überstunden</div>
+            </div>
+          </a>
+        </div>
+      </li>
+      <li><a href="/#lohnrechner">Lohnrechner</a></li>
+      <li><a href="/ueber-uns">Über uns</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/kontakt">Kontakt</a></li>
+      <li><a href="/#tool" class="nav-cta">⚡ Berechnen</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="https://arbeitszeitrechner365.de/">Startseite</a> &rsaquo;
+    <strong>Stundenlohn-Rechner</strong>
+  </div>
+</div>
+
+<!-- ════ HERO ════ -->
+<section class="hero">
+  <div class="container">
+    <div class="trust-bar">
+      <div class="t-pill">💶 Stundenlohn aus Monatsgehalt</div>
+      <div class="t-pill">📅 Monatsgehalt aus Stundenlohn</div>
+      <div class="t-pill">✖️ 4,35-Faktor (174 Std. bei 40 h)</div>
+      <div class="t-pill">⚖️ Mindestlohn-Check (MiLoG)</div>
+      <div class="t-pill">🇩🇪 Stand: 2026</div>
+    </div>
+    <h1>Stundenlohn berechnen: <span class="hl">Monatsgehalt &amp; Stundenlohn</span> umrechnen</h1>
+    <p class="hero-sub">Bruttomonatsgehalt und Wochenstunden eingeben – der Rechner ermittelt Ihren Stundenlohn nach der Formel Monatsgehalt geteilt durch (Wochenstunden × 4,35). Oder umgekehrt: Aus Ihrem Stundenlohn berechnet er Ihr Bruttomonats- und Jahresgehalt – inklusive Mindestlohn-Check nach dem Mindestlohngesetz (MiLoG). Kostenlos, ohne Login – alle Daten bleiben in Ihrem Browser.</p>
+    <div class="qa-box">
+      <div class="qa-label">Kurze Antwort</div>
+      <p>Der <strong>Stundenlohn</strong> ist Ihr <strong>Bruttolohn je Arbeitsstunde</strong>. Er berechnet sich aus dem <strong>Bruttomonatsgehalt geteilt durch die Monatsstunden</strong> – und die Monatsstunden ergeben sich aus Ihren <strong>Wochenstunden × 4,35</strong>. Beispiel: <strong>3.000 € geteilt durch 174 Stunden</strong> (40 Stunden × 4,35) = <strong>17,24 € pro Stunde</strong>. Umgekehrt gilt: Stundenlohn × Wochenstunden × 4,35 = Monatsgehalt. Der Rechner unten führt beide Rechnungen für Sie aus.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════ TOOL ZONE ════ -->
+<section class="tool-zone" id="rechner">
+  <div class="container">
+    <span class="eyebrow">Stundenlohn-Rechner</span>
+    <h2>Ihren Stundenlohn jetzt berechnen</h2>
+    <p class="lead">Wählen Sie die Rechenrichtung, tragen Sie Ihre Werte ein – der Rechner ermittelt sofort Stundenlohn, Monats- und Jahresgehalt, Ihre Monatsstunden und prüft, ob Ihr Lohn über dem gesetzlichen Mindestlohn liegt.</p>
+
+    <div class="preset-bar">
+      <button class="preset-btn" onclick="applyStundenlohn('gehalt',3000,40)">💼 Vollzeit: 3.000 € / 40 Std.</button>
+      <button class="preset-btn" onclick="applyStundenlohn('gehalt',2500,30)">🕐 Teilzeit: 2.500 € / 30 Std.</button>
+      <button class="preset-btn" onclick="applyStundenlohn('lohn',20,40)">💶 Stundenlohn 20 € / 40 Std.</button>
+      <button class="preset-btn" onclick="applyStundenlohn('lohn',13.9,9.5)">🧹 Minijob: 13,90 € / 9,5 Std.</button>
+      <button class="preset-btn" onclick="applyStundenlohn('gehalt',4500,38.5)">🏭 Tarif: 4.500 € / 38,5 Std.</button>
+    </div>
+
+    <div class="calc-card">
+      <div class="calc-grid">
+        <div class="form-grp">
+          <label for="s-mode">Rechenrichtung</label>
+          <select id="s-mode">
+            <option value="gehalt" selected>Monatsgehalt → Stundenlohn</option>
+            <option value="lohn">Stundenlohn → Monatsgehalt</option>
+          </select>
+        </div>
+        <div class="form-grp">
+          <label for="s-wochen">Wochenstunden (vertraglich)</label>
+          <input type="number" id="s-wochen" value="40" min="0.5" max="60" step="0.5"/>
+        </div>
+        <div class="form-grp" id="grp-gehalt">
+          <label for="s-gehalt">Bruttomonatsgehalt (€)</label>
+          <input type="number" id="s-gehalt" value="3000" min="1" step="0.01"/>
+        </div>
+        <div class="form-grp" id="grp-lohn" style="display:none;">
+          <label for="s-lohn">Brutto-Stundenlohn (€)</label>
+          <input type="number" id="s-lohn" value="20" min="0.01" step="0.01"/>
+        </div>
+        <div class="form-grp">
+          <label for="s-mindest">Gesetzlicher Mindestlohn (€/Std.)</label>
+          <input type="number" id="s-mindest" value="13.9" min="0.01" step="0.01"/>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,.65);font-size:13.5px;margin-top:14px;">Der Mindestlohn ist mit 13,90 € pro Stunde vorbelegt – dem gesetzlichen Satz seit dem 1. Januar 2026 (§ 1 MiLoG). Er wird regelmäßig angepasst: Prüfen Sie bei älteren Ausdrucken den aktuellen Satz und passen Sie das Feld gegebenenfalls an.</p>
+      <button class="calc-btn" onclick="calcStundenlohn()">⚡ Stundenlohn berechnen</button>
+
+      <div class="res-grid" id="s-results" style="display:none;">
+        <div class="res-box hl"><div class="lbl">Stundenlohn (brutto)</div><div class="val" id="r-stundenlohn">–</div></div>
+        <div class="res-box"><div class="lbl">Monatsstunden (Wochenstd. × 4,35)</div><div class="val" id="r-monatsstd">–</div></div>
+        <div class="res-box"><div class="lbl">Bruttomonatsgehalt</div><div class="val" id="r-monat">–</div></div>
+        <div class="res-box"><div class="lbl">Bruttojahresgehalt (× 12)</div><div class="val" id="r-jahr">–</div></div>
+        <div class="res-box"><div class="lbl">Dezimalstunden / Monat</div><div class="val" id="r-dezimal">–</div></div>
+        <div class="res-box"><div class="lbl">Industrieminuten / Monat</div><div class="val" id="r-im">–</div></div>
+        <div class="res-box"><div class="lbl">Mindestlohn-Monatsgehalt</div><div class="val" id="r-mindestmonat">–</div></div>
+        <div class="res-box"><div class="lbl">Abstand zum Mindestlohn</div><div class="val" id="r-abstand">–</div></div>
+      </div>
+      <div id="s-status"></div>
+
+      <div class="box box-warn" style="background:rgba(232,160,32,.10);border-left:4px solid var(--amber);color:#fde68a;margin-top:20px;">
+        <strong>So rechnet das Tool:</strong> Monatsstunden = Wochenstunden × 4,35 (durchschnittliche Wochen je Monat). Stundenlohn = Bruttomonatsgehalt ÷ Monatsstunden. Monatsgehalt = Stundenlohn × Monatsstunden. Das Jahresgehalt ist das Monatsgehalt × 12 – ohne Sonderzahlungen wie Weihnachts- oder Urlaubsgeld, die in Tarifverträgen (TVöD, TV-L, IG Metall) zusätzlich vereinbart sein können.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════ CONTENT: GRUNDLAGEN ════ -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">Grundlagen</span>
+    <h2>Was ist der Stundenlohn?</h2>
+
+    <div class="qa-box">
+      <div class="qa-label">Definition</div>
+      <p>Der <strong>Stundenlohn</strong> ist der <strong>Bruttoarbeitslohn je geleisteter Arbeitsstunde</strong> – also das Entgelt vor Abzug von Lohnsteuer und Sozialversicherungsbeiträgen, umgerechnet auf eine Stunde. Er steht entweder direkt in Ihrem Arbeitsvertrag oder ergibt sich aus Ihrem Monatsgehalt: <strong>Bruttomonatsgehalt ÷ (Wochenstunden × 4,35) = Stundenlohn</strong>.</p>
+    </div>
+
+    <p>Der Stundenlohn ist die <strong>zentrale Vergleichsgröße</strong> im deutschen Arbeitsleben: An ihm bemisst sich, ob der <strong>gesetzliche Mindestlohn</strong> nach dem <strong>Mindestlohngesetz (MiLoG)</strong> eingehalten wird. Daran knüpfen sich Zuschläge für <strong>Überstunden</strong>, <strong>Nachtarbeit</strong> (§ 6 ArbZG) und <strong>Feiertagsarbeit</strong> an. Und daran entscheidet sich, ob eine Stelle als <strong>Minijob</strong> gilt oder sozialversicherungspflichtig wird. Wer seinen Stundenlohn kennt, kann Gehaltsangebote vergleichen, Abrechnungen prüfen und im Vorstellungsgespräch souverän verhandeln.</p>
+
+    <div class="box box-tip">
+      <strong>Definition: Bruttomonatsgehalt</strong> Das Bruttomonatsgehalt ist das vertraglich vereinbarte monatliche Entgelt vor allen Abzügen – also vor Lohnsteuer, Solidaritätszuschlag, Kirchensteuer sowie den Beiträgen zu Kranken-, Pflege-, Renten- und Arbeitslosenversicherung. In Tarifverträgen (TVöD, TV-L, IG Metall) wird es meist als Tabellenentgelt ausgewiesen. Sonderzahlungen wie Urlaubs- oder Weihnachtsgeld sind darin nicht enthalten.
+    </div>
+
+    <div class="box box-tip">
+      <strong>Definition: 4,35-Faktor</strong> Der Faktor 4,35 ist die in der Lohnabrechnung übliche Zahl der durchschnittlichen Wochen je Kalendermonat. Rechnerisch wären es 52 Wochen ÷ 12 Monate = 4,333 Wochen; der gerundete Wert 4,35 gleicht die unterschiedlich langen Monate und Feiertage aus und ist in DATEV, SAP HCM und Lexware Standard.
+    </div>
+
+    <h2 style="margin-top:40px;">Wie berechnet man den Stundenlohn aus dem Monatsgehalt?</h2>
+    <p>Die Rechnung folgt zwei Schritten – genau so rechnet auch das Tool oben:</p>
+    <p><strong>1. Monatsstunden bestimmen.</strong> Multiplizieren Sie Ihre vertraglichen Wochenstunden mit dem Faktor 4,35. Bei 40 Wochenstunden: 40 × 4,35 = <strong>174 Stunden pro Monat</strong>. Bei 30 Wochenstunden: 30 × 4,35 = <strong>130,5 Stunden</strong>.</p>
+    <p><strong>2. Gehalt durch Monatsstunden teilen.</strong> Teilen Sie Ihr Bruttomonatsgehalt durch die Monatsstunden. Bei 3.000 € und 174 Stunden: 3.000 ÷ 174 = <strong>17,24 € pro Stunde</strong>.</p>
+
+    <div class="box box-ok">
+      <strong>Rechenbeispiel – Vollzeit in München:</strong> Sie arbeiten 40 Stunden pro Woche in einem Büro in München (80331) und verdienen 3.000 € brutto im Monat. Monatsstunden: 40 × 4,35 = <strong>174 Stunden</strong>. Stundenlohn: 3.000 ÷ 174 = <strong>17,24 €</strong>. Jahresgehalt: 3.000 × 12 = <strong>36.000 €</strong>. In Dezimalstunden für die Lohnabrechnung: <strong>174,00 Stunden = 17.400 Industrieminuten</strong> – so geben Sie Ihre Monatsstunden in DATEV, SAP HCM oder Lexware ein.
+    </div>
+
+    <h3>Warum nicht einfach durch 4 Wochen teilen?</h3>
+    <p><strong>Weil Monate unterschiedlich lang sind.</strong> Ein Monat hat nicht vier, sondern im Schnitt 4,35 Wochen – sonst würden Sie Ihr Gehalt auf zu wenige Stunden verteilen und einen zu hohen Stundenlohn errechnen. Die falsche Rechnung (3.000 ÷ 160 = 18,75 €) täuscht Sie um über 1,50 € pro Stunde. Arbeitgeber, Betriebsräte und Arbeitsgerichte rechnen in Deutschland einheitlich mit dem Faktor 4,35.</p>
+
+    <h2 style="margin-top:40px;">Wie berechnet man aus dem Stundenlohn das Monatsgehalt?</h2>
+    <p><strong>Durch Multiplikation – in umgekehrter Richtung.</strong> Monatsgehalt = Stundenlohn × Wochenstunden × 4,35. Bei einem Stundenlohn von 20 € und 40 Wochenstunden: 20 × 174 = <strong>3.480 € brutto im Monat</strong>. Das Jahresgehalt: 3.480 × 12 = <strong>41.760 €</strong>.</p>
+    <p>Diese Richtung brauchen Sie vor allem bei <strong>Stellenangeboten mit Stundenlohn</strong> – etwa in der Gastronomie, im Einzelhandel, in der Logistik oder bei Zeitarbeit. Rechnen Sie das Angebot immer auf den Monat hoch, bevor Sie unterschreiben: 15 € pro Stunde klingen gut, sind bei 20 Wochenstunden aber nur 15 × 87 = <strong>1.305 € brutto im Monat</strong> – und das liegt deutlich unter dem Mindestlohn-Monatsgehalt einer Vollzeitstelle.</p>
+
+    <div class="box box-ok">
+      <strong>Rechenbeispiel – Teilzeit in Berlin:</strong> Sie arbeiten 25 Stunden pro Woche in einem Café in Berlin (10115) bei einem Stundenlohn von 16 €. Monatsstunden: 25 × 4,35 = <strong>108,75 Stunden</strong>. Monatsgehalt: 16 × 108,75 = <strong>1.740 € brutto</strong>. Jahresgehalt: 1.740 × 12 = <strong>20.880 €</strong>. Mindestlohn-Check: 16 € liegen über dem gesetzlichen Mindestlohn von 13,90 € – Ihr Lohn ist also zulässig.
+    </div>
+
+    <h2 style="margin-top:40px;">Was ist der gesetzliche Mindestlohn 2026?</h2>
+    <p><strong>13,90 € brutto pro Stunde – seit dem 1. Januar 2026.</strong> Das Mindestlohngesetz (MiLoG) sichert seit 2015 jedem Arbeitnehmer in Deutschland einen Mindestlohn je Zeitstunde zu (§ 1 MiLoG); die Höhe wird auf Empfehlung der Mindestlohnkommission per Rechtsverordnung angepasst. Zum 1. Januar 2026 stieg der Satz von 12,82 € auf <strong>13,90 €</strong>; zum 1. Januar 2027 ist bereits die nächste Stufe auf <strong>14,60 €</strong> beschlossen.</p>
+    <p>Der Mindestlohn gilt für <strong>alle Arbeitnehmer ab 18 Jahren</strong> – Vollzeit, Teilzeit, Minijobs und Leiharbeit. Ausnahmen sind eng begrenzt: <strong>Auszubildende</strong>, <strong>Pflichtpraktikanten</strong>, <strong>Jugendliche unter 18</strong> sowie <strong>Langzeitarbeitslose in den ersten sechs Monaten</strong> nach Arbeitsaufnahme fallen nicht darunter. In einzelnen Branchen mit allgemeinverbindlichen Tarifverträgen können höhere Branchenmindestlöhne gelten – prüfen Sie also immer auch Ihren Tarifvertrag.</p>
+
+    <div class="box box-warn">
+      <strong>Schmerzpunkt vieler Beschäftigter:</strong> Der Stundenlohn auf der Abrechnung stimmt nicht mit dem Vertrag überein – etwa weil unbezahlte Pausen falsch abgezogen, Überstunden gar nicht erfasst oder Zuschläge auf einen zu niedrigen Grundlohn berechnet wurden. Rechnen Sie Ihr Gehalt mit dem Tool oben nach: Liegt Ihr tatsächlicher Stundenlohn unter 13,90 €, sprechen Sie zuerst die Personalabteilung oder den Betriebsrat an – häufig handelt es sich um einen Fehler in der Lohnabrechnung (DATEV, SAP HCM, Lexware), nicht um Absicht.
+    </div>
+
+    <h3>Wie prüfe ich, ob mein Gehalt den Mindestlohn einhält?</h3>
+    <p><strong>Rechnen Sie Ihren effektiven Stundenlohn aus – und vergleichen Sie.</strong> Teilen Sie Ihr tatsächliches Monatsbrutto durch die tatsächlich geleisteten Monatsstunden (inklusive unbezahlter Überstunden!). Liegt das Ergebnis unter 13,90 €, ist der Mindestlohn verletzt – auch dann, wenn auf dem Papier ein höherer Stundenlohn steht. Der Rechner oben zeigt Ihnen zusätzlich das <strong>Mindestlohn-Monatsgehalt</strong> für Ihre Wochenstunden: Bei 40 Stunden sind das 13,90 × 174 = <strong>2.418,60 € brutto</strong>.</p>
+
+    <h2 style="margin-top:40px;">Was gilt bei Teilzeit und Minijob?</h2>
+    <p><strong>Der Stundenlohn bleibt gleich – das Monatsgehalt sinkt anteilig.</strong> Das <strong>Teilzeit- und Befristungsgesetz (TzBfG)</strong> verbietet es, Teilzeitbeschäftigte beim Arbeitsentgelt schlechter zu behandeln als vergleichbare Vollzeitbeschäftigte (§ 4 Abs. 1 TzBfG): Bei 20 statt 40 Wochenstunden erhalten Sie die Hälfte des Vollzeitgehalts – bei gleichem Stundenlohn. Beispiel: 3.000 € bei 40 Stunden entsprechen <strong>1.500 € bei 20 Stunden</strong> (Stundenlohn jeweils 17,24 €).</p>
+    <p>Beim <strong>Minijob</strong> entscheidet der Stundenlohn darüber, wie viele Stunden Sie arbeiten dürfen: Die <strong>Minijob-Grenze</strong> beträgt seit 2026 <strong>603 € im Monat</strong> (zuvor 556 €) und steigt automatisch mit dem Mindestlohn. Bei 13,90 € Stundenlohn sind das 603 ÷ 13,90 = <strong>rund 43,4 Stunden im Monat</strong> – etwa zehn Stunden pro Woche. Liegt Ihr Verdienst darüber, wird die Beschäftigung sozialversicherungspflichtig (Midijob bis 2.000 €). Prüfen Sie Ihre genaue Grenze mit unserem <a href="https://arbeitszeitrechner365.de/minijob-rechner" style="color:var(--navy);font-weight:600;">Minijob-Rechner</a>.</p>
+
+    <h2 style="margin-top:40px;">Zählen Überstunden und Zuschläge zum Stundenlohn?</h2>
+    <p><strong>Nein – sie kommen obendrauf.</strong> Ihr vertraglicher Stundenlohn ist der Grundlohn je Arbeitsstunde. <strong>Überstundenzuschläge</strong>, der <strong>Nachtzuschlag</strong> nach § 6 Abs. 5 ArbZG (in der Praxis meist 25 %) und <strong>Feiertagszuschläge</strong> werden zusätzlich gezahlt und erhöhen Ihr effektives Einkommen – ändern aber nicht Ihren Stundenlohn. Wichtig: Auch der Mindestlohn bezieht sich auf den Grundlohn je Stunde; Zuschläge dürfen einen zu niedrigen Grundlohn nicht „auffüllen“.</p>
+    <p>Gerade bei Überstunden lohnt sich die getrennte Rechnung: Erfassen Sie Ihre Mehrarbeit mit dem <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" style="color:var(--navy);font-weight:600;">Überstunden-Rechner</a> und prüfen Sie, ob Ihr <strong>Zeitkonto</strong> stimmt – unser <a href="https://arbeitszeitrechner365.de/gleitzeit-rechner" style="color:var(--navy);font-weight:600;">Gleitzeit-Rechner</a> hilft bei der Saldenkontrolle. Arbeiten Sie regelmäßig nachts, zeigt Ihnen der <a href="https://arbeitszeitrechner365.de/nachtschicht-rechner" style="color:var(--navy);font-weight:600;">Nachtschicht-Rechner</a>, wie sich Nachtstunden und Nachtzuschlag auf Ihren effektiven Verdienst auswirken.</p>
+
+    <div class="box box-tip">
+      <strong>Definition: Dezimalstunden &amp; Industrieminuten</strong> Dezimalstunden drücken Zeit als Dezimalzahl aus: 7 Stunden 30 Minuten = 7,50 Stunden. Industrieminuten teilen die Stunde in 100 Teile: 7,50 Stunden = 750 Industrieminuten. Lohnprogramme wie DATEV, SAP HCM und Lexware erwarten Zeitangaben in diesem Format – ein häufiger Fehler ist, „7:30“ als 7,30 Stunden einzutragen. Der Rechner oben gibt Monatsstunden in beiden Formaten aus.
+    </div>
+
+    <h2 style="margin-top:40px;">Welche Rolle spielen Tarifverträge?</h2>
+    <p><strong>Sie legen den Stundenlohn oft genauer fest als das Gesetz.</strong> Im <strong>TVöD</strong> (öffentlicher Dienst Bund und Kommunen) und im <strong>TV-L</strong> (Länder) ergibt sich der Stundenlohn aus dem Tabellenentgelt geteilt durch die tarifliche Monatsarbeitszeit – bei 39 Wochenstunden im TVöD sind das 39 × 4,35 = <strong>169,65 Stunden</strong>. In der <strong>Metall- und Elektroindustrie</strong> gelten die Tarifverträge der <strong>IG Metall</strong> mit eigenen Entgelttabellen und Zuschlagsregelungen. Tarifverträge dürfen den gesetzlichen Mindestlohn nur über-, nie unterschreiten.</p>
+    <p>Auch die <strong>Arbeitszeitgrenzen</strong> kommen aus dem Tarifvertrag oder dem Gesetz: Die werktägliche Arbeitszeit darf <strong>8 Stunden</strong> nicht überschreiten, verlängerbar auf <strong>10 Stunden</strong> bei entsprechendem Ausgleich (§ 3 ArbZG). Nach mehr als 6 Stunden stehen Ihnen mindestens <strong>30 Minuten Pause</strong> zu (§ 4 ArbZG), zwischen zwei Arbeitstagen mindestens <strong>11 Stunden Ruhezeit</strong> (§ 5 Abs. 1 ArbZG). Ihr Stundenlohn ändert sich dadurch nicht – aber Ihre Monatsstunden und damit Ihr Gehalt schon, wenn die tarifliche Wochenarbeitszeit von 40 Stunden abweicht.</p>
+
+    <h2 style="margin-top:40px;">Brutto oder netto – womit rechnet man?</h2>
+    <p><strong>Immer mit brutto.</strong> Der Stundenlohn im Arbeitsvertrag, in Tarifverträgen und im Mindestlohngesetz ist stets ein <strong>Bruttowert</strong> – also vor Lohnsteuer und Sozialabgaben. Was davon als <strong>Netto</strong> übrig bleibt, hängt von Ihrer Steuerklasse, Ihrem Bundesland (Kirchensteuer!), Ihrer Krankenkasse und weiteren Faktoren ab. Zwei Beschäftigte mit identischem Brutto-Stundenlohn können deshalb sehr unterschiedliche Netto-Stundenlöhne haben.</p>
+    <p>Für Gehaltsvergleiche, den Mindestlohn-Check und die Lohnabrechnung zählt ausschließlich brutto – so rechnet auch das Tool oben. Wollen Sie wissen, was Ihnen tatsächlich ausgezahlt wird, brauchen Sie zusätzlich einen Brutto-Netto-Rechner mit Ihren persönlichen Abzugsmerkmalen.</p>
+
+    <h2 style="margin-top:40px;">Muss meine Arbeitszeit erfasst werden?</h2>
+    <p><strong>Ja – vom Arbeitgeber, und am besten auch von Ihnen.</strong> Seit dem Grundsatzbeschluss des <strong>Bundesarbeitsgerichts vom September 2022</strong> – aufbauend auf dem <strong>EuGH-Urteil von 2019</strong> – muss der Arbeitgeber <strong>Beginn, Ende und Dauer</strong> der täglichen Arbeitszeit systematisch erfassen, in der Regel elektronisch (DATEV, SAP HCM, Lexware oder ein Zeiterfassungssystem). Das gilt für Vollzeit, Teilzeit und Minijobs gleichermaßen.</p>
+    <p>Für Sie ist die eigene Dokumentation bares Geld wert: Nur wer seine Stunden kennt, kann prüfen, ob der abgerechnete Stundenlohn stimmt – und ob unbezahlte Überstunden Ihren effektiven Stundenlohn unter den Mindestlohn drücken. Führen Sie Ihre Zeiten monatlich mit, etwa in Ihrem <strong>Zeitkonto</strong>, und gleichen Sie sie mit der Lohnabrechnung ab. Auch <strong>Urlaubstage</strong> wirken sich auf Ihre Monatsstunden aus – der <a href="https://arbeitszeitrechner365.de/urlaubstage-rechner" style="color:var(--navy);font-weight:600;">Urlaubstage-Rechner</a> zeigt Ihnen Ihren Anspruch nach dem Bundesurlaubsgesetz (BUrlG).</p>
+
+    <h2 style="margin-top:40px;">Die häufigsten Fehler bei der Stundenlohn-Berechnung</h2>
+    <p><strong>Fehler 1: Durch 4 statt 4,35 teilen.</strong> Der Klassiker – und er schönt den Stundenlohn um fast 9 Prozent. Rechnen Sie immer mit 4,35.</p>
+    <p><strong>Fehler 2: Netto statt brutto einsetzen.</strong> Der Mindestlohn und alle Tarifverträge meinen brutto. Wer sein Nettogehalt durch die Stunden teilt, vergleicht Äpfel mit Birnen.</p>
+    <p><strong>Fehler 3: Unbezahlte Überstunden vergessen.</strong> 3.000 € bei 40 Vertragsstunden sind 17,24 € – bei regelmäßig 45 tatsächlichen Stunden aber nur noch 15,90 €. Erfassen Sie Ihre wirklichen Stunden.</p>
+    <p><strong>Fehler 4: Pausen als Arbeitszeit zählen.</strong> Unbezahlte Pausen nach § 4 ArbZG mindern die bezahlte Zeit nicht – sie gehören aber auch nicht zu den Stunden, die Sie für den Stundenlohn ansetzen dürfen, wenn sie unbezahlt sind. Entscheidend ist, was vertraglich als Arbeitszeit gilt.</p>
+    <p><strong>Fehler 5: Sonderzahlungen einrechnen.</strong> Weihnachts- und Urlaubsgeld erhöhen Ihr Jahreseinkommen, gehören aber nicht in den monatlichen Stundenlohn – es sei denn, Ihr Vertrag rechnet sie ausdrücklich auf zwölf Monate um.</p>
+
+    <div class="box box-tip">
+      <strong>Kein Ersatz für Rechtsberatung:</strong> Diese Seite erklärt die Berechnung des Stundenlohns und die Grundlagen des Mindestlohns nach bestem Wissen und mit exakten Paragrafenverweisen (MiLoG, ArbZG, TzBfG). Sie ersetzt keine individuelle Rechtsberatung. Bei konkreten Streitfällen – etwa zur Anrechnung von Zuschlägen auf den Mindestlohn oder zu Ausschlussfristen in Ihrem Tarifvertrag – wenden Sie sich an Ihren Betriebsrat, Ihre Gewerkschaft oder einen Fachanwalt für Arbeitsrecht.
+    </div>
+
+    <div class="box box-ok" style="text-align:center;">
+      <strong style="font-size:17px;">Wie hoch ist Ihr Stundenlohn wirklich?</strong><br/>
+      Geben Sie oben Ihr Bruttomonatsgehalt und Ihre Wochenstunden ein und sehen Sie in unter einer Minute Ihren exakten Stundenlohn, Ihr Jahresgehalt und ob der Mindestlohn eingehalten ist – kostenlos und ohne Anmeldung.
+      <br/><a href="#rechner" style="display:inline-block;margin-top:12px;background:var(--navy);color:#fff;font-weight:700;padding:12px 28px;border-radius:10px;text-decoration:none;">⚡ Jetzt Stundenlohn berechnen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ════ FAQ SECTION ════ -->
+<section class="section section-alt">
+  <div class="container">
+    <span class="eyebrow">FAQ</span>
+    <h2>Häufige Fragen zum Stundenlohn</h2>
+
+    <div class="faq-list">
+      <details class="faq" open>
+        <summary>Wie berechnet man den Stundenlohn aus dem Monatsgehalt?</summary>
+        <div class="faq-body">
+          Teilen Sie Ihr Bruttomonatsgehalt durch Ihre monatlichen Arbeitsstunden. Diese ergeben sich aus Ihren Wochenstunden multipliziert mit dem Faktor 4,35, also den durchschnittlichen Wochen pro Monat. Beispiel: 3.000 Euro geteilt durch 174 Stunden (40 Stunden mal 4,35) ergibt 17,24 Euro pro Stunde. Der Rechner oben führt diese Rechnung für Sie aus.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie berechnet man aus dem Stundenlohn das Monatsgehalt?</summary>
+        <div class="faq-body">
+          Multiplizieren Sie Ihren Brutto-Stundenlohn mit Ihren Wochenstunden und dem Faktor 4,35. Beispiel: 20 Euro mal 40 Stunden mal 4,35 ergibt 3.480 Euro brutto im Monat. Das Jahresgehalt erhalten Sie, indem Sie das Monatsgehalt mit zwölf multiplizieren – hier also 41.760 Euro. Zuschläge, etwa für Nachtarbeit, kommen gegebenenfalls hinzu.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Warum rechnet man mit dem Faktor 4,35?</summary>
+        <div class="faq-body">
+          Ein Jahr hat 52 Wochen, geteilt durch zwölf Monate ergibt das durchschnittlich 4,333 Wochen pro Monat. In der Lohnabrechnung hat sich der gerundete Faktor 4,35 durchgesetzt, weil er auch Feiertage und die ungleiche Monatslänge ausgleicht. Er ist in DATEV, SAP HCM und Lexware Standard. Mit 40 Wochenstunden ergeben sich so 174 Monatsstunden.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was ist der gesetzliche Mindestlohn 2026?</summary>
+        <div class="faq-body">
+          Seit dem 1. Januar 2026 beträgt der gesetzliche Mindestlohn 13,90 Euro brutto pro Stunde (§ 1 MiLoG). Ihr Stundenlohn darf nicht darunter liegen, außer es greift eine gesetzliche Ausnahme, etwa für Auszubildende oder Langzeitarbeitslose in den ersten sechs Monaten. Der Rechner prüft Ihren Stundenlohn automatisch gegen diesen Satz und warnt bei Unterschreitung.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Zählen Überstunden und Zuschläge zum Stundenlohn?</summary>
+        <div class="faq-body">
+          Nein, der Grund-Stundenlohn ist Ihr vertraglicher Lohn je Arbeitsstunde ohne Zuschläge. Überstundenzuschläge, Nachtzuschläge nach § 6 ArbZG oder Feiertagszuschläge werden zusätzlich gezahlt und erhöhen Ihr effektives Einkommen, ändern aber nicht Ihren vertraglichen Stundenlohn. Prüfen Sie Mehrarbeit separat mit dem Überstunden-Rechner, um Zuschläge korrekt zu erfassen.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Wie viele Stunden darf ich bei einem Minijob höchstens arbeiten?</summary>
+        <div class="faq-body">
+          Das hängt von Ihrem Stundenlohn ab: Die Minijob-Grenze beträgt seit 2026 603 Euro im Monat (zuvor 556 Euro). Bei einem Stundenlohn von 13,90 Euro entspricht das rund 43,4 Stunden im Monat, also etwa zehn Stunden pro Woche. Verdienen Sie mehr pro Stunde, sinkt die zulässige Stundenzahl. Der Minijob-Rechner zeigt Ihnen die genaue Grenze für Ihren Lohn.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Was ist der Unterschied zwischen Brutto- und Netto-Stundenlohn?</summary>
+        <div class="faq-body">
+          Der Brutto-Stundenlohn ist der Lohn vor Abzug von Lohnsteuer und Sozialversicherungsbeiträgen – er steht in Ihrem Arbeitsvertrag. Der Netto-Stundenlohn ist das, was nach allen Abzügen je Stunde übrig bleibt. Er hängt von Ihrer Steuerklasse, Ihrem Bundesland, der Krankenkasse und weiteren Faktoren ab. Dieser Rechner arbeitet bewusst mit Bruttowerten, wie die Lohnabrechnung.
+        </div>
+      </details>
+      <details class="faq">
+        <summary>Muss mein Arbeitgeber meine Arbeitszeit erfassen?</summary>
+        <div class="faq-body">
+          Ja: Seit dem BAG-Beschluss von September 2022, aufbauend auf dem EuGH-Urteil von 2019, muss der Arbeitgeber Beginn, Ende und Dauer Ihrer täglichen Arbeitszeit systematisch erfassen. Das gilt auch für Teilzeit und Minijobs. Führen Sie Ihre Stunden zusätzlich selbst mit – etwa im Zeitkonto – damit Ihr Stundenlohn und Ihr Monatsgehalt jederzeit nachprüfbar bleiben.
+        </div>
+      </details>
+    </div>
+
+    <!-- E-E-A-T AUTHOR BOX -->
+    <div class="author-box">
+      <div class="author-avatar">W</div>
+      <div>
+        <div class="author-name">Tobias Weber – Fachredakteur für Arbeitsrecht &amp; HR</div>
+        <div class="author-creds">Fachlich geprüft · Zuletzt aktualisiert: Oktober 2026</div>
+        <div class="author-desc">
+          Alle Berechnungen und rechtlichen Erläuterungen basieren auf dem deutschen <a href="https://www.gesetze-im-internet.de/milog/__1.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 1 MiLoG (Mindestlohn)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__3.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 3 ArbZG (Arbeitszeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 ArbZG (Ruhepausen)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__5.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 5 ArbZG (Ruhezeit)</a>,
+          <a href="https://www.gesetze-im-internet.de/arbzg/__6.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 6 ArbZG (Nacht- und Schichtarbeit)</a> sowie
+          <a href="https://www.gesetze-im-internet.de/tzbfg/__4.html" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">§ 4 TzBfG (Benachteiligungsverbot bei Teilzeit)</a>
+          und der Rechtsprechung des <a href="https://www.bundesarbeitsgericht.de" target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;">Bundesarbeitsgerichts (BAG)</a>.
+          Diese Seite ist keine Rechtsberatung – bei individuellen Fragen wenden Sie sich an Ihren Betriebsrat oder einen Fachanwalt für Arbeitsrecht.
+        </div>
+      </div>
+    </div>
+
+    <!-- SUMMARY NOTE -->
+    <div class="box box-tip" style="margin-top:24px;">
+      <strong>Zusammenfassung: Stundenlohn auf einen Blick</strong>
+      Stundenlohn = Bruttomonatsgehalt ÷ (Wochenstunden × 4,35). Beispiel: 3.000 € ÷ 174 Stunden (40 Stunden × 4,35) = 17,24 € pro Stunde. Umgekehrt: Stundenlohn × Wochenstunden × 4,35 = Monatsgehalt; × 12 = Jahresgehalt. Gesetzlicher Mindestlohn seit 1. Januar 2026: 13,90 € brutto pro Stunde (§ 1 MiLoG). Minijob-Grenze 2026: 603 € im Monat.
+      <a href="#rechner" style="color:#1d4ed8;font-weight:700;">Jetzt Ihren Stundenlohn berechnen →</a>
+    </div>
+
+    <!-- RELATED TOOLS -->
+    <h2 style="margin-top:48px;margin-bottom:16px;">Weitere Rechner &amp; Tools</h2>
+    <div class="rel-grid">
+      <a href="https://arbeitszeitrechner365.de/minijob-rechner" class="rel-card">
+        <div class="rel-tag">Minijob</div>
+        <div class="rel-title">Minijob-Rechner – 603-€-Grenze prüfen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/ueberstunden-rechner" class="rel-card">
+        <div class="rel-tag">Überstunden</div>
+        <div class="rel-title">Überstunden-Rechner – Mehrarbeit berechnen</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/gleitzeit-rechner" class="rel-card">
+        <div class="rel-tag">Gleitzeit</div>
+        <div class="rel-title">Gleitzeit-Rechner – Arbeitszeitkonto &amp; Kernzeit</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/nachtschicht-rechner" class="rel-card">
+        <div class="rel-tag">Nachtarbeit</div>
+        <div class="rel-title">Nachtschicht-Rechner – Nachtzuschlag &amp; Stunden</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/urlaubstage-rechner" class="rel-card">
+        <div class="rel-tag">Urlaub</div>
+        <div class="rel-title">Urlaubstage-Rechner – Anspruch nach BUrlG</div>
+      </a>
+      <a href="https://arbeitszeitrechner365.de/arbeitszeitrechner-dezimal" class="rel-card">
+        <div class="rel-tag">Dezimalstunden</div>
+        <div class="rel-title">Dezimalstunden umrechnen – DATEV &amp; SAP</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-brand">
+      <a href="/" class="brand-logo" title="Arbeitszeitrechner365.de - Startseite">
+        <svg fill="currentColor" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm1-13h-2v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+        <span>arbeitszeitrechner<span class="highlight">365</span>.de</span>
+      </a>
+      <p>Präziser kostenloser Online-Arbeitszeitrechner für Deutschland. Minutengenaue Zeiterfassung mit gesetzlichen Pausen nach deutschem Arbeitsrecht.</p>
+    </div>
+
+    <div>
+      <div class="footer-title">Tools &amp; Rechner</div>
+      <ul class="footer-links">
+        <li><a href="/#tool">Arbeitszeitrechner (Haupt-Tool)</a></li>
+        <li><a href="/pausenrechner">Pausenrechner (§ 4 ArbZG)</a></li>
+        <li><a href="/arbeitszeitrechner-monat">Monatsstunden berechnen</a></li>
+        <li><a href="/arbeitszeitrechner-dezimal">Dezimalstunden umrechnen</a></li>
+        <li><a href="/sollarbeitszeit-rechner">Sollarbeitszeit &amp; Zeitkonto</a></li>
+        <li><a href="/#lohnrechner">Integrierter Lohnrechner</a></li>
+        <li><a href="/#fuer-wen">Für alle Berufstypen</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Navigation &amp; Ratgeber</div>
+      <ul class="footer-links">
+        <li><a href="/">Startseite</a></li>
+        <li><a href="/#so-gehts">Bedienungsanleitung</a></li>
+        <li><a href="/#faq">Häufige Fragen (FAQ)</a></li>
+        <li><a href="/ueber-uns">Über uns</a></li>
+        <li><a href="/kontakt">Kontakt</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="footer-title">Folgen Sie uns</div>
+      <div class="footer-social-links">
+        <a href="https://www.facebook.com/Arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          <span>Facebook</span>
+        </a>
+        <a href="https://de.pinterest.com/arbeitszeitrechner365/" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+          <span>Pinterest</span>
+        </a>
+        <a href="https://x.com/Arbeitszeit365" target="_blank" rel="noopener" class="social-pill">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          <span>X (Twitter)</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div>© 2026 arbeitszeitrechner365.de – Alle Rechte vorbehalten.</div>
+    <div class="footer-bottom-links">
+      <a href="/impressum">Impressum</a>
+      <a href="/datenschutz">Datenschutz</a>
+      <a href="/nutzungsbedingungen">Nutzungsbedingungen</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function fmtDE(n, dec){
+  return n.toFixed(dec === undefined ? 2 : dec).replace('.', ',');
+}
+function fmtEUR(n){
+  return n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.') + ' €';
+}
+function num(id){
+  var el = document.getElementById(id);
+  if(!el) return NaN;
+  return parseFloat(String(el.value).replace(',', '.'));
+}
+function applyStundenlohn(mode, val, wochen){
+  var modeSel = document.getElementById('s-mode');
+  modeSel.value = mode;
+  document.getElementById('s-wochen').value = wochen;
+  if(mode === 'gehalt'){
+    document.getElementById('s-gehalt').value = val;
+  } else {
+    document.getElementById('s-lohn').value = String(val).replace('.', ',');
+  }
+  toggleMode();
+  calcStundenlohn();
+}
+function toggleMode(){
+  var mode = document.getElementById('s-mode').value;
+  document.getElementById('grp-gehalt').style.display = mode === 'gehalt' ? 'flex' : 'none';
+  document.getElementById('grp-lohn').style.display = mode === 'lohn' ? 'flex' : 'none';
+}
+function calcStundenlohn(){
+  var box = document.getElementById('s-status');
+  var res = document.getElementById('s-results');
+  var mode = document.getElementById('s-mode').value;
+  var wochen = num('s-wochen');
+  var mindest = num('s-mindest');
+  if(isNaN(wochen) || wochen <= 0 || wochen > 60){
+    res.style.display = 'none';
+    box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Bitte gültige Wochenstunden eintragen (0,5 bis 60).</span></div>';
+    return;
+  }
+  if(isNaN(mindest) || mindest <= 0) mindest = 13.9;
+
+  var monatsStd = wochen * 4.35;
+  var stundenlohn, monat;
+  if(mode === 'gehalt'){
+    monat = num('s-gehalt');
+    if(isNaN(monat) || monat <= 0){
+      res.style.display = 'none';
+      box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Bitte ein gültiges Bruttomonatsgehalt eingeben (z. B. 3000).</span></div>';
+      return;
+    }
+    stundenlohn = monat / monatsStd;
+  } else {
+    stundenlohn = num('s-lohn');
+    if(isNaN(stundenlohn) || stundenlohn <= 0){
+      res.style.display = 'none';
+      box.innerHTML = '<div class="status-banner status-warn">⚠️ <span>Bitte einen gültigen Brutto-Stundenlohn eingeben (z. B. 20).</span></div>';
+      return;
+    }
+    monat = stundenlohn * monatsStd;
+  }
+  var jahr = monat * 12;
+  var mindestMonat = mindest * monatsStd;
+  var abstand = stundenlohn - mindest;
+
+  res.style.display = 'grid';
+  document.getElementById('r-stundenlohn').textContent = fmtEUR(stundenlohn) + ' / Std.';
+  document.getElementById('r-monatsstd').textContent = fmtDE(monatsStd) + ' Std.';
+  document.getElementById('r-monat').textContent = fmtEUR(monat);
+  document.getElementById('r-jahr').textContent = fmtEUR(jahr);
+  document.getElementById('r-dezimal').textContent = fmtDE(monatsStd) + ' h';
+  document.getElementById('r-im').textContent = Math.round(monatsStd * 100) + ' IM';
+  document.getElementById('r-mindestmonat').textContent = fmtEUR(mindestMonat);
+  document.getElementById('r-abstand').textContent = (abstand >= 0 ? '+' : '') + fmtEUR(abstand) + ' / Std.';
+
+  var html = '';
+  if(stundenlohn < mindest){
+    html += '<div class="status-banner status-danger">🛑 <span><strong>Mindestlohn unterschritten (§ 1 MiLoG):</strong> Ihr Stundenlohn von ' + fmtEUR(stundenlohn) + ' liegt unter dem gesetzlichen Mindestlohn von ' + fmtEUR(mindest) + ' pro Stunde. Bei ' + fmtDE(wochen) + ' Wochenstunden müssten Sie mindestens ' + fmtEUR(mindestMonat) + ' brutto im Monat verdienen.</span></div>';
+  } else {
+    html += '<div class="status-banner status-ok">✅ <span><strong>Mindestlohn-Check bestanden (§ 1 MiLoG):</strong> Ihr Stundenlohn von ' + fmtEUR(stundenlohn) + ' liegt ' + fmtEUR(abstand) + ' pro Stunde über dem gesetzlichen Mindestlohn von ' + fmtEUR(mindest) + '.</span></div>';
+  }
+  if(monat <= 603){
+    html += '<div class="status-banner status-ok">🧹 <span><strong>Minijob-Hinweis:</strong> Ihr Monatsgehalt von ' + fmtEUR(monat) + ' liegt innerhalb der Minijob-Grenze von 603 € (2026). Prüfen Sie Details mit dem <a href="https://arbeitszeitrechner365.de/minijob-rechner" style="color:#86efac;font-weight:700;">Minijob-Rechner</a>.</span></div>';
+  } else if(monat <= 2000){
+    html += '<div class="status-banner status-warn">ℹ️ <span><strong>Midijob-Bereich:</strong> Ihr Monatsgehalt von ' + fmtEUR(monat) + ' liegt über der Minijob-Grenze (603 €, 2026), aber im Übergangsbereich bis 2.000 € – hier gelten reduzierte Sozialversicherungsbeiträge.</span></div>';
+  }
+  html += '<div class="status-banner status-ok">📋 <span><strong>Formel:</strong> ' + fmtDE(wochen) + ' Wochenstunden × 4,35 = ' + fmtDE(monatsStd) + ' Monatsstunden. ' + (mode === 'gehalt' ? fmtEUR(monat) + ' ÷ ' + fmtDE(monatsStd) + ' = ' + fmtEUR(stundenlohn) + ' pro Stunde.' : fmtEUR(stundenlohn) + ' × ' + fmtDE(monatsStd) + ' = ' + fmtEUR(monat) + ' im Monat.') + ' Jahresgehalt: ' + fmtEUR(jahr) + '.</span></div>';
+  box.innerHTML = html;
+}
+['s-mode','s-wochen','s-gehalt','s-lohn','s-mindest'].forEach(function(id){
+  var el = document.getElementById(id);
+  el.addEventListener(el.tagName === 'SELECT' ? 'change' : 'input', function(){
+    if(id === 's-mode') toggleMode();
+    calcStundenlohn();
+  });
+});
+toggleMode();
+calcStundenlohn();
+</script>
+
+</body>
+</html>
