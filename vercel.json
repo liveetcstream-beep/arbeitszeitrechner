@@ -85,6 +85,10 @@
     {
       "source": "/ratgeber/arbeitszeiterfassungspflicht",
       "destination": "/ratgeber/arbeitszeiterfassungspflicht.html"
+    },
+    {
+      "source": "/ratgeber/arbeitszeitgesetz",
+      "destination": "/ratgeber/arbeitszeitgesetz.html"
     }
   ]
 }
