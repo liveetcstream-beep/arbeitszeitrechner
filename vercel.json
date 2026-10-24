@@ -89,6 +89,10 @@
     {
       "source": "/ratgeber/arbeitszeitgesetz",
       "destination": "/ratgeber/arbeitszeitgesetz.html"
+    },
+    {
+      "source": "/ratgeber/ueberstunden-abgeltung",
+      "destination": "/ratgeber/ueberstunden-abgeltung.html"
     }
   ]
 }
