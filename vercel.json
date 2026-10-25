@@ -93,6 +93,10 @@
     {
       "source": "/ratgeber/ueberstunden-abgeltung",
       "destination": "/ratgeber/ueberstunden-abgeltung.html"
+    },
+    {
+      "source": "/azubi-arbeitszeit-rechner",
+      "destination": "/azubi-arbeitszeit-rechner.html"
     }
   ]
 }
