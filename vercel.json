@@ -97,6 +97,10 @@
     {
       "source": "/azubi-arbeitszeit-rechner",
       "destination": "/azubi-arbeitszeit-rechner.html"
+    },
+    {
+      "source": "/teilzeit-rechner",
+      "destination": "/teilzeit-rechner.html"
     }
   ]
 }
