@@ -101,6 +101,10 @@
     {
       "source": "/teilzeit-rechner",
       "destination": "/teilzeit-rechner.html"
+    },
+    {
+      "source": "/jahresarbeitszeit-rechner",
+      "destination": "/jahresarbeitszeit-rechner.html"
     }
   ]
 }
