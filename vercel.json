@@ -105,6 +105,10 @@
     {
       "source": "/jahresarbeitszeit-rechner",
       "destination": "/jahresarbeitszeit-rechner.html"
+    },
+    {
+      "source": "/ratgeber/nachtarbeit",
+      "destination": "/ratgeber/nachtarbeit.html"
     }
   ]
 }
