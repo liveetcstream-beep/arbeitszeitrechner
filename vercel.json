@@ -109,6 +109,10 @@
     {
       "source": "/ratgeber/nachtarbeit",
       "destination": "/ratgeber/nachtarbeit.html"
+    },
+    {
+      "source": "/ratgeber/brueckentage-2026",
+      "destination": "/ratgeber/brueckentage-2026.html"
     }
   ]
 }
