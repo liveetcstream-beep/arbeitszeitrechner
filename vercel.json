@@ -113,6 +113,10 @@
     {
       "source": "/ratgeber/brueckentage-2026",
       "destination": "/ratgeber/brueckentage-2026.html"
+    },
+    {
+      "source": "/ratgeber/was-zaehlt-als-arbeitszeit",
+      "destination": "/ratgeber/was-zaehlt-als-arbeitszeit.html"
     }
   ]
 }
