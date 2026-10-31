@@ -117,6 +117,10 @@
     {
       "source": "/ratgeber/was-zaehlt-als-arbeitszeit",
       "destination": "/ratgeber/was-zaehlt-als-arbeitszeit.html"
+    },
+    {
+      "source": "/ratgeber/homeoffice-arbeitszeit",
+      "destination": "/ratgeber/homeoffice-arbeitszeit.html"
     }
   ]
 }
