@@ -121,6 +121,10 @@
     {
       "source": "/ratgeber/homeoffice-arbeitszeit",
       "destination": "/ratgeber/homeoffice-arbeitszeit.html"
+    },
+    {
+      "source": "/faq/arbeitszeitgesetz",
+      "destination": "/faq/arbeitszeitgesetz.html"
     }
   ]
 }
