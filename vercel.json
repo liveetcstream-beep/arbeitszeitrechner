@@ -125,6 +125,10 @@
     {
       "source": "/faq/arbeitszeitgesetz",
       "destination": "/faq/arbeitszeitgesetz.html"
+    },
+    {
+      "source": "/faq/pausen-ruhezeit",
+      "destination": "/faq/pausen-ruhezeit.html"
     }
   ]
 }
