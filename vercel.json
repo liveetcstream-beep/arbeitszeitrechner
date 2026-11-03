@@ -129,6 +129,10 @@
     {
       "source": "/faq/pausen-ruhezeit",
       "destination": "/faq/pausen-ruhezeit.html"
+    },
+    {
+      "source": "/faq/urlaubsrecht",
+      "destination": "/faq/urlaubsrecht.html"
     }
   ]
 }
